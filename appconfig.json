@@ -1,9 +1,9 @@
 {
 	"appName": "Slayer Assistant (Beta)",
 	"description": "This app is designed to allow avid and new slayers to easy determine which slayer task they would like to do.",
-	"appUrl": "https://unlishema.org/slayerassistant/",
-	"configUrl": "https://unlishema.org/slayerassistant/appconfig.json",
-	"iconUrl": "https://unlishema.org/slayerassistant/icon.png",
+	"appUrl": "https://unlishema.github.io/slayerassistant/",
+	"configUrl": "https://unlishema.github.io/slayerassistant/appconfig.json",
+	"iconUrl": "https://unlishema.github.io/slayerassistant/icon.png",
 	"defaultWidth": 360,
 	"defaultHeight": 370,
 	"minWidth":360,
