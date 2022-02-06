@@ -227,7 +227,7 @@
     "alternates": ["None"]
   },
   {
-    "default-creature": "Kree'arra#Normal",
+    "default-creature": "Kree'arra",
     "weakness": ["<a target=\"_blank\" href=\"https://runescape.wiki/w/Bolts\" title=\"Bolts\">Bolts<\/a>"],
     "slayer-levels": [1],
     "creatures": [
@@ -1125,6 +1125,12 @@
       "Dungeon spider",
       "Animated pickaxe",
       "Edimmu (Dungeoneering)",
+      "Brute",
+      "Seeker",
+      "Soulgazer (Dungeoneering)",
+      "Frost dragon",
+      "Kal&#39;gerion demon",
+      "Soulgazer",
       "Edimmu",
       "Edimmu (elite)"
     ],
@@ -1251,7 +1257,10 @@
       "Unnatural prime automaton",
       "Automaton Generator",
       "Automaton Guardian",
-      "Automaton Tracer"
+      "Automaton Tracer",
+      "Abnormal automaton guardian",
+      "Unnatural automaton tracer",
+      "Malignant automaton generator"
     ],
     "hidden-creatures": ["Unnatural prime automaton"],
     "index": "Cres's creations",
@@ -1760,7 +1769,6 @@
     "weakness": [],
     "slayer-levels": [],
     "creatures": [
-      "Edimmu (Dungeoneering)",
       "Edimmu",
       "Edimmu (elite)"
     ],
@@ -2100,7 +2108,10 @@
       "Spiritual guardian",
       "Revenant demon",
       "Tormented soul (Uncharted Isles)",
-      "Revenant ork"
+      "Revenant ork",
+      "Revenant dark beast",
+      "Revenant knight",
+      "Revenant dragon"
     ],
     "hidden-creatures": [
       "Ghost (Dungeoneering, monster)",
@@ -2911,7 +2922,8 @@
       "Corrupted kalphite marauder",
       "Kalphite Queen",
       "Exiled Kalphite Queen",
-      "Kalphite King"
+      "Kalphite King",
+      "Unnatural kalphite paragon"
     ],
     "hidden-creatures": [
       "Unnatural kalphite guardian",
@@ -3499,7 +3511,8 @@
       "Ogress warrior",
       "Ogress champion",
       "Ogre chieftain",
-      "Enclave guard"
+      "Enclave guard",
+      "Mogre"
     ],
     "hidden-creatures": [
       "Gorad",
@@ -4068,7 +4081,19 @@
       "Snailfeet",
       "Mosschin",
       "Strongbones",
-      "Redeyes"
+      "Redeyes",
+      "Fabricated skeleton archer",
+      "Skoblin (Strongbones)",
+      "Undead one",
+      "Skeleton (Tarn&#39;s Lair)",
+      "Skeletal miner",
+      "Ulfric",
+      "Skeleton (Thok Your Block Off)",
+      "Skeleton archer (The Death of Chivalry)",
+      "Skogre",
+      "Summoned skeleton",
+      "Skeleton (Ullek)",
+      "Skeletal hand"
     ],
     "hidden-creatures": [
       "Skeleton mage (The Death of Chivalry)",
@@ -4953,7 +4978,15 @@
       "Zombie pirate",
       "Zombie (Zogre Flesh Eaters)",
       "Reborn mage (Dungeoneering)",
-      "Armoured zombie"
+      "Armoured zombie",
+      "Zombie swab",
+      "Sorebones",
+      "Undead Lumberjack",
+      "Zogre",
+      "Dried zombie",
+      "Monkey Zombie",
+      "Zombie (Tarn&#39;s Lair)",
+      "Zombie hand"
     ],
     "hidden-creatures": [
       "Zombie cow",

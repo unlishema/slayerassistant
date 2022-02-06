@@ -1,13 +1,13 @@
 [
   {
     "task-counts": {
-      "Gelatinous abominations": "10-25",
-      "Trolls": "10-25",
-      "Wolves": "10-25",
-      "Cave bugs": "10-25",
+      "Gelatinous abominations": "10-20",
+      "Trolls": "10-20",
+      "Wolves": "10-20",
+      "Cave bugs": "10-20",
       "Cows": "10-25",
-      "Birds": "10-25",
-      "Crawling hands": "10-25"
+      "Birds": "10-20",
+      "Crawling hands": "10-20"
     },
     "name": "Turael",
     "id": 1,
