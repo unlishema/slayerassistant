@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en-GB" dir="ltr">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-126479006-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","UA-126479006-1");</script>
+<meta charset="UTF-8"/>
+<title>Null - The RuneScape Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Null","wgTitle":"Null","wgCurRevisionId":35519719,"wgRevisionId":35519719,"wgArticleId":7423,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Mechanics"],"wgBreakFrames":false,"wgPageContentLanguage":"en-gb","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Null","wgRelevantArticleId":7423,"wgRequestId":"16e7f67597938a49e4913e74433352b3","wgCSPNonce":false,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgWikiEditorEnabledModules":[],"wgVisualEditor":{"pageLanguageCode":"en-GB","pageLanguageDir":"ltr","pageVariantFallbacks":"en-gb","usePageImages":true,"usePageDescriptions":false},"wgPreferredVariant":"en-gb","wgMFExpandAllSectionsUserOption":true,"wgMFEnableFontChanger":true,"wgMFDisplayWikibaseDescriptions":{"search":false,"nearby":false,"watchlist":false,"tagline":false},"wgPopupsShouldSendModuleToUser":true,"wgPopupsConflictsWithNavPopupGadget":false,"simpleBatchUploadMaxFilesPerBatch":{"*":1000},"wgVisualEditorToolbarScrollOffset":0,"wgVisualEditorUnsupportedEditParams":["undo","undoafter","veswitched"],"wgEditSubmitButtonLabelPublish":false,"wgCodeMirrorEnabled":true});mw.loader.state({"ext.gadget.switch-infobox-styles":"ready","ext.gadget.stickyTableHeaders":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"loading","user.tokens":"loading","mediawiki.page.gallery.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0qpjoud",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"variant":"en-gb"});
+});mw.loader.implement("user.tokens@14p3yrv",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.smw.style","ext.smw.tooltips","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","mmv.head","mmv.bootstrap.autostart","ext.gadget.rsw-util","ext.gadget.exchangePages","ext.gadget.GECharts","ext.gadget.charmadd","ext.gadget.cvuform","ext.gadget.titleparenthesis","ext.gadget.timer","ext.gadget.tooltips","ext.gadget.highlightTable","ext.gadget.checkboxList","ext.gadget.autosort","ext.gadget.switch-infobox","ext.gadget.compare","ext.gadget.pengLocations","ext.gadget.InstantCollapsible","ext.gadget.topIcons","ext.gadget.Username","ext.gadget.countdown","ext.gadget.autocollapse","ext.gadget.navboxToggle","ext.gadget.VoS","ext.gadget.Charts","ext.gadget.portables","ext.gadget.submitData","ext.gadget.calc","ext.gadget.calc2","ext.gadget.killCalc","ext.gadget.infoboxQty","ext.gadget.discalc","ext.gadget.itemDiscalc","ext.gadget.revocalc","ext.gadget.questchecker","ext.gadget.armoury","ext.gadget.bestiary","ext.gadget.kiln","ext.gadget.dropDisplay","ext.gadget.hitcalc","ext.gadget.perkcalc","ext.gadget.dynamicMMG","ext.gadget.popcalc","ext.gadget.capecustomiser","ext.gadget.archcalc","ext.gadget.skillplanner","ext.gadget.dropdown","ext.gadget.autocvu","ext.gadget.newPage","ext.gadget.purge","ext.gadget.ReferenceTooltips","ext.gadget.contributions","ext.gadget.fileDownload","ext.gadget.sectionAnchors","ext.gadget.skinTogglesNew","ext.gadget.utcclock","ext.gadget.relativetime","ext.gadget.falseSubpage","ext.gadget.events","ext.gadget.oswf","ext.gadget.lazyload","ext.gadget.rsnews","ext.gadget.spoiler","ext.gadget.searchfocus","ext.gadget.sigreminder","ext.gadget.gadgetLinks","ext.gadget.nft","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.popups","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en-gb&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=vector"/>
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en-gb&amp;modules=ext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.page.gallery.styles%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/load.php?debug=false&amp;lang=en-gb&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en-gb&amp;modules=ext.gadget.stickyTableHeaders%2Cswitch-infobox-styles&amp;only=styles&amp;skin=vector"/>
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en-gb&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.31.15"/>
+<meta name="description" content="null is a reserved constant used in Java and similar programming languages that is used to represent a void reference. In simpler terms, it is a value used to represent that a reference variable has no set value. In RuneScape it usually appears in string values either due to a variable not being assigned in time, usually due to lag, or as a result of a glitch."/>
+<meta property="og:image" content="https://runescape.wiki/images/0/0d/Null.png?a6fdb"/>
+<link rel="alternate" type="application/rdf+xml" title="Null" href="/w/Special:ExportRDF/Null?xmlmime=rdf"/>
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/Null?action=edit"/>
+<link rel="edit" title="Edit" href="/w/Null?action=edit"/>
+<link rel="apple-touch-icon" href="/images/4/43/Apple-touch-icon.png?2d422"/>
+<link rel="shortcut icon" href="/images/6/64/Favicon.ico?843a1"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="RuneScape Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://runescape.wiki/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+<link rel="canonical" href="https://runescape.wiki/w/Null"/>
+	<meta property="og:type" content="article"/>
+
+	<meta property="og:site_name" content="RuneScape Wiki"/>
+
+	<meta property="og:title" content="Null"/>
+
+	<meta property="og:description" content="null is a reserved constant used in Java and similar programming languages that is used to represent a void reference. In simpler terms, it is a value used to represent that a reference variable has no set value. In RuneScape it usually appears in string values either due to a variable not being assigned in time, usually due to lag, or as a result of a glitch."/>
+
+	<meta property="og:url" content="https://runescape.wiki/w/Null"/>
+
+<!--[if lt IE 9]><script src="/load.php?debug=false&amp;lang=en-gb&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Null rootpage-Null skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en-GB">Null</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">From the RuneScape Wiki, the wiki for all things RuneScape</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en-GB" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="rs-external-header-links" style="display:none"><span class="rs-header-icon rs-header-icon-os" data-text="Old School" data-title="The Old School RuneScape Wiki also has an article on Null." data-site="os">The Old School RuneScape Wiki also has an article on: <a href="https://oldschool.runescape.wiki/w/Null" class="extiw" title="osrsw:Null">osrsw:Null</a></span></div>
+<div class="thumb tleft"><div class="thumbinner" style="width:28px;"><a href="/w/File:Null.png" class="image"><img alt="" src="/images/0/0d/Null.png?a6fdb" width="26" height="26" class="thumbimage" data-file-width="26" data-file-height="26" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/w/File:Null.png" class="internal" title="Enlarge"></a></div>Null icon</div></div></div>
+<p><b><code>null</code></b> is a reserved constant used in <a href="/w/Java" class="mw-redirect" title="Java">Java</a> and similar programming languages that is used to represent a void reference. In simpler terms, it is a value used to represent that a reference variable has no set value. In <i>RuneScape</i> it usually appears in string values either due to a variable not being assigned in time, usually due to lag, or as a result of a <a href="/w/Glitch" title="Glitch">glitch</a>.
+</p><p>It first made its appearance in game as a player name some people would see from time to time in <i><a href="/w/RuneScape_Classic" title="RuneScape Classic">RuneScape Classic</a></i>. This can occasionally appear when moving between areas like going up and down stairs. This usually occurred when players with dial-up, or similar low speed, internet logged in and tried to type something.
+</p>
+<div id="toc" class="toc"><div class="toctitle" lang="en-GB" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Null_items"><span class="tocnumber">1</span> <span class="toctext">Null items</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Make_null"><span class="tocnumber">2</span> <span class="toctext">Make null</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Logging_in"><span class="tocnumber">3</span> <span class="toctext">Logging in</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Null_scenery"><span class="tocnumber">4</span> <span class="toctext">Null scenery</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Adventurer&#39;s_log_Null"><span class="tocnumber">5</span> <span class="toctext">Adventurer's log Null</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Gallery"><span class="tocnumber">6</span> <span class="toctext">Gallery</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Null_items">Null items</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/Null?section=1&amp;veaction=edit" class="mw-editsection-visualeditor" title="Edit section: Null items">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/Null?action=edit&amp;section=1" title="Edit section: Null items">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:142px;"><a href="/w/File:Null.gif" class="image"><img alt="" src="/images/4/41/Null.gif?cf870" width="140" height="108" class="thumbimage" data-file-width="140" data-file-height="108" /></a>  <div class="thumbcaption">The object, which is really a Golden statuette, appears as a "null"</div></div></div>
+<p>An item also can be called "null". It means the same at the top of the page, the information of the object didn't load. Strangely the "null" object's name never changed. Previously, if one typed in 'null' on the <a href="/w/Quick_Chat#Removed" title="Quick Chat">quick chat</a> system, this item could be said. This was removed in a hidden update.
+</p><p>If you search bank item "null" you get a message stating a number of search results equal to the number of empty spaces in your bank. This is explained by banks being represented as a List of items of some sort where empty slots are a null reference and occupied slots are references to the items they hold.
+</p>
+<h2><span class="mw-headline" id="Make_null">Make null</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/Null?section=2&amp;veaction=edit" class="mw-editsection-visualeditor" title="Edit section: Make null">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/Null?action=edit&amp;section=2" title="Edit section: Make null">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Sometimes, when making items, "null" is displayed for a split second in the "How many would you like to make?" interface. This tends to happen more often while smelting. Also, null can be made by dropping an object, then right clicking the object again before it is removed from your inventory, click "Use" and right click on another object.
+</p>
+<h2><span class="mw-headline" id="Logging_in">Logging in</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/Null?section=3&amp;veaction=edit" class="mw-editsection-visualeditor" title="Edit section: Logging in">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/Null?action=edit&amp;section=3" title="Edit section: Logging in">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Sometimes, immediately after logging in, if a player talks, or the game makes the player say something, the player's name will appear as 'null' in the chat box.
+</p>
+<h2><span class="mw-headline" id="Null_scenery">Null scenery</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/Null?section=4&amp;veaction=edit" class="mw-editsection-visualeditor" title="Edit section: Null scenery">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/Null?action=edit&amp;section=4" title="Edit section: Null scenery">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In <a href="/w/Legacy_of_Seergaze" title="Legacy of Seergaze">Legacy of Seergaze</a>, players repair a <a href="/w/Furnace" title="Furnace">furnace</a>. For a time after the quest was released, players could stand on the story above, and see the furnace through a hole in the floor. They could right-click on the top of the furnace (which registered as non-interactive scenery), and the menu would include the option "Examine null". This was later fixed by <a href="/w/Jagex" title="Jagex">Jagex</a>.
+</p>
+<h2><span class="mw-headline" id="Adventurer's_log_Null">Adventurer's log Null</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/Null?section=5&amp;veaction=edit" class="mw-editsection-visualeditor" title="Edit section: Adventurer&#039;s log Null">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/Null?action=edit&amp;section=5" title="Edit section: Adventurer&#039;s log Null">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When <a href="/w/Livid_Farm" title="Livid Farm">Livid Farm</a> was released, the <a href="/w/Adventurer%27s_log" class="mw-redirect" title="Adventurer&#39;s log">Adventurer's log</a> became glitched resulting in all of the entries reading "null". Examples include:"Item Found&#160;: Null.", "I killed null null", "I killed null null null null null null in Daemonheim." or other similar sentences. This happened for everyone with sentences containing a boss monster name, item names, or a completed treasure trail. For quest completions, it displays the title correctly, but then just says 'null'. This was finally fixed on 12 April 2011.
+</p>
+<h2><span class="mw-headline" id="Gallery">Gallery</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/Null?section=6&amp;veaction=edit" class="mw-editsection-visualeditor" title="Edit section: Gallery">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/Null?action=edit&amp;section=6" title="Edit section: Gallery">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div align="center"><ul class="gallery mw-gallery-traditional" style="max-width: 704px;_width: 704px;">
+		<li class="gallerybox" style="width: 168px"><div style="width: 168px">
+			<div class="thumb" style="width: 163px;"><div style="margin:34px auto;"><a href="/w/File:GE_null.png" class="image"><img alt="" src="/images/thumb/4/45/GE_null.png/133px-GE_null.png?70f18" width="133" height="82" srcset="/images/thumb/4/45/GE_null.png/200px-GE_null.png?70f18 1.5x, /images/thumb/4/45/GE_null.png/266px-GE_null.png?70f18 2x" data-file-width="475" data-file-height="294" /></a></div></div>
+			<div class="gallerytext">
+<p>Buying <a href="/w/Ingredients" title="Ingredients">Ingredients</a> for Moonshine from the Grand Exchange
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 168px"><div style="width: 168px">
+			<div class="thumb" style="width: 163px;"><div style="margin:15px auto;"><a href="/w/File:Adventurer%27s_log_null.png" class="image"><img alt="" src="/images/thumb/0/0f/Adventurer%27s_log_null.png/92px-Adventurer%27s_log_null.png?64bd7" width="92" height="120" srcset="/images/thumb/0/0f/Adventurer%27s_log_null.png/139px-Adventurer%27s_log_null.png?64bd7 1.5x, /images/thumb/0/0f/Adventurer%27s_log_null.png/185px-Adventurer%27s_log_null.png?64bd7 2x" data-file-width="358" data-file-height="464" /></a></div></div>
+			<div class="gallerytext">
+<p>Null glitch on players adventurers log
+</p>
+			</div>
+		</div></li>
+</ul></div>
+<div class="rs-external-header-links" style="display:none"><span class="rs-header-icon rs-header-icon-wp" data-text="Wikipedia" data-title="Wikipedia also has an article on Null pointer." data-site="wp">Wikipedia also has an article on: <a href="https://en.wikipedia.org/wiki/Null_pointer" class="extiw" title="wikipedia:Null pointer">wikipedia:Null pointer</a></span></div>
+
+<!-- 
+NewPP limit report
+Parsed by vindicta
+Cached time: 20210806191357
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0 seconds
+CPU time usage: 0.045 seconds
+Real time usage: 0.058 seconds
+Preprocessor visited node count: 47/1000000
+Preprocessor generated node count: 142/1000000
+Post‐expand include size: 1146/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1370/5000000 bytes
+Lua time usage: 0.006/10.000 seconds
+Lua memory usage: 584 KB/350 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   33.518      1 -total
+ 77.36%   25.931      2 Template:External
+-->
+</div>
+<!-- Saved in parser cache with key en_rswiki:pcache:idhash:7423-0!canonical and timestamp 20210806191357 and revision id 35519719
+ -->
+</div>					<div class="printfooter">
+						Retrieved from ‘<a dir="ltr" href="https://runescape.wiki/w/Null?oldid=35519719">https://runescape.wiki/w/Null?oldid=35519719</a>’					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/w/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/w/Category:Mechanics" title="Category:Mechanics">Mechanics</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/w/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/w/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/Special:CreateAccount?returnto=Null" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/Special:UserLogin?returnto=Null" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/w/Null" title="View the content page [c]" accesskey="c">Article</a></span></li><li id="ca-talk"><span><a href="/w/Talk:Null" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="/w/Null">Read</a></span></li><li id="ca-ve-edit" class="collapsible"><span><a href="/w/Null?veaction=edit" title="Edit this page [v]" accesskey="v">Edit</a></span></li><li id="ca-edit" class="collapsible"><span><a href="/w/Null?action=edit" title="Edit this page [e]" accesskey="e">Edit source</a></span></li><li id="ca-history" class="collapsible"><span><a href="/w/Null?action=history" title="Past revisions of this page [h]" accesskey="h">History</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="/" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search the RuneScape Wiki" title="Search the wiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-Discord" aria-labelledby="p-Discord-label">
+			<h3 id="p-Discord-label">Discord</h3>
+			<div class="body">
+								<ul>
+					<li id="n-Discord"><a href="https://discord.gg/buU5wwr" rel="nofollow" target="_blank">Discord</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Navigation" aria-labelledby="p-Navigation-label">
+			<h3 id="p-Navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-About-us"><a href="/w/RuneScape:About">About us</a></li><li id="n-User-help"><a href="/w/RuneScape:User_help">User help</a></li><li id="n-recentchanges"><a href="/w/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-Random-page"><a href="/w/Special:Random/main">Random page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Guides" aria-labelledby="p-Guides-label">
+			<h3 id="p-Guides-label">Guides</h3>
+			<div class="body">
+								<ul>
+					<li id="n-List-of-quests"><a href="/w/List_of_quests">List of quests</a></li><li id="n-Skill-training"><a href="/w/Skill_training_guides">Skill training</a></li><li id="n-Money-making"><a href="/w/Money_making_guide">Money making</a></li><li id="n-Treasure-Trails"><a href="/w/Treasure_Trails">Treasure Trails</a></li><li id="n-New-player-guide"><a href="/w/New_Player_Guide_to_RuneScape">New player guide</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Databases" aria-labelledby="p-Databases-label">
+			<h3 id="p-Databases-label">Databases</h3>
+			<div class="body">
+								<ul>
+					<li id="n-Equipment"><a href="/w/Equipment_tables">Equipment</a></li><li id="n-Calculators"><a href="/w/Calculators">Calculators</a></li><li id="n-Bestiary"><a href="/w/Bestiary">Bestiary</a></li><li id="n-Achievements"><a href="/w/Achievements">Achievements</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-sidebar-editing" aria-labelledby="p-sidebar-editing-label">
+			<h3 id="p-sidebar-editing-label">Editing</h3>
+			<div class="body">
+								<ul>
+					<li id="n-How-to-edit"><a href="/w/Help:Editing">How to edit</a></li><li id="n-Policies"><a href="/w/RuneScape:Policies">Policies</a></li><li id="n-Projects"><a href="/w/RuneScape:Maintenance">Projects</a></li><li id="n-New-files"><a href="/w/Special:NewFiles">New files</a></li><li id="n-The-Wikian"><a href="/w/RuneScape:The_Wikian">The Wikian</a></li><li id="n-One-Small-Wiki-Favour"><a href="/w/RuneScape:One_Small_Wiki_Favour">One Small Wiki Favour</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Community" aria-labelledby="p-Community-label">
+			<h3 id="p-Community-label">Community</h3>
+			<div class="body">
+								<ul>
+					<li id="n-Discussions"><a href="/w/RuneScape:Active_discussions">Discussions</a></li><li id="n-Events-Team"><a href="/w/RuneScape:Events_Team">Events Team</a></li><li id="n-Clan-Chat"><a href="/w/RuneScape:Clan_Chat">Clan Chat</a></li><li id="n-Discord-server"><a href="https://meta.weirdgloop.org/w/Discord">Discord server</a></li><li id="n-Finding-the-wikis"><a href="/w/RuneScape:FIND">Finding the wikis</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-More_RuneScape" aria-labelledby="p-More_RuneScape-label">
+			<h3 id="p-More_RuneScape-label">More RuneScape</h3>
+			<div class="body">
+								<ul>
+					<li id="n-OSRS-Wiki"><a href="https://oldschool.runescape.wiki/w/Old_School_RuneScape_Wiki">OSRS Wiki</a></li><li id="n-RSC-Wiki"><a href="https://classic.runescape.wiki/w/RuneScape_Classic_Wiki">RSC Wiki</a></li><li id="n-RuneScape.com"><a href="https://www.runescape.com" rel="nofollow" target="_blank">RuneScape.com</a></li><li id="n-RuneScape-Forums"><a href="http://services.runescape.com/m=forum/forums.ws" rel="nofollow" target="_blank">RuneScape Forums</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/w/Special:WhatLinksHere/Null" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/w/Special:RecentChangesLinked/Null" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/w/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/w/Null?printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/w/Null?oldid=35519719" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/Null?action=info" title="More information about this page">Page information</a></li><li id="t-smwbrowselink"><a href="/w/Special:Browse/:Null" rel="search">Browse properties</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last modified on 27 July 2021, at 21:43.</li>
+								<li id="footer-info-copyright">Content on this site is licensed under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a>; <a href="https://meta.weirdgloop.org/w/Project:Copyrights">additional terms apply</a>.
+<br /><i>RuneScape</i> and <i>RuneScape Old School</i> are the trademarks of <a href="http://jagex.com">Jagex Limited</a> and are used with the permission of Jagex.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://weirdgloop.org/privacy" class="extiw" title="wg:privacy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="/w/RuneScape:About" title="RuneScape:About">About the RuneScape Wiki</a></li>
+								<li id="footer-places-disclaimer"><a href="/w/RuneScape:General_disclaimer" title="RuneScape:General disclaimer">Disclaimers</a></li>
+								<li id="footer-places-tou"><a href="https://weirdgloop.org/terms">Terms of Use</a></li>
+								<li id="footer-places-contact"><a href="/w/Special:Contact">Contact Weird Gloop</a></li>
+								<li id="footer-places-mobileview"><a href="https://runescape.wiki/w/Null?mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank"><div title="CC BY-NC-SA 3.0"></div></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="https://weirdgloop.org" target="_blank"><div title="A Weird Gloop wiki"></div></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.045","walltime":"0.058","ppvisitednodes":{"value":47,"limit":1000000},"ppgeneratednodes":{"value":142,"limit":1000000},"postexpandincludesize":{"value":1146,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1370,"limit":5000000},"timingprofile":["100.00%   33.518      1 -total"," 77.36%   25.931      2 Template:External"]},"scribunto":{"limitreport-timeusage":{"value":"0.006","limit":"10.000"},"limitreport-memusage":{"value":597550,"limit":367001600}},"cachereport":{"origin":"vindicta","timestamp":"20210806191357","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":300,"wgHostname":"vindicta"});});</script>
+	<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"67aa95d81e60b9fe","token":"6348a5ceb9674fe390473560fffff798","version":"2021.7.0","si":10}'></script>
+</body>
+</html>
