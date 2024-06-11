@@ -1,9 +1,9 @@
 {
-	"appName": "Local Slayer Assistant",
-	"description": "This app is designed to allow avid and new slayers to easy determine which slayer task they would like to do.",
-	"appUrl": "http://slayer/",
-	"configUrl": "http://slayer/appconfig.json",
-	"iconUrl": "http://slayer/icon.png",
+	"appName": "Slayer Assistant",
+	"description": "Slayer Assistant is your go-to tool for efficient Slayer tasks in RuneScape. Designed for the Alt1 Toolkit, it provides instant access to task information, helping you make informed decisions quickly. Whether you're a new player or an experienced Slayer, this app streamlines the task selection process, making your gameplay smoother and more enjoyable.",
+	"appUrl": "https://unlishema.github.io/slayerassistant/",
+	"configUrl": "https://unlishema.github.io/slayerassistant/appconfig.json",
+	"iconUrl": "https://unlishema.github.io/slayerassistant/icon.png",
 	"defaultWidth": 360,
 	"defaultHeight": 395,
 	"minWidth": 360,
@@ -11,8 +11,6 @@
 	"maxWidth": 400,
 	"maxHeight": 550,
 	"requestHandlers": [],
-	"activators": [
-		""
-	],
+	"activators": ["regex:^Get task .*"],
 	"permissions": "pixel,gamestate,overlay"
 }
