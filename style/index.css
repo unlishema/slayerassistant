@@ -116,11 +116,11 @@ div[id^="summary"]:hover {background-color: #324e6165;}
 
 div[id^="weaknessBox"] {position : absolute; left : 50%; top : 5px; font-size: 12px; text-align : center; height : 35px; width : 48%;}
 div[id^="weaknessBox"] p#weakness-text {margin: 0px; padding: 0px;}
-div[id^="weaknessBox"] img {position : relative; height : 18px; width : 18px;}
+div[id^="weaknessBox"] img {position : relative; height : 18px; width : 18px; padding-right: 3px; padding-left: 3px;}
 
 div[id^="susceptibleBox"] {position : absolute; left : 50%; top : 40px; font-size: 12px; text-align : center; height : 35px; width : 48%;}
 div[id^="susceptibleBox"] p#susceptible-text {margin: 0px; padding: 0px;}
-div[id^="susceptibleBox"] img {position : relative; height : 18px; width : 18px;}
+div[id^="susceptibleBox"] img {position : relative; height : 18px; width : 18px; padding-right: 3px; padding-left: 3px;}
 
 /* Third Sections */
 img.first-third-image {position : absolute; left : 5px; top : 7px; height : 15px; width : 15px;}
