@@ -1,63 +1,86 @@
-<html><head>
-	<title>Changelog</title>
-    <link rel="icon" href="/slayerassistant/icon.png" type="image/png">
-	<style type="text/css">
-        .nis {background: url("/slayerassistant/images/ui/background.png");}
-        .nistext {color: #E5E6EB;}
-        .nisbutton{height:32px; position:relative; background:url('/slayerassistant/images/ui/nisbutton.png') 0px -100%/24px 400% repeat content-box; cursor:pointer; text-align:center; color:#000; font-family:'trajan-pro-3'; text-shadow:1px 1px 2px #ECC622; font-size:18px; margin:5px; padding:0px 12px; line-height:32px; user-select:none; -webkit-user-select:none;}
-        .nisbutton::before{width:12px; height:100%; content:""; position:absolute; top:0px; left:0px; background:url('/slayerassistant/images/ui/nisbutton.png') 0px 0px / 24px 400%;}
-        .nisbutton::after{width:12px; height:100%; content:""; position:absolute; top:0px; right:0px; background:url('/slayerassistant/images/ui/nisbutton.png') -12px 0px / 24px 400%;}
-        .nisbutton:hover{background-position:0px -300%;}
-        .nisbutton:hover::before{background-position:0px -200%;}
-        .nisbutton:hover::after{background-position:-12px -200%;}
-        .nisbutton:active, .nisbutton.fakeactive{-webkit-filter:brightness(1.2); filter:brightness(1.2);}
+<html>
 
-		body{font-family:sans-serif; font-size:14px; padding:0px 10px; overflow-x:hidden; margin:0px; width:315px;}
-		h2{border-top:1px solid #A3A3A3; font-weight:normal; margin-top: 25px; margin-bottom:-10px; color:#068b1c;}
-		h2:first-child{margin-top:10px;}
-
-        a.link{color: orange; text-decoration: underline; cursor: pointer;}
-        a.link:hover{color: red; text-decoration: underline; cursor: pointer;}
-	</style>
+<head>
+    <title>Changelog</title>
+    <link rel="icon" href="./icon.png" type="image/png">
+    <link rel="stylesheet" href="./style/changelog.css">
 </head>
+
 <body class="nis">
     <div class="nisbutton" id="changelog-button" onclick="history.back();">Go Back</div>
-
-    <h2>02/13/2022 - Minor but Needed</h2>
-    <p class="nistext">Finally have a little time to work on updating the Forum Post as well as the credits. Also going to update the about section soon.</p>
-
-    <h2>12/24/2021 - Merry Christmas</h2>
-    <p class="nistext">Finished updating all the old changelog information, some may be missing but the most of it is there for now. Need to backup discord info during development so I can check later.</p>
-    <p class="nistext">Adding about info section soon...</p>
-    <p class="nistext">Current App Features to Date</p>
+    <h2>06/11/2024 - Major Recode
+    </h2>
+    <p class="nistext">Today is a special day because a massive recode has came for Slayer Assistant. This recode
+        started on 06/02/2024. Most of the changes were due to an update to the base alt1. You may not see a lot of
+        changes but there is a lot, so lets go over them all.</p>
+    <p class="nistext">The recode has allowed me to have all the code neater so updates should be much easier. Also
+        new features won't be as hard to add in because the code before was a huge mess</p>
+    <p class="nistext">Features coming soon</p>
     <ul class="nistext">
-        <li>Search Bar at the Top of the App</li>
+        <li>Update the forum post</li>
+        <li>Add in some basic settings</li>
+        <li>120 Slayer Assignment suggestions (Needs Page Made)</li>
+        <li>Ability to lookup task via Slayer Counter RS3</li>
+        <li>Ability to lookup task via Reaper Counter RS3</li>
+        <li>Add support for Ushabti</li>
+    </ul>
+    <p class="nistext">Features added</p>
+    <ul class="nistext">
+        <li>Adjusted Search Algorithm to work better</li>
+        <li>Reaper Task support has been added (Needs more Work)</li>
+        <li>Added Necromancy Support to databaase and app</li>
+        <li>Ability to Ctrl+V paste an image for lookup</li>
+        <li>Ability to Drag & Drop an image for lookup</li>
+        <li>Added a small copyright at the bottom of all pages</li>
+        <li>Search bar now has history using up and down arrows</li>
+        <ul>
+            <li>It also temp saves the current search too</li>
+        </ul>
+        <li>Optimized the updating of current task</li>
+        <ul>
+            <li>This way it won't flicker on updates</li>
+        </ul>
+    </ul>
+    <p class="nistext">Features updated</p>
+    <ul class="nistext">
+        <li>Massive fixes to the database</li>
+        <li>Updated the database for new content</li>
+        <li>Updated the about page with new info</li>
+        <li>Capture Loop has been optimized</li>
+        <li>Capture Button has now been added</li>
+        <li>Search Button is also the Capture Button</li>
+        <ul>
+            <li>It changes when you type in search</li>
+        </ul>
+    </ul>
+    <p class="nistext">Features kept from previous version</p>
+    <ul class="nistext">
         <li>Help/About, Settings, & Donate Buttons</li>
-        <li>Ability to show 1 or 2 Assignments</li>
-        <li>(Default) vs (1 Slayer Token)</li>
-        <li>Important Info on Shown at All Times</li>
+        <li>Search Bar and Capture/Search Button</li>
+        <li>Ability to show single Assignments</li>
+        <li>Ability to show 2(vs) Assignments</li>
+        <li>Important Info Shown at All Times</li>
         <ul>
             <li>Wiki, Kills, & Assignment</li>
             <ul>
+                <li>Total Exp for Assignment</li>
                 <li>Hover Assignment Wiki</li>
                 <ul>
                     <li>Slayer Master Info</li>
                 </ul>
             </ul>
-            <li>Total Exp for Assignment</li>
             <li>Locations for Assignment</li>
             <li>Equipment Suggested for Assignment</li>
-            <li>Wiki, Creatures, & Creature Varants</li>
+            <li>Wiki, Creatures, & Creature Variants</li>
             <ul>
                 <li>Slayer Level & Exp</li>
                 <li>Weakness & Susceptible</li>
                 <li>Hover Creature Wiki</li>
                 <ul>
                     <li>Image</li>
-                    <li>Examine Info (Missing ATM)</li>
                     <li>Stats</li>
                     <ul>
-                        <li>Level</li>
+                        <li>Combat Level</li>
                         <li>Lifepoints</li>
                         <li>Defence</li>
                     </ul>
@@ -77,9 +100,69 @@
             </ul>
         </ul>
     </ul>
-        
+
+    <h2>04/27/2024 - Minor Bug Fixes</h2>
+    <p class="nistext">Fixed a bug that caused only the first assignment to get loaded and not the second one.</p>
+    <p class="nistext">Fixed a bug that caused the wiki links to not go to the currently loaded assignment.</p>
+
+    <h2>02/13/2022 - Minor but Needed</h2>
+    <p class="nistext">Finally have a little time to work on updating the Forum Post as well as the credits. Also going
+        to update the about section soon.</p>
+
+    <h2>12/24/2021 - Merry Christmas</h2>
+    <p class="nistext">Finished updating all the old changelog information, some may be missing but the most of it is
+        there for now. Need to backup discord info during development so I can check later.</p>
+    <p class="nistext">Adding about info section soon...</p>
+    <p class="nistext">Current App Features to Date</p>
+    <ul class="nistext">
+        <li>Help/About, Settings, & Donate Buttons</li>
+        <li>Search Bar and Button</li>
+        <li>Ability to show 1 or 2(vs) Assignments</li>
+        <li>Important Info Shown at All Times</li>
+        <ul>
+            <li>Wiki, Kills, & Assignment</li>
+            <ul>
+                <li>Total Exp for Assignment</li>
+                <li>Hover Assignment Wiki</li>
+                <ul>
+                    <li>Slayer Master Info</li>
+                </ul>
+            </ul>
+            <li>Locations for Assignment</li>
+            <li>Equipment Suggested for Assignment</li>
+            <li>Wiki, Creatures, & Creature Varants</li>
+            <ul>
+                <li>Slayer Level & Exp</li>
+                <li>Weakness & Susceptible</li>
+                <li>Hover Creature Wiki</li>
+                <ul>
+                    <li>Image</li>
+                    <li>Stats</li>
+                    <ul>
+                        <li>Combat Level</li>
+                        <li>Lifepoints</li>
+                        <li>Defence</li>
+                    </ul>
+                    <li>Exp</li>
+                    <ul>
+                        <li>Combat</li>
+                        <li>Lifepoints</li>
+                    </ul>
+                    <li>Max Hit</li>
+                    <ul>
+                        <li>Melee</li>
+                        <li>Range</li>
+                        <li>Magic</li>
+                        <li>Spec</li>
+                    </ul>
+                </ul>
+            </ul>
+        </ul>
+    </ul>
+
     <h2>12/09/2021 - Beta Updated</h2>
-    <p class="nistext">Massively adjusted the look and feel of the app. Moved a lot of data into a "Wiki Preview Screen" that shows up when hovering over the wiki button.</p>
+    <p class="nistext">Massively adjusted the look and feel of the app. Moved a lot of data into a "Wiki Preview Screen"
+        that shows up when hovering over the wiki button.</p>
     <p class="nistext">Adjusted and added a lot of the user experience features.</p>
     <ul class="nistext">
         <li>Hover Assigment Wiki for Slayer Master Info</li>
@@ -96,7 +179,8 @@
     </ul>
 
     <h2>11/19/2021 - Beta Released</h2>
-    <p class="nistext">Released the Beta to the public as it was working well enough for the public to use without worry about it crashing.</p>
+    <p class="nistext">Released the Beta to the public as it was working well enough for the public to use without worry
+        about it crashing.</p>
     <ul class="nistext">
         <li>Ability to search for an assignment</li>
         <li>Compare 2 Assignments side by side</li>
@@ -120,14 +204,22 @@
     </ul>
 
     <h2>11/09/2021 - Beta Getting Close</h2>
-    <p class="nistext">Fixed almost all the major bugs and most of the minor bugs, next is to finish adjusting the look of the new app.</p>
-    <p class="nistext">With a massive amount of help from <a class="link" onclick="openDiscordUser('Emma Kitty#6969');">Emma Kitty</a>, I was finally able to add the first bit of user experience features to the app making the list of creatures smaller and easiler to navigate. Also default selected creatures were added. These features still need refined more so they do everything they are supposed to.</p>
+    <p class="nistext">Fixed almost all the major bugs and most of the minor bugs, next is to finish adjusting the look
+        of the new app.</p>
+    <p class="nistext">With a massive amount of help from <a class="link"
+            onclick="openDiscordUser('Emma Kitty#6969');">Emma Kitty</a>, I was finally able to add the first bit of
+        user experience features to the app making the list of creatures smaller and easiler to navigate. Also default
+        selected creatures were added. These features still need refined more so they do everything they are supposed
+        to.</p>
 
     <h2>08/12/2021 - Changelog Added</h2>
-    <p class="nistext">Added the changelog and about webpages for the app; however, still haven't added them to the app intself. Still need to work on settings and updating the look and feel even more to work out the rest of the bugs.</p>
+    <p class="nistext">Added the changelog and about webpages for the app; however, still haven't added them to the app
+        intself. Still need to work on settings and updating the look and feel even more to work out the rest of the
+        bugs.</p>
 
     <h2>08/05/2021 - New Alpha Release</h2>
-    <p class="nistext">Released the alpha to the development channel on Discord with a few bugs and a lot of information missing to see how it worked for others before releasing to the public.</p>
+    <p class="nistext">Released the alpha to the development channel on Discord with a few bugs and a lot of information
+        missing to see how it worked for others before releasing to the public.</p>
     <p class="nistext">Features partially or fully added.</p>
     <ul class="nistext">
         <li>Ability to search for an assignment</li>
@@ -152,10 +244,13 @@
     </ul>
 
     <h2>07/09/2021 - Major Bug Found</h2>
-    <p class="nistext">Soon after doing the redesign of the Database Updater, a major bug came up that almost crashed the computer many times. Come to find out this was a bug in the compiler I was using and had nothing to do with the way I created the app at all.</p>
+    <p class="nistext">Soon after doing the redesign of the Database Updater, a major bug came up that almost crashed
+        the computer many times. Come to find out this was a bug in the compiler I was using and had nothing to do with
+        the way I created the app at all.</p>
 
     <h2>06/11/2021 - Redesign Revealed</h2>
-    <p class="nistext">Revealed the redesigned look and feel of the Slayer Assistant to the Development channel on RuneApps Discord. Public didn't have access to the app but got to see it's progress.</p>
+    <p class="nistext">Revealed the redesigned look and feel of the Slayer Assistant to the Development channel on
+        RuneApps Discord. Public didn't have access to the app but got to see it's progress.</p>
     <p class="nistext">Features partially or fully added.</p>
     <ul class="nistext">
         <li>Ability to search for an assignment</li>
@@ -180,8 +275,12 @@
     </ul>
 
     <h2>05/20/2021 - Redesign Started</h2>
-    <p class="nistext">Due to a major computer crash that required a re-install of the OS, all source for the database updater was lost. This lead to a complete redesign of the app for many reasons, but the biggest was due to the system not supporting cluster tasks.</p>
-    <p class="nistext">After a lot of discussion with <a class="link" onclick="openDiscordUser('Zykrow#8009');">Zykrow</a> on the matter, I started working on the new database updater and redesigning the Alt1 app.</p>
+    <p class="nistext">Due to a major computer crash that required a re-install of the OS, all source for the database
+        updater was lost. This lead to a complete redesign of the app for many reasons, but the biggest was due to the
+        system not supporting cluster tasks.</p>
+    <p class="nistext">After a lot of discussion with <a class="link"
+            onclick="openDiscordUser('Zykrow#8009');">Zykrow</a> on the matter, I started working on the new database
+        updater and redesigning the Alt1 app.</p>
     <p class="nistext">Features planned for the redesign.</p>
     <ul class="nistext">
         <li>Ability to search for an assignment</li>
@@ -210,8 +309,14 @@
     </ul>
 
     <h2>05/14/2021 - First Release</h2>
-    <p class="nistext">With a lot of assistance from <a class="link" onclick="openDiscordUser('Skillbert#9582');">Skillbert</a> on discord, I was finally able to create my first basic app on Alt1.</p>
-    <p class="nistext">Not long after the first app was working, I was able to turn it into the Slayer Assistant app. This was not without help from the rest of the discord comunity though. <a class="link" onclick="openDiscordUser('crazye97#2027');">crazye97</a> assisted a lot to get the first version created. <a class="link" onclick="openDiscordUser('troy236#2361');">troy236</a> gave me the answer to my last issue with the app allowing me to get it released.</p>
+    <p class="nistext">With a lot of assistance from <a class="link"
+            onclick="openDiscordUser('Skillbert#9582');">Skillbert</a> on discord, I was finally able to create my first
+        basic app on Alt1.</p>
+    <p class="nistext">Not long after the first app was working, I was able to turn it into the Slayer Assistant app.
+        This was not without help from the rest of the discord comunity though. <a class="link"
+            onclick="openDiscordUser('crazye97#2027');">crazye97</a> assisted a lot to get the first version created. <a
+            class="link" onclick="openDiscordUser('troy236#2361');">troy236</a> gave me the answer to my last issue with
+        the app allowing me to get it released.</p>
     <p class="nistext">Here is a list of all features supported in this version.</p>
     <ul class="nistext">
         <li>A button to read the task on screen incase the app had a glitch and wasn't working correctly</li>
@@ -233,10 +338,18 @@
 
     <h2>05/12/2021 - Project Started</h2>
     <p class="nistext">Here is a little history on how this app came to be.</p>
-    <p class="nistext">After a long conversation with <a class="link" onclick="openDiscordUser('Zykrow#8009');">Zykrow</a> on the viability of a new slayer app for Alt1, I started doing some research on creating Alt1 apps and come to find out it is not hard but not easy either; however, redesigning the wheel is bad practice so lets see if anyone else has already created an app like this.</p>
-    <p class="nistext">To my suprise there was one; however, it was outdated and no source code was known to exist for it. Oh well. Time to start designing it then.</p>
-    <p class="nistext">The original Slayer Decision App was used as a base for the look and feel for the new app I started creating. The original app can be found <a class="link" onclick="window.open('https://runeapps.org/forums/viewtopic.php?id=570');">here</a>.</p>
-    <p class="nistext">There was a lot discussed on what could be added to the app; however, quite a bit of it was for way later on once the app was made and working. So here is a list of what was planned for the first release.</p>
+    <p class="nistext">After a long conversation with <a class="link"
+            onclick="openDiscordUser('Zykrow#8009');">Zykrow</a> on the viability of a new slayer app for Alt1, I
+        started doing some research on creating Alt1 apps and come to find out it is not hard but not easy either;
+        however, redesigning the wheel is bad practice so lets see if anyone else has already created an app like this.
+    </p>
+    <p class="nistext">To my suprise there was one; however, it was outdated and no source code was known to exist for
+        it. Oh well. Time to start designing it then.</p>
+    <p class="nistext">The original Slayer Decision App was used as a base for the look and feel for the new app I
+        started creating. The original app can be found <a class="link"
+            onclick="window.open('https://runeapps.org/forums/viewtopic.php?id=570');">here</a>.</p>
+    <p class="nistext">There was a lot discussed on what could be added to the app; however, quite a bit of it was for
+        way later on once the app was made and working. So here is a list of what was planned for the first release.</p>
     <ul class="nistext">
         <li>Ability to search for an assignment</li>
         <li>Compare 2 Assignments side by side</li>
@@ -254,10 +367,13 @@
         </ul>
     </ul>
 
+    <div id="copyright" class="center">Copyright &copy;2021 Unlishema Dragonsworn</div>
+
     <script type="text/javascript">
         function openDiscordUser(user) {
             window.open('https://discordapp.com/users/' + user);
         }
     </script>
 </body>
+
 </html>

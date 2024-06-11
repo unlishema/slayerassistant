@@ -1,0 +1,3787 @@
+[
+    {
+        "default-creature": "Aberrant spectre#Slayer Tower",
+        "weakness": [],
+        "creatures": ["Aberrant spectre"],
+        "hidden-creatures": [],
+        "index": "Aberrant spectres",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Nose_peg\" title=\"Nose peg\" target=\"_blank\">Nose peg<\/a>",
+            "<a href=\"https://runescape.wiki/w/Slayer_helmet\" title=\"Slayer helmet\" target=\"_blank\">Slayer helmet<\/a>"
+        ],
+        "masters": [
+            "The Raptor",
+            "Chaeldar",
+            "Sumona",
+            "Duradel",
+            "Kuradal"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Pollnivneach_Slayer_Dungeon\" title=\"Pollnivneach Slayer Dungeon\" target=\"_blank\">Pollnivneach Slayer Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Slayer_Tower\" title=\"Slayer Tower\" target=\"_blank\">Slayer Tower<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Abyssal demon#Default",
+        "weakness": [],
+        "creatures": [
+            "Abyssal beast",
+            "Abyssal demon",
+            "Abyssal demon (elite)",
+            "Abyssal lord",
+            "Abyssal savage"
+        ],
+        "hidden-creatures": ["Abyssal demon (elite)"],
+        "index": "Abyssal Demons",
+        "alias": ["Abyssal demons"],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea",
+            "Mandrith"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Slayer_Tower\" title=\"Slayer Tower\" target=\"_blank\">Slayer Tower<\/a>",
+            "<a href=\"https://runescape.wiki/w/Kuradal%27s_Dungeon\" title=\"Kuradal's Dungeon\" target=\"_blank\">Kuradal's Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Abyssal_Area\" title=\"Abyssal Area\" target=\"_blank\">Abyssal Area<\/a>",
+            "<a href=\"https://runescape.wiki/w/Graveyard_of_Shadows\" title=\"Graveyard of Shadows\" target=\"_blank\">Graveyard of Shadows<\/a>",
+            "<a href=\"https://runescape.wiki/w/Forinthry_Dungeon\" title=\"Forinthry Dungeon\" target=\"_blank\">Forinthry Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Abyssal beast#Default",
+        "weakness": [],
+        "creatures": ["Abyssal beast"],
+        "hidden-creatures": [],
+        "index": "Abyssal beasts",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mandrith"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Senntisten_Asylum\" title=\"Senntisten Asylum\" target=\"_blank\">Senntisten Asylum<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Abyssal lord#Default",
+        "weakness": [],
+        "creatures": ["Abyssal lord"],
+        "hidden-creatures": [],
+        "index": "Abyssal lords",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mandrith"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Senntisten_Asylum\" title=\"Senntisten Asylum\" target=\"_blank\">Senntisten Asylum<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Abyssal savage#Asylum",
+        "weakness": [],
+        "creatures": ["Abyssal savage"],
+        "hidden-creatures": [],
+        "index": "Abyssal savages",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mandrith"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Senntisten_Asylum\" title=\"Senntisten Asylum\" target=\"_blank\">Senntisten Asylum<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Acheron mammoth#Default",
+        "weakness": [],
+        "creatures": ["Acheron mammoth"],
+        "hidden-creatures": [],
+        "index": "Acheron mammoths",
+        "alias": ["Acheron mammoth"],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Kuradal",
+            "Morvran",
+            "Laniakea",
+            "Mandrith"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Mammoth_iceberg\" title=\"Mammoth iceberg\" target=\"_blank\">Mammoth iceberg<\/a>",
+            "<a href=\"https://runescape.wiki/w/Frozen_Waste_Plateau\" title=\"Frozen Waste Plateau\" target=\"_blank\">Frozen Waste Plateau<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Adamant dragon#Default",
+        "weakness": [],
+        "creatures": ["Adamant dragon"],
+        "hidden-creatures": [],
+        "index": "Adamant dragons",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Anti-dragon_shield\" title=\"Anti-dragon shield\" target=\"_blank\">Anti-dragon shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dragonfire_shield\" title=\"Dragonfire shield\" target=\"_blank\">Dragonfire shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Antifire_potion\" class=\"mw-redirect\" title=\"Antifire potion\" target=\"_blank\">Antifire potion<\/a>"
+        ],
+        "masters": [
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Adamant_dragon_dungeon\" title=\"Adamant dragon dungeon\" target=\"_blank\">Adamant dragon dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dragonkin_Lair\" title=\"Dragonkin Lair\" target=\"_blank\">Dragonkin Lair<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Airut#Melee",
+        "weakness": [],
+        "creatures": ["Airut"],
+        "hidden-creatures": [],
+        "index": "Airut",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Kuradal%27s_Dungeon\" title=\"Kuradal's Dungeon\" target=\"_blank\">Kuradal's Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Piscatoris_Fishing_Colony\" title=\"Piscatoris Fishing Colony\" target=\"_blank\">Piscatoris Fishing Colony<\/a>",
+            "<a href=\"https://runescape.wiki/w/Mazcab\" title=\"Mazcab\" target=\"_blank\">Mazcab<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Ankou#Default",
+        "weakness": [],
+        "creatures": [
+            "Ankou",
+            "Ankou (Kili's Knowledge IV)",
+            "Ankou (elite)"
+        ],
+        "hidden-creatures": ["Ankou (elite)"],
+        "index": "Ankou",
+        "alias": ["Ankous"],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Mazchna"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Stronghold_of_Security\" title=\"Stronghold of Security\" target=\"_blank\">Stronghold of Security<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness_Crater\" title=\"Wilderness Crater\" target=\"_blank\">Wilderness Crater<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Aquanite#Default",
+        "weakness": [],
+        "creatures": [
+            "Aquanite",
+            "Aquanite (elite)"
+        ],
+        "hidden-creatures": ["Aquanite (elite)"],
+        "index": "Aquanites",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Slayer_master\" class=\"mw-redirect\" title=\"Slayer master\" target=\"_blank\">Slayer master<\/a>"],
+        "masters": [
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Fremennik_Slayer_Dungeon\" title=\"Fremennik Slayer Dungeon\" target=\"_blank\">Fremennik Slayer Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Armoured phantom#1",
+        "weakness": [],
+        "creatures": ["Armoured phantom"],
+        "hidden-creatures": [],
+        "index": "Armoured phantoms",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Crypt_(Wilderness)\" title=\"Crypt (Wilderness)\" target=\"_blank\">Crypt<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>",
+            "<a href=\"https://runescape.wiki/w/Fort_Forinthry\" title=\"Fort Forinthry\" target=\"_blank\">Fort Forinthry<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Capsarius#1",
+        "weakness": [],
+        "creatures": [
+            "Capsarius",
+            "Gladius",
+            "Legio Primus",
+            "Legio Quartus",
+            "Legio Quintus",
+            "Legio Secundus",
+            "Legio Sextus",
+            "Legio Tertius",
+            "Rorarius",
+            "Scutarius"
+        ],
+        "hidden-creatures": [],
+        "index": "Ascension members",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Monastery_of_Ascension\" title=\"Monastery of Ascension\" target=\"_blank\">Monastery of Ascension<\/a>"]
+    },
+    {
+        "default-creature": "Kree'arra#Normal",
+        "weakness": [],
+        "creatures": [
+            "Aviansie",
+            "Flight Kilisa",
+            "Flockleader Geerin",
+            "Kree'arra",
+            "Spiritual mage",
+            "Spiritual ranger",
+            "Spiritual warrior",
+            "Wingman Skree"
+        ],
+        "hidden-creatures": [
+            "Spiritual mage",
+            "Spiritual ranger",
+            "Spiritual warrior"
+        ],
+        "index": "Aviansies",
+        "alias": ["Aviansie"],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/God_Wars_Dungeon\" title=\"God Wars Dungeon\" target=\"_blank\">God Wars Dungeon<\/a>",
+            "<sup id=\"cite_ref-4\" class=\"reference\" target=\"_blank\" href=\"https://runescape.wiki\"><a href=\"#cite_note-4\">[n 3]<\/a><\/sup>"
+        ]
+    },
+    {
+        "default-creature": "Banshee#Default",
+        "weakness": [],
+        "creatures": [
+            "Banshee",
+            "Mighty banshee"
+        ],
+        "hidden-creatures": ["Mighty banshee"],
+        "index": "Banshees",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Earmuffs\" title=\"Earmuffs\" target=\"_blank\">Earmuffs<\/a>",
+            "<a href=\"https://runescape.wiki/w/Masked_earmuffs\" title=\"Masked earmuffs\" target=\"_blank\">Masked earmuffs<\/a>",
+            "<a href=\"https://runescape.wiki/w/Slayer_helmet\" title=\"Slayer helmet\" target=\"_blank\">Slayer helmet<\/a>"
+        ],
+        "masters": [
+            "Mazchna",
+            "Chaeldar",
+            "Sumona"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Slayer_Tower\" title=\"Slayer Tower\" target=\"_blank\">Slayer Tower<\/a>"]
+    },
+    {
+        "default-creature": "Basilisk#Large",
+        "weakness": [],
+        "creatures": ["Basilisk"],
+        "hidden-creatures": [],
+        "index": "Basilisks",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Mirror_shield\" title=\"Mirror shield\" target=\"_blank\">Mirror shield<\/a>"],
+        "masters": [
+            "Mazchna",
+            "Chaeldar",
+            "Sumona"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Fremennik_Slayer_Dungeon\" title=\"Fremennik Slayer Dungeon\" target=\"_blank\">Fremennik Slayer Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Pollnivneach_Slayer_Dungeon\" title=\"Pollnivneach Slayer Dungeon\" target=\"_blank\">Pollnivneach Slayer Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Bat#Default",
+        "weakness": [],
+        "creatures": [
+            "Albino bat",
+            "Bat",
+            "Giant bat",
+            "Warped bat"
+        ],
+        "hidden-creatures": [],
+        "index": "Bats",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Jacquelyn",
+            "Vannaka"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Silvarea\" title=\"Silvarea\" target=\"_blank\">Silvarea<\/a>",
+            "<a href=\"https://runescape.wiki/w/Morytania\" title=\"Morytania\" target=\"_blank\">Morytania<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Black bear#Default",
+        "weakness": [],
+        "creatures": [
+            "Angry bear",
+            "Bear cub",
+            "Black bear",
+            "Grizzly bear",
+            "Grizzly bear cub"
+        ],
+        "hidden-creatures": [
+            "Angry bear",
+            "Bear cub",
+            "Grizzly bear",
+            "Grizzly bear cub"
+        ],
+        "index": "Bears",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Vannaka"],
+        "locations": []
+    },
+    {
+        "default-creature": "Chicken#White",
+        "weakness": [],
+        "creatures": [
+            "Bird",
+            "Chicken",
+            "Chompy bird",
+            "Duck",
+            "Duckling",
+            "Jubbly bird",
+            "Mounted terrorbird gnome",
+            "Oomlie bird",
+            "Pekin",
+            "Penguin (monster)",
+            "Pernicious parrot",
+            "Rooster",
+            "Seagull",
+            "Tenacious toucan",
+            "Terrorbird",
+            "Undead chicken",
+            "Undead pekin"
+        ],
+        "hidden-creatures": [
+            "Bird",
+            "Chompy bird",
+            "Duckling",
+            "Jubbly bird",
+            "Mounted terrorbird gnome",
+            "Oomlie bird",
+            "Pekin",
+            "Penguin (monster)",
+            "Pernicious parrot",
+            "Rooster",
+            "Seagull",
+            "Tenacious toucan",
+            "Undead chicken",
+            "Undead pekin"
+        ],
+        "index": "Birds",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Turael",
+            "Jacquelyn"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Ape_Atoll\" title=\"Ape Atoll\" target=\"_blank\">Ape Atoll<\/a>",
+            "<a href=\"https://runescape.wiki/w/Crash_Island\" title=\"Crash Island\" target=\"_blank\">Crash Island<\/a>",
+            "<a href=\"https://runescape.wiki/w/Life_altar\" title=\"Life altar\" target=\"_blank\">Life altar<\/a>",
+            "<a href=\"https://runescape.wiki/w/Nature_altar\" title=\"Nature altar\" target=\"_blank\">Nature altar<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Black demon#1",
+        "weakness": [],
+        "creatures": [
+            "Balfrug Kreeyath",
+            "Black demon"
+        ],
+        "hidden-creatures": ["Balfrug Kreeyath"],
+        "index": "Black demons",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea",
+            "Mandrith"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Taverley_Dungeon\" title=\"Taverley Dungeon\" target=\"_blank\">Taverley Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Edgeville_Dungeon\" title=\"Edgeville Dungeon\" target=\"_blank\">Edgeville Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>",
+            "<a href=\"https://runescape.wiki/w/Brimhaven_Dungeon\" title=\"Brimhaven Dungeon\" target=\"_blank\">Brimhaven Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Queen Black Dragon#Normal",
+        "weakness": [],
+        "creatures": [
+            "Alanogard the Black",
+            "Baby black dragon",
+            "Black dragon",
+            "Black dragon (Dragonkin Laboratory)",
+            "King Black Dragon",
+            "Queen Black Dragon",
+            "Verak Lith",
+            "Verak Little"
+        ],
+        "hidden-creatures": [
+            "Alanogard the Black",
+            "Verak Lith",
+            "Verak Little"
+        ],
+        "index": "Black dragons",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Anti-dragon_shield\" title=\"Anti-dragon shield\" target=\"_blank\">Anti-dragon shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dragonfire_shield\" title=\"Dragonfire shield\" target=\"_blank\">Dragonfire shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Antifire_potion\" class=\"mw-redirect\" title=\"Antifire potion\" target=\"_blank\">Antifire potion<\/a>"
+        ],
+        "masters": [
+            "The Raptor",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Taverley_Dungeon\" title=\"Taverley Dungeon\" target=\"_blank\">Taverley Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Lava_Maze\" title=\"Lava Maze\" target=\"_blank\">Lava Maze<\/a>",
+            "<a href=\"https://runescape.wiki/w/Evil_Chicken%27s_Lair\" title=\"Evil Chicken's Lair\" target=\"_blank\">Evil Chicken's Lair<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Bloodveld#Default",
+        "weakness": [],
+        "creatures": [
+            "Bloodveld",
+            "Bloodveld (God Wars Dungeon)",
+            "Bloodveld (Heart of Gielinor)",
+            "Mutated bloodveld"
+        ],
+        "hidden-creatures": [],
+        "index": "Bloodveld",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Mazchna",
+            "Chaeldar",
+            "Sumona",
+            "Duradel",
+            "Kuradal"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Slayer_Tower\" title=\"Slayer Tower\" target=\"_blank\">Slayer Tower<\/a>",
+            "<a href=\"https://runescape.wiki/w/God_Wars_Dungeon\" title=\"God Wars Dungeon\" target=\"_blank\">God Wars Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Meiyerditch_Dungeon\" class=\"mw-redirect\" title=\"Meiyerditch Dungeon\" target=\"_blank\">Meiyerditch Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Blue dragon#1",
+        "weakness": [],
+        "creatures": [
+            "Baby blue dragon",
+            "Blue dragon",
+            "Vorkath"
+        ],
+        "hidden-creatures": [],
+        "index": "Blue dragons",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Anti-dragon_shield\" title=\"Anti-dragon shield\" target=\"_blank\">Anti-dragon shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dragonfire_shield\" title=\"Dragonfire shield\" target=\"_blank\">Dragonfire shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Antifire_potion\" class=\"mw-redirect\" title=\"Antifire potion\" target=\"_blank\">Antifire potion<\/a>"
+        ],
+        "masters": [
+            "Chaeldar",
+            "Sumona",
+            "Kuradal",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Taverley_Dungeon\" title=\"Taverley Dungeon\" target=\"_blank\">Taverley Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ogre_Enclave\" title=\"Ogre Enclave\" target=\"_blank\">Ogre Enclave<\/a>",
+            "<a href=\"https://runescape.wiki/w/Heroes%27_Guild\" title=\"Heroes' Guild\" target=\"_blank\">Heroes' Guild<\/a>",
+            "<a href=\"https://runescape.wiki/w/Kuradal%27s_Dungeon\" title=\"Kuradal's Dungeon\" target=\"_blank\">Kuradal's Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Bound skeleton#1",
+        "weakness": [],
+        "creatures": ["Bound skeleton"],
+        "hidden-creatures": [],
+        "index": "Bound skeletons",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Mazchna",
+            "Chaeldar"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Fort_Forinthry\" title=\"Fort Forinthry\" target=\"_blank\">Fort Forinthry<\/a>"]
+    },
+    {
+        "default-creature": "Brine rat#Default",
+        "weakness": [],
+        "creatures": ["Brine rat"],
+        "hidden-creatures": [],
+        "index": "Brine rats",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Mazchna",
+            "Chaeldar"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Brine_Rat_Cavern\" title=\"Brine Rat Cavern\" target=\"_blank\">Brine Rat Cavern<\/a>"]
+    },
+    {
+        "default-creature": "Bronze dragon#Default",
+        "weakness": [],
+        "creatures": ["Bronze dragon"],
+        "hidden-creatures": [],
+        "index": "Bronze dragons",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Anti-dragon_shield\" title=\"Anti-dragon shield\" target=\"_blank\">Anti-dragon shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dragonfire_shield\" title=\"Dragonfire shield\" target=\"_blank\">Dragonfire shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Antifire_potion\" class=\"mw-redirect\" title=\"Antifire potion\" target=\"_blank\">Antifire potion<\/a>"
+        ],
+        "masters": [
+            "Chaeldar",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Brimhaven_Dungeon\" title=\"Brimhaven Dungeon\" target=\"_blank\">Brimhaven Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Camel Warrior#Default",
+        "weakness": [],
+        "creatures": ["Camel Warrior"],
+        "hidden-creatures": [],
+        "index": "Camel warriors",
+        "alias": ["Camel Warrior"],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Camel_Warriors_island\" title=\"Camel Warriors island\" target=\"_blank\">Camel Warriors island<\/a>"]
+    },
+    {
+        "default-creature": "Catablepon#Default",
+        "weakness": [],
+        "creatures": ["Catablepon"],
+        "hidden-creatures": [],
+        "index": "Catablepon",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Vannaka"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Stronghold_of_Security\" title=\"Stronghold of Security\" target=\"_blank\">Stronghold of Security<\/a>"]
+    },
+    {
+        "default-creature": "Cave bug#Level 11",
+        "weakness": [],
+        "creatures": ["Cave bug"],
+        "hidden-creatures": [],
+        "index": "Cave bugs",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Turael",
+            "Jacquelyn"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Burthorpe_Slayer_Cave\" title=\"Burthorpe Slayer Cave\" target=\"_blank\">Burthorpe Slayer Cave<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dorgesh-Kaan_South_Dungeon\" title=\"Dorgesh-Kaan South Dungeon\" target=\"_blank\">Dorgesh-Kaan South Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Lumbridge_Swamp_Caves\" title=\"Lumbridge Swamp Caves\" target=\"_blank\">Lumbridge Swamp Caves<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Cave crawler#Level 24",
+        "weakness": [],
+        "creatures": ["Cave crawler"],
+        "hidden-creatures": [],
+        "index": "Cave crawlers",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Mazchna",
+            "Chaeldar",
+            "Sumona"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Fremennik_Slayer_Dungeon\" title=\"Fremennik Slayer Dungeon\" target=\"_blank\">Fremennik Slayer Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Lumbridge_Swamp_Caves\" title=\"Lumbridge Swamp Caves\" target=\"_blank\">Lumbridge Swamp Caves<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dorgesh-Kaan_South_Dungeon\" title=\"Dorgesh-Kaan South Dungeon\" target=\"_blank\">Dorgesh-Kaan South Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Pollnivneach_Slayer_Dungeon\" title=\"Pollnivneach Slayer Dungeon\" target=\"_blank\">Pollnivneach Slayer Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Unspeakable horror#Default",
+        "weakness": [],
+        "creatures": [
+            "Cave horror",
+            "Cave horror (elite)",
+            "Unspeakable horror",
+            "Unspeakable horror (elite)"
+        ],
+        "hidden-creatures": [
+            "Cave horror (elite)",
+            "Unspeakable horror (elite)"
+        ],
+        "index": "Cave horrors",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Witchwood_icon\" title=\"Witchwood icon\" target=\"_blank\">Witchwood icon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Light_source\" class=\"mw-redirect\" title=\"Light source\" target=\"_blank\">Light source<\/a>"
+        ],
+        "masters": [
+            "Chaeldar",
+            "Sumona"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Mos_Le%27Harmless_Caves\" title=\"Mos Le'Harmless Caves\" target=\"_blank\">Mos Le'Harmless Caves<\/a>"]
+    },
+    {
+        "default-creature": "Cave slime#Default",
+        "weakness": [],
+        "creatures": [
+            "Cave slime",
+            "Giant slime",
+            "Laboratory slime"
+        ],
+        "hidden-creatures": [
+            "Giant slime",
+            "Laboratory slime"
+        ],
+        "index": "Cave slimes",
+        "alias": ["Cave slime"],
+        "equipment": [],
+        "masters": [
+            "Jacquelyn",
+            "Vannaka"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Lumbridge_Swamp_Caves\" title=\"Lumbridge Swamp Caves\" target=\"_blank\">Lumbridge Swamp Caves<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dorgesh-Kaan_South_Dungeon\" title=\"Dorgesh-Kaan South Dungeon\" target=\"_blank\">Dorgesh-Kaan South Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Celestial dragon#Default",
+        "weakness": [],
+        "creatures": [
+            "Astellarn",
+            "Celestial dragon",
+            "Celestial dragon (Dragonkin Laboratory)",
+            "Elegorn the Celestial"
+        ],
+        "hidden-creatures": [
+            "Astellarn",
+            "Celestial dragon (Dragonkin Laboratory)"
+        ],
+        "index": "Celestial dragons",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Super_antifire\" title=\"Super antifire\" target=\"_blank\">Super antifire<\/a>"],
+        "masters": [
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Dragontooth_Island_resource_dungeon\" title=\"Dragontooth Island resource dungeon\" target=\"_blank\">Dragontooth Island resource dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Chaos Giant#Default",
+        "weakness": [],
+        "creatures": ["Chaos Giant"],
+        "hidden-creatures": [],
+        "index": "Chaos giants",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Barendir\" title=\"Barendir\" target=\"_blank\">Barendir<\/a>"]
+    },
+    {
+        "default-creature": "Cockatrice#Default",
+        "weakness": [],
+        "creatures": ["Cockatrice"],
+        "hidden-creatures": [],
+        "index": "Cockatrice",
+        "alias": ["Cockatrices"],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Mirror_shield\" title=\"Mirror shield\" target=\"_blank\">Mirror shield<\/a>"],
+        "masters": ["Mazchna"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Fremennik_Slayer_Dungeon\" title=\"Fremennik Slayer Dungeon\" target=\"_blank\">Fremennik Slayer Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Cockroach drone#Default",
+        "weakness": [],
+        "creatures": [
+            "Cockroach drone",
+            "Cockroach soldier",
+            "Cockroach worker",
+            "Warped cockroach"
+        ],
+        "hidden-creatures": [],
+        "index": "Cockroaches",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Vannaka"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Lumbridge_Catacombs\" title=\"Lumbridge Catacombs\" target=\"_blank\">Lumbridge Catacombs<\/a>",
+            "<a href=\"https://runescape.wiki/w/Stronghold_of_Player_Safety\" title=\"Stronghold of Player Safety\" target=\"_blank\">Stronghold of Player Safety<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Corrupted scorpion#Default",
+        "weakness": [],
+        "creatures": [
+            "Corrupted dust devil",
+            "Corrupted kalphite guardian",
+            "Corrupted kalphite marauder",
+            "Corrupted lizard",
+            "Corrupted scarab",
+            "Corrupted scorpion",
+            "Corrupted worker"
+        ],
+        "hidden-creatures": [],
+        "index": "Corrupted creatures",
+        "alias": [
+            "Corrupted dust devils",
+            "Corrupted kalphites",
+            "Corrupted lizards",
+            "Corrupted scarabs",
+            "Corrupted scorpions",
+            "Corrupted worker"
+        ],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Feather_of_Ma%27at\" title=\"Feather of Ma'at\" target=\"_blank\">Feather of Ma'at<\/a>"],
+        "masters": [
+            "Sumona",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Sophanem_Slayer_Dungeon\" title=\"Sophanem Slayer Dungeon\" target=\"_blank\">Sophanem Slayer Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Cow#Standard (1)",
+        "weakness": [],
+        "creatures": [
+            "Cow",
+            "Cow calf",
+            "Super Cow",
+            "Undead cow"
+        ],
+        "hidden-creatures": [
+            "Cow calf",
+            "Super Cow",
+            "Undead cow"
+        ],
+        "index": "Cows",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Turael",
+            "Jacquelyn"
+        ],
+        "locations": []
+    },
+    {
+        "default-creature": "Crawling hand#10a",
+        "weakness": [],
+        "creatures": [
+            "Crawling hand",
+            "Skeletal hand",
+            "Zombie hand"
+        ],
+        "hidden-creatures": [
+            "Skeletal hand",
+            "Zombie hand"
+        ],
+        "index": "Crawling hands",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Turael",
+            "Chaeldar"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Burthorpe_Slayer_Cave\" title=\"Burthorpe Slayer Cave\" target=\"_blank\">Burthorpe Slayer Cave<\/a>",
+            "<a href=\"https://runescape.wiki/w/Slayer_Tower\" title=\"Slayer Tower\" target=\"_blank\">Slayer Tower<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Edimmu#Default",
+        "weakness": [],
+        "creatures": [
+            "Edimmu",
+            "Edimmu (elite)",
+            "Frost dragon",
+            "Kal'gerion demon",
+            "Seeker",
+            "Soulgazer"
+        ],
+        "hidden-creatures": ["Edimmu (elite)"],
+        "index": "Creatures of Daemonheim",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Laniakea"],
+        "locations": []
+    },
+    {
+        "default-creature": "Bulbous crawler#Default",
+        "weakness": [],
+        "creatures": [
+            "Bulbous crawler",
+            "Moss golem",
+            "Vinecrawler"
+        ],
+        "hidden-creatures": [],
+        "index": "Creatures of the Lost Grove",
+        "alias": ["Lost Grove creatures"],
+        "equipment": [],
+        "masters": [
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/The_Lost_Grove\" title=\"The Lost Grove\" target=\"_blank\">The Lost Grove<\/a>"]
+    },
+    {
+        "default-creature": "Automaton Generator#Post-quest",
+        "weakness": [],
+        "creatures": [
+            "Automaton Generator",
+            "Automaton Guardian",
+            "Automaton Tracer"
+        ],
+        "hidden-creatures": [],
+        "index": "Cres's creations",
+        "alias": ["Automatons"],
+        "equipment": [],
+        "masters": [
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Guthix%27s_Cave\" class=\"mw-redirect\" title=\"Guthix's Cave\" target=\"_blank\">Guthix's Cave<\/a>"]
+    },
+    {
+        "default-creature": "Crocodile#40",
+        "weakness": [],
+        "creatures": [
+            "Crocodile",
+            "Crocodile akh",
+            "Ol' Sawtooth",
+            "Sea crocodile"
+        ],
+        "hidden-creatures": [
+            "Ol' Sawtooth",
+            "Sea crocodile"
+        ],
+        "index": "Crocodiles",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Mazchna",
+            "Sumona"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/River_Elid\" title=\"River Elid\" target=\"_blank\">Elid<\/a>",
+            "<a href=\"https://runescape.wiki/w/Kharidian_Desert\" title=\"Kharidian Desert\" target=\"_blank\">Kharidian Desert<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Crystal Shapeshifter#Magic",
+        "weakness": [],
+        "creatures": ["Crystal Shapeshifter"],
+        "hidden-creatures": [],
+        "index": "Crystal shapeshifters",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Tarddiad\" title=\"Tarddiad\" target=\"_blank\">Tarddiad<\/a>"]
+    },
+    {
+        "default-creature": "Cyclops#57 (Crush)",
+        "weakness": [],
+        "creatures": [
+            "Cyclops",
+            "Cyclossus"
+        ],
+        "hidden-creatures": ["Cyclossus"],
+        "index": "Cyclopes",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mazchna"],
+        "locations": [
+            "<span class=\"floornumber\" target=\"_blank\" href=\"https://runescape.wiki\"><span class=\"floornumber-gb\">2<sup class=\"floornumber-ordinal-suffix\">nd<\/sup>&nbsp;floor<sup class=\"floornumber-help noexcerpt\">[<span class=\"fact-text floor-convention\" title=\"British convention; floor 3 in the US\">UK<\/span>]<\/sup><\/span><span class=\"floornumber-us noexcerpt\">3<sup class=\"floornumber-ordinal-suffix\">rd<\/sup>&nbsp;floor<sup class=\"floornumber-help noexcerpt\">[<span class=\"fact-text floor-convention\" title=\"US convention; floor 2 in the UK\">US<\/span>]<\/sup><\/span><\/span>",
+            "<a href=\"https://runescape.wiki/w/Warriors%27_Guild\" title=\"Warriors' Guild\" target=\"_blank\">Warriors' Guild<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ardougne_Zoo\" title=\"Ardougne Zoo\" target=\"_blank\">Ardougne Zoo<\/a>",
+            "<a href=\"https://runescape.wiki/w/God_Wars_Dungeon\" title=\"God Wars Dungeon\" target=\"_blank\">God Wars Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Dagannoth Rex#Default",
+        "weakness": [],
+        "creatures": [
+            "Dagannoth (Lighthouse)",
+            "Dagannoth (Waterbirth Island)",
+            "Dagannoth (Waterbirth Island, ranged)",
+            "Dagannoth Prime",
+            "Dagannoth Rex",
+            "Dagannoth Supreme",
+            "Dagannoth fledgeling",
+            "Dagannoth guardian",
+            "Dagannoth spawn"
+        ],
+        "hidden-creatures": [
+            "Dagannoth (Lighthouse)",
+            "Dagannoth (Waterbirth Island)",
+            "Dagannoth (Waterbirth Island, ranged)",
+            "Dagannoth fledgeling",
+            "Dagannoth guardian",
+            "Dagannoth spawn"
+        ],
+        "index": "Dagannoth",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Chaeldar",
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>",
+            "<a href=\"https://runescape.wiki/w/Lighthouse\" title=\"Lighthouse\" target=\"_blank\">Lighthouse<\/a>",
+            "<a href=\"https://runescape.wiki/w/Waterbirth_Island\" title=\"Waterbirth Island\" target=\"_blank\">Waterbirth Island<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Dark beast#19,000 life points",
+        "weakness": [],
+        "creatures": [
+            "Dark beast",
+            "Dark beast (elite)",
+            "Revenant dark beast"
+        ],
+        "hidden-creatures": [
+            "Dark beast (elite)",
+            "Revenant dark beast"
+        ],
+        "index": "Dark beasts",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea",
+            "Mandrith"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Kuradal%27s_Dungeon\" title=\"Kuradal's Dungeon\" target=\"_blank\">Kuradal's Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Temple_of_Light\" title=\"Temple of Light\" target=\"_blank\">Temple of Light<\/a>"
+        ]
+    },
+    {
+        "default-creature": "K'ril Tsutsaroth#Normal",
+        "weakness": [],
+        "creatures": [
+            "Abyssal beast",
+            "Abyssal demon",
+            "Abyssal lord",
+            "Abyssal savage",
+            "Balfrug Kreeyath",
+            "Black demon",
+            "Cerberus Juvenile",
+            "Gargoyle",
+            "Greater demon",
+            "Greater demon ash lord",
+            "Greater demon berserker",
+            "Greater demon brute",
+            "Greater demon pyromancer",
+            "Greater demon sage",
+            "Greater demon savage",
+            "Imp",
+            "Imp scavenger",
+            "K'ril Tsutsaroth",
+            "Kal'gerion demon",
+            "Kal'gerion demon (The Shadow Reef)",
+            "Lesser demon",
+            "Revenant demon",
+            "Ripper Demon",
+            "Tormented demon",
+            "Tstanon Karlak",
+            "Yor'Ger the Deceiver",
+            "Zakl'n Gritch"
+        ],
+        "hidden-creatures": [
+            "Gargoyle",
+            "Imp",
+            "Kal'gerion demon",
+            "Kal'gerion demon (The Shadow Reef)",
+            "Tstanon Karlak",
+            "Yor'Ger the Deceiver",
+            "Zakl'n Gritch"
+        ],
+        "index": "Demons",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Laniakea"
+        ],
+        "locations": []
+    },
+    {
+        "default-creature": "Corrupted lizard#Default",
+        "weakness": [],
+        "creatures": [
+            "Corrupted lizard",
+            "Desert Lizard",
+            "Lizard",
+            "Small Lizard"
+        ],
+        "hidden-creatures": [],
+        "index": "Desert lizards",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Ice_cooler\" title=\"Ice cooler\" target=\"_blank\">Ice cooler<\/a>"],
+        "masters": [
+            "Mazchna",
+            "Sumona"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Kharidian_Desert\" title=\"Kharidian Desert\" target=\"_blank\">Kharidian Desert<\/a>"]
+    },
+    {
+        "default-creature": "Desert strykewyrm#Default",
+        "weakness": [],
+        "creatures": ["Desert strykewyrm"],
+        "hidden-creatures": [],
+        "index": "Desert strykewyrms",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Al_Kharid\" title=\"Al Kharid\" target=\"_blank\">Al Kharid<\/a>"]
+    },
+    {
+        "default-creature": "Ripper dinosaur#Normal",
+        "weakness": [],
+        "creatures": [
+            "Baby Dinosaur Skeleton",
+            "Brutish dinosaur",
+            "Feral Dinosaur",
+            "Orikalka",
+            "Osseous",
+            "Pthentraken",
+            "Rathis",
+            "Ripper dinosaur",
+            "Venomous dinosaur"
+        ],
+        "hidden-creatures": [],
+        "index": "Dinosaurs",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Laniakea"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Anachronia\" title=\"Anachronia\" target=\"_blank\">Anachronia<\/a>"]
+    },
+    {
+        "default-creature": "Jackal#Default",
+        "weakness": [],
+        "creatures": [
+            "Guard dog",
+            "Jackal",
+            "Shadow Hound",
+            "Wild dog"
+        ],
+        "hidden-creatures": [
+            "Guard dog",
+            "Shadow Hound",
+            "Wild dog"
+        ],
+        "index": "Dogs",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mazchna"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Ardougne\" title=\"Ardougne\" target=\"_blank\">Ardougne<\/a>",
+            "<a href=\"https://runescape.wiki/w/McGrubor%27s_Wood\" title=\"McGrubor's Wood\" target=\"_blank\">McGrubor's Wood<\/a>",
+            "<a href=\"https://runescape.wiki/w/Black_Arm_Gang\" title=\"Black Arm Gang\" target=\"_blank\">Black Arm Gang<\/a>",
+            "<a href=\"https://runescape.wiki/w/Brimhaven\" title=\"Brimhaven\" target=\"_blank\">Brimhaven<\/a>",
+            "<a href=\"https://runescape.wiki/w/Brimhaven_Dungeon\" title=\"Brimhaven Dungeon\" target=\"_blank\">Brimhaven Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Queen Black Dragon#Normal",
+        "weakness": [],
+        "creatures": [
+            "Adamant dragon",
+            "Alanogard the Black",
+            "Astellarn",
+            "Baby blue dragon",
+            "Baby red dragon",
+            "Black dragon",
+            "Black dragon (Dragonkin Laboratory)",
+            "Black stone dragon",
+            "Blue dragon",
+            "Bronze dragon",
+            "Brutal green dragon",
+            "Celestial dragon",
+            "Celestial dragon (Dragonkin Laboratory)",
+            "Dragonstone dragon",
+            "Dragonstone dragon (Dragonkin Laboratory)",
+            "Elegorn the Celestial",
+            "Frost dragon",
+            "Green dragon",
+            "Hydrix dragon",
+            "Hydrix dragon (Dragonkin Laboratory)",
+            "Iron dragon",
+            "King Black Dragon",
+            "Mithril dragon",
+            "Nodon artificer",
+            "Nodon engineer",
+            "Nodon guard",
+            "Nodon hunter",
+            "Onyx dragon",
+            "Onyx dragon (Dragonkin Laboratory)",
+            "Queen Black Dragon",
+            "Red dragon",
+            "Red dragon (Dragonkin Laboratory)",
+            "Rune dragon",
+            "Sangri the Red",
+            "Siege engine",
+            "Steel dragon",
+            "Verak Lith",
+            "Verak Little",
+            "Vorkath"
+        ],
+        "hidden-creatures": [],
+        "index": "Dragons",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Laniakea"
+        ],
+        "locations": []
+    },
+    {
+        "default-creature": "Corrupted dust devil#Default",
+        "weakness": [],
+        "creatures": [
+            "Corrupted dust devil",
+            "Dust devil",
+            "Dust devil (elite)"
+        ],
+        "hidden-creatures": ["Dust devil (elite)"],
+        "index": "Dust devils",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Face_mask\" title=\"Face mask\" target=\"_blank\">Face mask<\/a>",
+            "<a href=\"https://runescape.wiki/w/Masked_earmuffs\" title=\"Masked earmuffs\" target=\"_blank\">Masked earmuffs<\/a>",
+            "<a href=\"https://runescape.wiki/w/Slayer_helmet\" title=\"Slayer helmet\" target=\"_blank\">Slayer helmet<\/a>",
+            "<a href=\"https://runescape.wiki/w/Gas_mask\" title=\"Gas mask\" target=\"_blank\">Gas mask<\/a>"
+        ],
+        "masters": [
+            "Chaeldar",
+            "Sumona",
+            "Duradel",
+            "Kuradal"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Smoke_Dungeon\" title=\"Smoke Dungeon\" target=\"_blank\">Smoke Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Earth warrior#Default",
+        "weakness": [],
+        "creatures": [
+            "Earth warrior",
+            "Earth warrior (elite)"
+        ],
+        "hidden-creatures": ["Earth warrior (elite)"],
+        "index": "Earth warriors",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mazchna"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Edgeville_Dungeon\" title=\"Edgeville Dungeon\" target=\"_blank\">Edgeville Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Edimmu#Default",
+        "weakness": [],
+        "creatures": [
+            "Edimmu",
+            "Edimmu (elite)"
+        ],
+        "hidden-creatures": ["Edimmu (elite)"],
+        "index": "Edimmu",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Dungeoneering\" title=\"Dungeoneering\" target=\"_blank\">Dungeoneering<\/a>"],
+        "masters": [
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Edimmu_resource_dungeon\" title=\"Edimmu resource dungeon\" target=\"_blank\">Edimmu resource dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Elf warrior#Melee",
+        "weakness": [],
+        "creatures": [
+            "Cadarn magus",
+            "Cadarn ranger",
+            "Elf warrior",
+            "Iorwerth guard",
+            "Iorwerth scout",
+            "Knight of Ardougne (West Ardougne)",
+            "Mourner (Mourner Tunnels)",
+            "Seren archer",
+            "Seren mage",
+            "Seren warrior"
+        ],
+        "hidden-creatures": [
+            "Knight of Ardougne (West Ardougne)",
+            "Mourner (Mourner Tunnels)",
+            "Seren archer",
+            "Seren mage",
+            "Seren warrior"
+        ],
+        "index": "Elves",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Chaeldar",
+            "Sumona",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Lletya\" title=\"Lletya\" target=\"_blank\">Lletya<\/a>",
+            "<a href=\"https://runescape.wiki/w/Elf_Camp\" title=\"Elf Camp\" target=\"_blank\">Elf Camp<\/a>",
+            "<a href=\"https://runescape.wiki/w/Prifddinas\" title=\"Prifddinas\" target=\"_blank\">Prifddinas<\/a>",
+            "<a href=\"https://runescape.wiki/w/Heart_of_Gielinor\" title=\"Heart of Gielinor\" target=\"_blank\">Heart of Gielinor<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Fetid zombie#1",
+        "weakness": [],
+        "creatures": ["Fetid zombie"],
+        "hidden-creatures": [],
+        "index": "Fetid zombies",
+        "alias": [],
+        "equipment": [],
+        "masters": ["The Raptor"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Crypt_(Wilderness)\" title=\"Crypt (Wilderness)\" target=\"_blank\">crypt<\/a>",
+            "<a href=\"https://runescape.wiki/w/Fort_Forinthry\" title=\"Fort Forinthry\" target=\"_blank\">Fort Forinthry<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Fever spider#Default",
+        "weakness": [],
+        "creatures": ["Fever spider"],
+        "hidden-creatures": [],
+        "index": "Fever spiders",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Slayer_gloves\" title=\"Slayer gloves\" target=\"_blank\">Slayer gloves<\/a>"],
+        "masters": ["Chaeldar"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Braindeath_Island\" title=\"Braindeath Island\" target=\"_blank\">Braindeath Island<\/a>"]
+    },
+    {
+        "default-creature": "Fire giant#Default",
+        "weakness": [],
+        "creatures": ["Fire giant"],
+        "hidden-creatures": [],
+        "index": "Fire giants",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Chaeldar",
+            "Sumona",
+            "Duradel",
+            "Kuradal"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Brimhaven_Dungeon\" title=\"Brimhaven Dungeon\" target=\"_blank\">Brimhaven Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>",
+            "<a href=\"https://runescape.wiki/w/Smoke_Dungeon\" title=\"Smoke Dungeon\" target=\"_blank\">Smoke Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Resource_dungeon\" class=\"mw-redirect\" title=\"Resource dungeon\" target=\"_blank\">Resource dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Waterfall_Dungeon\" title=\"Waterfall Dungeon\" target=\"_blank\">Waterfall Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Flesh Crawler#Default",
+        "weakness": [],
+        "creatures": ["Flesh Crawler"],
+        "hidden-creatures": [],
+        "index": "Fleshcrawlers",
+        "alias": ["Flesh Crawlers"],
+        "equipment": [],
+        "masters": ["Vannaka"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Stronghold_of_Security\" title=\"Stronghold of Security\" target=\"_blank\">Stronghold of Security<\/a>"]
+    },
+    {
+        "default-creature": "Plague frog#Default",
+        "weakness": [],
+        "creatures": [
+            "Big frog",
+            "Frog",
+            "Frogeel",
+            "Giant frog",
+            "Plague frog",
+            "Swamp frog"
+        ],
+        "hidden-creatures": [
+            "Big frog",
+            "Frogeel",
+            "Giant frog"
+        ],
+        "index": "Frogs",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Jacquelyn",
+            "Vannaka"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Lumbridge_Swamp_Caves\" title=\"Lumbridge Swamp Caves\" target=\"_blank\">Lumbridge Swamp Caves<\/a>",
+            "<a href=\"https://runescape.wiki/w/Lumbridge_Swamp\" title=\"Lumbridge Swamp\" target=\"_blank\">Lumbridge Swamp<\/a>",
+            "<a href=\"https://runescape.wiki/w/Sophanem\" title=\"Sophanem\" target=\"_blank\">Sophanem<\/a>",
+            "<a href=\"https://runescape.wiki/w/Jade_vine_maze\" title=\"Jade vine maze\" target=\"_blank\">Jade vine maze<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Fungal mage#Normal",
+        "weakness": [],
+        "creatures": ["Fungal mage"],
+        "hidden-creatures": [],
+        "index": "Fungal magi",
+        "alias": ["Fungal mages"],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Neem_oil\" title=\"Neem oil\" target=\"_blank\">Neem oil<\/a>"],
+        "masters": [
+            "Chaeldar",
+            "Sumona",
+            "Duradel"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Polypore_Dungeon\" title=\"Polypore Dungeon\" target=\"_blank\">Polypore Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Ganodermic beast#Normal",
+        "weakness": [],
+        "creatures": [
+            "Ganodermic beast",
+            "Ganodermic runt"
+        ],
+        "hidden-creatures": [],
+        "index": "Ganodermic creatures",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Neem_oil\" title=\"Neem oil\" target=\"_blank\">Neem oil<\/a>"],
+        "masters": [
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Polypore_Dungeon\" title=\"Polypore Dungeon\" target=\"_blank\">Polypore Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Gargoyle#Regular",
+        "weakness": [],
+        "creatures": ["Gargoyle"],
+        "hidden-creatures": [],
+        "index": "Gargoyles",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Rock_hammer\" title=\"Rock hammer\" target=\"_blank\">Rock hammer<\/a>"],
+        "masters": [
+            "Chaeldar",
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea",
+            "Mandrith"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>",
+            "<a href=\"https://runescape.wiki/w/Kuradal%27s_Dungeon\" title=\"Kuradal's Dungeon\" target=\"_blank\">Kuradal's Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ruins_(east)\" title=\"Ruins (east)\" target=\"_blank\">Ruins (east)<\/a>",
+            "<a href=\"https://runescape.wiki/w/Slayer_Tower\" title=\"Slayer Tower\" target=\"_blank\">Slayer Tower<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Gelatinous abomination#Default",
+        "weakness": [],
+        "creatures": ["Gelatinous abomination"],
+        "hidden-creatures": [],
+        "index": "Gelatinous abominations",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Spiked_gloves\" class=\"mw-redirect\" title=\"Spiked gloves\" target=\"_blank\">Spiked gloves<\/a>"],
+        "masters": ["Turael"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Burthorpe_Slayer_Cave\" title=\"Burthorpe Slayer Cave\" target=\"_blank\">Burthorpe Slayer Cave<\/a>"]
+    },
+    {
+        "default-creature": "Hydrix dragon#Default",
+        "weakness": [],
+        "creatures": [
+            "Black stone dragon",
+            "Dragonstone dragon",
+            "Dragonstone dragon (Dragonkin Laboratory)",
+            "Hydrix dragon",
+            "Hydrix dragon (Dragonkin Laboratory)",
+            "Onyx dragon",
+            "Onyx dragon (Dragonkin Laboratory)"
+        ],
+        "hidden-creatures": [],
+        "index": "Gemstone dragons",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Super_anti-fire_potion\" class=\"mw-redirect\" title=\"Super anti-fire potion\" target=\"_blank\">Super anti-fire potion<\/a>"],
+        "masters": [
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Gemstone_cavern\" title=\"Gemstone cavern\" target=\"_blank\">Gemstone cavern<\/a>"]
+    },
+    {
+        "default-creature": "Ghost#1",
+        "weakness": [],
+        "creatures": [
+            "Aberrant spectre",
+            "Ahrim the Blighted",
+            "Akrisae the Doomed",
+            "Ankou",
+            "Banshee",
+            "Dharok the Wretched",
+            "Edimmu",
+            "Edimmu (elite)",
+            "Ghast",
+            "Ghost",
+            "Ghost (Abandoned Mine)",
+            "Ghost (Ourania Runecrafting Altar)",
+            "Ghost (Shattered Worlds)",
+            "Ghost (Spirit of Summer)",
+            "Ghost (Stronghold of Security)",
+            "Ghost healer",
+            "Ghostly troll bruiser",
+            "Ghostly troll thrower",
+            "Ghostly warrior",
+            "Guthan the Infested",
+            "Karil the Tainted",
+            "Linza the Disgraced",
+            "Masuta the Descended",
+            "Mighty banshee",
+            "Revenant cyclops",
+            "Revenant dark beast",
+            "Revenant demon",
+            "Revenant dragon",
+            "Revenant goblin",
+            "Revenant hellhound",
+            "Revenant hobgoblin",
+            "Revenant icefiend",
+            "Revenant imp",
+            "Revenant knight",
+            "Revenant ork",
+            "Revenant pyrefiend",
+            "Revenant vampyre",
+            "Revenant werewolf",
+            "Risen ghost",
+            "Shade",
+            "Shadow warrior",
+            "Spiritual mage",
+            "Spiritual ranger",
+            "Spiritual warrior",
+            "Torag the Corrupted",
+            "Tormented soul (Uncharted Isles)",
+            "Tormented wraith",
+            "Tortured soul (Port Phasmatys)",
+            "Verac the Defiled",
+            "Wight",
+            "Wight (Missing, Presumed Death)",
+            "Wight ranger",
+            "Wight ranger (Sliske's Endgame)"
+        ],
+        "hidden-creatures": [
+            "Edimmu (elite)",
+            "Ghost (Abandoned Mine)",
+            "Ghost (Ourania Runecrafting Altar)",
+            "Ghost (Shattered Worlds)",
+            "Ghost (Spirit of Summer)",
+            "Ghost (Stronghold of Security)",
+            "Revenant cyclops",
+            "Revenant demon",
+            "Revenant goblin",
+            "Revenant hobgoblin",
+            "Revenant icefiend",
+            "Revenant imp",
+            "Revenant ork",
+            "Revenant pyrefiend",
+            "Revenant vampyre",
+            "Revenant werewolf",
+            "Tormented soul (Uncharted Isles)",
+            "Tormented wraith",
+            "Tortured soul (Port Phasmatys)",
+            "Wight",
+            "Wight (Missing, Presumed Death)",
+            "Wight ranger",
+            "Wight ranger (Sliske's Endgame)"
+        ],
+        "index": "Ghosts",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Jacquelyn",
+            "Vannaka",
+            "The Raptor"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Varrock_Sewers\" title=\"Varrock Sewers\" target=\"_blank\">Varrock Sewers<\/a>",
+            "<a href=\"https://runescape.wiki/w/Draynor_Manor\" title=\"Draynor Manor\" target=\"_blank\">Draynor Manor<\/a>",
+            "<a href=\"https://runescape.wiki/w/Melzar%27s_Maze\" title=\"Melzar's Maze\" target=\"_blank\">Melzar's Maze<\/a>",
+            "<a href=\"https://runescape.wiki/w/Stronghold_of_Security\" title=\"Stronghold of Security\" target=\"_blank\">Stronghold of Security<\/a>",
+            "<a href=\"https://runescape.wiki/w/Taverley_Dungeon\" title=\"Taverley Dungeon\" target=\"_blank\">Taverley Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Tarn%27s_Lair\" class=\"mw-redirect\" title=\"Tarn's Lair\" target=\"_blank\">Tarn's Lair<\/a>",
+            "<a href=\"https://runescape.wiki/w/Death_Altar\" class=\"mw-redirect\" title=\"Death Altar\" target=\"_blank\">Death Altar<\/a>",
+            "<a href=\"https://runescape.wiki/w/Haunted_Mine\" title=\"Haunted Mine\" target=\"_blank\">Haunted Mine<\/a>",
+            "<a href=\"https://runescape.wiki/w/Clan_Wars\" title=\"Clan Wars\" target=\"_blank\">Clan Wars<\/a>",
+            "<a href=\"https://runescape.wiki/w/Forgotten_Cemetery\" class=\"mw-redirect\" title=\"Forgotten Cemetery\" target=\"_blank\">Forgotten Cemetery<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Ravenous ghoul#Default",
+        "weakness": [],
+        "creatures": [
+            "Ghoul",
+            "Ghoul (Paterdomus)",
+            "Ravenous ghoul",
+            "Ravenous ghoul (Mazchna)"
+        ],
+        "hidden-creatures": [
+            "Ghoul (Paterdomus)",
+            "Ravenous ghoul (Mazchna)"
+        ],
+        "index": "Ghouls",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mazchna"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Canifis\" title=\"Canifis\" target=\"_blank\">Canifis<\/a>"]
+    },
+    {
+        "default-creature": "Arch-Glacor#Normal mode",
+        "weakness": [],
+        "creatures": [
+            "Arch-Glacor",
+            "Bolstered Glacyte",
+            "Enduring glacyte",
+            "Glacor",
+            "Glacyte",
+            "Glacyte (Arch-Glacor)",
+            "Sapping glacyte",
+            "Unstable glacyte"
+        ],
+        "hidden-creatures": [],
+        "index": "Glacors",
+        "alias": ["Glacor"],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Slayer_master\" class=\"mw-redirect\" title=\"Slayer master\" target=\"_blank\">Slayer master<\/a>"],
+        "masters": [
+            "Kuradal",
+            "Morvran",
+            "Laniakea",
+            "Mandrith"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Glacor_Cave\" title=\"Glacor Cave\" target=\"_blank\">Glacor Cave<\/a>",
+            "<a href=\"https://runescape.wiki/w/Glacor_Front\" title=\"Glacor Front\" target=\"_blank\">Glacor front<\/a>",
+            "<a href=\"https://runescape.wiki/w/Frozen_Waste_Plateau\" title=\"Frozen Waste Plateau\" target=\"_blank\">Frozen Waste Plateau<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Goblin#Level 11",
+        "weakness": [],
+        "creatures": [
+            "Angry goblin",
+            "Brokeface",
+            "Cave goblin (monster)",
+            "Cave goblin guard",
+            "Cave goblin miner",
+            "Goblin",
+            "Goblin (Goblin Village)",
+            "Goblin (God Wars Dungeon)",
+            "Goblin (Stronghold of Security)",
+            "Guard (cave goblin)",
+            "Lumpnose",
+            "Sergeant Grimspike",
+            "Sergeant Steelwill",
+            "Sergeant Strongstack",
+            "Skoblin",
+            "Stinkears"
+        ],
+        "hidden-creatures": [
+            "Angry goblin",
+            "Brokeface",
+            "Cave goblin (monster)",
+            "Cave goblin guard",
+            "Cave goblin miner",
+            "Guard (cave goblin)",
+            "Lumpnose",
+            "Sergeant Grimspike",
+            "Sergeant Steelwill",
+            "Sergeant Strongstack",
+            "Skoblin"
+        ],
+        "index": "Goblins",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Jacquelyn"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Lumbridge_catacombs\" class=\"mw-redirect\" title=\"Lumbridge catacombs\" target=\"_blank\">Lumbridge catacombs<\/a>",
+            "<a href=\"https://runescape.wiki/w/Goblin_Village\" title=\"Goblin Village\" target=\"_blank\">Goblin Village<\/a>",
+            "<a href=\"https://runescape.wiki/w/Port_Sarim\" title=\"Port Sarim\" target=\"_blank\">Port Sarim<\/a>",
+            "<a href=\"https://runescape.wiki/w/Varrock_Dig_Site\" title=\"Varrock Dig Site\" target=\"_blank\">Varrock Dig Site<\/a>",
+            "<a href=\"https://runescape.wiki/w/Stronghold_of_Security\" title=\"Stronghold of Security\" target=\"_blank\">Stronghold of Security<\/a>",
+            "<a href=\"https://runescape.wiki/w/Underground_Pass_(dungeon)\" title=\"Underground Pass (dungeon)\" target=\"_blank\">Underground Pass<\/a>",
+            "<a href=\"https://runescape.wiki/w/Goblin_Cave\" title=\"Goblin Cave\" target=\"_blank\">Goblin Cave<\/a>",
+            "<a href=\"https://runescape.wiki/w/Coal_truck_mining_site\" class=\"mw-redirect\" title=\"Coal truck mining site\" target=\"_blank\">Coal truck mining site<\/a>",
+            "<a href=\"https://runescape.wiki/w/God_Wars_Dungeon\" title=\"God Wars Dungeon\" target=\"_blank\">God Wars Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Observatory\" title=\"Observatory\" target=\"_blank\">Observatory<\/a>",
+            "<a href=\"https://runescape.wiki/w/Gunnarsgrunn\" class=\"mw-redirect\" title=\"Gunnarsgrunn\" target=\"_blank\">Gunnarsgrunn<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Gorak#God Wars Dungeon",
+        "weakness": [],
+        "creatures": ["Gorak"],
+        "hidden-creatures": [],
+        "index": "Goraks",
+        "alias": ["Gorak"],
+        "equipment": [],
+        "masters": ["Duradel"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Fairy_ring\" class=\"mw-redirect\" title=\"Fairy ring\" target=\"_blank\">Fairy ring<\/a>",
+            "<span class=\"fairycode\" style=\"word-break:keep-all\" target=\"_blank\" href=\"https://runescape.wiki\"><b>D<\/b><b>I<\/b><b>R<\/b><\/span>",
+            "<a href=\"https://runescape.wiki/w/God_Wars_Dungeon\" title=\"God Wars Dungeon\" target=\"_blank\">God Wars Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Greater demon ash lord#Wilderness",
+        "weakness": [],
+        "creatures": [
+            "Greater demon ash lord",
+            "Greater demon berserker"
+        ],
+        "hidden-creatures": [],
+        "index": "Greater demon berserkers and ash lords",
+        "alias": [
+            "Greater demon ash lords",
+            "Greater demon berserkers"
+        ],
+        "equipment": [],
+        "masters": ["Mandrith"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/The_Zamorakian_Undercity\" title=\"The Zamorakian Undercity\" target=\"_blank\">The Zamorakian Undercity<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>"
+        ]
+    },
+    {
+        "default-creature": "K'ril Tsutsaroth#Normal",
+        "weakness": [],
+        "creatures": [
+            "Butcher demon",
+            "Champion of Infernus",
+            "Chaos Demon",
+            "Chaos Demon Savage",
+            "Denizen of Infernus",
+            "Greater demon",
+            "Greater demon (elite)",
+            "Greater demon ash lord",
+            "Greater demon berserker",
+            "Greater demon brute",
+            "Greater demon pyromancer",
+            "Greater demon sage",
+            "Greater demon savage",
+            "K'ril Tsutsaroth",
+            "Kor'Vath the Blightbringer",
+            "La'Kalor the Unbroken",
+            "Shara'Kor the Widowmaker",
+            "Tstanon Karlak"
+        ],
+        "hidden-creatures": [
+            "Butcher demon",
+            "Champion of Infernus",
+            "Greater demon (elite)"
+        ],
+        "index": "Greater demons",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Entrana_Dungeon\" title=\"Entrana Dungeon\" target=\"_blank\">Entrana Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Brimhaven_Dungeon\" title=\"Brimhaven Dungeon\" target=\"_blank\">Brimhaven Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ogre_Enclave\" title=\"Ogre Enclave\" target=\"_blank\">Ogre Enclave<\/a>",
+            "<a href=\"https://runescape.wiki/w/Kuradal%27s_Dungeon\" title=\"Kuradal's Dungeon\" target=\"_blank\">Kuradal's Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Demonic_ruins\" class=\"mw-redirect\" title=\"Demonic ruins\" target=\"_blank\">Demonic ruins<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness_Crater\" title=\"Wilderness Crater\" target=\"_blank\">Wilderness Crater<\/a>",
+            "<a href=\"https://runescape.wiki/w/Lava_Maze_Dungeon\" title=\"Lava Maze Dungeon\" target=\"_blank\">Lava Maze Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Green dragon#1",
+        "weakness": [],
+        "creatures": [
+            "Brutal green dragon",
+            "Green dragon"
+        ],
+        "hidden-creatures": [],
+        "index": "Green dragons",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Anti-dragon_shield\" title=\"Anti-dragon shield\" target=\"_blank\">Anti-dragon shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dragonfire_shield\" title=\"Dragonfire shield\" target=\"_blank\">Dragonfire shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Antifire_potion\" class=\"mw-redirect\" title=\"Antifire potion\" target=\"_blank\">Antifire potion<\/a>"
+        ],
+        "masters": [
+            "The Raptor",
+            "Mazchna",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Chaos_tunnels\" class=\"mw-redirect\" title=\"Chaos tunnels\" target=\"_blank\">Chaos tunnels<\/a>",
+            "<a href=\"https://runescape.wiki/w/Clan_Wars\" title=\"Clan Wars\" target=\"_blank\">Clan Wars<\/a>",
+            "<a href=\"https://runescape.wiki/w/Goblin_Village\" title=\"Goblin Village\" target=\"_blank\">Goblin Village<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Grifolapine#Normal",
+        "weakness": [],
+        "creatures": ["Grifolapine"],
+        "hidden-creatures": [],
+        "index": "Grifolapines",
+        "alias": [],
+        "equipment": [
+            "<span class=\"pic-link inventory-image\" target=\"_blank\" href=\"https://runescape.wiki\"><span class=\"mw-default-size\" typeof=\"mw:File\"><a href=\"/w/Neem_oil\" title=\"Neem oil\"><img alt=\"Neem oil.png: RS3 Inventory image of Neem oil\" src=\"/images/Neem_oil.png?f5dec\" decoding=\"async\" loading=\"lazy\" width=\"27\" height=\"29\" class=\"mw-file-element\" data-file-width=\"27\" data-file-height=\"29\"><\/a><\/span><\/span>",
+            "<a href=\"https://runescape.wiki/w/Neem_oil\" title=\"Neem oil\" target=\"_blank\">Neem oil<\/a>"
+        ],
+        "masters": [
+            "Chaeldar",
+            "Sumona",
+            "Duradel",
+            "Kuradal"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Polypore_Dungeon\" title=\"Polypore Dungeon\" target=\"_blank\">Polypore Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Grifolaroo#Normal",
+        "weakness": [],
+        "creatures": ["Grifolaroo"],
+        "hidden-creatures": [],
+        "index": "Grifolaroos",
+        "alias": [],
+        "equipment": [
+            "<span class=\"pic-link inventory-image\" target=\"_blank\" href=\"https://runescape.wiki\"><span class=\"mw-default-size\" typeof=\"mw:File\"><a href=\"/w/Neem_oil\" title=\"Neem oil\"><img alt=\"Neem oil.png: RS3 Inventory image of Neem oil\" src=\"/images/Neem_oil.png?f5dec\" decoding=\"async\" loading=\"lazy\" width=\"27\" height=\"29\" class=\"mw-file-element\" data-file-width=\"27\" data-file-height=\"29\"><\/a><\/span><\/span>",
+            "<a href=\"https://runescape.wiki/w/Neem_oil\" title=\"Neem oil\" target=\"_blank\">Neem oil<\/a>"
+        ],
+        "masters": [
+            "Chaeldar",
+            "Sumona",
+            "Duradel",
+            "Kuradal"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Polypore_Dungeon\" title=\"Polypore Dungeon\" target=\"_blank\">Polypore Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Mature grotworm#Default",
+        "weakness": [],
+        "creatures": [
+            "Giant worm",
+            "Grotworm",
+            "Mature grotworm",
+            "Young grotworm"
+        ],
+        "hidden-creatures": ["Giant worm"],
+        "index": "Grotworms",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Vannaka",
+            "The Raptor",
+            "Mazchna",
+            "Chaeldar",
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Grotworm_Lair\" title=\"Grotworm Lair\" target=\"_blank\">Grotworm Lair<\/a>"]
+    },
+    {
+        "default-creature": "Harpie Bug Swarm#Default",
+        "weakness": [],
+        "creatures": [
+            "Harpie Bug Swarm",
+            "Harpie Bug Swarm (elite)"
+        ],
+        "hidden-creatures": ["Harpie Bug Swarm (elite)"],
+        "index": "Harpie bug swarms",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Bug_lantern\" class=\"mw-redirect\" title=\"Bug lantern\" target=\"_blank\">Bug lantern<\/a>"],
+        "masters": ["Chaeldar"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Karamja\" title=\"Karamja\" target=\"_blank\">Karamja<\/a>"]
+    },
+    {
+        "default-creature": "Hellhound#Normal",
+        "weakness": [],
+        "creatures": [
+            "Cerberus Juvenile",
+            "Hellhound",
+            "Hellhound (Heart of Gielinor)",
+            "Hellhound (The Zamorakian Undercity)",
+            "Hellhound (summoned)",
+            "Hellhound Alpha",
+            "Hellhound Hunter",
+            "Hellhound Hunter (summoned)",
+            "Revenant hellhound"
+        ],
+        "hidden-creatures": ["Hellhound (Heart of Gielinor)"],
+        "index": "Hellhounds",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Sumona",
+            "Duradel",
+            "Kuradal"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Taverley_Dungeon\" title=\"Taverley Dungeon\" target=\"_blank\">Taverley Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Deserted_Keep\" title=\"Deserted Keep\" target=\"_blank\">Deserted Keep<\/a>",
+            "<a href=\"https://runescape.wiki/w/Witchaven_Shrine_Dungeon\" class=\"mw-redirect\" title=\"Witchaven Shrine Dungeon\" target=\"_blank\">Witchaven Shrine Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/God_Wars_Dungeon\" title=\"God Wars Dungeon\" target=\"_blank\">God Wars Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Kuradal%27s_Dungeon\" title=\"Kuradal's Dungeon\" target=\"_blank\">Kuradal's Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness_Crater\" title=\"Wilderness Crater\" target=\"_blank\">Wilderness Crater<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Hill Giant#Default",
+        "weakness": [],
+        "creatures": ["Hill Giant"],
+        "hidden-creatures": [],
+        "index": "Hill giants",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Vannaka"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Deep_Wilderness_Dungeon\" title=\"Deep Wilderness Dungeon\" target=\"_blank\">Deep Wilderness Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Edgeville_Dungeon\" title=\"Edgeville Dungeon\" target=\"_blank\">Edgeville Dungeon<\/a>",
+            "<sup target=\"_blank\" href=\"https://runescape.wiki\">(<a href=\"/w/Edgeville_Dungeon_hill_giant_resource_dungeon\" title=\"Edgeville Dungeon hill giant resource dungeon\">resource dungeon<\/a>)<\/sup>",
+            "<a href=\"https://runescape.wiki/w/Gnome_Stronghold\" class=\"mw-redirect\" title=\"Gnome Stronghold\" target=\"_blank\">Gnome Stronghold<\/a>",
+            "<a href=\"https://runescape.wiki/w/Lava_Maze\" title=\"Lava Maze\" target=\"_blank\">Lava Maze<\/a>",
+            "<a href=\"https://runescape.wiki/w/Observatory\" title=\"Observatory\" target=\"_blank\">Observatory<\/a>",
+            "<a href=\"https://runescape.wiki/w/Taverley_Dungeon\" title=\"Taverley Dungeon\" target=\"_blank\">Taverley Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Tree_Gnome_Village_(location)\" title=\"Tree Gnome Village (location)\" target=\"_blank\">Tree Gnome Village<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Hobgoblin#Level 15",
+        "weakness": [],
+        "creatures": [
+            "Hobgoblin",
+            "Hobgoblin (elite)"
+        ],
+        "hidden-creatures": ["Hobgoblin (elite)"],
+        "index": "Hobgoblins",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Vannaka"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Asgarnian_Ice_Dungeon\" title=\"Asgarnian Ice Dungeon\" target=\"_blank\">Asgarnian Ice Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Crandor\" title=\"Crandor\" target=\"_blank\">Crandor<\/a>",
+            "<a href=\"https://runescape.wiki/w/Hobgoblin_Peninsula\" title=\"Hobgoblin Peninsula\" target=\"_blank\">Hobgoblin Peninsula<\/a>",
+            "<a href=\"https://runescape.wiki/w/Edgeville_Dungeon\" title=\"Edgeville Dungeon\" target=\"_blank\">Edgeville Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/God_Wars_Dungeon\" title=\"God Wars Dungeon\" target=\"_blank\">God Wars Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Rellekka\" title=\"Rellekka\" target=\"_blank\">Rellekka<\/a>",
+            "<a href=\"https://runescape.wiki/w/Waterbirth_Island\" title=\"Waterbirth Island\" target=\"_blank\">Waterbirth Island<\/a>",
+            "<a href=\"https://runescape.wiki/w/Hobgoblin_Mine\" class=\"mw-redirect\" title=\"Hobgoblin Mine\" target=\"_blank\">Hobgoblin Mine<\/a>",
+            "<a href=\"https://runescape.wiki/w/Witchaven_Dungeon\" title=\"Witchaven Dungeon\" target=\"_blank\">Witchaven Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Hydrix dragon#Default",
+        "weakness": [],
+        "creatures": ["Hydrix dragon"],
+        "hidden-creatures": [],
+        "index": "Hydrix dragons",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Super_anti-fire_potion\" class=\"mw-redirect\" title=\"Super anti-fire potion\" target=\"_blank\">Super anti-fire potion<\/a>"],
+        "masters": ["Mandrith"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Wilderness_(level_47)_Lava_Maze_mine\" title=\"Wilderness (level 47) Lava Maze mine\" target=\"_blank\">Wilderness (level 47) Lava Maze mine<\/a>",
+            "<a href=\"https://runescape.wiki/w/Deep_Wilderness_Dungeon\" title=\"Deep Wilderness Dungeon\" target=\"_blank\">Deep Wilderness Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Ice giant#Level 47 (1)",
+        "weakness": [],
+        "creatures": ["Ice giant"],
+        "hidden-creatures": [],
+        "index": "Ice giants",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Vannaka",
+            "Mazchna"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Asgarnian_Ice_Caves\" class=\"mw-redirect\" title=\"Asgarnian Ice Caves\" target=\"_blank\">Asgarnian Ice Caves<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>",
+            "<a href=\"https://runescape.wiki/w/Frozen_Waste_Plateau\" title=\"Frozen Waste Plateau\" target=\"_blank\">Frozen Waste Plateau<\/a>",
+            "<a href=\"https://runescape.wiki/w/White_Wolf_Mountain\" title=\"White Wolf Mountain\" target=\"_blank\">White Wolf Mountain<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Ice strykewyrm#Default",
+        "weakness": [],
+        "creatures": ["Ice strykewyrm"],
+        "hidden-creatures": [],
+        "index": "Ice strykewyrms",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Fire_cape\" title=\"Fire cape\" target=\"_blank\">Fire cape<\/a>"],
+        "masters": [
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea",
+            "Mandrith"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Ice_strykewyrm_cave\" title=\"Ice strykewyrm cave\" target=\"_blank\">Ice strykewyrm cave<\/a>",
+            "<a href=\"https://runescape.wiki/w/Frozen_Waste_Plateau\" title=\"Frozen Waste Plateau\" target=\"_blank\">Frozen Waste Plateau<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Ice warrior#Normal",
+        "weakness": [],
+        "creatures": [
+            "Ice warrior",
+            "Icelord"
+        ],
+        "hidden-creatures": ["Icelord"],
+        "index": "Ice warriors",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Vannaka",
+            "Mazchna"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/White_Wolf_Mountain\" title=\"White Wolf Mountain\" target=\"_blank\">White Wolf Mountain<\/a>",
+            "<a href=\"https://runescape.wiki/w/Frozen_Waste_Plateau\" title=\"Frozen Waste Plateau\" target=\"_blank\">Frozen Waste Plateau<\/a>",
+            "<a href=\"https://runescape.wiki/w/Asgarnian_Ice_Caves\" class=\"mw-redirect\" title=\"Asgarnian Ice Caves\" target=\"_blank\">Asgarnian Ice Caves<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Icefiend#God Wars Dungeon",
+        "weakness": [],
+        "creatures": [
+            "Icefiend",
+            "Icefiend (Ghorrock)",
+            "Revenant icefiend"
+        ],
+        "hidden-creatures": ["Icefiend (Ghorrock)"],
+        "index": "Icefiends",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Vannaka"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Ice_mountain\" class=\"mw-redirect\" title=\"Ice mountain\" target=\"_blank\">Ice mountain<\/a>",
+            "<a href=\"https://runescape.wiki/w/God_Wars_Dungeon\" title=\"God Wars Dungeon\" target=\"_blank\">God Wars Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ghorrock\" title=\"Ghorrock\" target=\"_blank\">Ghorrock<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Infernal Mage#Default",
+        "weakness": [],
+        "creatures": [
+            "Infernal Mage",
+            "Infernal Mage (elite)"
+        ],
+        "hidden-creatures": ["Infernal Mage (elite)"],
+        "index": "Infernal mages",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Mazchna",
+            "Chaeldar"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Slayer_Tower\" title=\"Slayer Tower\" target=\"_blank\">Slayer Tower<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Iron dragon#Default",
+        "weakness": [],
+        "creatures": ["Iron dragon"],
+        "hidden-creatures": [],
+        "index": "Iron dragons",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Anti-dragon_shield\" title=\"Anti-dragon shield\" target=\"_blank\">Anti-dragon shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dragonfire_shield\" title=\"Dragonfire shield\" target=\"_blank\">Dragonfire shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Antifire_potion\" class=\"mw-redirect\" title=\"Antifire potion\" target=\"_blank\">Antifire potion<\/a>"
+        ],
+        "masters": [
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Brimhaven_Dungeon\" title=\"Brimhaven Dungeon\" target=\"_blank\">Brimhaven Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ghorrock\" title=\"Ghorrock\" target=\"_blank\">Ghorrock<\/a>",
+            "<a href=\"https://runescape.wiki/w/Kuradal%27s_Dungeon\" title=\"Kuradal's Dungeon\" target=\"_blank\">Kuradal's Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Jelly#Default",
+        "weakness": [],
+        "creatures": ["Jelly"],
+        "hidden-creatures": [],
+        "index": "Jellies",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Mazchna",
+            "Chaeldar"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Fremennik_Slayer_Dungeon\" title=\"Fremennik Slayer Dungeon\" target=\"_blank\">Fremennik Slayer Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>",
+            "<a href=\"https://runescape.wiki/w/Soul_Wars\" title=\"Soul Wars\" target=\"_blank\">Soul Wars<\/a>",
+            "<a href=\"https://runescape.wiki/w/Mahjarrat_Ritual_Site_Cavern\" class=\"mw-redirect\" title=\"Mahjarrat Ritual Site Cavern\" target=\"_blank\">Mahjarrat Ritual Site Cavern<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Jungle horror#Default",
+        "weakness": [],
+        "creatures": [
+            "Jungle horror",
+            "Quetzathog",
+            "Sea horror"
+        ],
+        "hidden-creatures": [
+            "Quetzathog",
+            "Sea horror"
+        ],
+        "index": "Jungle horrors",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Mazchna",
+            "Chaeldar"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Mos_Le%27Harmless\" title=\"Mos Le'Harmless\" target=\"_blank\">Mos Le'Harmless<\/a>"]
+    },
+    {
+        "default-creature": "Jungle strykewyrm#Default",
+        "weakness": [],
+        "creatures": ["Jungle strykewyrm"],
+        "hidden-creatures": [],
+        "index": "Jungle strykewyrms",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Chaeldar",
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/South_Feldip_Hills\" title=\"South Feldip Hills\" target=\"_blank\">South Feldip Hills<\/a>"]
+    },
+    {
+        "default-creature": "Kal'gerion demon#Bloodchiller",
+        "weakness": [],
+        "creatures": [
+            "Kal'gerion demon",
+            "Kal'gerion demon (The Shadow Reef)",
+            "Yor'Ger the Deceiver"
+        ],
+        "hidden-creatures": [],
+        "index": "Kal'gerion demons",
+        "alias": ["Kal'gerion demon"],
+        "equipment": [],
+        "masters": [
+            "Kuradal",
+            "Morvran",
+            "Laniakea",
+            "Mandrith"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Kal%27gerion_resource_dungeon\" title=\"Kal'gerion resource dungeon\" target=\"_blank\">Kal'gerion resource dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Demonic_Ruins\" title=\"Demonic Ruins\" target=\"_blank\">Demonic Ruins<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Corrupted kalphite guardian#Default",
+        "weakness": [],
+        "creatures": [
+            "Corrupted kalphite guardian",
+            "Corrupted kalphite marauder",
+            "Exiled Kalphite Queen",
+            "Exiled kalphite guardian",
+            "Exiled kalphite marauder",
+            "Exiled kalphite paragon",
+            "Exiled kalphite soldier",
+            "Exiled kalphite worker",
+            "Kalphite Guardian",
+            "Kalphite King",
+            "Kalphite Queen",
+            "Kalphite Soldier",
+            "Kalphite Worker"
+        ],
+        "hidden-creatures": [
+            "Exiled kalphite guardian",
+            "Exiled kalphite marauder",
+            "Exiled kalphite paragon"
+        ],
+        "index": "Kalphite",
+        "alias": ["Kalphites"],
+        "equipment": [],
+        "masters": [
+            "Vannaka",
+            "The Raptor",
+            "Chaeldar",
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Kalphite_Lair\" class=\"mw-redirect\" title=\"Kalphite Lair\" target=\"_blank\">Kalphite Lair<\/a>",
+            "<a href=\"https://runescape.wiki/w/Exiled_Kalphite_Hive\" title=\"Exiled Kalphite Hive\" target=\"_blank\">Exiled Kalphite Hive<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Killerwatt#Default",
+        "weakness": [],
+        "creatures": ["Killerwatt"],
+        "hidden-creatures": [],
+        "index": "Killerwatts",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Insulated_boots\" title=\"Insulated boots\" target=\"_blank\">Insulated boots<\/a>"],
+        "masters": ["Mazchna"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Killerwatt_plane\" title=\"Killerwatt plane\" target=\"_blank\">Killerwatt plane<\/a>"]
+    },
+    {
+        "default-creature": "Kurask#Examine #1",
+        "weakness": [],
+        "creatures": ["Kurask"],
+        "hidden-creatures": [],
+        "index": "Kurask",
+        "alias": ["Kurasks"],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Leaf-bladed_sword\" title=\"Leaf-bladed sword\" target=\"_blank\">Leaf-bladed sword<\/a>",
+            "<a href=\"https://runescape.wiki/w/Leaf-bladed_spear\" title=\"Leaf-bladed spear\" target=\"_blank\">Leaf-bladed spear<\/a>",
+            "<a href=\"https://runescape.wiki/w/Slayer_Dart\" title=\"Slayer Dart\" target=\"_blank\">Slayer Dart<\/a>",
+            "<a href=\"https://runescape.wiki/w/Broad_arrows\" class=\"mw-redirect\" title=\"Broad arrows\" target=\"_blank\">Broad arrows<\/a>",
+            "<a href=\"https://runescape.wiki/w/Broad-tipped_bolts\" title=\"Broad-tipped bolts\" target=\"_blank\">Broad-tipped bolts<\/a>"
+        ],
+        "masters": [
+            "Chaeldar",
+            "Sumona"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Fremennik_Slayer_Dungeon\" title=\"Fremennik Slayer Dungeon\" target=\"_blank\">Fremennik Slayer Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Pollnivneach_Slayer_Dungeon\" title=\"Pollnivneach Slayer Dungeon\" target=\"_blank\">Pollnivneach Slayer Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Lava strykewyrm#Default",
+        "weakness": [],
+        "creatures": [
+            "Engorged lava strykewyrm",
+            "Lava strykewyrm",
+            "Lava strykewyrm (Dragonkin Laboratory)",
+            "WildyWyrm (2015, historical)"
+        ],
+        "hidden-creatures": [
+            "Engorged lava strykewyrm",
+            "Lava strykewyrm (Dragonkin Laboratory)"
+        ],
+        "index": "Lava strykewyrms",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Kuradal",
+            "Morvran",
+            "Laniakea",
+            "Mandrith"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>"]
+    },
+    {
+        "default-creature": "Lesser demon#1",
+        "weakness": [],
+        "creatures": [
+            "Lesser demon",
+            "Lesser demon (Wizards' Tower)",
+            "Zakl'n Gritch"
+        ],
+        "hidden-creatures": [],
+        "index": "Lesser demons",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Mazchna",
+            "Chaeldar",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Wizards%27_Tower\" title=\"Wizards' Tower\" target=\"_blank\">Wizards' Tower<\/a>",
+            "<a href=\"https://runescape.wiki/w/Resource_dungeon\" class=\"mw-redirect\" title=\"Resource dungeon\" target=\"_blank\">Resource dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Karamja_Dungeon\" class=\"mw-redirect\" title=\"Karamja Dungeon\" target=\"_blank\">Karamja Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Crandor\" title=\"Crandor\" target=\"_blank\">Crandor<\/a>",
+            "<a href=\"https://runescape.wiki/w/Melzar%27s_Maze\" title=\"Melzar's Maze\" target=\"_blank\">Melzar's Maze<\/a>",
+            "<a href=\"https://runescape.wiki/w/Demonic_Ruins\" title=\"Demonic Ruins\" target=\"_blank\">Demonic Ruins<\/a>",
+            "<a href=\"https://runescape.wiki/w/Clan_Wars\" title=\"Clan Wars\" target=\"_blank\">Clan Wars<\/a>",
+            "<a href=\"https://runescape.wiki/w/Lava_Maze\" title=\"Lava Maze\" target=\"_blank\">Lava Maze<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness_Crater\" title=\"Wilderness Crater\" target=\"_blank\">Wilderness Crater<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Living rock patriarch#Default",
+        "weakness": [],
+        "creatures": [
+            "Living rock patriarch",
+            "Living rock protector",
+            "Living rock striker"
+        ],
+        "hidden-creatures": [],
+        "index": "Living rock creatures",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Kuradal"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Living_rock_caverns\" class=\"mw-redirect\" title=\"Living rock caverns\" target=\"_blank\">Living rock caverns<\/a>"]
+    },
+    {
+        "default-creature": "Wyvern#Default",
+        "weakness": [],
+        "creatures": [
+            "Wyvern",
+            "Wyvern (elite)"
+        ],
+        "hidden-creatures": ["Wyvern (elite)"],
+        "index": "Living wyverns",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Wyrmfire_potion\" title=\"Wyrmfire potion\" target=\"_blank\">Wyrmfire potion<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dragonfire_shield\" title=\"Dragonfire shield\" target=\"_blank\">Dragonfire shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Elemental_Workshop_equipment\" title=\"Elemental Workshop equipment\" target=\"_blank\">Elemental Workshop shield<\/a>"
+        ],
+        "masters": [
+            "The Raptor",
+            "Kuradal",
+            "Morvran",
+            "Laniakea",
+            "Mandrith"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Asgarnian_Ice_Dungeon\" title=\"Asgarnian Ice Dungeon\" target=\"_blank\">Asgarnian Ice Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Frozen_Waste_Plateau\" title=\"Frozen Waste Plateau\" target=\"_blank\">Frozen Waste Plateau<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Minotaur#Level 12",
+        "weakness": [],
+        "creatures": ["Minotaur"],
+        "hidden-creatures": [],
+        "index": "Minotaurs",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Vannaka"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Stronghold_of_Security\" title=\"Stronghold of Security\" target=\"_blank\">Stronghold of Security<\/a>"]
+    },
+    {
+        "default-creature": "Mithril dragon#Default",
+        "weakness": [],
+        "creatures": ["Mithril dragon"],
+        "hidden-creatures": [],
+        "index": "Mithril dragons",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Anti-dragon_shield\" title=\"Anti-dragon shield\" target=\"_blank\">Anti-dragon shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dragonfire_shield\" title=\"Dragonfire shield\" target=\"_blank\">Dragonfire shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Antifire_potion\" class=\"mw-redirect\" title=\"Antifire potion\" target=\"_blank\">Antifire potion<\/a>"
+        ],
+        "masters": [
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Ancient_Cavern\" title=\"Ancient Cavern\" target=\"_blank\">Ancient Cavern<\/a>"]
+    },
+    {
+        "default-creature": "Mogre#Default",
+        "weakness": [],
+        "creatures": ["Mogre"],
+        "hidden-creatures": [],
+        "index": "Mogres",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Super_fishing_explosive\" title=\"Super fishing explosive\" target=\"_blank\">Super<\/a>",
+            "<a href=\"https://runescape.wiki/w/Fishing_explosive\" title=\"Fishing explosive\" target=\"_blank\">Fishing explosives<\/a>"
+        ],
+        "masters": ["Vannaka"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Mudskipper_Point\" title=\"Mudskipper Point\" target=\"_blank\">Mudskipper Point<\/a>"]
+    },
+    {
+        "default-creature": "Molanisk#Default",
+        "weakness": [],
+        "creatures": ["Molanisk"],
+        "hidden-creatures": [],
+        "index": "Molanisks",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Slayer_bell\" title=\"Slayer bell\" target=\"_blank\">Slayer bell<\/a>"],
+        "masters": ["Mazchna"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Dorgesh-Kaan_South_Dungeon\" title=\"Dorgesh-Kaan South Dungeon\" target=\"_blank\">Dorgesh-Kaan South Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Moss giant#Common (1)",
+        "weakness": [],
+        "creatures": ["Moss giant"],
+        "hidden-creatures": [],
+        "index": "Moss giants",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Vannaka",
+            "Mazchna"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Brimhaven_Dungeon\" title=\"Brimhaven Dungeon\" target=\"_blank\">Brimhaven Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Crandor_Isle\" class=\"mw-redirect\" title=\"Crandor Isle\" target=\"_blank\">Crandor Isle<\/a>",
+            "<a href=\"https://runescape.wiki/w/Fishing_Guild\" title=\"Fishing Guild\" target=\"_blank\">Fishing Guild<\/a>",
+            "<a href=\"https://runescape.wiki/w/Moss_Giant_Island\" title=\"Moss Giant Island\" target=\"_blank\">Moss Giant Island<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>",
+            "<a href=\"https://runescape.wiki/w/Varrock_Sewers\" title=\"Varrock Sewers\" target=\"_blank\">Varrock Sewers<\/a>",
+            "<a href=\"https://runescape.wiki/w/Pirates%27_Cove\" title=\"Pirates' Cove\" target=\"_blank\">Pirates' Cove<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>",
+            "<a href=\"https://runescape.wiki/w/Glarial%27s_Tomb\" title=\"Glarial's Tomb\" target=\"_blank\">Glarial's Tomb<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Bladed muspah#Default",
+        "weakness": [],
+        "creatures": [
+            "Bladed muspah",
+            "Force muspah",
+            "Throwing muspah"
+        ],
+        "hidden-creatures": [],
+        "index": "Muspah",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Freneskae\" title=\"Freneskae\" target=\"_blank\">Freneskae<\/a>"]
+    },
+    {
+        "default-creature": "Mutated jadinko baby#Default",
+        "weakness": [],
+        "creatures": [
+            "Mutated jadinko baby",
+            "Mutated jadinko guard",
+            "Mutated jadinko male"
+        ],
+        "hidden-creatures": [],
+        "index": "Mutated jadinkos",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Jadinko_Lair\" title=\"Jadinko Lair\" target=\"_blank\">Jadinko Lair<\/a>"]
+    },
+    {
+        "default-creature": "Mutated zygomite#Level 58",
+        "weakness": [],
+        "creatures": ["Mutated zygomite"],
+        "hidden-creatures": [],
+        "index": "Mutated zygomites",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Fungicide_spray\" title=\"Fungicide spray\" target=\"_blank\">Fungicide spray<\/a>"],
+        "masters": ["Chaeldar"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Zanaris\" title=\"Zanaris\" target=\"_blank\">Zanaris<\/a>"]
+    },
+    {
+        "default-creature": "Nechryael#Default",
+        "weakness": [],
+        "creatures": [
+            "Nechryael",
+            "Nechryael (Heart of Gielinor)",
+            "Nechryael (elite)"
+        ],
+        "hidden-creatures": [
+            "Nechryael (Heart of Gielinor)",
+            "Nechryael (elite)"
+        ],
+        "index": "Nechryael",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Slayer_Tower\" title=\"Slayer Tower\" target=\"_blank\">Slayer Tower<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Nightmare#Default",
+        "weakness": [],
+        "creatures": ["Nightmare"],
+        "hidden-creatures": [],
+        "index": "Nightmare creatures",
+        "alias": ["Nightmare"],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Slayer_master\" class=\"mw-redirect\" title=\"Slayer master\" target=\"_blank\">Slayer master<\/a>"],
+        "masters": [
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Freneskae#The_Ritual_Site\" title=\"Freneskae\" target=\"_blank\">Freneskae (Ritual Site)<\/a>"]
+    },
+    {
+        "default-creature": "Blood nihil#normal",
+        "weakness": [],
+        "creatures": [
+            "Blood nihil",
+            "Ice nihil",
+            "Shadow nihil",
+            "Smoke nihil"
+        ],
+        "hidden-creatures": [],
+        "index": "Nihil",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Freneskae#The_Pit\" title=\"Freneskae\" target=\"_blank\">Freneskae (the Pit)<\/a>"]
+    },
+    {
+        "default-creature": "Nodon guard#Default",
+        "weakness": [],
+        "creatures": [
+            "Kerapac, the bound",
+            "Nodon artificer",
+            "Nodon enforcer",
+            "Nodon engineer",
+            "Nodon guard",
+            "Nodon hunter",
+            "Siege engine"
+        ],
+        "hidden-creatures": [],
+        "index": "Nodon dragonkin",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Nodon_Front\" title=\"Nodon Front\" target=\"_blank\">Nodon Front<\/a>"]
+    },
+    {
+        "default-creature": "Enclave guard#Default",
+        "weakness": [],
+        "creatures": [
+            "Enclave guard",
+            "Mogre",
+            "Ogre",
+            "Ogre chieftain",
+            "Ogress",
+            "Ogress champion",
+            "Ogress warrior",
+            "Skogre",
+            "Zogre"
+        ],
+        "hidden-creatures": ["Skogre"],
+        "index": "Ogres",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mazchna"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Yanille\" title=\"Yanille\" target=\"_blank\">Yanille<\/a>",
+            "<a href=\"https://runescape.wiki/w/Castle_Wars\" title=\"Castle Wars\" target=\"_blank\">Castle Wars<\/a>",
+            "<a href=\"https://runescape.wiki/w/Gu%27Tanoth\" title=\"Gu'Tanoth\" target=\"_blank\">Gu'Tanoth<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Druid_Tower\" title=\"Chaos Druid Tower\" target=\"_blank\">Chaos Druid Tower<\/a>",
+            "<a href=\"https://runescape.wiki/w/Clock_Tower_Dungeon\" title=\"Clock Tower Dungeon\" target=\"_blank\">Clock Tower Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Witchaven_Dungeon\" title=\"Witchaven Dungeon\" target=\"_blank\">Witchaven Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Underground_Pass_(dungeon)\" title=\"Underground Pass (dungeon)\" target=\"_blank\">Underground Pass (dungeon)<\/a>",
+            "<a href=\"https://runescape.wiki/w/Combat_Training_Camp\" title=\"Combat Training Camp\" target=\"_blank\">Combat Training Camp<\/a>",
+            "<a href=\"https://runescape.wiki/w/God_Wars_Dungeon\" title=\"God Wars Dungeon\" target=\"_blank\">God Wars Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Onyx dragon#Default",
+        "weakness": [],
+        "creatures": ["Onyx dragon"],
+        "hidden-creatures": [],
+        "index": "Onyx dragons",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Super_anti-fire_potion\" class=\"mw-redirect\" title=\"Super anti-fire potion\" target=\"_blank\">Super anti-fire potion<\/a>"],
+        "masters": ["Mandrith"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Gemstone_cavern\" title=\"Gemstone cavern\" target=\"_blank\">Gemstone cavern<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>",
+            "<a href=\"https://runescape.wiki/w/Deep_Wilderness_Dungeon\" title=\"Deep Wilderness Dungeon\" target=\"_blank\">Deep Wilderness Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Otherworldly being#Default",
+        "weakness": [],
+        "creatures": ["Otherworldly being"],
+        "hidden-creatures": [],
+        "index": "Otherworldly beings",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mazchna"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Zanaris\" title=\"Zanaris\" target=\"_blank\">Zanaris<\/a>"]
+    },
+    {
+        "default-creature": "Pyrefiend#Level 38",
+        "weakness": [],
+        "creatures": [
+            "Pyrefiend",
+            "Pyrefiend (The Zamorakian Undercity)",
+            "Pyrefiend (summoned)",
+            "Revenant pyrefiend",
+            "Seething Pyrefiend",
+            "Smoulders",
+            "Smoulders, the Revenger"
+        ],
+        "hidden-creatures": [],
+        "index": "Pyrefiends",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mazchna"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Fremennik_Slayer_Dungeon\" title=\"Fremennik Slayer Dungeon\" target=\"_blank\">Fremennik Slayer Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Smoke_Dungeon\" title=\"Smoke Dungeon\" target=\"_blank\">Smoke Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/God_Wars_Dungeon\" title=\"God Wars Dungeon\" target=\"_blank\">God Wars Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Warped rat#Default",
+        "weakness": [],
+        "creatures": [
+            "Angry giant rat",
+            "Brine rat",
+            "Crypt rat",
+            "Dungeon rat",
+            "Giant crypt rat",
+            "Giant rat",
+            "Rat",
+            "Warped rat"
+        ],
+        "hidden-creatures": [],
+        "index": "Rats",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Jacquelyn"],
+        "locations": []
+    },
+    {
+        "default-creature": "Red dragon#1",
+        "weakness": [],
+        "creatures": [
+            "Baby red dragon",
+            "Red dragon",
+            "Red dragon (Dragonkin Laboratory)",
+            "Sangri the Red"
+        ],
+        "hidden-creatures": [
+            "Red dragon (Dragonkin Laboratory)",
+            "Sangri the Red"
+        ],
+        "index": "Red dragons",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Anti-dragon_shield\" title=\"Anti-dragon shield\" target=\"_blank\">Anti-dragon shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dragonfire_shield\" title=\"Dragonfire shield\" target=\"_blank\">Dragonfire shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Antifire_potion\" class=\"mw-redirect\" title=\"Antifire potion\" target=\"_blank\">Antifire potion<\/a>"
+        ],
+        "masters": [
+            "Sumona",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Red_Dragon_Isle\" title=\"Red Dragon Isle\" target=\"_blank\">Red Dragon Isle<\/a>",
+            "<a href=\"https://runescape.wiki/w/Brimhaven_Dungeon\" title=\"Brimhaven Dungeon\" target=\"_blank\">Brimhaven Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Revenant cyclops#Default",
+        "weakness": [],
+        "creatures": [
+            "Revenant cyclops",
+            "Revenant dark beast",
+            "Revenant demon",
+            "Revenant dragon",
+            "Revenant goblin",
+            "Revenant hellhound",
+            "Revenant hobgoblin",
+            "Revenant icefiend",
+            "Revenant imp",
+            "Revenant knight",
+            "Revenant ork",
+            "Revenant pyrefiend",
+            "Revenant vampyre",
+            "Revenant werewolf"
+        ],
+        "hidden-creatures": [],
+        "index": "Revenants",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mandrith"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Forinthry_Dungeon\" title=\"Forinthry Dungeon\" target=\"_blank\">Forinthry Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Ripper Demon#Default",
+        "weakness": [],
+        "creatures": [
+            "Ripper Demon",
+            "Slasher Demon"
+        ],
+        "hidden-creatures": ["Slasher Demon"],
+        "index": "Ripper demons",
+        "alias": ["Ripper Demon"],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Kuradal",
+            "Morvran",
+            "Laniakea",
+            "Mandrith"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Ripper_Demon_cave\" title=\"Ripper Demon cave\" target=\"_blank\">Ripper Demon cave<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Risen ghost#Default",
+        "weakness": [],
+        "creatures": ["Risen ghost"],
+        "hidden-creatures": [],
+        "index": "Risen ghosts",
+        "alias": ["Risen ghost"],
+        "equipment": [],
+        "masters": ["The Raptor"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Crypt_(Wilderness)\" title=\"Crypt (Wilderness)\" target=\"_blank\">Crypt (Wilderness)<\/a>",
+            "<a href=\"https://runescape.wiki/w/Fort_Forinthry\" title=\"Fort Forinthry\" target=\"_blank\">Fort Forinthry<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Rock slug#Default",
+        "weakness": [],
+        "creatures": ["Rock slug"],
+        "hidden-creatures": [],
+        "index": "Rockslugs",
+        "alias": ["Rock slugs"],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Bag_of_salt\" title=\"Bag of salt\" target=\"_blank\">Bag of salt<\/a>"],
+        "masters": ["Mazchna"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Fremennik_Slayer_Dungeon\" title=\"Fremennik Slayer Dungeon\" target=\"_blank\">Fremennik Slayer Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Lumbridge_Swamp_Caves\" title=\"Lumbridge Swamp Caves\" target=\"_blank\">Lumbridge Swamp Caves<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dorgesh-Kaan_South_Dungeon\" title=\"Dorgesh-Kaan South Dungeon\" target=\"_blank\">Dorgesh-Kaan South Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Rune dragon#Armoured",
+        "weakness": [],
+        "creatures": [
+            "Elite rune dragon",
+            "Rune dragon"
+        ],
+        "hidden-creatures": ["Elite rune dragon"],
+        "index": "Rune dragons",
+        "alias": ["Rune dragon"],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Super_antifire\" title=\"Super antifire\" target=\"_blank\">Super antifire<\/a>"],
+        "masters": [
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Mount_Firewake\" title=\"Mount Firewake\" target=\"_blank\">Mount Firewake<\/a>"]
+    },
+    {
+        "default-creature": "Scarab akh#Default",
+        "weakness": [],
+        "creatures": [
+            "Corrupted scarab",
+            "Locust lancer",
+            "Locust ranger",
+            "Locust rider",
+            "Scabaras lancer",
+            "Scabaras mage",
+            "Scabaras ranger",
+            "Scarab akh",
+            "Scarab mage",
+            "Small scarab"
+        ],
+        "hidden-creatures": [],
+        "index": "Scabarites",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Sumona",
+            "Duradel"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Sophanem\" title=\"Sophanem\" target=\"_blank\">Sophanem<\/a>",
+            "<a href=\"https://runescape.wiki/w/Agility_pyramid\" class=\"mw-redirect\" title=\"Agility pyramid\" target=\"_blank\">Agility pyramid<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dealing_with_Scabaras\" title=\"Dealing with Scabaras\" target=\"_blank\">Dealing with Scabaras<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Corrupted scorpion#Default",
+        "weakness": [],
+        "creatures": [
+            "Corrupted scorpion",
+            "Grave scorpion",
+            "King Scorpion",
+            "Pit Scorpion",
+            "Poison Scorpion",
+            "Scorpion",
+            "Scorpion (Ape Atoll)"
+        ],
+        "hidden-creatures": [
+            "Grave scorpion",
+            "King Scorpion",
+            "Pit Scorpion",
+            "Poison Scorpion",
+            "Scorpion (Ape Atoll)"
+        ],
+        "index": "Scorpions",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Vannaka",
+            "Sumona"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Al_Kharid_mining_site\" class=\"mw-redirect\" title=\"Al Kharid mining site\" target=\"_blank\">Al Kharid mining site<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dwarven_mines\" title=\"Dwarven mines\" target=\"_blank\">Dwarven mines<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ardougne_Zoo\" title=\"Ardougne Zoo\" target=\"_blank\">Ardougne Zoo<\/a>",
+            "<a href=\"https://runescape.wiki/w/Scorpion_Pit\" title=\"Scorpion Pit\" target=\"_blank\">Scorpion Pit<\/a>",
+            "<a href=\"https://runescape.wiki/w/Stronghold_of_Security\" title=\"Stronghold of Security\" target=\"_blank\">Stronghold of Security<\/a>",
+            "<a href=\"https://runescape.wiki/w/Varrock_Sewers\" title=\"Varrock Sewers\" target=\"_blank\">Varrock Sewers<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>",
+            "<a href=\"https://runescape.wiki/w/Karamja_Volcano\" title=\"Karamja Volcano\" target=\"_blank\">Karamja Volcano<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Sea Snake Hatchling#Default",
+        "weakness": [],
+        "creatures": [
+            "Sea Snake Hatchling",
+            "Sea Snake Young"
+        ],
+        "hidden-creatures": [],
+        "index": "Sea snakes",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mazchna"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Miscellania_%26_Etceteria_Dungeon\" class=\"mw-redirect\" title=\"Miscellania &amp; Etceteria Dungeon\" target=\"_blank\">Miscellania &amp; Etceteria Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Shade#Default",
+        "weakness": [],
+        "creatures": ["Shade"],
+        "hidden-creatures": [],
+        "index": "Shades",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mazchna"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Stronghold_of_Security\" title=\"Stronghold of Security\" target=\"_blank\">Stronghold of Security<\/a>",
+            "<a href=\"https://runescape.wiki/w/Mort%27ton\" title=\"Mort'ton\" target=\"_blank\">Mort'ton<\/a>",
+            "<a href=\"https://runescape.wiki/w/Shade_Catacombs\" title=\"Shade Catacombs\" target=\"_blank\">Shade Catacombs<\/a>",
+            "<a href=\"https://runescape.wiki/w/Temple_Trekking\" title=\"Temple Trekking\" target=\"_blank\">Temple Trekking<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Manifest shadow#Default",
+        "weakness": [],
+        "creatures": [
+            "Blissful shadow",
+            "Manifest shadow",
+            "Shadow (Temple of Light)",
+            "Truthful shadow"
+        ],
+        "hidden-creatures": [],
+        "index": "Shadow creatures",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Temple_of_Light\" title=\"Temple of Light\" target=\"_blank\">Temple of Light<\/a>",
+            "<a href=\"https://runescape.wiki/w/Prifddinas\" title=\"Prifddinas\" target=\"_blank\">Prifddinas<\/a>",
+            "<a href=\"https://runescape.wiki/w/Amlodd_Clan\" title=\"Amlodd Clan\" target=\"_blank\">Amlodd Clan<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Shadow warrior#Default",
+        "weakness": [],
+        "creatures": ["Shadow warrior"],
+        "hidden-creatures": [],
+        "index": "Shadow warriors",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Mazchna",
+            "Chaeldar"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Legends%27_Guild\" title=\"Legends' Guild\" target=\"_blank\">Legends' Guild<\/a>"]
+    },
+    {
+        "default-creature": "Skeletal Wyvern#1",
+        "weakness": [],
+        "creatures": ["Skeletal Wyvern"],
+        "hidden-creatures": [],
+        "index": "Skeletal wyverns",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Wyrmfire_potion\" title=\"Wyrmfire potion\" target=\"_blank\">Wyrmfire potion<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dragonfire_shield\" title=\"Dragonfire shield\" target=\"_blank\">Dragonfire shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Elemental_Workshop_equipment\" title=\"Elemental Workshop equipment\" target=\"_blank\">Elemental Workshop shield<\/a>"
+        ],
+        "masters": [
+            "Duradel",
+            "Kuradal"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Asgarnian_Ice_Dungeon\" title=\"Asgarnian Ice Dungeon\" target=\"_blank\">Asgarnian Ice Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Skeleton (Lumbridge Catacombs)#Default",
+        "weakness": [],
+        "creatures": [
+            "Ankou",
+            "Ankou (elite)",
+            "Baby Dinosaur Skeleton",
+            "Bossy McBossFace's First mate",
+            "Bound skeleton",
+            "Giant skeleton (Shadow Dungeon)",
+            "Giant skeleton (Tarn's Lair)",
+            "Huge skeleton",
+            "Osseous",
+            "Skeletal Wyvern",
+            "Skeletal hand",
+            "Skeletal miner",
+            "Skeletal shielder",
+            "Skeleton",
+            "Skeleton (Ape Atoll)",
+            "Skeleton (Barrows)",
+            "Skeleton (Dark Warriors' Fortress)",
+            "Skeleton (Heart of Gielinor)",
+            "Skeleton (Lumbridge Catacombs)",
+            "Skeleton (Tarn's Lair)",
+            "Skeleton (Temple Trekking)",
+            "Skeleton (Ullek)",
+            "Skeleton (Uncharted Isles)",
+            "Skeleton Archer",
+            "Skeleton Mage",
+            "Skeleton archer (Ancient Awakening)",
+            "Skeleton brute",
+            "Skeleton fremennik",
+            "Skeleton heavy",
+            "Skeleton hero",
+            "Skeleton knight",
+            "Skeleton ranger (Ancient Awakening)",
+            "Skeleton thug",
+            "Skeleton warlord",
+            "Skeleton warrior (Ancient Awakening)",
+            "Skeleton warrior (Rasial)",
+            "Skoblin",
+            "Skogre",
+            "Summoned skeleton",
+            "Summoned skeleton archer",
+            "Training dummy",
+            "Undead one",
+            "Warped skeleton"
+        ],
+        "hidden-creatures": [
+            "Skeletal miner",
+            "Skeleton (Tarn's Lair)",
+            "Skeleton (Temple Trekking)",
+            "Skeleton fremennik",
+            "Undead one"
+        ],
+        "index": "Skeletons",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Jacquelyn",
+            "Vannaka",
+            "The Raptor"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Lumbridge_Catacombs\" title=\"Lumbridge Catacombs\" target=\"_blank\">Lumbridge Catacombs<\/a>",
+            "<a href=\"https://runescape.wiki/w/Edgeville_Dungeon\" title=\"Edgeville Dungeon\" target=\"_blank\">Edgeville Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Digsite_Dungeon\" class=\"mw-redirect\" title=\"Digsite Dungeon\" target=\"_blank\">Digsite Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Draynor_Sewers\" title=\"Draynor Sewers\" target=\"_blank\">Draynor Sewers<\/a>",
+            "<a href=\"https://runescape.wiki/w/Karamja_Volcano\" title=\"Karamja Volcano\" target=\"_blank\">Karamja Volcano<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ogre_Enclave\" title=\"Ogre Enclave\" target=\"_blank\">Ogre Enclave<\/a>",
+            "<a href=\"https://runescape.wiki/w/Steel_Mine\" class=\"mw-redirect\" title=\"Steel Mine\" target=\"_blank\">Steel Mine<\/a>",
+            "<a href=\"https://runescape.wiki/w/Stronghold_of_Security\" title=\"Stronghold of Security\" target=\"_blank\">Stronghold of Security<\/a>",
+            "<a href=\"https://runescape.wiki/w/Taverley_Dungeon\" title=\"Taverley Dungeon\" target=\"_blank\">Taverley Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Temple_of_Ikov_(dungeon)\" title=\"Temple of Ikov (dungeon)\" target=\"_blank\">Temple of Ikov<\/a>",
+            "<a href=\"https://runescape.wiki/w/Varrock_Sewers\" title=\"Varrock Sewers\" target=\"_blank\">Varrock Sewers<\/a>",
+            "<a href=\"https://runescape.wiki/w/Waterfall_Dungeon\" title=\"Waterfall Dungeon\" target=\"_blank\">Waterfall Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Barrows\" title=\"Barrows\" target=\"_blank\">Barrows<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ruins_of_Ullek\" class=\"mw-redirect\" title=\"Ruins of Ullek\" target=\"_blank\">Ruins of Ullek<\/a>",
+            "<a href=\"https://runescape.wiki/w/Melzar%27s_Maze\" title=\"Melzar's Maze\" target=\"_blank\">Melzar's Maze<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness_Crater\" title=\"Wilderness Crater\" target=\"_blank\">Wilderness Crater<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ape_Atoll_Dungeon\" title=\"Ape Atoll Dungeon\" target=\"_blank\">Ape Atoll Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Senntisten_Temple\" title=\"Senntisten Temple\" target=\"_blank\">Senntisten Temple<\/a>",
+            "<a href=\"https://runescape.wiki/w/Underground_Pass_(dungeon)\" title=\"Underground Pass (dungeon)\" target=\"_blank\">Underground Pass (dungeon)<\/a>",
+            "<a href=\"https://runescape.wiki/w/Crypt_(Wilderness)\" title=\"Crypt (Wilderness)\" target=\"_blank\">crypt<\/a>",
+            "<a href=\"https://runescape.wiki/w/Fort_Forinthry\" title=\"Fort Forinthry\" target=\"_blank\">Fort Forinthry<\/a>"
+        ]
+    },
+    {
+        "default-creature": "The Magister#Default",
+        "weakness": [],
+        "creatures": [
+            "Crocodile akh",
+            "Feline akh",
+            "Gorilla akh",
+            "Imperial mage akh",
+            "Imperial ranger akh",
+            "Imperial warrior akh",
+            "Oreb, the Magister",
+            "Salawa akh",
+            "Scarab akh",
+            "The Magister"
+        ],
+        "hidden-creatures": ["Oreb, the Magister"],
+        "index": "Soul devourers",
+        "alias": [
+            "Crocodile akh",
+            "Feline akh",
+            "Gorilla akh",
+            "Imperial guard akh",
+            "Salawa akh",
+            "Scarab akh",
+            "Soul devourer"
+        ],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Feather_of_Ma%27at\" title=\"Feather of Ma'at\" target=\"_blank\">Feather of Ma'at<\/a>"],
+        "masters": [
+            "Sumona",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Sophanem_Slayer_Dungeon\" title=\"Sophanem Slayer Dungeon\" target=\"_blank\">Sophanem Slayer Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Soulgazer#Default",
+        "weakness": [],
+        "creatures": [
+            "Soulgazer",
+            "Soulgazer (elite)"
+        ],
+        "hidden-creatures": ["Soulgazer (elite)"],
+        "index": "Soulgazers",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mandrith"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Stalker_Dungeon\" class=\"mw-redirect\" title=\"Stalker Dungeon\" target=\"_blank\">Stalker Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Deadly red spider#Default",
+        "weakness": [],
+        "creatures": [
+            "Corpse spider",
+            "Crypt spider",
+            "Deadly red spider",
+            "Fever spider",
+            "Giant crypt spider",
+            "Giant spider",
+            "Ice spider",
+            "Jungle spider",
+            "Lava spider",
+            "Poison spider",
+            "Shadow spider",
+            "Spider",
+            "Spyndra"
+        ],
+        "hidden-creatures": [],
+        "index": "Spiders",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Jacquelyn",
+            "Vannaka"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Melzar%27s_Maze\" title=\"Melzar's Maze\" target=\"_blank\">Melzar's Maze<\/a>",
+            "<a href=\"https://runescape.wiki/w/Sorceress\" title=\"Sorceress\" target=\"_blank\">Sorceress<\/a>",
+            "<a href=\"https://runescape.wiki/w/Lumbridge_Castle\" title=\"Lumbridge Castle\" target=\"_blank\">Lumbridge Castle<\/a>",
+            "<a href=\"https://runescape.wiki/w/Stronghold_of_Security\" title=\"Stronghold of Security\" target=\"_blank\">Stronghold of Security<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ape_Atoll\" title=\"Ape Atoll\" target=\"_blank\">Ape Atoll<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ogre_Enclave\" title=\"Ogre Enclave\" target=\"_blank\">Ogre Enclave<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>",
+            "<a href=\"https://runescape.wiki/w/Karamja\" title=\"Karamja\" target=\"_blank\">Karamja<\/a>",
+            "<a href=\"https://runescape.wiki/w/Underground_Pass_(dungeon)\" title=\"Underground Pass (dungeon)\" target=\"_blank\">Underground Pass<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Spiritual mage#Armadyl",
+        "weakness": [],
+        "creatures": ["Spiritual mage"],
+        "hidden-creatures": [],
+        "index": "Spiritual mages",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Sumona",
+            "Duradel",
+            "Kuradal"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/God_Wars_Dungeon\" title=\"God Wars Dungeon\" target=\"_blank\">God Wars Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Spiritual warrior#Armadyl",
+        "weakness": [],
+        "creatures": ["Spiritual warrior"],
+        "hidden-creatures": [],
+        "index": "Spiritual warriors",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Sumona"],
+        "locations": ["<a href=\"https://runescape.wiki/w/God_Wars_Dungeon\" title=\"God Wars Dungeon\" target=\"_blank\">God Wars Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Veil-ripper Ozharakha#Default",
+        "weakness": [],
+        "creatures": [
+            "Seeker",
+            "Soulgazer",
+            "Soulgazer (elite)",
+            "Veil-ripper Ozharakha"
+        ],
+        "hidden-creatures": ["Soulgazer (elite)"],
+        "index": "Stalker creatures",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Stalker_dungeon\" title=\"Stalker dungeon\" target=\"_blank\">Stalker dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Steel dragon#Default",
+        "weakness": [],
+        "creatures": ["Steel dragon"],
+        "hidden-creatures": [],
+        "index": "Steel dragons",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Anti-dragon_shield\" title=\"Anti-dragon shield\" target=\"_blank\">Anti-dragon shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Dragonfire_shield\" title=\"Dragonfire shield\" target=\"_blank\">Dragonfire shield<\/a>",
+            "<a href=\"https://runescape.wiki/w/Antifire_potion\" class=\"mw-redirect\" title=\"Antifire potion\" target=\"_blank\">Antifire potion<\/a>"
+        ],
+        "masters": [
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Kuradal%27s_Dungeon\" title=\"Kuradal's Dungeon\" target=\"_blank\">Kuradal's Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Brimhaven_Dungeon\" title=\"Brimhaven Dungeon\" target=\"_blank\">Brimhaven Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ghorrock\" title=\"Ghorrock\" target=\"_blank\">Ghorrock<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Desert strykewyrm#Default",
+        "weakness": [],
+        "creatures": [
+            "Desert strykewyrm",
+            "Ice strykewyrm",
+            "Jungle strykewyrm",
+            "Lava strykewyrm",
+            "Lava strykewyrm (Dragonkin Laboratory)",
+            "WildyWyrm (2015, historical)"
+        ],
+        "hidden-creatures": ["WildyWyrm (2015, historical)"],
+        "index": "Strykewyrms",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Laniakea"],
+        "locations": []
+    },
+    {
+        "default-creature": "Suqah#Level 73 (Dual wielding swords)",
+        "weakness": [],
+        "creatures": ["Suqah"],
+        "hidden-creatures": [],
+        "index": "Suqahs",
+        "alias": ["Suqah"],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Seal_of_passage\" title=\"Seal of passage\" target=\"_blank\">Seal of passage<\/a>",
+            "<a href=\"https://runescape.wiki/w/Moon_Clan\" title=\"Moon Clan\" target=\"_blank\">Moon Clan<\/a>"
+        ],
+        "masters": [
+            "Duradel",
+            "Kuradal"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Lunar_Isle\" title=\"Lunar Isle\" target=\"_blank\">Lunar Isle<\/a>"]
+    },
+    {
+        "default-creature": "Terror dog#Level 61",
+        "weakness": [],
+        "creatures": ["Terror dog"],
+        "hidden-creatures": [],
+        "index": "Terror dogs",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Sumona",
+            "Kuradal"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Tarn%27s_Lair\" class=\"mw-redirect\" title=\"Tarn's Lair\" target=\"_blank\">Tarn's Lair<\/a>"]
+    },
+    {
+        "default-creature": "Tormented demon#Standard",
+        "weakness": [],
+        "creatures": ["Tormented demon"],
+        "hidden-creatures": [],
+        "index": "Tormented demons",
+        "alias": ["Tormented demon"],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Slayer_master\" class=\"mw-redirect\" title=\"Slayer master\" target=\"_blank\">Slayer master<\/a>"],
+        "masters": [
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Ancient_Guthix_Temple\" class=\"mw-redirect\" title=\"Ancient Guthix Temple\" target=\"_blank\">Ancient Guthix Temple<\/a>"]
+    },
+    {
+        "default-creature": "Ice troll runt#Default",
+        "weakness": [],
+        "creatures": [
+            "Ghostly troll bruiser",
+            "Ghostly troll thrower",
+            "Ice troll",
+            "Ice troll female",
+            "Ice troll grunt",
+            "Ice troll male",
+            "Ice troll runt",
+            "Kraka",
+            "Mountain troll",
+            "Mountain troll (well)",
+            "Pee Hat",
+            "River troll",
+            "Rock (monster)",
+            "Stick",
+            "Stove",
+            "Thrower Troll",
+            "Troll brute",
+            "Troll brute (Davendale)",
+            "Troll chucker",
+            "Troll chucker (Davendale)",
+            "Troll general",
+            "Troll lout",
+            "Troll shaman",
+            "Troll shaman (Davendale)",
+            "Troll spectator",
+            "Undead troll"
+        ],
+        "hidden-creatures": [
+            "Mountain troll (well)",
+            "Stove",
+            "Troll brute (Davendale)"
+        ],
+        "index": "Trolls",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Turael",
+            "Chaeldar",
+            "Sumona"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Mountain_troll\" title=\"Mountain troll\" target=\"_blank\">Mountain trolls<\/a>",
+            "<a href=\"https://runescape.wiki/w/Trollheim\" title=\"Trollheim\" target=\"_blank\">Trollheim<\/a>",
+            "<a href=\"https://runescape.wiki/w/Keldagrim\" title=\"Keldagrim\" target=\"_blank\">Keldagrim<\/a>",
+            "<a href=\"https://runescape.wiki/w/Death_Plateau\" title=\"Death Plateau\" target=\"_blank\">Death Plateau<\/a>",
+            "<a href=\"https://runescape.wiki/w/Burthorpe_Troll_Cave\" title=\"Burthorpe Troll Cave\" target=\"_blank\">Burthorpe Troll Cave<\/a>",
+            "<a href=\"https://runescape.wiki/w/Troll_cave\" title=\"Troll cave\" target=\"_blank\">Troll cave<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ice_troll\" title=\"Ice troll\" target=\"_blank\">Ice trolls<\/a>",
+            "<a href=\"https://runescape.wiki/w/Fremennik_Isles\" title=\"Fremennik Isles\" target=\"_blank\">Fremennik Isles<\/a>",
+            "<a href=\"https://runescape.wiki/w/Undead_troll\" title=\"Undead troll\" target=\"_blank\">Undead trolls<\/a>",
+            "<a href=\"https://runescape.wiki/w/Lucien%27s_camp\" title=\"Lucien's camp\" target=\"_blank\">Lucien's camp<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Turoth#60 - Large",
+        "weakness": [],
+        "creatures": ["Turoth"],
+        "hidden-creatures": [],
+        "index": "Turoth",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Leaf-bladed_sword\" title=\"Leaf-bladed sword\" target=\"_blank\">Leaf-bladed sword<\/a>",
+            "<a href=\"https://runescape.wiki/w/Leaf-bladed_spear\" title=\"Leaf-bladed spear\" target=\"_blank\">Leaf-bladed spear<\/a>",
+            "<a href=\"https://runescape.wiki/w/Slayer_Dart\" title=\"Slayer Dart\" target=\"_blank\">Slayer Dart<\/a>",
+            "<a href=\"https://runescape.wiki/w/Broad_arrows\" class=\"mw-redirect\" title=\"Broad arrows\" target=\"_blank\">Broad arrows<\/a>",
+            "<a href=\"https://runescape.wiki/w/Broad-tipped_bolts\" title=\"Broad-tipped bolts\" target=\"_blank\">Broad-tipped bolts<\/a>"
+        ],
+        "masters": [
+            "Mazchna",
+            "Chaeldar",
+            "Sumona"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Fremennik_Slayer_Dungeon\" title=\"Fremennik Slayer Dungeon\" target=\"_blank\">Fremennik Slayer Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>",
+            "<a href=\"https://runescape.wiki/w/Pollnivneach_Slayer_Dungeon\" title=\"Pollnivneach Slayer Dungeon\" target=\"_blank\">Pollnivneach Slayer Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "TzHaar-Hur#Level 86",
+        "weakness": [],
+        "creatures": [
+            "TzHaar-Hur",
+            "TzHaar-Ket",
+            "TzHaar-Mej",
+            "TzHaar-Xil"
+        ],
+        "hidden-creatures": [],
+        "index": "TzHaar",
+        "alias": ["Volcanic creatures"],
+        "equipment": [],
+        "masters": [
+            "Kuradal",
+            "Morvran"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/TzHaar_city\" class=\"mw-redirect\" title=\"TzHaar city\" target=\"_blank\">TzHaar city<\/a>"]
+    },
+    {
+        "default-creature": "Ghost#1",
+        "weakness": [],
+        "creatures": [
+            "Aberrant spectre",
+            "Ahrim the Blighted",
+            "Akrisae the Doomed",
+            "Animated spade",
+            "Ankou",
+            "Ankou (elite)",
+            "Armoured phantom",
+            "Armoured zombie",
+            "Banshee",
+            "Bloated monstrosity",
+            "Bound skeleton",
+            "Corpse archer",
+            "Corpse carrier",
+            "Corpse mage",
+            "Corpse spider",
+            "Crawling corpse torso",
+            "Crawling hand",
+            "Dharok the Wretched",
+            "Dragith Nurn",
+            "Edimmu",
+            "Edimmu (elite)",
+            "Fetid zombie",
+            "General malpractitioner",
+            "Ghast",
+            "Ghost",
+            "Ghost (Abandoned Mine)",
+            "Ghost (Ourania Runecrafting Altar)",
+            "Ghost (Shattered Worlds)",
+            "Ghost (Spirit of Summer)",
+            "Ghost (Stronghold of Security)",
+            "Ghostly troll bruiser",
+            "Ghostly troll thrower",
+            "Graveside Phantom",
+            "Guthan the Infested",
+            "Karil the Tainted",
+            "Linza the Disgraced",
+            "Magic axe",
+            "Masuta the Descended",
+            "Mighty banshee",
+            "Monkey Zombie",
+            "Mummy (Jaldraocht Pyramid)",
+            "Mummy (Ullek)",
+            "Osseous",
+            "Phantom sorcerer",
+            "Phantom wizard",
+            "Possessed pickaxe",
+            "Possessed pickaxe (Lava Flow Mine)",
+            "Putrid zombie (Rasial)",
+            "Revenant cyclops",
+            "Revenant dark beast",
+            "Revenant demon",
+            "Revenant dragon",
+            "Revenant goblin",
+            "Revenant hellhound",
+            "Revenant hobgoblin",
+            "Revenant icefiend",
+            "Revenant imp",
+            "Revenant knight",
+            "Revenant ork",
+            "Revenant pyrefiend",
+            "Revenant vampyre",
+            "Revenant werewolf",
+            "Risen ghost",
+            "Shade",
+            "Shadow warrior",
+            "Skeletal Wyvern",
+            "Skeletal hand",
+            "Skeletal miner",
+            "Skeleton",
+            "Skeleton (Lumbridge Catacombs)",
+            "Skeleton (Tarn's Lair)",
+            "Skeleton Mage",
+            "Skeleton archer (Ancient Awakening)",
+            "Skeleton knight",
+            "Skeleton ranger (Ancient Awakening)",
+            "Skeleton warrior (Ancient Awakening)",
+            "Skeleton warrior (Rasial)",
+            "Skoblin",
+            "Skogre",
+            "Small scarab",
+            "Soulless armoured zombie",
+            "Soulless unarmoured zombie",
+            "Spiritual mage",
+            "Spiritual ranger",
+            "Spiritual warrior",
+            "Taraket the Necromancer",
+            "Torag the Corrupted",
+            "Tormented wraith",
+            "Training dummy",
+            "Undead chicken",
+            "Undead cow",
+            "Undead giant (Battle of Forinthry)",
+            "Undead one",
+            "Undead pekin",
+            "Undead troll",
+            "Unstable zombie",
+            "Verac the Defiled",
+            "Vorkath",
+            "Wight",
+            "Wight ranger",
+            "Wight ranger (Sliske's Endgame)",
+            "Zogre",
+            "Zombie",
+            "Zombie (New Varrock)",
+            "Zombie cow (New Varrock)",
+            "Zombie hand",
+            "Zombie knight",
+            "Zombie pirate",
+            "Zombie swab",
+            "Zombie warrior"
+        ],
+        "hidden-creatures": [
+            "Wight",
+            "Wight ranger",
+            "Wight ranger (Sliske's Endgame)"
+        ],
+        "index": "Undead",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "The Raptor",
+            "Laniakea"
+        ],
+        "locations": []
+    },
+    {
+        "default-creature": "Vampyre#Default",
+        "weakness": [],
+        "creatures": [
+            "Angry vampyre",
+            "Feral vampyre",
+            "Revenant vampyre",
+            "Vampyre",
+            "Vampyre Juvenile",
+            "Vampyre Juvinate"
+        ],
+        "hidden-creatures": ["Feral vampyre"],
+        "index": "Vampyres",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mazchna"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/God_Wars_Dungeon\" title=\"God Wars Dungeon\" target=\"_blank\">God Wars Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Haunted_Woods\" title=\"Haunted Woods\" target=\"_blank\">Haunted Woods<\/a>",
+            "<a href=\"https://runescape.wiki/w/Abandoned_Mine\" title=\"Abandoned Mine\" target=\"_blank\">Abandoned Mine<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Liverworts#Default",
+        "weakness": [],
+        "creatures": [
+            "Devil's snare",
+            "Lampenflora",
+            "Liverworts",
+            "Luminous snaggler"
+        ],
+        "hidden-creatures": [],
+        "index": "Vile blooms",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Laniakea"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Anachronia\" title=\"Anachronia\" target=\"_blank\">Anachronia<\/a>"]
+    },
+    {
+        "default-creature": "Vyrewatch#Level 70",
+        "weakness": [],
+        "creatures": [
+            "Vyrelady",
+            "Vyrelord",
+            "Vyrewatch"
+        ],
+        "hidden-creatures": [],
+        "index": "Vyrewatch",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Ivandis_flail\" title=\"Ivandis flail\" target=\"_blank\">Ivandis flail<\/a>",
+            "<a href=\"https://runescape.wiki/w/Blisterwood_polearm\" title=\"Blisterwood polearm\" target=\"_blank\">Blisterwood polearm<\/a>",
+            "<a href=\"https://runescape.wiki/w/Blisterwood_staff\" title=\"Blisterwood staff\" target=\"_blank\">Blisterwood staff<\/a>",
+            "<a href=\"https://runescape.wiki/w/Blisterwood_stake\" title=\"Blisterwood stake\" target=\"_blank\">Blisterwood stake<\/a>"
+        ],
+        "masters": [
+            "Chaeldar",
+            "Sumona",
+            "Duradel",
+            "Kuradal",
+            "Morvran",
+            "Laniakea"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Darkmeyer\" title=\"Darkmeyer\" target=\"_blank\">Darkmeyer<\/a>",
+            "<a href=\"https://runescape.wiki/w/Burgh_de_Rott_Woods\" title=\"Burgh de Rott Woods\" target=\"_blank\">Burgh de Rott Woods<\/a>",
+            "<a href=\"https://runescape.wiki/w/Meiyerditch\" title=\"Meiyerditch\" target=\"_blank\">Meiyerditch<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Wall beast#Default",
+        "weakness": [],
+        "creatures": ["Wall beast"],
+        "hidden-creatures": [],
+        "index": "Wall beasts",
+        "alias": [],
+        "equipment": [
+            "<a href=\"https://runescape.wiki/w/Spiny_helmet\" title=\"Spiny helmet\" target=\"_blank\">Spiny helmet<\/a>",
+            "<a href=\"https://runescape.wiki/w/Spiked_helmet\" title=\"Spiked helmet\" target=\"_blank\">Spiked helmet<\/a>",
+            "<a href=\"https://runescape.wiki/w/Slayer_helmet\" title=\"Slayer helmet\" target=\"_blank\">Slayer helmet<\/a>"
+        ],
+        "masters": ["Vannaka"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Lumbridge_Swamp_Caves\" title=\"Lumbridge Swamp Caves\" target=\"_blank\">Lumbridge Swamp Caves<\/a>"]
+    },
+    {
+        "default-creature": "Warped terrorbird#1",
+        "weakness": [],
+        "creatures": ["Warped terrorbird"],
+        "hidden-creatures": [],
+        "index": "Warped terrorbirds",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Crystal_chime\" title=\"Crystal chime\" target=\"_blank\">Crystal chime<\/a>"],
+        "masters": ["Duradel"],
+        "locations": ["<a href=\"https://runescape.wiki/w/Poison_Waste_Slayer_Dungeon\" title=\"Poison Waste Slayer Dungeon\" target=\"_blank\">Poison Waste Slayer Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Warped tortoise#Vulnerable",
+        "weakness": [],
+        "creatures": ["Warped tortoise"],
+        "hidden-creatures": [],
+        "index": "Warped tortoises",
+        "alias": [],
+        "equipment": ["<a href=\"https://runescape.wiki/w/Crystal_chime\" title=\"Crystal chime\" target=\"_blank\">Crystal chime<\/a>"],
+        "masters": [
+            "Chaeldar",
+            "Sumona",
+            "Kuradal"
+        ],
+        "locations": ["<a href=\"https://runescape.wiki/w/Poison_Waste_Slayer_Dungeon\" title=\"Poison Waste Slayer Dungeon\" target=\"_blank\">Poison Waste Slayer Dungeon<\/a>"]
+    },
+    {
+        "default-creature": "Waterfiend#Default",
+        "weakness": [],
+        "creatures": [
+            "Maelstrom, Raging Waterfiend",
+            "Torrential Waterfiend",
+            "Torrential Waterfiend (summoned)",
+            "Waterfiend",
+            "Waterfiend (Ghorrock)",
+            "Waterfiend (Temple of Aminishi)",
+            "Waterfiend (The Zamorakian Undercity)",
+            "Waterfiend (elite)",
+            "Waterfiend (summoned)"
+        ],
+        "hidden-creatures": [
+            "Waterfiend (Ghorrock)",
+            "Waterfiend (Temple of Aminishi)",
+            "Waterfiend (elite)"
+        ],
+        "index": "Waterfiends",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Duradel",
+            "Kuradal",
+            "Morvran"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Ancient_Cavern\" title=\"Ancient Cavern\" target=\"_blank\">Ancient Cavern<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>",
+            "<a href=\"https://runescape.wiki/w/Ghorrock\" title=\"Ghorrock\" target=\"_blank\">Ghorrock<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Werewolf#Alexis",
+        "weakness": [],
+        "creatures": ["Werewolf"],
+        "hidden-creatures": [],
+        "index": "Werewolves",
+        "alias": [],
+        "equipment": [],
+        "masters": ["Mazchna"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Canifis\" title=\"Canifis\" target=\"_blank\">Canifis<\/a>",
+            "<a href=\"https://runescape.wiki/w/God_Wars_Dungeon\" title=\"God Wars Dungeon\" target=\"_blank\">God Wars Dungeon<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Adolescent White wolf#Default",
+        "weakness": [],
+        "creatures": [
+            "Adolescent White wolf",
+            "Big Wolf",
+            "Desert wolf",
+            "Dire Wolf",
+            "Fenris wolf",
+            "Fenris wolf (Sköll)",
+            "Ice wolf",
+            "Jungle Wolf",
+            "White wolf",
+            "Wolf"
+        ],
+        "hidden-creatures": [
+            "Fenris wolf",
+            "Fenris wolf (Sköll)"
+        ],
+        "index": "Wolves",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Turael",
+            "Vannaka"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Stronghold_of_Security\" title=\"Stronghold of Security\" target=\"_blank\">Stronghold of Security<\/a>",
+            "<a href=\"https://runescape.wiki/w/White_Wolf_Mountain\" title=\"White Wolf Mountain\" target=\"_blank\">White Wolf Mountain<\/a>",
+            "<a href=\"https://runescape.wiki/w/Feldip_Hills\" title=\"Feldip Hills\" target=\"_blank\">Feldip Hills<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Armoured phantom#1",
+        "weakness": [],
+        "creatures": [
+            "Armoured phantom",
+            "Bound skeleton",
+            "Fetid zombie",
+            "Risen ghost"
+        ],
+        "hidden-creatures": [],
+        "index": "Zemouregal's undead",
+        "alias": [],
+        "equipment": [],
+        "masters": ["The Raptor"],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Crypt_(Wilderness)\" title=\"Crypt (Wilderness)\" target=\"_blank\">Crypt<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wilderness\" title=\"Wilderness\" target=\"_blank\">Wilderness<\/a>",
+            "<a href=\"https://runescape.wiki/w/Fort_Forinthry\" title=\"Fort Forinthry\" target=\"_blank\">Fort Forinthry<\/a>"
+        ]
+    },
+    {
+        "default-creature": "Zombie#Level 29",
+        "weakness": [],
+        "creatures": [
+            "Armoured zombie",
+            "Armoured zombie (The Shadow Reef)",
+            "Armoured zombie (Uncharted Isles)",
+            "Bloated monstrosity",
+            "Bossy McBossFace",
+            "Corpse archer",
+            "Corpse carrier",
+            "Corpse mage",
+            "Corpse spider",
+            "Crawling corpse torso",
+            "Crawling hand",
+            "Dragith Nurn",
+            "Dried zombie",
+            "Edimmu",
+            "Edimmu (elite)",
+            "Empowering zombie",
+            "Fetid zombie",
+            "General malpractitioner",
+            "Monkey Zombie",
+            "Mummy (Jaldraocht Pyramid)",
+            "Mummy (Ullek)",
+            "Putrid zombie (Rasial)",
+            "Small scarab",
+            "Soulless armoured zombie",
+            "Soulless unarmoured zombie",
+            "Summoned Zombie",
+            "Summoned Zombie (The Shadow Reef)",
+            "Summoned armoured zombie",
+            "Ulthven Keith",
+            "Undead Witch",
+            "Undead chicken",
+            "Undead cow",
+            "Undead giant (Battle of Forinthry)",
+            "Undead one",
+            "Undead pekin",
+            "Undead troll",
+            "Unstable zombie",
+            "Zogre",
+            "Zombie",
+            "Zombie (Lair of Tarn Razorlor)",
+            "Zombie (New Varrock)",
+            "Zombie (Stronghold of Security)",
+            "Zombie (Temple Trekking)",
+            "Zombie (The Shadow Reef)",
+            "Zombie (Uncharted Isles)",
+            "Zombie (Wilderness)",
+            "Zombie (Zogre Flesh Eaters)",
+            "Zombie cow (New Varrock)",
+            "Zombie hand",
+            "Zombie knight",
+            "Zombie pirate",
+            "Zombie swab",
+            "Zombie warrior"
+        ],
+        "hidden-creatures": [
+            "Zombie (Zogre Flesh Eaters)",
+            "Zombie cow (New Varrock)"
+        ],
+        "index": "Zombies",
+        "alias": [],
+        "equipment": [],
+        "masters": [
+            "Jacquelyn",
+            "Vannaka",
+            "The Raptor"
+        ],
+        "locations": [
+            "<a href=\"https://runescape.wiki/w/Gnome_Village_Dungeon\" title=\"Gnome Village Dungeon\" target=\"_blank\">Gnome Village Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Entrana_Dungeon\" title=\"Entrana Dungeon\" target=\"_blank\">Entrana Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Edgeville_Dungeon\" title=\"Edgeville Dungeon\" target=\"_blank\">Edgeville Dungeon<\/a>",
+            "<a href=\"https://runescape.wiki/w/Chaos_Tunnels\" title=\"Chaos Tunnels\" target=\"_blank\">Chaos Tunnels<\/a>",
+            "<a href=\"https://runescape.wiki/w/Graveyard_of_Shadows\" title=\"Graveyard of Shadows\" target=\"_blank\">Graveyard of Shadows<\/a>",
+            "<a href=\"https://runescape.wiki/w/Stronghold_of_Security\" title=\"Stronghold of Security\" target=\"_blank\">Stronghold of Security<\/a>",
+            "<a href=\"https://runescape.wiki/w/Varrock_Sewers\" title=\"Varrock Sewers\" target=\"_blank\">Varrock Sewers<\/a>",
+            "<a href=\"https://runescape.wiki/w/Wizards%27_Guild\" title=\"Wizards' Guild\" target=\"_blank\">Wizards' Guild<\/a>",
+            "<a href=\"https://runescape.wiki/w/Draynor_Sewers\" title=\"Draynor Sewers\" target=\"_blank\">Draynor Sewers<\/a>",
+            "<a href=\"https://runescape.wiki/w/Tarn%27s_Lair\" class=\"mw-redirect\" title=\"Tarn's Lair\" target=\"_blank\">lair of Tarn Razorlor<\/a>"
+        ]
+    }
+]

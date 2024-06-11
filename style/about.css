@@ -1,0 +1,24 @@
+.nis {background: url("../images/ui/background.png");}
+.nistext {color: #E5E6EB;}
+.nisbutton{height:32px; position:relative; background:url('../images/ui/nisbutton.png') 0px -100%/24px 400% repeat content-box; cursor:pointer; text-align:center; color:#000; font-family:'trajan-pro-3'; text-shadow:1px 1px 2px #ECC622; font-size:18px; margin:5px; padding:0px 12px; line-height:32px; user-select:none; -webkit-user-select:none;}
+.nisbutton::before{width:12px; height:100%; content:""; position:absolute; top:0px; left:0px; background:url('../images/ui/nisbutton.png') 0px 0px / 24px 400%;}
+.nisbutton::after{width:12px; height:100%; content:""; position:absolute; top:0px; right:0px; background:url('../images/ui/nisbutton.png') -12px 0px / 24px 400%;}
+.nisbutton:hover{background-position:0px -300%;}
+.nisbutton:hover::before{background-position:0px -200%;}
+.nisbutton:hover::after{background-position:-12px -200%;}
+.nisbutton:active, .nisbutton.fakeactive{-webkit-filter:brightness(1.2); filter:brightness(1.2);}
+
+#copyright {font-size: 10px; color: #5a6400; text-align : center; padding-top: 3px; height : 20px; width : calc(100% - 6px);}
+
+.info{text-align: center;}
+.example{border: 1px solid rgb(84, 85, 66); margin-top: 5px; margin-bottom: 5px;}
+
+body{font-family:sans-serif; font-size:14px; padding:0px 10px; overflow-x:hidden; margin:0px; width:440px;}
+h2{text-align: center; font-size: 22px; font-weight:normal;}
+h2:first-child{margin-top:5px;}
+h3{text-align: center; font-size: 18px; border-top:3px double rgb(255, 231, 185); font-weight:bold;}
+h4{text-align: center; font-size: 16px; border-top:3px dashed rgb(255, 231, 185); font-weight:normal;}
+table{margin:auto;}
+img{width:100%;}
+img.expanded{width:60%;}
+img.collapsed{width:35%;}

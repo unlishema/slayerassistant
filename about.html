@@ -1,64 +1,95 @@
-<html><head>
-	<title>About Slayer Assistant</title>
-    <link rel="icon" href="/slayerassistant/icon.png" type="image/png">
-	<style type="text/css">
-        .nis {background: url("/slayerassistant/images/ui/background.png");}
-        .nistext {color: #E5E6EB;}
-        .nisbutton{height:32px; position:relative; background:url('/slayerassistant/images/ui/nisbutton.png') 0px -100%/24px 400% repeat content-box; cursor:pointer; text-align:center; color:#000; font-family:'trajan-pro-3'; text-shadow:1px 1px 2px #ECC622; font-size:18px; margin:5px; padding:0px 12px; line-height:32px; user-select:none; -webkit-user-select:none;}
-        .nisbutton::before{width:12px; height:100%; content:""; position:absolute; top:0px; left:0px; background:url('/slayerassistant/images/ui/nisbutton.png') 0px 0px / 24px 400%;}
-        .nisbutton::after{width:12px; height:100%; content:""; position:absolute; top:0px; right:0px; background:url('/slayerassistant/images/ui/nisbutton.png') -12px 0px / 24px 400%;}
-        .nisbutton:hover{background-position:0px -300%;}
-        .nisbutton:hover::before{background-position:0px -200%;}
-        .nisbutton:hover::after{background-position:-12px -200%;}
-        .nisbutton:active, .nisbutton.fakeactive{-webkit-filter:brightness(1.2); filter:brightness(1.2);}
+<html>
 
-        .info{text-align: center;}
-        .example{border: 1px solid rgb(84, 85, 66); margin-top: 5px; margin-bottom: 5px;}
-
-		body{font-family:sans-serif; font-size:14px; padding:0px 10px; overflow-x:hidden; margin:0px;}
-		h2{font-size: 22px; font-weight:normal;}
-		h2:first-child{margin-top:5px;}
-		h3{font-size: 18px; border-top:3px double rgb(255, 231, 185); font-weight:normal;}
-		table{margin:auto;}
-		img{width:100%;}
-	</style>
+<head>
+    <title>About Slayer Assistant</title>
+    <link rel="icon" href="./icon.png" type="image/png">
+    <link rel="stylesheet" href="./style/about.css">
 </head>
+
 <body class="nis">
 
-<div class="nisbutton" id="changelog-button" onclick="openCredits();">Open Credits</div>
-<div class="nisbutton" id="changelog-button" onclick="openChangelog();">Open Changelog</div>
-<h2 class="nistext">Need Help or Having Trouble?</br>Welcome to the Correct Place!</h2>
+    <div class="nisbutton" id="changelog-button" onclick="openCredits();">Open Credits</div>
+    <div class="nisbutton" id="changelog-button" onclick="openChangelog();">Open Changelog</div>
+    <h2 class="nistext">Need Help or Having Trouble?</br>Welcome to the Correct Place!</h2>
 
-<h3 class="nistext">Current Slayer Assistant Look N Feel</h3>
-<p class="nistext">This Look N Feel has been designed by the community.</p>
-<img src="/slayerassistant/images/ui/about/Slayer_assistant_interface.png" alt="Slayer Assistant Interface Image"></img>
-<p class="info nistext">Slayer Assistant Working Example</p>
+    <h3 class="nistext">Current Slayer Assistant Look N Feel</h3>
+    <p class="nistext">This Look N Feel has been designed by the community. It has slowly but surely updated to
+        accomadate new information and features.</p>
+    <img src="./images/ui/about/Slayer_assistant_interface.png" alt="Slayer Assistant Interface Image"></img>
 
-<h3 class="nistext">What activates the Slayer Assistant?</h3>
-<p class="nistext">There are a few different instances that will cause the Slayer Assistant to update it's information. The first is if you go get a new task from a slayer master.</p>
-<p class="nistext">Once it reads an interface similar to the examples below it will save this assignment information and automatically do a lookup for you.</p>
-<div class="example">
-    <img src="/slayerassistant/images/ui/about/Slayer_interface.png" alt="Slayer Assignment Interface Image"></img>
-    <p class="info nistext">Example Slayer Assignment Interface</p>
-</div>
-<div class="example">
-    <img src="/slayerassistant/images/ui/about/VIP_ticket_interface.png" alt="VIP Ticket Interface Image"></img>
-    <p class="info nistext">Example Slayer Ticket Assignment Interface</p>
-</div>
+    <h3 class="nistext">What activates the Slayer Assistant?</h3>
+    <p class="nistext">There are a few different instances that will cause the Slayer Assistant to update it's
+        information. The first is if you go get a new task from a slayer master or death for reaper tasks. The next is
+        while you are on a task, it will keep track of your kills vis the slayer/reaper counter GUI.</p>
+    <p class="nistext">Once it reads an interface similar to the examples below it will save this assignment information
+        and automatically do a lookup for you. You can also click on Capture to make it try and lookup a task on the
+        screen at the very moment.</p>
+    <h4 class="nistext">The following are examples of the interfaces it can read for slayer tasks.</h4>
+    <div class="example">
+        <img src="./images/ui/about/Slayer_task_interface.png" alt="Slayer Assignment Interface Image"></img>
+        <p class="info nistext">Example Slayer Assignment Interface</p>
+    </div>
+    <div class="example">
+        <img src="./images/ui/about/VIP_ticket_interface.png" alt="VIP Ticket Interface Image"></img>
+        <p class="info nistext">Example Slayer Ticket Assignment Interface</p>
+    </div>
+    <div class="example">
+        <img class="expanded" src="./images/ui/about/Slayer_counter_expanded.png"
+            alt="Slayer Counter Expanded Image"></img>
+        <img class="collapsed" src="./images/ui/about/Slayer_counter.png" alt="Slayer Counter Collapsed Image"></img>
+        <p class="info nistext">Example Slayer Counter Interface</p>
+        <p class="info nistext" style="color: red;">Currently disabled until it is finished</p>
+        <p class="info nistext">This interface will cause it to lookup the exact assignment that is given (if expanded)
+            and display relevant data; otherwise, it will just attempt to update the count of the current task it has
+            loaded.</p>
+    </div>
+    <h4 class="nistext">The following are examples of the interfaces it can read for reaper tasks.</h4>
+    <div class="example">
+        <img src="./images/ui/about/Reaper_task_interface.png" alt="Reaper Assignment Interface Image"></img>
+        <p class="info nistext">Example Reaper Assignment Interface</p>
+        <p class="info nistext">This interface will cause it to lookup the exact assignment that is given and display
+            relevant data.</p>
+    </div>
+    <div class="example">
+        <img class="expanded" src="./images/ui/about/Reaper_counter_expanded.png"
+            alt="Reaper Counter Expanded Image"></img>
+        <img class="collapsed" src="./images/ui/about/Reaper_counter.png" alt="Reaper Counter Collapsed Image"></img>
+        <p class="info nistext">Example Reaper Counter Interface</p>
+        <p class="info nistext" style="color: red;">Currently disabled until it is finished</p>
+        <p class="info nistext">This interface will cause it to lookup the exact assignment that is given (if expanded)
+            and display relevant data; otherwise, it will just attempt to update the count of the current task it has
+            loaded.</p>
+    </div>
+    <h4 class="nistext">The following are examples of the interfaces it can read for select your own assignment tasks.
+    </h4>
+    <div class="example">
+        <img src="./images/ui/about/Select_your_own_task.png" alt="Select Your Own Assignment Interface Image"></img>
+        <p class="info nistext">Example Select Your Own Assignment Interface</p>
+        <p class="info nistext">This interface will cause it to display a list of suggested tasks and why they are
+            suggested for the Select Your Own Assignment.</p>
+    </div>
 
 
-<h2 class="nistext">Did you know?</h2>
-<img src="/slayerassistant/images/ui/about/Right_click_interface.png" alt="Right Click Image"></img>
-<p class="info nistext">Opens up Slayer Assistant</p>
+    <h3 class="nistext">Did you know?</h3>
+    <p class="info nistext">There is now a search history you can use with the up and down arrow key? It resets
+        everytime you close the app.</p>
+    <p class="info nistext">If you hover over the assignment wiki, creature wiki, and See More... on the app it shows
+        more data. Give it a try</p>
+    <img src="./images/ui/about/Right_click_interface.png" alt="Right Click Image"></img>
+    <p class="info nistext">Opens up Slayer Assistant</p>
 
-<script type="text/javascript">
-    function openChangelog() {
-        window.open("/slayerassistant/changelog.html", null, "width=350,height=500");
-    }
+    <div id="copyright" class="center">Copyright &copy;2021 Unlishema Dragonsworn</div>
 
-    function openCredits() {
-        window.open("/slayerassistant/credits.html", null, "width=350,height=500");
-    }
-</script>
+    <script type="text/javascript">
+        function openChangelog() {
+            window.open("./changelog.html", null, "width=480,height=550");
+        }
 
-</body></html>
+        function openCredits() {
+            window.open("./credits.html", null, "width=480,height=550");
+        }
+    </script>
+
+</body>
+
+</html>

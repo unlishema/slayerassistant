@@ -1,16 +1,18 @@
 {
-	"appName": "Slayer Assistant",
+	"appName": "Local Slayer Assistant",
 	"description": "This app is designed to allow avid and new slayers to easy determine which slayer task they would like to do.",
-	"appUrl": "https://unlishema.github.io/slayerassistant/",
-	"configUrl": "https://unlishema.github.io/slayerassistant/appconfig.json",
-	"iconUrl": "https://unlishema.github.io/slayerassistant/icon.png",
+	"appUrl": "http://slayer/",
+	"configUrl": "http://slayer/appconfig.json",
+	"iconUrl": "http://slayer/icon.png",
 	"defaultWidth": 360,
-	"defaultHeight": 370,
-	"minWidth":360,
+	"defaultHeight": 395,
+	"minWidth": 360,
 	"minHeight": 120,
 	"maxWidth": 400,
 	"maxHeight": 550,
 	"requestHandlers": [],
-	"activators": ["regex:^Get task .*"],
+	"activators": [
+		""
+	],
 	"permissions": "pixel,gamestate,overlay"
 }

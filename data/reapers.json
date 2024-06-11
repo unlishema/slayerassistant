@@ -1,0 +1,450 @@
+[
+    {
+        "weakness": [],
+        "creatures": ["Araxxi"],
+        "hidden-creatures": [],
+        "index": "Araxxi",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Arch-Glacor"],
+        "hidden-creatures": [],
+        "index": "Arch-Glacor",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Black stone dragon"],
+        "hidden-creatures": [],
+        "index": "Black stone dragon",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Chaos Elemental"],
+        "hidden-creatures": [],
+        "index": "Chaos Elemental",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Commander Zilyana"],
+        "hidden-creatures": [],
+        "index": "Commander Zilyana",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Corporeal Beast"],
+        "hidden-creatures": [],
+        "index": "Corporeal Beast",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Croesus"],
+        "hidden-creatures": [],
+        "index": "Croesus",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": [
+            "Dagannoth Supreme",
+            "Dagannoth Rex",
+            "Dagannoth Prime"
+        ],
+        "hidden-creatures": [],
+        "index": "Dagannoth Kings",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["General Graardor"],
+        "hidden-creatures": [],
+        "index": "General Graardor",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Giant mole"],
+        "hidden-creatures": [],
+        "index": "Giant mole",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Gregorovic"],
+        "hidden-creatures": [],
+        "index": "Gregorovic",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Har-Aken"],
+        "hidden-creatures": [],
+        "index": "Har-Aken",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Helwyr"],
+        "hidden-creatures": [],
+        "index": "Helwyr",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Hermod, the Spirit of War"],
+        "hidden-creatures": [],
+        "index": "Hermod, the Spirit of War",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["K'ril Tsutsaroth"],
+        "hidden-creatures": [],
+        "index": "K'ril Tsutsaroth",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Kalphite King"],
+        "hidden-creatures": [],
+        "index": "Kalphite King",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Kalphite Queen"],
+        "hidden-creatures": [],
+        "index": "Kalphite Queen",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Kerapac, the bound"],
+        "hidden-creatures": [],
+        "index": "Kerapac, the bound",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["King Black Dragon"],
+        "hidden-creatures": [],
+        "index": "King Black Dragon",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Kree'arra"],
+        "hidden-creatures": [],
+        "index": "Kree'arra",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": [
+            "Legio Primus",
+            "Legio Secundus",
+            "Legio Tertius",
+            "Legio Quartus",
+            "Legio Quintus",
+            "Legio Sextus"
+        ],
+        "hidden-creatures": [],
+        "index": "Legiones",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Nex"],
+        "hidden-creatures": [],
+        "index": "Nex",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Nex: Angel of Death"],
+        "hidden-creatures": [],
+        "index": "Nex: Angel of Death",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Queen Black Dragon"],
+        "hidden-creatures": [],
+        "index": "Queen Black Dragon",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Raksha, the Shadow Colossus"],
+        "hidden-creatures": [],
+        "index": "Raksha, the Shadow Colossus",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Rasial, the First Necromancer"],
+        "hidden-creatures": [],
+        "index": "Rasial, the First Necromancer",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": [
+            "Orikalka",
+            "Rathis",
+            "Pthentraken",
+            "Osseous"
+        ],
+        "hidden-creatures": [],
+        "index": "Rex Matriarchs",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Seiryu the Azure Serpent"],
+        "hidden-creatures": [],
+        "index": "Seiryu the Azure Serpent",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Solak"],
+        "hidden-creatures": [],
+        "index": "Solak",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Telos, the Warden"],
+        "hidden-creatures": [],
+        "index": "Telos, the Warden",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["The Ambassador"],
+        "hidden-creatures": [],
+        "index": "The Ambassador",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": [
+            "Ahrim the Blighted",
+            "Akrisae the Doomed",
+            "Dharok the Wretched",
+            "Guthan the Infested",
+            "Karil the Tainted",
+            "Linza the Disgraced",
+            "Torag the Corrupted",
+            "Verac the Defiled"
+        ],
+        "hidden-creatures": [],
+        "index": "The Barrows Brothers",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": [
+            "Ahrim the Blighted",
+            "Dharok the Wretched",
+            "Guthan the Infested",
+            "Torag the Corrupted",
+            "Verac the Defiled",
+            "Karil the Tainted"
+        ],
+        "hidden-creatures": [],
+        "index": "The Barrows: Rise of the Six",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["The Magister"],
+        "hidden-creatures": [],
+        "index": "The Magister",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": [
+            "Nymora, the Vengeful",
+            "Avaryss, the Unceasing"
+        ],
+        "hidden-creatures": [],
+        "index": "Twin Furies",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["TzKal-Zuk"],
+        "hidden-creatures": [],
+        "index": "TzKal-Zuk",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["TzTok-Jad"],
+        "hidden-creatures": [],
+        "index": "TzTok-Jad",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Vindicta"],
+        "hidden-creatures": [],
+        "index": "Vindicta",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Vorago"],
+        "hidden-creatures": [],
+        "index": "Vorago",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": ["Zamorak, Lord of Chaos"],
+        "hidden-creatures": [],
+        "index": "Zamorak, Lord of Chaos",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    },
+    {
+        "weakness": [],
+        "creatures": [
+            "Zemouregal",
+            "Vorkath"
+        ],
+        "hidden-creatures": [],
+        "index": "Zemouregal & Vorkath",
+        "alias": [],
+        "equipment": [],
+        "masters": [],
+        "locations": []
+    }
+]
