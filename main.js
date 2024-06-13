@@ -102,42 +102,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! alt1 */ "../node_modules/alt1/dist/base/index.js");
 /* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(alt1__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_slayer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slayer */ "./modules/slayer.ts");
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 
 
 /* Extra Features for advanced controls in the app
@@ -147,86 +111,61 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     These functions can be used inside of alt1 but are not useful (mostly for other browsers)
 */
 // Listen for pasted (ctrl-v) images, usually used in the browser version of an app
-alt1__WEBPACK_IMPORTED_MODULE_1__.PasteInput.listen(function (img) {
+alt1__WEBPACK_IMPORTED_MODULE_1__.PasteInput.listen(img => {
     // Display the image at the bottom of the document
-    if (false) { var pixels; }
+    if (false) {}
     // Look and see if we can read a slayer task
     _modules_slayer__WEBPACK_IMPORTED_MODULE_0__.findTask(img);
-}, function (err, errid) {
+}, (err, errid) => {
     console.error("${errid}: ${err}");
 });
 // Handle events for when a file gets dragged or dropped onto the app
 document.addEventListener('dragover', handleDragOverFiles, false);
 document.addEventListener('drop', handleFileDropped, false);
 // Convert Blob(file) into Image Data so we can use it with alt1
-var blobToImageData = function (blob) {
-    return __awaiter(this, void 0, void 0, function () {
-        var blobUrl, img_1, _a, w, h, aspectRatio, canvas, ctx;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    blobUrl = URL.createObjectURL(blob);
-                    return [4 /*yield*/, new Promise(function (resolve, reject) {
-                            var img = new Image();
-                            img.onload = function () { return resolve(img); };
-                            img.onerror = function (err) { return reject(err); };
-                            img.src = blobUrl;
-                        })];
-                case 1:
-                    img_1 = _b.sent();
-                    URL.revokeObjectURL(blobUrl);
-                    _a = [img_1.width, img_1.height], w = _a[0], h = _a[1];
-                    aspectRatio = w / h;
-                    canvas = document.createElement("canvas");
-                    canvas.width = w;
-                    canvas.height = h;
-                    ctx = canvas.getContext("2d");
-                    ctx.drawImage(img_1, 0, 0);
-                    return [2 /*return*/, ctx.getImageData(0, 0, w, h)];
-            }
-        });
+const blobToImageData = async function (blob) {
+    let blobUrl = URL.createObjectURL(blob);
+    const img_1 = await new Promise((resolve, reject) => {
+        let img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = err => reject(err);
+        img.src = blobUrl;
     });
+    URL.revokeObjectURL(blobUrl);
+    let [w, h] = [img_1.width, img_1.height];
+    let aspectRatio = w / h;
+    let canvas = document.createElement("canvas");
+    canvas.width = w;
+    canvas.height = h;
+    let ctx = canvas.getContext("2d");
+    ctx.drawImage(img_1, 0, 0);
+    return ctx.getImageData(0, 0, w, h);
 };
 // Handle when a file is dropped onto the app and have it load assignment from the file if it can
-function handleFileDropped(evt) {
-    return __awaiter(this, void 0, void 0, function () {
-        var files, fileReader, output, i, f, imgData, img;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    evt.stopPropagation();
-                    evt.preventDefault();
-                    files = evt.dataTransfer.files;
-                    // Only accept 1 file at a time
-                    if (files.length > 1) {
-                        console.error("We can only process 1 file at a time. Please only drag and drop 1 file at a time!");
-                        return [2 /*return*/];
-                    }
-                    fileReader = new FileReader();
-                    output = [];
-                    i = 0, f = void 0;
-                    _a.label = 1;
-                case 1:
-                    if (!(f = files[i])) return [3 /*break*/, 4];
-                    // Skip any files that aren't a supported image type
-                    if (!f.type.match('image/png'))
-                        return [3 /*break*/, 3];
-                    // Convert the file into a image we can process
-                    fileReader.readAsDataURL(f);
-                    return [4 /*yield*/, blobToImageData(f)];
-                case 2:
-                    imgData = _a.sent();
-                    img = new alt1__WEBPACK_IMPORTED_MODULE_1__.ImgRefData(imgData, 0, 0);
-                    // Look and see if we can read a slayer task
-                    _modules_slayer__WEBPACK_IMPORTED_MODULE_0__.findTask(img);
-                    _a.label = 3;
-                case 3:
-                    i++;
-                    return [3 /*break*/, 1];
-                case 4: return [2 /*return*/];
-            }
-        });
-    });
+async function handleFileDropped(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    // Get the FileList Object
+    let files = evt.dataTransfer.files;
+    // Only accept 1 file at a time
+    if (files.length > 1) {
+        console.error("We can only process 1 file at a time. Please only drag and drop 1 file at a time!");
+        return;
+    }
+    // files is a FileList of File objects. List some properties.
+    const fileReader = new FileReader();
+    let output = [];
+    for (let i = 0, f; f = files[i]; i++) {
+        // Skip any files that aren't a supported image type
+        if (!f.type.match('image/png'))
+            continue;
+        // Convert the file into a image we can process
+        fileReader.readAsDataURL(f);
+        let imgData = await blobToImageData(f);
+        let img = new alt1__WEBPACK_IMPORTED_MODULE_1__.ImgRefData(imgData, 0, 0);
+        // Look and see if we can read a slayer task
+        _modules_slayer__WEBPACK_IMPORTED_MODULE_0__.findTask(img);
+    }
 }
 // Handle when a file is dragged onto the app and show user we will only make a copy of it (must exist or it won't work sadly)
 function handleDragOverFiles(evt) {
@@ -250,85 +189,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   get: () => (/* binding */ get),
 /* harmony export */   getIndexList: () => (/* binding */ getIndexList)
 /* harmony export */ });
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 // Fetch a single assignment based on the index or alias
-function get(assignment) {
-    return __awaiter(this, void 0, void 0, function () {
-        var res, _i, res_1, a, _a, _b, b;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0: return [4 /*yield*/, fetch("./data/assignments.json").then(function (r) { return r.json(); })];
-                case 1:
-                    res = _c.sent();
-                    for (_i = 0, res_1 = res; _i < res_1.length; _i++) {
-                        a = res_1[_i];
-                        if (a["index"].toLowerCase() === assignment.toLowerCase())
-                            return [2 /*return*/, a];
-                        for (_a = 0, _b = a["alias"]; _a < _b.length; _a++) {
-                            b = _b[_a];
-                            if (b.toLowerCase() === assignment.toLowerCase())
-                                return [2 /*return*/, a];
-                        }
-                    }
-                    return [2 /*return*/, null];
-            }
-        });
-    });
+async function get(assignment) {
+    let res = await fetch("./data/assignments.json").then(r => r.json());
+    for (let a of res) {
+        if (a["index"].toLowerCase() === assignment.toLowerCase())
+            return a;
+        for (let b of a["alias"])
+            if (b.toLowerCase() === assignment.toLowerCase())
+                return a;
+    }
+    return null;
 }
 // Get an array of the index
-function getIndexList() {
-    return __awaiter(this, void 0, void 0, function () {
-        var dataList, res, _i, res_2, a;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    dataList = "";
-                    return [4 /*yield*/, fetch("./data/assignments.json").then(function (r) { return r.json(); })];
-                case 1:
-                    res = _a.sent();
-                    for (_i = 0, res_2 = res; _i < res_2.length; _i++) {
-                        a = res_2[_i];
-                        dataList += "<option>" + a["index"] + "</option>\n\r";
-                    }
-                    return [2 /*return*/, dataList];
-            }
-        });
-    });
+async function getIndexList() {
+    let dataList = ``;
+    let res = await fetch("./data/assignments.json").then(r => r.json());
+    for (let a of res) {
+        dataList += `<option>` + a["index"] + `</option>\n\r`;
+    }
+    return dataList;
 }
 
 
@@ -346,61 +226,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   get: () => (/* binding */ get)
 /* harmony export */ });
 /* harmony import */ var _extrafuncs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../extrafuncs */ "./modules/extrafuncs.ts");
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 
 // Fetch a single creature based on the name
-function get(creature) {
-    return __awaiter(this, void 0, void 0, function () {
-        var res, _i, res_1, a;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, fetch("./data/creatures.json").then(function (r) { return r.json(); })];
-                case 1:
-                    res = _a.sent();
-                    for (_i = 0, res_1 = res; _i < res_1.length; _i++) {
-                        a = res_1[_i];
-                        if (_extrafuncs__WEBPACK_IMPORTED_MODULE_0__.decodeHtml(a["name"].toLowerCase()) === creature.toLowerCase())
-                            return [2 /*return*/, a];
-                    }
-                    return [2 /*return*/, null];
-            }
-        });
-    });
+async function get(creature) {
+    let res = await fetch("./data/creatures.json").then(r => r.json());
+    for (let a of res)
+        if (_extrafuncs__WEBPACK_IMPORTED_MODULE_0__.decodeHtml(a["name"].toLowerCase()) === creature.toLowerCase())
+            return a;
+    return null;
 }
 
 
@@ -418,61 +251,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   get: () => (/* binding */ get)
 /* harmony export */ });
 /* harmony import */ var _extrafuncs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../extrafuncs */ "./modules/extrafuncs.ts");
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 
 // Fetch a single master based on the name
-function get(master) {
-    return __awaiter(this, void 0, void 0, function () {
-        var res, _i, res_1, a;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, fetch("./data/masters.json").then(function (r) { return r.json(); })];
-                case 1:
-                    res = _a.sent();
-                    for (_i = 0, res_1 = res; _i < res_1.length; _i++) {
-                        a = res_1[_i];
-                        if (_extrafuncs__WEBPACK_IMPORTED_MODULE_0__.decodeHtml(a["name"].toLowerCase()) === master.toLowerCase())
-                            return [2 /*return*/, a];
-                    }
-                    return [2 /*return*/, null];
-            }
-        });
-    });
+async function get(master) {
+    let res = await fetch("./data/masters.json").then(r => r.json());
+    for (let a of res)
+        if (_extrafuncs__WEBPACK_IMPORTED_MODULE_0__.decodeHtml(a["name"].toLowerCase()) === master.toLowerCase())
+            return a;
+    return null;
 }
 
 
@@ -490,80 +276,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   get: () => (/* binding */ get),
 /* harmony export */   getIndexList: () => (/* binding */ getIndexList)
 /* harmony export */ });
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 // Fetch a single reaper based on the index or alias
-function get(reaper) {
-    return __awaiter(this, void 0, void 0, function () {
-        var res, _i, res_1, a;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, fetch("./data/reapers.json").then(function (r) { return r.json(); })];
-                case 1:
-                    res = _a.sent();
-                    for (_i = 0, res_1 = res; _i < res_1.length; _i++) {
-                        a = res_1[_i];
-                        if (a["index"].toLowerCase() === reaper.toLowerCase())
-                            return [2 /*return*/, a];
-                    }
-                    return [2 /*return*/, null];
-            }
-        });
-    });
+async function get(reaper) {
+    let res = await fetch("./data/reapers.json").then(r => r.json());
+    for (let a of res) {
+        if (a["index"].toLowerCase() === reaper.toLowerCase())
+            return a;
+    }
+    return null;
 }
 // Get an array of the index
-function getIndexList() {
-    return __awaiter(this, void 0, void 0, function () {
-        var dataList, res, _i, res_2, a;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    dataList = "";
-                    return [4 /*yield*/, fetch("./data/reapers.json").then(function (r) { return r.json(); })];
-                case 1:
-                    res = _a.sent();
-                    for (_i = 0, res_2 = res; _i < res_2.length; _i++) {
-                        a = res_2[_i];
-                        dataList += "<option>" + a["index"] + "</option>\n\r";
-                    }
-                    return [2 /*return*/, dataList];
-            }
-        });
-    });
+async function getIndexList() {
+    let dataList = ``;
+    let res = await fetch("./data/reapers.json").then(r => r.json());
+    for (let a of res) {
+        dataList += `<option>` + a["index"] + `</option>\n\r`;
+    }
+    return dataList;
 }
 
 
@@ -581,66 +310,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   get: () => (/* binding */ get)
 /* harmony export */ });
 /* harmony import */ var _extrafuncs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../extrafuncs */ "./modules/extrafuncs.ts");
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 
 // Fetch a single master based on the name
-function get(creature, variant) {
-    return __awaiter(this, void 0, void 0, function () {
-        var res, _i, res_1, a, _a, _b, b;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0: return [4 /*yield*/, fetch("./data/creatures.json").then(function (r) { return r.json(); })];
-                case 1:
-                    res = _c.sent();
-                    for (_i = 0, res_1 = res; _i < res_1.length; _i++) {
-                        a = res_1[_i];
-                        if (_extrafuncs__WEBPACK_IMPORTED_MODULE_0__.decodeHtml(a["name"].toLowerCase()) === creature.toLowerCase()) {
-                            for (_a = 0, _b = a["variants"]; _a < _b.length; _a++) {
-                                b = _b[_a];
-                                if (b["name"].toLowerCase() === variant.toLowerCase())
-                                    return [2 /*return*/, b];
-                            }
-                        }
-                    }
-                    return [2 /*return*/, null];
-            }
-        });
-    });
+async function get(creature, variant) {
+    let res = await fetch("./data/creatures.json").then(r => r.json());
+    for (let a of res)
+        if (_extrafuncs__WEBPACK_IMPORTED_MODULE_0__.decodeHtml(a["name"].toLowerCase()) === creature.toLowerCase()) {
+            for (let b of a["variants"])
+                if (b["name"].toLowerCase() === variant.toLowerCase())
+                    return b;
+        }
+    return null;
 }
 
 
@@ -726,42 +406,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_assignments__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../data/assignments */ "./modules/data/assignments.ts");
 /* harmony import */ var _data_creatures__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../data/creatures */ "./modules/data/creatures.ts");
 /* harmony import */ var _data_variants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../data/variants */ "./modules/data/variants.ts");
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 
 
 
@@ -770,215 +414,154 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 // Update the Creature variant Shown
-function variant(side) {
-    return __awaiter(this, void 0, void 0, function () {
-        var data, imageElement, imageContainerElement, newSize, weaknessElem, i, susceptibleElem, i, count;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loading();
-                    console.log("Change variant to: " + document.getElementById("variants-" + side).value);
-                    return [4 /*yield*/, _data_variants__WEBPACK_IMPORTED_MODULE_6__.get(document.getElementById("creatures-" + side).value, document.getElementById("variants-" + side).value)];
-                case 1:
-                    data = _a.sent();
-                    if (data != null) {
-                        // Set the image of variant but replace the # with url safe Percent-encoding
-                        document.getElementById("image-container-" + side).innerHTML = data["image"].replace("#", "%23");
-                        imageElement = document.getElementById("image-container-" + side).firstElementChild;
-                        imageContainerElement = document.getElementById("image-container-" + side);
-                        newSize = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.calculateAspectRatioFit(parseInt(imageElement.getAttribute("width")), parseInt(imageElement.getAttribute("height")), imageContainerElement.offsetWidth, imageContainerElement.offsetHeight);
-                        imageElement.setAttribute("style", "max-width:" + newSize.width + "px; max-height:" + newSize.height + "px;");
-                        document.getElementById("level-" + side).innerHTML = data["level"];
-                        document.getElementById("slayer-level-" + side).innerHTML = data["slayer-level"];
-                        document.getElementById("lifepoints-" + side).innerHTML = data["lifepoints"];
-                        document.getElementById("defence-" + side).innerHTML = data["defence"];
-                        document.getElementById("max-melee-" + side).innerHTML = data["max-melee"];
-                        document.getElementById("max-ranged-" + side).innerHTML = data["max-ranged"];
-                        document.getElementById("max-magic-" + side).innerHTML = data["max-magic"];
-                        document.getElementById("max-necromancy-" + side).innerHTML = data["max-necromancy"];
-                        document.getElementById("max-spec-" + side).innerHTML = data["max-spec"];
-                        weaknessElem = document.getElementById("weaknessBox-" + side);
-                        weaknessElem.innerHTML = "<p id=\"weakness-text\">Weakness</p>";
-                        for (i = 0; i < data["weakness"].length; i++)
-                            weaknessElem.innerHTML += data["weakness"][i];
-                        susceptibleElem = document.getElementById("susceptibleBox-" + side);
-                        susceptibleElem.innerHTML = "<p id=\"susceptible-text\">Susceptible</p>";
-                        for (i = 0; i < data["susceptible"].length; i++)
-                            susceptibleElem.innerHTML += data["susceptible"][i];
-                        document.getElementById("combat-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(data["experience"].toFixed(2));
-                        document.getElementById("lifepoints-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(data["lifepoint-exp"].toFixed(2));
-                        document.getElementById("slayer-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(data["slayer-exp"].toFixed(2));
-                        count = document.getElementById("kills-" + side).innerHTML;
-                        document.getElementById("total-slayer-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas((data["slayer-exp"] * count).toFixed(2));
-                    }
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loadingStop();
-                    return [2 /*return*/];
-            }
-        });
-    });
+async function variant(side) {
+    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loading();
+    console.log("Change variant to: " + document.getElementById("variants-" + side).value);
+    let data = await _data_variants__WEBPACK_IMPORTED_MODULE_6__.get(document.getElementById("creatures-" + side).value, document.getElementById("variants-" + side).value);
+    if (data != null) {
+        // Set the image of variant but replace the # with url safe Percent-encoding
+        document.getElementById("image-container-" + side).innerHTML = data["image"].replace("#", "%23");
+        // Resize image but keep the aspect ratio
+        let imageElement = document.getElementById("image-container-" + side).firstElementChild;
+        let imageContainerElement = document.getElementById("image-container-" + side);
+        let newSize = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.calculateAspectRatioFit(parseInt(imageElement.getAttribute("width")), parseInt(imageElement.getAttribute("height")), imageContainerElement.offsetWidth, imageContainerElement.offsetHeight);
+        imageElement.setAttribute("style", "max-width:" + newSize.width + "px; max-height:" + newSize.height + "px;");
+        document.getElementById("level-" + side).innerHTML = data["level"];
+        document.getElementById("slayer-level-" + side).innerHTML = data["slayer-level"];
+        document.getElementById("lifepoints-" + side).innerHTML = data["lifepoints"];
+        document.getElementById("defence-" + side).innerHTML = data["defence"];
+        document.getElementById("max-melee-" + side).innerHTML = data["max-melee"];
+        document.getElementById("max-ranged-" + side).innerHTML = data["max-ranged"];
+        document.getElementById("max-magic-" + side).innerHTML = data["max-magic"];
+        document.getElementById("max-necromancy-" + side).innerHTML = data["max-necromancy"];
+        document.getElementById("max-spec-" + side).innerHTML = data["max-spec"];
+        let weaknessElem = document.getElementById("weaknessBox-" + side);
+        weaknessElem.innerHTML = `<p id="weakness-text">Weakness</p>`;
+        for (let i = 0; i < data["weakness"].length; i++)
+            weaknessElem.innerHTML += data["weakness"][i];
+        let susceptibleElem = document.getElementById("susceptibleBox-" + side);
+        susceptibleElem.innerHTML = `<p id="susceptible-text">Susceptible</p>`;
+        for (let i = 0; i < data["susceptible"].length; i++)
+            susceptibleElem.innerHTML += data["susceptible"][i];
+        document.getElementById("combat-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(data["experience"].toFixed(2));
+        document.getElementById("lifepoints-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(data["lifepoint-exp"].toFixed(2));
+        document.getElementById("slayer-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(data["slayer-exp"].toFixed(2));
+        let count = document.getElementById("kills-" + side).innerHTML;
+        document.getElementById("total-slayer-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas((data["slayer-exp"] * count).toFixed(2));
+    }
+    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loadingStop();
 }
 // Update the Creature Shown
-function creature(side_1) {
-    return __awaiter(this, arguments, void 0, function (side, variant) {
-        var data, _i, _a, a;
-        if (variant === void 0) { variant = null; }
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loading();
-                    console.log("Change Creature to: " + document.getElementById("creatures-" + side).value);
-                    return [4 /*yield*/, _data_creatures__WEBPACK_IMPORTED_MODULE_5__.get(document.getElementById("creatures-" + side).value)];
-                case 1:
-                    data = _b.sent();
-                    if (data != null) {
-                        if (data["variants"] != null) {
-                            document.getElementById("variants-" + side).innerHTML = "";
-                            for (_i = 0, _a = data["variants"]; _i < _a.length; _i++) {
-                                a = _a[_i];
-                                document.getElementById("variants-" + side).innerHTML += "<option value=\"" + a["name"] + "\"" + ((variant != null && _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(a["name"]) === _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(variant)) ? " selected" : "") + ">" + a["name"] + "</option>";
-                            }
-                        }
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.variant(side);
-                    }
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loadingStop();
-                    return [2 /*return*/];
-            }
-        });
-    });
+async function creature(side, variant = null) {
+    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loading();
+    console.log("Change Creature to: " + document.getElementById("creatures-" + side).value);
+    let data = await _data_creatures__WEBPACK_IMPORTED_MODULE_5__.get(document.getElementById("creatures-" + side).value);
+    if (data != null) {
+        if (data["variants"] != null) {
+            document.getElementById("variants-" + side).innerHTML = "";
+            for (let a of data["variants"])
+                document.getElementById("variants-" + side).innerHTML += `<option value="` + a["name"] + `"` + ((variant != null && _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(a["name"]) === _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(variant)) ? ` selected` : ``) + `>` + a["name"] + `</option>`;
+        }
+        _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.variant(side);
+    }
+    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loadingStop();
 }
 // Update the reaper assignment data
-function reaper(task, count) {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            return [2 /*return*/, assignment(2, task, count)];
-        });
-    });
+async function reaper(task, count) {
+    return assignment(2, task, count);
 }
 // Update the entire Assignment data
-function assignment(side, task, count) {
-    return __awaiter(this, void 0, void 0, function () {
-        var data, _a, i, i, i, i, i, img, masterData, kills, previewMastersHeight, _loop_1, i, variant_1, _i, _b, a, creature_1;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0:
-                    // Check if we are trying to load a second task when only 1 is displayed
-                    if (side == 1 && !_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.doubleLoaded) {
-                        console.error("Cannot load double task if only 1 is diaplyed!");
-                        return [2 /*return*/];
+async function assignment(side, task, count) {
+    // Check if we are trying to load a second task when only 1 is displayed
+    if (side == 1 && !_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.doubleLoaded) {
+        console.error("Cannot load double task if only 1 is diaplyed!");
+        return;
+    }
+    // Check if we are trying to load a single task when 2 is displayed
+    if (side == 2 && _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.doubleLoaded) {
+        console.error("Cannot load reaper task if there are 2 is diaplyed!");
+        return;
+    }
+    // Show we are loading
+    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loading();
+    // If the current task is already set then lets just update the count and return
+    console.log("Setup: [" + side + "] " + task + " {" + count + "}");
+    if (document.getElementById("name-" + side).innerHTML === task) {
+        console.log("Update task: [" + count + "] " + task + " " + (side == 0 ? `(Default)` : (side == 2 ? `(Reaper)` : `(1 Slayer Token)`)));
+        document.getElementById("kills-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(count);
+        _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loadingStop();
+        return;
+    }
+    console.log("Load task: [" + count + "] " + task + " " + (side == 0 ? `(Default)` : (side == 2 ? `(Reaper)` : `(1 Slayer Token)`)));
+    document.getElementById("kills-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(count);
+    document.getElementById("name-" + side).innerHTML = task;
+    let data = side == 2 ? await _data_reapers__WEBPACK_IMPORTED_MODULE_3__.get(task) : await _data_assignments__WEBPACK_IMPORTED_MODULE_4__.get(task);
+    if (data != null) {
+        document.getElementById("name-" + side).innerHTML = data["index"];
+        if (data["equipment"] != null) {
+            for (let i = 0; i < 3; i++)
+                document.getElementById("equipInfo" + (i + 1) + "-" + side).innerHTML = (i == 0 ? "None" : "");
+            if (data["equipment"].length > 0)
+                for (let i = 0; i < data["equipment"].length; i++)
+                    document.getElementById("equipInfo" + (i + 1) + "-" + side).innerHTML = data["equipment"][i] != "" ? data["equipment"][i] : `<span style="color: red;" title="There is no information in the database.">Database Empty</span>`;
+            // Hide & Show the See More Link...
+            if (data["equipment"].length < 3)
+                document.getElementById("equipMore-" + side).style.visibility = "hidden";
+            else
+                document.getElementById("equipMore-" + side).style.visibility = "visible";
+        }
+        else if (data["equipment"] == null) {
+            document.getElementById("equipMore-" + side).style.visibility = "hidden";
+            document.getElementById("equipInfo1-" + side).innerHTML = `<span style="color: red;" title="There is no information in the database.">Database Missing</span>`;
+        }
+        if (data["locations"] != null) {
+            for (let i = 0; i < 3; i++)
+                document.getElementById("locationInfo" + (i + 1) + "-" + side).innerHTML = (i == 0 ? "None" : "");
+            if (data["locations"].length > 0)
+                for (let i = 0; i < data["locations"].length; i++)
+                    document.getElementById("locationInfo" + (i + 1) + "-" + side).innerHTML = data["locations"][i] != "" ? data["locations"][i] : `<span style="color: red;" title="There is no information in the database.">Database Empty</span>`;
+            // Hide & Show the See More Link...
+            if (data["locations"].length < 3)
+                document.getElementById("locationMore-" + side).style.visibility = "hidden";
+            else
+                document.getElementById("locationMore-" + side).style.visibility = "visible";
+        }
+        else if (data["locations"] == null) {
+            document.getElementById("locationMore-" + side).style.visibility = "hidden";
+            document.getElementById("locationInfo1-" + side).innerHTML = `<span style="color: red;" title="There is no information in the database.">Database Missing</span>`;
+        }
+        document.getElementById("masters-" + side).innerHTML = `<div class="nistext" id="masterTitle" >Assignment Range</div>`;
+        for (let i = 0; i < data["masters"].length; i++) {
+            let img = `<img id="masterImage` + i + `-` + side + `" alt="` + data["masters"][i] + `" src="./images/masters/` + data["masters"][i] + `.png" title="` + data["masters"][i] + `"></img>`;
+            // Load Master Data and Show it in the hidden window
+            let masterData = await _data_masters__WEBPACK_IMPORTED_MODULE_2__.get(data["masters"][i]);
+            let kills = masterData["task-counts"][data["index"]];
+            document.getElementById("masters-" + side).innerHTML += `<div class="nistext" id="masterInfo` + i + `-` + side + `">` + img + ` Kills: ` + kills + `</div>`;
+        }
+        // Setup the click events for masters and size for preview-task-wiki
+        let previewMastersHeight = (data["masters"].length * 30 + 30);
+        document.getElementById("preview-task-wiki-" + side).setAttribute("style", "height: " + previewMastersHeight + "px;");
+        for (let i = 0; i < data["masters"].length; i++)
+            document.getElementById("masterInfo" + i + "-" + side).addEventListener('click', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.wiki.master(side, i); });
+        if (data["creatures"] != null) {
+            document.getElementById("creatures-" + side).innerHTML = "";
+            let variant = null;
+            for (let a of data["creatures"])
+                if (!_extrafuncs__WEBPACK_IMPORTED_MODULE_1__.listContains(data["hidden-creatures"], a)) {
+                    if (data["default-creature"] && data["default-creature"].includes("#")) {
+                        let creature = data["default-creature"].substring(0, data["default-creature"].indexOf("#"));
+                        variant = data["default-creature"].substring(data["default-creature"].indexOf("#") + 1);
+                        document.getElementById("creatures-" + side).innerHTML += `<option value="` + a + `"` + (_extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(a) === _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(creature) ? ` selected` : ``) + `>` + a + `</option>`;
+                        console.log("Default " + creature + " variant found: " + variant);
                     }
-                    // Check if we are trying to load a single task when 2 is displayed
-                    if (side == 2 && _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.doubleLoaded) {
-                        console.error("Cannot load reaper task if there are 2 is diaplyed!");
-                        return [2 /*return*/];
+                    else {
+                        document.getElementById("creatures-" + side).innerHTML += `<option value="` + a + `"` + (_extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(a) === _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(data["default-creature"]) ? ` selected` : ``) + `>` + a + `</option>`;
                     }
-                    // Show we are loading
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loading();
-                    // If the current task is already set then lets just update the count and return
-                    console.log("Setup: [" + side + "] " + task + " {" + count + "}");
-                    if (document.getElementById("name-" + side).innerHTML === task) {
-                        console.log("Update task: [" + count + "] " + task + " " + (side == 0 ? "(Default)" : (side == 2 ? "(Reaper)" : "(1 Slayer Token)")));
-                        document.getElementById("kills-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(count);
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loadingStop();
-                        return [2 /*return*/];
-                    }
-                    console.log("Load task: [" + count + "] " + task + " " + (side == 0 ? "(Default)" : (side == 2 ? "(Reaper)" : "(1 Slayer Token)")));
-                    document.getElementById("kills-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(count);
-                    document.getElementById("name-" + side).innerHTML = task;
-                    if (!(side == 2)) return [3 /*break*/, 2];
-                    return [4 /*yield*/, _data_reapers__WEBPACK_IMPORTED_MODULE_3__.get(task)];
-                case 1:
-                    _a = _c.sent();
-                    return [3 /*break*/, 4];
-                case 2: return [4 /*yield*/, _data_assignments__WEBPACK_IMPORTED_MODULE_4__.get(task)];
-                case 3:
-                    _a = _c.sent();
-                    _c.label = 4;
-                case 4:
-                    data = _a;
-                    if (!(data != null)) return [3 /*break*/, 9];
-                    document.getElementById("name-" + side).innerHTML = data["index"];
-                    if (data["equipment"] != null) {
-                        for (i = 0; i < 3; i++)
-                            document.getElementById("equipInfo" + (i + 1) + "-" + side).innerHTML = (i == 0 ? "None" : "");
-                        if (data["equipment"].length > 0)
-                            for (i = 0; i < data["equipment"].length; i++)
-                                document.getElementById("equipInfo" + (i + 1) + "-" + side).innerHTML = data["equipment"][i] != "" ? data["equipment"][i] : "<span style=\"color: red;\" title=\"There is no information in the database.\">Database Empty</span>";
-                        // Hide & Show the See More Link...
-                        if (data["equipment"].length < 3)
-                            document.getElementById("equipMore-" + side).style.visibility = "hidden";
-                        else
-                            document.getElementById("equipMore-" + side).style.visibility = "visible";
-                    }
-                    else if (data["equipment"] == null) {
-                        document.getElementById("equipMore-" + side).style.visibility = "hidden";
-                        document.getElementById("equipInfo1-" + side).innerHTML = "<span style=\"color: red;\" title=\"There is no information in the database.\">Database Missing</span>";
-                    }
-                    if (data["locations"] != null) {
-                        for (i = 0; i < 3; i++)
-                            document.getElementById("locationInfo" + (i + 1) + "-" + side).innerHTML = (i == 0 ? "None" : "");
-                        if (data["locations"].length > 0)
-                            for (i = 0; i < data["locations"].length; i++)
-                                document.getElementById("locationInfo" + (i + 1) + "-" + side).innerHTML = data["locations"][i] != "" ? data["locations"][i] : "<span style=\"color: red;\" title=\"There is no information in the database.\">Database Empty</span>";
-                        // Hide & Show the See More Link...
-                        if (data["locations"].length < 3)
-                            document.getElementById("locationMore-" + side).style.visibility = "hidden";
-                        else
-                            document.getElementById("locationMore-" + side).style.visibility = "visible";
-                    }
-                    else if (data["locations"] == null) {
-                        document.getElementById("locationMore-" + side).style.visibility = "hidden";
-                        document.getElementById("locationInfo1-" + side).innerHTML = "<span style=\"color: red;\" title=\"There is no information in the database.\">Database Missing</span>";
-                    }
-                    document.getElementById("masters-" + side).innerHTML = "<div class=\"nistext\" id=\"masterTitle\" >Assignment Range</div>";
-                    i = 0;
-                    _c.label = 5;
-                case 5:
-                    if (!(i < data["masters"].length)) return [3 /*break*/, 8];
-                    img = "<img id=\"masterImage" + i + "-" + side + "\" alt=\"" + data["masters"][i] + "\" src=\"./images/masters/" + data["masters"][i] + ".png\" title=\"" + data["masters"][i] + "\"></img>";
-                    return [4 /*yield*/, _data_masters__WEBPACK_IMPORTED_MODULE_2__.get(data["masters"][i])];
-                case 6:
-                    masterData = _c.sent();
-                    kills = masterData["task-counts"][data["index"]];
-                    document.getElementById("masters-" + side).innerHTML += "<div class=\"nistext\" id=\"masterInfo" + i + "-" + side + "\">" + img + " Kills: " + kills + "</div>";
-                    _c.label = 7;
-                case 7:
-                    i++;
-                    return [3 /*break*/, 5];
-                case 8:
-                    previewMastersHeight = (data["masters"].length * 30 + 30);
-                    document.getElementById("preview-task-wiki-" + side).setAttribute("style", "height: " + previewMastersHeight + "px;");
-                    _loop_1 = function (i) {
-                        document.getElementById("masterInfo" + i + "-" + side).addEventListener('click', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.wiki.master(side, i); });
-                    };
-                    for (i = 0; i < data["masters"].length; i++) {
-                        _loop_1(i);
-                    }
-                    if (data["creatures"] != null) {
-                        document.getElementById("creatures-" + side).innerHTML = "";
-                        variant_1 = null;
-                        for (_i = 0, _b = data["creatures"]; _i < _b.length; _i++) {
-                            a = _b[_i];
-                            if (!_extrafuncs__WEBPACK_IMPORTED_MODULE_1__.listContains(data["hidden-creatures"], a)) {
-                                if (data["default-creature"] && data["default-creature"].includes("#")) {
-                                    creature_1 = data["default-creature"].substring(0, data["default-creature"].indexOf("#"));
-                                    variant_1 = data["default-creature"].substring(data["default-creature"].indexOf("#") + 1);
-                                    document.getElementById("creatures-" + side).innerHTML += "<option value=\"" + a + "\"" + (_extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(a) === _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(creature_1) ? " selected" : "") + ">" + a + "</option>";
-                                    console.log("Default " + creature_1 + " variant found: " + variant_1);
-                                }
-                                else {
-                                    document.getElementById("creatures-" + side).innerHTML += "<option value=\"" + a + "\"" + (_extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(a) === _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(data["default-creature"]) ? " selected" : "") + ">" + a + "</option>";
-                                }
-                            }
-                        }
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.creature(side, variant_1);
-                    }
-                    _c.label = 9;
-                case 9:
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loadingStop();
-                    return [2 /*return*/];
-            }
-        });
-    });
+                }
+            _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.creature(side, variant);
+        }
+    }
+    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loadingStop();
 }
 
 
@@ -1034,28 +617,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 // Hover the Assignment's wiki button
 function assignmentWiki(side) {
-    var showTimer = setTimeout("SlayerAssistant.dochandler.show.assignmentWikiPreview(" + side + ")", 500);
-    var hideTimer = null;
+    let showTimer = setTimeout("SlayerAssistant.dochandler.show.assignmentWikiPreview(" + side + ")", 500);
+    let hideTimer = null;
     document.getElementById("task-wiki-" + side).onmouseleave = function () { hideTimer = setTimeout("SlayerAssistant.dochandler.hide.assignmentWikiPreview(" + side + ")", 200); clearTimeout(showTimer); };
     document.getElementById("preview-task-wiki-" + side).onmouseenter = function () { if (hideTimer != null)
         clearTimeout(hideTimer); };
 }
 // Hover the Creature's wiki button
 function creatureWiki(side) {
-    var showTimer = setTimeout("SlayerAssistant.dochandler.show.creatureWikiPreview(" + side + ")", 500);
-    var hideTimer = null;
+    let showTimer = setTimeout("SlayerAssistant.dochandler.show.creatureWikiPreview(" + side + ")", 500);
+    let hideTimer = null;
     document.getElementById("creature-wiki-" + side).onmouseleave = function () { hideTimer = setTimeout("SlayerAssistant.dochandler.hide.creatureWikiPreview(" + side + ")", 200); clearTimeout(showTimer); };
     document.getElementById("preview-creature-wiki-" + side).onmouseenter = function () { if (hideTimer != null)
         clearTimeout(hideTimer); };
 }
 // Hover more Equipment for task
 function moreEquip(side) {
-    var showTimer = setTimeout("SlayerAssistant.dochandler.show.moreEquip(" + side + ")", 500);
+    let showTimer = setTimeout("SlayerAssistant.dochandler.show.moreEquip(" + side + ")", 500);
     document.getElementById("equipMore-" + side).onmouseleave = function () { clearTimeout(showTimer); };
 }
 // Hover more Locations for task
 function moreLocations(side) {
-    var showTimer = setTimeout("SlayerAssistant.dochandler.show.moreLocations(" + side + ")", 500);
+    let showTimer = setTimeout("SlayerAssistant.dochandler.show.moreLocations(" + side + ")", 500);
     document.getElementById("locationMore-" + side).onmouseleave = function () { clearTimeout(showTimer); };
 }
 
@@ -1088,7 +671,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var doubleLoaded = true, reaperLoaded = false, suggestedLoaded = false;
+let doubleLoaded = true, reaperLoaded = false, suggestedLoaded = false;
 var reset;
 (function (reset) {
     // Reset from reaper tasks doc
@@ -1180,12 +763,13 @@ var setup;
     function documentMain() {
         document.getElementById("nis").innerHTML = getBaseDoc();
         toggle.singleDouble();
-        var str = "Empty";
+        let str = "Empty";
         document.getElementById("infobutton").addEventListener('click', _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.aboutInfo);
         document.getElementById("menubutton").addEventListener('click', _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.settings);
         document.getElementById("donatebutton").addEventListener('click', _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.donate);
         document.getElementById("search-button").addEventListener('click', _slayer__WEBPACK_IMPORTED_MODULE_1__.searchTasks);
         document.getElementById("search-info").addEventListener('input', _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.toggle.searchText);
+        document.getElementById("search-info").addEventListener('change', _slayer__WEBPACK_IMPORTED_MODULE_1__.searchTasks);
         document.getElementById("search-info").addEventListener('keyup', function (event) {
             switch (event.key) {
                 case "ArrowUp":
@@ -1200,14 +784,14 @@ var setup;
             }
         });
         // Load the list of all assignments into the search feature
-        _data_assignments__WEBPACK_IMPORTED_MODULE_3__.getIndexList().then(function (r) { return document.getElementById("search-info-list").innerHTML = r; });
-        _data_reapers__WEBPACK_IMPORTED_MODULE_2__.getIndexList().then(function (r) { return document.getElementById("search-info-list").innerHTML += r; });
+        _data_reapers__WEBPACK_IMPORTED_MODULE_2__.getIndexList().then(r => document.getElementById("search-info-list").innerHTML = r);
+        _data_assignments__WEBPACK_IMPORTED_MODULE_3__.getIndexList().then(r => document.getElementById("search-info-list").innerHTML += r);
     }
     setup.documentMain = documentMain;
     // Setup the base for double assignment
     function doubleAssignment() {
         document.getElementById("base").innerHTML = getExampleDouble();
-        var _loop_1 = function (side) {
+        for (let side = 0; side < 2; side++) {
             document.getElementById("task-wiki-" + side).addEventListener('click', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.wiki.assignment(side); });
             document.getElementById("task-wiki-" + side).addEventListener('mouseover', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.assignmentWiki(side); });
             document.getElementById("preview-task-wiki-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.assignmentWikiPreview(side); });
@@ -1220,9 +804,6 @@ var setup;
             document.getElementById("preview-creature-wiki-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.creatureWikiPreview(side); });
             document.getElementById("creatures-" + side).addEventListener('change', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.creature(side); });
             document.getElementById("variants-" + side).addEventListener('change', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.variant(side); });
-        };
-        for (var side = 0; side < 2; side++) {
-            _loop_1(side);
         }
     }
     setup.doubleAssignment = doubleAssignment;
@@ -1245,15 +826,172 @@ var setup;
     setup.singleAssignment = singleAssignment;
     // Return the base document
     function getBaseDoc() {
-        return "\n        <div id=\"infobutton\" class=\"transbutton\" title=\"About\"></div>\n        <div id=\"menubutton\" class=\"transbutton\" title=\"Settings\"></div>\n        <div id=\"donatebutton\" class=\"transbutton\" title=\"Donate\"></div>\n    \n        <input type=\"text\" list=\"search-info-list\" class=\"nistext\" id=\"search-info\" name=\"search-info\" title=\"Search assignments, alias, or creatures\" placeholder=\"Search...\" autofocus></input>\n        <datalist id=\"search-info-list\"></datalist>\n        <div class=\"nisbutton\" id=\"search-button\" title=\"You can also just press enter\">Capture<span style=\"visibility: hidden;\">. . .</span></div>\n        <div class=\"loading-container\"><span class=\"loading\" id=\"loading-bar\" title=\"Loading...\"></span></div>\n    \n        <div id=\"base\" class=\"center\">\n        </div>\n        <div id=\"copyright\" class=\"center\">Copyright &copy;2021 Unlishema Dragonsworn</div>\n        ";
+        return `
+        <div id="infobutton" class="transbutton" title="About"></div>
+        <div id="menubutton" class="transbutton" title="Settings"></div>
+        <div id="donatebutton" class="transbutton" title="Donate"></div>
+    
+        <input type="text" list="search-info-list" class="nistext" id="search-info" name="search-info" title="Search assignments, alias, or creatures" placeholder="Search..." autofocus></input>
+        <datalist id="search-info-list"></datalist>
+        <div class="nisbutton" id="search-button" title="You can also just press enter">Capture<span style="visibility: hidden;">. . .</span></div>
+        <div class="loading-container"><span class="loading" id="loading-bar" title="Loading..."></span></div>
+    
+        <div id="base" class="center">
+        </div>
+        <div id="copyright" class="center">Copyright &copy;2021 Unlishema Dragonsworn</div>
+        `;
     }
     // Get the Example Dobule Assignment
     function getExampleDouble() {
-        return "\n        <div class=\"left\">\n            " + getExampleSingle(0) + "\n        </div>\n\n        <div id=\"divide\"></div>\n\n        <div class=\"right\">\n            " + getExampleSingle(1) + "\n        </div>";
+        return `
+        <div class="left">
+            ` + getExampleSingle(0) + `
+        </div>
+
+        <div id="divide"></div>
+
+        <div class="right">
+            ` + getExampleSingle(1) + `
+        </div>`;
     }
     // Get the Example Single Assignment
     function getExampleSingle(side) {
-        return "\n        <div class=\"nistext\" id=\"type-" + side + "\">" + (side == 0 ? "(Default)" : (side == 2 ? "(Reaper)" : "(1 Slayer Token)")) + "</div>\n\n        <div class=\"nistext\" id=\"info-" + side + "\">\n            <div class=\"nistext\" id=\"task-wiki-" + side + "\"></div>\n            <div class=\"nistext\" id=\"preview-task-wiki-" + side + "\">\n                <div class=\"nistext\" id=\"masters-" + side + "\">\n                    <div class=\"nistext\" id=\"masterInfo1-" + side + "\"><img id=\"masterImage1-" + side + "\" alt=\"Chaeldar\" src=\"./images/masters/Chaeldar.png\" title=\"Chaeldar\"></img> Kills: Coming Soon...</div>\n                    <div class=\"nistext\" id=\"masterInfo2-" + side + "\"><img id=\"masterImage2-" + side + "\" alt=\"Duradel\" src=\"./images/masters/Duradel.png\" title=\"Duradel\"></img> Kills: Coming Soon...</div>\n                    <div class=\"nistext\" id=\"masterInfo3-" + side + "\"><img id=\"masterImage3-" + side + "\" alt=\"Jacquelyn\" src=\"./images/masters/Jacquelyn.png\" title=\"Jacquelyn\"></img> Kills: Coming Soon...</div>\n                    <div class=\"nistext\" id=\"masterInfo4-" + side + "\"><img id=\"masterImage4-" + side + "\" alt=\"Kuradal\" src=\"./images/masters/Kuradal.png\" title=\"Kuradal\"></img> Kills: Coming Soon...</div>\n                    <div class=\"nistext\" id=\"masterInfo5-" + side + "\"><img id=\"masterImage5-" + side + "\" alt=\"Laniakea\" src=\"./images/masters/Laniakea.png\" title=\"Laniakea\"></img> Kills: Coming Soon...</div>\n                    <div class=\"nistext\" id=\"masterInfo6-" + side + "\"><img id=\"masterImage6-" + side + "\" alt=\"Mandrith\" src=\"./images/masters/Mandrith.png\" title=\"Mandrith\"></img> Kills: Coming Soon...</div>\n                    <div class=\"nistext\" id=\"masterInfo7-" + side + "\"><img id=\"masterImage7-" + side + "\" alt=\"Mazchna\" src=\"./images/masters/Mazchna.png\" title=\"Mazchna\"></img> Kills: Coming Soon...</div>\n                </div>\n            </div>\n\n            <div class=\"nistext\" id=\"kills-" + side + "\" title=\"Kills\">???</div>\n            <div class=\"nistext\" id=\"name-" + side + "\" title=\"Assignment\">???</div>\n            <div class=\"nistext\" id=\"slayer-exp-text\" title=\"Total Slayer Experience\">Exp:</div>\n            <div class=\"nistext\" id=\"total-slayer-exp-" + side + "\" title=\"Total Slayer Experience\">???</div>\n        </div>\n\n        <div class=\"nistext\" id=\"equipment-" + side + "\">\n            <div class=\"nistext\" id=\"equipInfo1-" + side + "\"></div>\n            <div class=\"nistext\" id=\"equipInfo2-" + side + "\"></div>\n            <div class=\"nistext\" id=\"equipMore-" + side + "\">See More...</div>\n            <div class=\"nistext\" id=\"equipHidden-" + side + "\">\n                <div class=\"nistext\" id=\"equipInfo3-" + side + "\"></div>\n                <div class=\"nistext\" id=\"equipInfo4-" + side + "\"></div>\n                <div class=\"nistext\" id=\"equipInfo5-" + side + "\"></div>\n                <div class=\"nistext\" id=\"equipInfo6-" + side + "\"></div>\n                <div class=\"nistext\" id=\"equipInfo7-" + side + "\"></div>\n                <div class=\"nistext\" id=\"equipInfo8-" + side + "\"></div>\n                <div class=\"nistext\" id=\"equipInfo9-" + side + "\"></div>\n            </div>\n        </div>\n        <div class=\"nistext\" id=\"title-1\">Equipment</div>\n\n        <div class=\"nistext\" id=\"locations-" + side + "\">\n            <div class=\"nistext\" id=\"locationInfo1-" + side + "\"></div>\n            <div class=\"nistext\" id=\"locationInfo2-" + side + "\"></div>\n            <div class=\"nistext\" id=\"locationMore-" + side + "\">See More...</div>\n            <div class=\"nistext\" id=\"locationHidden-" + side + "\">\n                <div class=\"nistext\" id=\"locationInfo3-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo4-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo5-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo6-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo7-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo8-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo9-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo10-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo11-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo12-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo13-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo14-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo15-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo16-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo17-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo18-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo19-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo20-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo21-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo22-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo23-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo24-" + side + "\"></div>\n                <div class=\"nistext\" id=\"locationInfo25-" + side + "\"></div>\n            </div>\n        </div>\n        <div class=\"nistext\" id=\"title-2\">Locations</div>\n\n        <div class=\"nistext\" id=\"title-border-3\"></div>\n        <div class=\"nistext\" id=\"title-3\">Creatures</div>\n\n        <div class=\"nistext\" id=\"creature-wiki-" + side + "\"></div>\n        <div class=\"nistext\" id=\"preview-creature-wiki-" + side + "\">\n            <div class=\"nistext\" id=\"image-container-" + side + "\"></div>\n            <div class=\"nistext\" id=\"stats-" + side + "\">\n                <img class=\"first-third-image\" src=\"./images/misc/combat.png\" title=\"Combat Level\"></img>\n                <img class=\"second-third-image\" src=\"./images/misc/lifepoints.png\" title=\"Lifepoints\"></img>\n                <img class=\"third-third-image\" src=\"./images/misc/defence.png\" title=\"Defense\"></img>\n                <div class=\"nistext first-third\" id=\"level-" + side + "\" title=\"Combat Level\">???</div>\n                <div class=\"nistext second-third\" id=\"lifepoints-" + side + "\" title=\"Lifepoints\">???</div>\n                <div class=\"nistext third-third\" id=\"defence-" + side + "\" title=\"Defense\">???</div>\n                <div class=\"nistext\" id=\"title-4\">Stats</div>\n            </div>\n\n            <div class=\"nistext\" id=\"exp-" + side + "\">\n                <img class=\"first-third-image\" src=\"./images/misc/combat.png\" title=\"Combat Exp\"></img>\n                <img class=\"second-third-image\" src=\"./images/misc/lifepoints.png\" title=\"Lifepoints Exp\"></img>\n                <div class=\"nistext first-third\" id=\"combat-exp-" + side + "\" title=\"Combat Exp\">???</div>\n                <div class=\"nistext second-third\" id=\"lifepoints-exp-" + side + "\" title=\"Lifepoints Exp\">???</div>\n                <div class=\"nistext\" id=\"title-5\">Exp</div>\n            </div>\n\n            <div class=\"nistext\" id=\"max-hits-" + side + "\">\n                <img class=\"first-quarter-image\" src=\"./images/misc/melee.png\" title=\"Max Melee\"></img>\n                <img class=\"second-quarter-image\" src=\"./images/misc/ranged.png\" title=\"Max Ranged\"></img>\n                <img class=\"third-quarter-image\" src=\"./images/misc/magic.png\" title=\"Max Magic\"></img>\n                <img class=\"forth-quarter-image\" src=\"./images/misc/necromancy.png\" title=\"Max Necromancy\"></img>\n                <img class=\"fifth-quarter-image\" src=\"./images/misc/spec.png\" title=\"Max Special\"></img>\n                <div class=\"nistext first-quarter\" id=\"max-melee-" + side + "\" title=\"Max Melee\">???</div>\n                <div class=\"nistext second-quarter\" id=\"max-ranged-" + side + "\" title=\"Max Ranged\">???</div>\n                <div class=\"nistext third-quarter\" id=\"max-magic-" + side + "\" title=\"Max Magic\">???</div>\n                <div class=\"nistext forth-quarter\" id=\"max-necromancy-" + side + "\" title=\"Max Necromancy\">???</div>\n                <div class=\"nistext fifth-quarter\" id=\"max-spec-" + side + "\" title=\"Max Special\">???</div>\n                <div class=\"nistext\" id=\"title-6\">Max Hit</div>\n            </div>\n        </div>\n\n        <select class=\"nistext\" id=\"creatures-" + side + "\" name=\"creatures\" title=\"Creatures\">\n        </select>\n\n        <select class=\"nistext\" id=\"variants-" + side + "\" name=\"variants\" title=\"variants\">\n        </select>\n\n        <div class=\"nistext\" id=\"summary-" + side + "\">\n            <img class=\"second-quarter-image\" src=\"./images/misc/slayer.png\" title=\"Slayer Level\"></img>\n            <img class=\"forth-quarter-image\" src=\"./images/misc/slayer.png\" title=\"Slayer Exp\"></img>\n            <div class=\"nistext first-quarter\" style=\"left: 5px;\">Slayer Level</div>\n            <div class=\"nistext second-quarter\" id=\"slayer-level-" + side + "\" title=\"Slayer Level\">???</div>\n            <div class=\"nistext third-quarter\" style=\"left: 5px;\">Slayer Exp</div>\n            <div class=\"nistext forth-quarter\" id=\"slayer-exp-" + side + "\" title=\"Slayer Exp\">???</div>\n\n            <div class=\"nistext\" id=\"weaknessBox-" + side + "\"><p id=\"weakness-text\">Weakness</p>\n                <img class=\"weakness-image\" id=\"weakness-image1-" + side + "\" src=\"\"></img>\n                <img class=\"weakness-image\" id=\"weakness-image2-" + side + "\" src=\"\"></img>\n            </div>\n        \n            <div class=\"nistext\" id=\"susceptibleBox-" + side + "\"><p id=\"susceptible-text\">Susceptible</p>\n                <img class=\"susceptible-image\" id=\"susceptible-image1-" + side + "\" src=\"\"></img>\n                <img class=\"susceptible-image\" id=\"susceptible-image2-" + side + "\" src=\"\"></img>\n            </div>\n        </div>\n        <div class=\"nistext\" id=\"title-7\">Summary</div>\n        ";
+        return `
+        <div class="nistext" id="type-` + side + `">` + (side == 0 ? `(Default)` : (side == 2 ? `(Reaper)` : `(1 Slayer Token)`)) + `</div>
+
+        <div class="nistext" id="info-` + side + `">
+            <div class="nistext" id="task-wiki-` + side + `"></div>
+            <div class="nistext" id="preview-task-wiki-` + side + `">
+                <div class="nistext" id="masters-` + side + `">
+                    <div class="nistext" id="masterInfo1-` + side + `"><img id="masterImage1-` + side + `" alt="Chaeldar" src="./images/masters/Chaeldar.png" title="Chaeldar"></img> Kills: Coming Soon...</div>
+                    <div class="nistext" id="masterInfo2-` + side + `"><img id="masterImage2-` + side + `" alt="Duradel" src="./images/masters/Duradel.png" title="Duradel"></img> Kills: Coming Soon...</div>
+                    <div class="nistext" id="masterInfo3-` + side + `"><img id="masterImage3-` + side + `" alt="Jacquelyn" src="./images/masters/Jacquelyn.png" title="Jacquelyn"></img> Kills: Coming Soon...</div>
+                    <div class="nistext" id="masterInfo4-` + side + `"><img id="masterImage4-` + side + `" alt="Kuradal" src="./images/masters/Kuradal.png" title="Kuradal"></img> Kills: Coming Soon...</div>
+                    <div class="nistext" id="masterInfo5-` + side + `"><img id="masterImage5-` + side + `" alt="Laniakea" src="./images/masters/Laniakea.png" title="Laniakea"></img> Kills: Coming Soon...</div>
+                    <div class="nistext" id="masterInfo6-` + side + `"><img id="masterImage6-` + side + `" alt="Mandrith" src="./images/masters/Mandrith.png" title="Mandrith"></img> Kills: Coming Soon...</div>
+                    <div class="nistext" id="masterInfo7-` + side + `"><img id="masterImage7-` + side + `" alt="Mazchna" src="./images/masters/Mazchna.png" title="Mazchna"></img> Kills: Coming Soon...</div>
+                </div>
+            </div>
+
+            <div class="nistext" id="kills-` + side + `" title="Kills">???</div>
+            <div class="nistext" id="name-` + side + `" title="Assignment">???</div>
+            <div class="nistext" id="slayer-exp-text" title="Total Slayer Experience">Exp:</div>
+            <div class="nistext" id="total-slayer-exp-` + side + `" title="Total Slayer Experience">???</div>
+        </div>
+
+        <div class="nistext" id="equipment-` + side + `">
+            <div class="nistext" id="equipInfo1-` + side + `"></div>
+            <div class="nistext" id="equipInfo2-` + side + `"></div>
+            <div class="nistext" id="equipMore-` + side + `">See More...</div>
+            <div class="nistext" id="equipHidden-` + side + `">
+                <div class="nistext" id="equipInfo3-` + side + `"></div>
+                <div class="nistext" id="equipInfo4-` + side + `"></div>
+                <div class="nistext" id="equipInfo5-` + side + `"></div>
+                <div class="nistext" id="equipInfo6-` + side + `"></div>
+                <div class="nistext" id="equipInfo7-` + side + `"></div>
+                <div class="nistext" id="equipInfo8-` + side + `"></div>
+                <div class="nistext" id="equipInfo9-` + side + `"></div>
+            </div>
+        </div>
+        <div class="nistext" id="title-1">Equipment</div>
+
+        <div class="nistext" id="locations-` + side + `">
+            <div class="nistext" id="locationInfo1-` + side + `"></div>
+            <div class="nistext" id="locationInfo2-` + side + `"></div>
+            <div class="nistext" id="locationMore-` + side + `">See More...</div>
+            <div class="nistext" id="locationHidden-` + side + `">
+                <div class="nistext" id="locationInfo3-` + side + `"></div>
+                <div class="nistext" id="locationInfo4-` + side + `"></div>
+                <div class="nistext" id="locationInfo5-` + side + `"></div>
+                <div class="nistext" id="locationInfo6-` + side + `"></div>
+                <div class="nistext" id="locationInfo7-` + side + `"></div>
+                <div class="nistext" id="locationInfo8-` + side + `"></div>
+                <div class="nistext" id="locationInfo9-` + side + `"></div>
+                <div class="nistext" id="locationInfo10-` + side + `"></div>
+                <div class="nistext" id="locationInfo11-` + side + `"></div>
+                <div class="nistext" id="locationInfo12-` + side + `"></div>
+                <div class="nistext" id="locationInfo13-` + side + `"></div>
+                <div class="nistext" id="locationInfo14-` + side + `"></div>
+                <div class="nistext" id="locationInfo15-` + side + `"></div>
+                <div class="nistext" id="locationInfo16-` + side + `"></div>
+                <div class="nistext" id="locationInfo17-` + side + `"></div>
+                <div class="nistext" id="locationInfo18-` + side + `"></div>
+                <div class="nistext" id="locationInfo19-` + side + `"></div>
+                <div class="nistext" id="locationInfo20-` + side + `"></div>
+                <div class="nistext" id="locationInfo21-` + side + `"></div>
+                <div class="nistext" id="locationInfo22-` + side + `"></div>
+                <div class="nistext" id="locationInfo23-` + side + `"></div>
+                <div class="nistext" id="locationInfo24-` + side + `"></div>
+                <div class="nistext" id="locationInfo25-` + side + `"></div>
+            </div>
+        </div>
+        <div class="nistext" id="title-2">Locations</div>
+
+        <div class="nistext" id="title-border-3"></div>
+        <div class="nistext" id="title-3">Creatures</div>
+
+        <div class="nistext" id="creature-wiki-` + side + `"></div>
+        <div class="nistext" id="preview-creature-wiki-` + side + `">
+            <div class="nistext" id="image-container-` + side + `"></div>
+            <div class="nistext" id="stats-` + side + `">
+                <img class="first-third-image" src="./images/misc/combat.png" title="Combat Level"></img>
+                <img class="second-third-image" src="./images/misc/lifepoints.png" title="Lifepoints"></img>
+                <img class="third-third-image" src="./images/misc/defence.png" title="Defense"></img>
+                <div class="nistext first-third" id="level-` + side + `" title="Combat Level">???</div>
+                <div class="nistext second-third" id="lifepoints-` + side + `" title="Lifepoints">???</div>
+                <div class="nistext third-third" id="defence-` + side + `" title="Defense">???</div>
+                <div class="nistext" id="title-4">Stats</div>
+            </div>
+
+            <div class="nistext" id="exp-` + side + `">
+                <img class="first-third-image" src="./images/misc/combat.png" title="Combat Exp"></img>
+                <img class="second-third-image" src="./images/misc/lifepoints.png" title="Lifepoints Exp"></img>
+                <div class="nistext first-third" id="combat-exp-` + side + `" title="Combat Exp">???</div>
+                <div class="nistext second-third" id="lifepoints-exp-` + side + `" title="Lifepoints Exp">???</div>
+                <div class="nistext" id="title-5">Exp</div>
+            </div>
+
+            <div class="nistext" id="max-hits-` + side + `">
+                <img class="first-quarter-image" src="./images/misc/melee.png" title="Max Melee"></img>
+                <img class="second-quarter-image" src="./images/misc/ranged.png" title="Max Ranged"></img>
+                <img class="third-quarter-image" src="./images/misc/magic.png" title="Max Magic"></img>
+                <img class="forth-quarter-image" src="./images/misc/necromancy.png" title="Max Necromancy"></img>
+                <img class="fifth-quarter-image" src="./images/misc/spec.png" title="Max Special"></img>
+                <div class="nistext first-quarter" id="max-melee-` + side + `" title="Max Melee">???</div>
+                <div class="nistext second-quarter" id="max-ranged-` + side + `" title="Max Ranged">???</div>
+                <div class="nistext third-quarter" id="max-magic-` + side + `" title="Max Magic">???</div>
+                <div class="nistext forth-quarter" id="max-necromancy-` + side + `" title="Max Necromancy">???</div>
+                <div class="nistext fifth-quarter" id="max-spec-` + side + `" title="Max Special">???</div>
+                <div class="nistext" id="title-6">Max Hit</div>
+            </div>
+        </div>
+
+        <select class="nistext" id="creatures-` + side + `" name="creatures" title="Creatures">
+        </select>
+
+        <select class="nistext" id="variants-` + side + `" name="variants" title="variants">
+        </select>
+
+        <div class="nistext" id="summary-` + side + `">
+            <img class="second-quarter-image" src="./images/misc/slayer.png" title="Slayer Level"></img>
+            <img class="forth-quarter-image" src="./images/misc/slayer.png" title="Slayer Exp"></img>
+            <div class="nistext first-quarter" style="left: 5px;">Slayer Level</div>
+            <div class="nistext second-quarter" id="slayer-level-` + side + `" title="Slayer Level">???</div>
+            <div class="nistext third-quarter" style="left: 5px;">Slayer Exp</div>
+            <div class="nistext forth-quarter" id="slayer-exp-` + side + `" title="Slayer Exp">???</div>
+
+            <div class="nistext" id="weaknessBox-` + side + `"><p id="weakness-text">Weakness</p>
+                <img class="weakness-image" id="weakness-image1-` + side + `" src=""></img>
+                <img class="weakness-image" id="weakness-image2-` + side + `" src=""></img>
+            </div>
+        
+            <div class="nistext" id="susceptibleBox-` + side + `"><p id="susceptible-text">Susceptible</p>
+                <img class="susceptible-image" id="susceptible-image1-` + side + `" src=""></img>
+                <img class="susceptible-image" id="susceptible-image2-` + side + `" src=""></img>
+            </div>
+        </div>
+        <div class="nistext" id="title-7">Summary</div>
+        `;
     }
 })(setup || (setup = {}));
 var toggle;
@@ -1267,8 +1005,7 @@ var toggle;
     }
     toggle.searchText = searchText;
     // Toggle if we are doing dual document or single
-    function singleDouble(side) {
-        if (side === void 0) { side = 0; }
+    function singleDouble(side = 0) {
         if (doubleLoaded = !doubleLoaded)
             setup.doubleAssignment();
         else
@@ -1304,7 +1041,7 @@ function aboutInfo() {
 }
 // Open the settings page
 function settings() {
-    var t = window.open("./settings.html", null, "width=420,height=550");
+    let t = window.open("./settings.html", null, "width=420,height=550");
     t.addEventListener('load', function () {
         window.console.warn("Settings loaded!");
         // TODO load the current settings
@@ -1318,22 +1055,22 @@ var wiki;
 (function (wiki) {
     // Open the specific Task's wiki page
     function assignment(side) {
-        var task = document.getElementById("name-" + side).innerHTML;
+        let task = document.getElementById("name-" + side).innerHTML;
         if (task != null)
             window.open('https://runescape.wiki/' + task + '_(Slayer_assignment)');
     }
     wiki.assignment = assignment;
     // Open the specific Creature's wiki page
     function creature(side) {
-        var creature = document.getElementById("creatures-" + side).value;
-        var variant = document.getElementById("variants-" + side).value;
+        let creature = document.getElementById("creatures-" + side).value;
+        let variant = document.getElementById("variants-" + side).value;
         if (creature != null && variant != null)
             window.open('https://runescape.wiki/' + creature + "#" + variant);
     }
     wiki.creature = creature;
     // Open the specific Master wiki page
     function master(side, i) {
-        var master = document.getElementById("masterImage" + i + "-" + side).alt;
+        let master = document.getElementById("masterImage" + i + "-" + side).alt;
         if (master != null)
             window.open('https://runescape.wiki/' + master);
     }
@@ -1397,14 +1134,14 @@ __webpack_require__.r(__webpack_exports__);
 // Add commas into a number if its big enough
 function numberWithCommas(n) {
     if (n == null)
-        return "<span style=\"color: red;\">Empty</span>";
+        return `<span style="color: red;">Empty</span>`;
     if (n == -666)
-        return "<span style=\"color: red;\">Error</span>";
+        return `<span style="color: red;">Error</span>`;
     return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 // Check if the list contains what you want to find
 function listContains(list, find) {
-    for (var l in list)
+    for (let l in list)
         if (decodeHtml(list[l]).toLowerCase() === decodeHtml(find).toLowerCase())
             return true;
     return false;
@@ -1416,19 +1153,19 @@ function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
 }
 // Decode the Html chars that have been encoded during database downloading
 function decodeHtml(html) {
-    var txt = document.createElement("textarea");
+    let txt = document.createElement("textarea");
     txt.innerHTML = html;
     return txt.value;
 }
 // Check the similarity of 2 strings (Refer to authors overlord1234 & David)
 function similarity(s1, s2) {
-    var longer = s1;
-    var shorter = s2;
+    let longer = s1;
+    let shorter = s2;
     if (s1.length < s2.length) {
         longer = s2;
         shorter = s1;
     }
-    var longerLength = longer.length;
+    let longerLength = longer.length;
     if (longerLength === 0) {
         return 1.0;
     }
@@ -1438,15 +1175,15 @@ function similarity(s1, s2) {
 function editDistance(s1, s2) {
     s1 = s1.toLowerCase();
     s2 = s2.toLowerCase();
-    var costs = new Array();
-    for (var i = 0; i <= s1.length; i++) {
-        var lastValue = i;
-        for (var j = 0; j <= s2.length; j++) {
+    let costs = new Array();
+    for (let i = 0; i <= s1.length; i++) {
+        let lastValue = i;
+        for (let j = 0; j <= s2.length; j++) {
             if (i == 0)
                 costs[j] = j;
             else {
                 if (j > 0) {
-                    var newValue = costs[j - 1];
+                    let newValue = costs[j - 1];
                     if (s1.charAt(i - 1) != s2.charAt(j - 1))
                         newValue = Math.min(Math.min(newValue, lastValue), costs[j]) + 1;
                     costs[j - 1] = lastValue;
@@ -1480,100 +1217,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _dochandler__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dochandler */ "./modules/dochandler.ts");
 /* harmony import */ var _slayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./slayer */ "./modules/slayer.ts");
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 
 
-var localConfigLoaded = false;
-var extractCount = false;
+let localConfigLoaded = false;
+let extractCount = false;
 // Run the first setup settings
-function setup() {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    if (localConfigLoaded)
-                        return [2 /*return*/];
-                    // Add Versioning system to allow compatibility with future updates (Should only ever run once)
-                    if (window.localStorage.getItem('version') == null || window.localStorage.getItem('version') == '0.1') {
-                        console.log("(Versioning System Missing) Setting up versioning system.");
-                        // TODO Remove old Config from before versioning system was added
-                        //if (window.localStorage.getItem('recent_task_0') != null) window.localStorage.removeItem('recent_task_0');
-                        //if (window.localStorage.getItem('recent_task_count_0') != null) window.localStorage.removeItem('recent_task_count_0');
-                        //if (window.localStorage.getItem('recent_task_1') != null) window.localStorage.removeItem('recent_task_1');
-                        //if (window.localStorage.getItem('recent_task_count_1') != null) window.localStorage.removeItem('recent_task_count_1');
-                        // Add new Startup config
-                        window.localStorage.setItem('version', '0.1');
-                    }
-                    // Set Default tasks for first ever run (TODO Adjust during versioning update)
-                    if (window.localStorage.getItem('recent_task_0') == null) {
-                        window.localStorage.setItem('recent_task_0', 'waterfiends');
-                        window.localStorage.setItem('recent_task_count_0', '777');
-                        console.log("(Default) task's default info has been saved. This only happens on first ever run!");
-                    }
-                    if (window.localStorage.getItem('recent_task_1') == null) {
-                        window.localStorage.setItem('recent_task_1', 'black demons');
-                        window.localStorage.setItem('recent_task_count_1', '666');
-                        console.log("(Cost 1 Slayer) task's default info has been saved. This only happens on first ever run!");
-                    }
-                    // TODO Add version updates below here
-                    // Adjust the document to be single or dual
-                    if (_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.doubleLoaded && window.localStorage.getItem('recent_task_1') == null)
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.single();
-                    if (!_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.doubleLoaded && window.localStorage.getItem('recent_task_1') != null)
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.double();
-                    if (!(window.localStorage.getItem('recent_task_0') != null)) return [3 /*break*/, 2];
-                    return [4 /*yield*/, _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.assignment(0, window.localStorage.getItem('recent_task_0'), parseInt(window.localStorage.getItem('recent_task_count_0')))];
-                case 1:
-                    _a.sent();
-                    _a.label = 2;
-                case 2:
-                    if (!(window.localStorage.getItem('recent_task_1') != null)) return [3 /*break*/, 4];
-                    return [4 /*yield*/, _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.assignment(1, window.localStorage.getItem('recent_task_1'), parseInt(window.localStorage.getItem('recent_task_count_1')))];
-                case 3:
-                    _a.sent();
-                    _a.label = 4;
-                case 4:
-                    // Lets set the local config to loaded so we won't do this again
-                    localConfigLoaded = true;
-                    return [2 /*return*/];
-            }
-        });
-    });
+async function setup() {
+    if (localConfigLoaded)
+        return;
+    // Add Versioning system to allow compatibility with future updates (Should only ever run once)
+    if (window.localStorage.getItem('version') == null || window.localStorage.getItem('version') == '0.1') {
+        console.log("(Versioning System Missing) Setting up versioning system.");
+        // TODO Remove old Config from before versioning system was added
+        //if (window.localStorage.getItem('recent_task_0') != null) window.localStorage.removeItem('recent_task_0');
+        //if (window.localStorage.getItem('recent_task_count_0') != null) window.localStorage.removeItem('recent_task_count_0');
+        //if (window.localStorage.getItem('recent_task_1') != null) window.localStorage.removeItem('recent_task_1');
+        //if (window.localStorage.getItem('recent_task_count_1') != null) window.localStorage.removeItem('recent_task_count_1');
+        // Add new Startup config
+        window.localStorage.setItem('version', '0.1');
+    }
+    // Set Default tasks for first ever run (TODO Adjust during versioning update)
+    if (window.localStorage.getItem('recent_task_0') == null) {
+        window.localStorage.setItem('recent_task_0', 'waterfiends');
+        window.localStorage.setItem('recent_task_count_0', '777');
+        console.log("(Default) task's default info has been saved. This only happens on first ever run!");
+    }
+    if (window.localStorage.getItem('recent_task_1') == null) {
+        window.localStorage.setItem('recent_task_1', 'black demons');
+        window.localStorage.setItem('recent_task_count_1', '666');
+        console.log("(Cost 1 Slayer) task's default info has been saved. This only happens on first ever run!");
+    }
+    // TODO Add version updates below here
+    // Adjust the document to be single or dual
+    if (_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.doubleLoaded && window.localStorage.getItem('recent_task_1') == null)
+        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.single();
+    if (!_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.doubleLoaded && window.localStorage.getItem('recent_task_1') != null)
+        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.double();
+    // Load the Saved Tasks into the App
+    if (window.localStorage.getItem('recent_task_0') != null)
+        await _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.assignment(0, window.localStorage.getItem('recent_task_0'), parseInt(window.localStorage.getItem('recent_task_count_0')));
+    if (window.localStorage.getItem('recent_task_1') != null)
+        await _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.assignment(1, window.localStorage.getItem('recent_task_1'), parseInt(window.localStorage.getItem('recent_task_count_1')));
+    // Lets set the local config to loaded so we won't do this again
+    localConfigLoaded = true;
 }
 // Load the users settings
 function load() {
@@ -1595,33 +1281,30 @@ function executeDevTools(value) {
         if (value === "size")
             console.log("Current Size: " + document.body.clientWidth + ", " + document.body.clientHeight);
         // Temp lock for extract current task count because it's not finished
-        if (value === "enableExtractCount")
+        if (value === "enableExtractCount") {
+            console.log("Enabling Extract Slayer Count via Slayer Counter UI Element");
             extractCount = true;
-        if (value === "disableExtractCount")
+        }
+        if (value === "disableExtractCount") {
+            console.log("Disabling Extract Slayer Count via Slayer Counter UI Element");
             extractCount = false;
-        if (value.startsWith("testReaper ")) {
-            var task = value.substring(value.indexOf(" ") + 1);
-            _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loading();
-            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.reaper();
-            _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.reaper(task, 666);
-            _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loadingStop();
         }
         if (value === "dialogReader") {
             console.log("Searching for Dialog...");
             // Capture the rs screen
-            var img = _slayer__WEBPACK_IMPORTED_MODULE_1__.captureRunescape();
+            let img = _slayer__WEBPACK_IMPORTED_MODULE_1__.captureRunescape();
             if (!img) {
                 console.log(" ~~~ Dev Tools ~ Error: Cannot capture the screen! ~~~ ");
                 return;
             }
             // Get the dialog on the screen if it exists
-            var pos = _slayer__WEBPACK_IMPORTED_MODULE_1__.reader.find(img);
+            let pos = _slayer__WEBPACK_IMPORTED_MODULE_1__.reader.find(img);
             if (!pos) {
                 console.log(" ~~~ Dev Tools ~ Error: Cannot find the Dialog! ~~~ ");
                 return;
             }
             // Attempt to read the data in the dialog box
-            var box = _slayer__WEBPACK_IMPORTED_MODULE_1__.reader.read(img);
+            let box = _slayer__WEBPACK_IMPORTED_MODULE_1__.reader.read(img);
             if (!box) {
                 console.log(" ~~~ Dev Tools ~ Error: Cannot read the Dialog! ~~~ ");
                 return;
@@ -1633,7 +1316,7 @@ function executeDevTools(value) {
                 console.log("The Dialog Box Text [" + box.text.toString() + "]");
             if (box.opts) {
                 console.log("The Dialog Box Options (" + box.opts.length + ") [" + box.opts.toString() + "]");
-                for (var a in box.opts)
+                for (let a in box.opts)
                     console.log("\t" + (Number(a) + 1) + ". " + box.opts[a].text);
             }
         }
@@ -1675,52 +1358,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _settings__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./settings */ "./modules/settings.ts");
 /* harmony import */ var _dochandler__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dochandler */ "./modules/dochandler.ts");
 /* harmony import */ var _extrafuncs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./extrafuncs */ "./modules/extrafuncs.ts");
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 
 
 
 
 
 
-var tempSearch = null;
-var searchHistory = [];
-var searchIndex = 0;
-var imgs = alt1__WEBPACK_IMPORTED_MODULE_3__.webpackImages({
+let tempSearch = null;
+let searchHistory = [];
+let searchIndex = 0;
+let imgs = alt1__WEBPACK_IMPORTED_MODULE_3__.webpackImages({
     slayer_expanded_RS3: __webpack_require__(/*! ./images/slayer_expanded_RS3.data.png */ "./modules/images/slayer_expanded_RS3.data.png"),
     slayer_expanded_OSL: __webpack_require__(/*! ./images/slayer_expanded_OSL.data.png */ "./modules/images/slayer_expanded_OSL.data.png"),
     reaper_expanded_RS3: __webpack_require__(/*! ./images/reaper_expanded_RS3.data.png */ "./modules/images/reaper_expanded_RS3.data.png"),
@@ -1730,13 +1377,13 @@ var imgs = alt1__WEBPACK_IMPORTED_MODULE_3__.webpackImages({
     reaper_collapsed_RS3: __webpack_require__(/*! ./images/reaper_collapsed_RS3.data.png */ "./modules/images/reaper_collapsed_RS3.data.png"),
     reaper_collapsed_OSL: __webpack_require__(/*! ./images/reaper_collapsed_OSL.data.png */ "./modules/images/reaper_collapsed_OSL.data.png"),
 });
-var font;
-var fontcolors = [
+let font;
+let fontcolors = [
     [255, 152, 31], // orange
 ];
 // Get a timer and the Dialog Reader
-var timer = function (ms) { return new Promise(function (res) { return setTimeout(res, ms); }); };
-var reader = new (alt1_dialog__WEBPACK_IMPORTED_MODULE_4___default())();
+const timer = (ms) => new Promise(res => setTimeout(res, ms));
+let reader = new (alt1_dialog__WEBPACK_IMPORTED_MODULE_4___default())();
 // Check to see if we can capture the current screen
 function canCaptureRunescape() {
     return window.alt1 && alt1.rsLinked && alt1.permissionPixel;
@@ -1756,6 +1403,7 @@ function captureRunescape() {
 }
 // Get the previous search history
 function getPreviousSearchHistory() {
+    // TODO Adjust the search history to be in sessionStorage instead
     // Setup temp search value while it is empty
     if (tempSearch == null)
         tempSearch = document.getElementById("search-info").value;
@@ -1795,182 +1443,150 @@ function getNextSearchHistory() {
     return searchHistory[searchIndex];
 }
 // Find a task on the current screen in multiple different ways
-function findTask(img) {
-    return __awaiter(this, void 0, void 0, function () {
-        var pos, box, msg, count, task, e, count, task, task, _a, _b, _c, _i, a, str, count, task, type, slayerTask, reaperTask;
-        return __generator(this, function (_d) {
-            switch (_d.label) {
-                case 0:
-                    if (!img)
-                        return [2 /*return*/]; // If img in null return
-                    if (!!font) return [3 /*break*/, 2];
-                    return [4 /*yield*/, fetch("../aa_10px_mono.fontmeta.json").then(function (r) { return r.json(); })];
-                case 1:
-                    font = _d.sent();
-                    _d.label = 2;
-                case 2:
-                    // End current animation just incase it didn't end before
-                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
-                    pos = reader.find(img);
-                    if (!pos) return [3 /*break*/, 19];
-                    box = reader.read(img);
-                    if (!box) return [3 /*break*/, 19];
-                    // If we haven't made it to the slayer assigment screen yet just return and try again
-                    if (box.text && box.text.toString() === "I need another assignment.")
-                        return [2 /*return*/];
-                    // If we can see a dialog box, lets let them know we are looking for the slayer assignment to show up
-                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loading();
-                    if (!(box.text && (!box.opts || box.opts.length != 2))) return [3 /*break*/, 13];
-                    msg = box.text.toString();
-                    if (!box.text.toString().toLowerCase().includes("select your own task")) return [3 /*break*/, 4];
+async function findTask(img) {
+    if (!img)
+        return; // If img in null return
+    if (!font)
+        font = await fetch(__webpack_require__(/*! ../fonts/aa_10px_mono.fontmeta.json */ "./fonts/aa_10px_mono.fontmeta.json")).then(r => r.json());
+    // End current animation just incase it didn't end before
+    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
+    // Get the dialog on the screen if it exists
+    let pos = reader.find(img);
+    if (pos) {
+        // If we found a dialog in screen then attempt to read the data in the dialog box
+        let box = reader.read(img);
+        if (box) {
+            // If we haven't made it to the slayer assigment screen yet just return and try again
+            if (box.text && box.text.toString() === "I need another assignment.")
+                return;
+            // If we can see a dialog box, lets let them know we are looking for the slayer assignment to show up
+            _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loading();
+            // If we see they have been assigned a single slayer assignment then lets do that
+            if (box.text && (!box.opts || box.opts.length != 2)) {
+                let msg = box.text.toString();
+                // Show support for 120 slayer assignment chooser
+                if (box.text.toString().toLowerCase().includes("select your own task")) {
                     //dochandler.main.set.suggested();
                     // TODO Add in support for 120 Slayer Assignment choosing suggestion
                     // End Loading animation, wait 5 secs and then return
                     console.error("Select your own task support not added yet");
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
-                    return [4 /*yield*/, timer(5000)];
-                case 3:
-                    _d.sent();
-                    return [2 /*return*/];
-                case 4:
-                    if (!box.text.toString().toLowerCase().includes("require you to collect")) return [3 /*break*/, 7];
-                    count = msg.substring(msg.indexOf("collect ") + 8, msg.indexOf(" souls"));
-                    task = msg.substring(msg.indexOf("battle: ") + 8, msg.indexOf(". Can"));
+                    await timer(5000);
+                    return;
+                }
+                // Get reaper assignment if it's a new reaper task dialog
+                if (box.text.toString().toLowerCase().includes("require you to collect")) {
+                    // Extract the count and reaper task from the dialog
+                    let count = msg.substring(msg.indexOf("collect ") + 8, msg.indexOf(" souls"));
+                    let task = msg.substring(msg.indexOf("battle: ") + 8, msg.indexOf(". Can"));
                     console.log("Reaper Task Extracted: [" + count + "] " + task);
                     // Set Reaper Task doc and set data then stop loading
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.set.reaper();
-                    return [4 /*yield*/, _dochandler__WEBPACK_IMPORTED_MODULE_1__.change.reaper(task, parseInt(count))];
-                case 5:
-                    _d.sent();
+                    await _dochandler__WEBPACK_IMPORTED_MODULE_1__.change.reaper(task, parseInt(count));
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
                     // Wait 5 seconds to attempt this loop again
-                    return [4 /*yield*/, timer(5000)];
-                case 6:
-                    // Wait 5 seconds to attempt this loop again
-                    _d.sent();
-                    return [2 /*return*/];
-                case 7:
-                    if (!box.text.toString().toLowerCase().includes("new task is to kill")) return [3 /*break*/, 10];
-                    e = msg.substring(msg.indexOf("kill ") + 5, msg.length - 1);
-                    count = e.substring(0, e.includes(",") ? e.indexOf(",") : e.indexOf(" "));
-                    task = e.substring((e.includes(",") ? e.indexOf(",") : e.indexOf(" ")) + 1);
+                    await timer(5000);
+                    return;
+                }
+                // Get single slayer assignment if it's a new task dialog
+                if (box.text.toString().toLowerCase().includes("new task is to kill")) {
+                    let e = msg.substring(msg.indexOf("kill ") + 5, msg.length - 1);
+                    // Extract the count and task from the dialog
+                    let count = e.substring(0, e.includes(",") ? e.indexOf(",") : e.indexOf(" "));
+                    let task = e.substring((e.includes(",") ? e.indexOf(",") : e.indexOf(" ")) + 1);
                     console.log("Slayer Task Extracted: [" + count + "] " + task);
                     // Set Single Task doc and set data then stop loading
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.set.single();
-                    return [4 /*yield*/, _dochandler__WEBPACK_IMPORTED_MODULE_1__.change.assignment(0, task, parseInt(count))];
-                case 8:
-                    _d.sent();
+                    await _dochandler__WEBPACK_IMPORTED_MODULE_1__.change.assignment(0, task, parseInt(count));
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
                     // Wait 5 seconds to attempt this loop again
-                    return [4 /*yield*/, timer(5000)];
-                case 9:
-                    // Wait 5 seconds to attempt this loop again
-                    _d.sent();
-                    return [2 /*return*/];
-                case 10:
-                    if (!box.text.toString().toLowerCase().includes("still hunting")) return [3 /*break*/, 13];
-                    task = msg.substring(msg.indexOf("hunting ") + 8, msg.indexOf(";"));
+                    await timer(5000);
+                    return;
+                }
+                // Get single slayer assignment from still hunting dialog
+                if (box.text.toString().toLowerCase().includes("still hunting")) {
+                    // Extract task of Assignment
+                    let task = msg.substring(msg.indexOf("hunting ") + 8, msg.indexOf(";"));
                     console.log("Slayer Task Extracted: [???] " + task);
                     // Set Single Task doc and set data then stop loading
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.set.single();
-                    return [4 /*yield*/, _dochandler__WEBPACK_IMPORTED_MODULE_1__.change.assignment(0, task, 1)];
-                case 11:
-                    _d.sent();
+                    await _dochandler__WEBPACK_IMPORTED_MODULE_1__.change.assignment(0, task, 1);
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
                     // Wait 5 seconds to attempt this loop again
-                    return [4 /*yield*/, timer(5000)];
-                case 12:
-                    // Wait 5 seconds to attempt this loop again
-                    _d.sent();
-                    return [2 /*return*/];
-                case 13:
-                    if (!(box.opts && box.opts.length == 2 && (box.title && box.title.toLowerCase().includes("change your assigned slayer task")))) return [3 /*break*/, 19];
-                    // From here on assume we are doing a dual assignment and adjust as needed
-                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.set.double(); // Set to Dual Assignment
-                    _a = box.opts;
-                    _b = [];
-                    for (_c in _a)
-                        _b.push(_c);
-                    _i = 0;
-                    _d.label = 14;
-                case 14:
-                    if (!(_i < _b.length)) return [3 /*break*/, 17];
-                    _c = _b[_i];
-                    if (!(_c in _a)) return [3 /*break*/, 16];
-                    a = _c;
-                    str = box.opts[a].text;
-                    count = str.substring(0, str.indexOf(' '));
-                    task = str.substring(str.indexOf(' ') + 1, str.includes('(') ? str.indexOf('(') - 1 : str.length);
-                    type = str.includes('(') ? str.substring(str.indexOf('(') + 1, str.indexOf(')')) : 'extra';
-                    // Update the data in the window
-                    return [4 /*yield*/, _dochandler__WEBPACK_IMPORTED_MODULE_1__.change.assignment(type == "default" ? 0 : 1, task, parseInt(count))];
-                case 15:
-                    // Update the data in the window
-                    _d.sent();
-                    _d.label = 16;
-                case 16:
-                    _i++;
-                    return [3 /*break*/, 14];
-                case 17:
-                    // End Loading animation, wait 0.2 secs and then return
-                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
-                    return [4 /*yield*/, timer(200)];
-                case 18:
-                    _d.sent();
-                    return [2 /*return*/];
-                case 19:
-                    if (!_settings__WEBPACK_IMPORTED_MODULE_0__.extractCount) return [3 /*break*/, 23];
-                    slayerTask = findSlayerRS3UI(img);
-                    if (!slayerTask) return [3 /*break*/, 21];
-                    // If we can see the Slayer Count UI for RS3, lets let them know we are loading
-                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loading();
-                    console.log("Slayer Task RS3UI Found!");
-                    // Display the image at the bottom of the document
-                    if (true)
-                        document.getElementById("copyright").insertAdjacentElement("afterbegin", slayerTask);
-                    // TODO process slayer task
-                    // Process count only (also take into account the current assignment we got from the dialog earlier)
-                    // Process count and task
-                    // End Loading animation, wait 5 secs and then return
-                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
-                    return [4 /*yield*/, timer(5000)];
-                case 20:
-                    _d.sent();
-                    return [2 /*return*/];
-                case 21:
-                    reaperTask = findReaperRS3UI(img);
-                    if (!reaperTask) return [3 /*break*/, 23];
-                    // If we can see the Reaper Count UI for RS3, lets let them know we are loading
-                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loading();
-                    console.log("Reaper Task RS3UI Found!");
-                    // Display the image at the bottom of the document
-                    if (true)
-                        document.getElementById("copyright").insertAdjacentElement("afterbegin", reaperTask);
-                    // TODO process reaper task
-                    // Process count only
-                    // Process count and task
-                    // TODO Add support for Reaper Task doc
-                    console.error("Reaper Task support not added yet");
-                    // End Loading animation, wait 5 secs and then return
-                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
-                    return [4 /*yield*/, timer(5000)];
-                case 22:
-                    _d.sent();
-                    return [2 /*return*/];
-                case 23:
-                    // Finish up by stoping the loading animation and wait 0.5 seconds before we start capturing again
-                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
-                    return [4 /*yield*/, timer(500)];
-                case 24:
-                    _d.sent();
-                    return [2 /*return*/];
+                    await timer(5000);
+                    return;
+                }
             }
-        });
-    });
+            // Look and see if there is a slayer assignment choice on screen via 2 options and title
+            if (box.opts && box.opts.length == 2 && (box.title && box.title.toLowerCase().includes("change your assigned slayer task"))) {
+                // From here on assume we are doing a dual assignment and adjust as needed
+                _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.set.double(); // Set to Dual Assignment
+                // Loop through options from the dialog box since we know it's for slayer task
+                for (let a in box.opts) {
+                    // Below are the options as displayed as-is in rs3
+                    // 113 iron dragons (costs 1 Slayer token)
+                    // 284 black demons (default)
+                    // Store the string for easier access
+                    const str = box.opts[a].text;
+                    // Extract the slayer task info from the option
+                    const count = str.substring(0, str.indexOf(' '));
+                    const task = str.substring(str.indexOf(' ') + 1, str.includes('(') ? str.indexOf('(') - 1 : str.length);
+                    const type = str.includes('(') ? str.substring(str.indexOf('(') + 1, str.indexOf(')')) : 'extra';
+                    // Update the data in the window
+                    await _dochandler__WEBPACK_IMPORTED_MODULE_1__.change.assignment(type == "default" ? 0 : 1, task, parseInt(count));
+                }
+                // End Loading animation, wait 0.2 secs and then return
+                _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
+                await timer(200);
+                return;
+            }
+        }
+    }
+    // Temp lock for current task extraction due to it not being finised
+    if (_settings__WEBPACK_IMPORTED_MODULE_0__.extractCount) {
+        // Find Slayer Count UI for RS3
+        let slayerTask = findSlayerRS3UI(img);
+        if (slayerTask) {
+            // If we can see the Slayer Count UI for RS3, lets let them know we are loading
+            _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loading();
+            console.log("Slayer Task RS3UI Found!");
+            // Display the image at the bottom of the document
+            if (true)
+                document.getElementById("copyright").insertAdjacentElement("afterbegin", slayerTask);
+            // TODO process slayer task
+            // Process count only (also take into account the current assignment we got from the dialog earlier)
+            // Process count and task
+            // End Loading animation, wait 5 secs and then return
+            _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
+            await timer(5000);
+            return;
+        }
+        let reaperTask = findReaperRS3UI(img);
+        if (reaperTask) {
+            // If we can see the Reaper Count UI for RS3, lets let them know we are loading
+            _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loading();
+            console.log("Reaper Task RS3UI Found!");
+            // Display the image at the bottom of the document
+            if (true)
+                document.getElementById("copyright").insertAdjacentElement("afterbegin", reaperTask);
+            // TODO process reaper task
+            // Process count only
+            // Process count and task
+            // TODO Add support for Reaper Task doc
+            console.error("Reaper Task support not added yet");
+            // End Loading animation, wait 5 secs and then return
+            _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
+            await timer(5000);
+            return;
+        }
+    }
+    // Finish up by stoping the loading animation and wait 0.5 seconds before we start capturing again
+    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
+    await timer(500);
 }
 // Get the image of the current slayer counter and return it
 function findSlayerRS3UI(img) {
-    var data, loc;
+    let data, loc;
     // Look for OS Collapsed Salyer Counter
     if (!data)
         loc = img.findSubimage(imgs.slayer_collapsed_OSL);
@@ -1994,10 +1610,9 @@ function findSlayerRS3UI(img) {
     // If we don't find any data or we found too many matches then return
     if (!data || loc.length == 0)
         return false;
-    for (var _i = 0, loc_1 = loc; _i < loc_1.length; _i++) {
-        var match = loc_1[_i];
+    for (let match of loc) {
         // Setup the location of the slayer counter using the data needed
-        var found = {
+        let found = {
             x: match.x,
             y: match.y,
             w: data.img.width,
@@ -2007,16 +1622,20 @@ function findSlayerRS3UI(img) {
         if (window.alt1 && alt1.permissionOverlay)
             alt1.overLayRect(alt1__WEBPACK_IMPORTED_MODULE_3__.mixColor(255, 255, 255), found.x, found.y, found.w, found.h, 500, 3);
         // Get the pixel data for the matched area
-        var pixels = img.toData(found.x, found.y, found.w, found.h);
+        let pixels = img.toData(found.x, found.y, found.w, found.h);
         // Test extract text
         console.log("font " + font);
-        console.log("font.chars " + font.chars);
         console.log("font.chars.length " + font.chars.length);
-        var test = alt1_ocr__WEBPACK_IMPORTED_MODULE_5__.findReadLine(pixels, font, fontcolors, 19, 6, 16, 12);
-        console.log("Read Debug: " + test.debugArea.x);
-        console.log("Read Debug: " + test.debugArea.y);
-        console.log("Read Debug: " + test.debugArea.w);
-        console.log("Read Debug: " + test.debugArea.h);
+        console.log("font.width " + font.width);
+        console.log("font.spacewidth " + font.spacewidth);
+        console.log("font.shadow " + font.shadow);
+        console.log("font.height " + font.height);
+        console.log("font.basey " + font.basey);
+        var test = alt1_ocr__WEBPACK_IMPORTED_MODULE_5__.findReadLine(pixels, font, fontcolors, 19, 6, 16, 13);
+        console.log("Read DebugArea.x: " + test.debugArea.x);
+        console.log("Read DebugArea.y: " + test.debugArea.y);
+        console.log("Read DebugArea.w: " + test.debugArea.w);
+        console.log("Read DebugArea.h: " + test.debugArea.h);
         console.log("Read Text: " + test.text);
         console.log("Read Fragments: " + test.fragments);
         // TODO Process the data
@@ -2026,7 +1645,7 @@ function findSlayerRS3UI(img) {
 }
 // Get the image of the current reaper counter and return it
 function findReaperRS3UI(img) {
-    var data, loc;
+    let data, loc;
     // Look for OS Collapsed Reaper Counter
     if (!data)
         loc = img.findSubimage(imgs.reaper_collapsed_OSL);
@@ -2050,10 +1669,9 @@ function findReaperRS3UI(img) {
     // If we don't find any data or we found too many matches then return
     if (!data || loc.length == 0)
         return false;
-    for (var _i = 0, loc_2 = loc; _i < loc_2.length; _i++) {
-        var match = loc_2[_i];
+    for (let match of loc) {
         // Setup the location of the slayer counter using the data needed
-        var found = {
+        let found = {
             x: match.x,
             y: match.y,
             w: data.img.width,
@@ -2063,132 +1681,116 @@ function findReaperRS3UI(img) {
         if (window.alt1 && alt1.permissionOverlay)
             alt1.overLayRect(alt1__WEBPACK_IMPORTED_MODULE_3__.mixColor(255, 255, 255), found.x - 8, found.y - 8, found.w + 16, found.h + 16, 1500, 3);
         // Get the pixel data for the matched area
-        var pixels = img.toData(found.x, found.y, found.w, found.h);
+        let pixels = img.toData(found.x, found.y, found.w, found.h);
         // TODO Process the data
         return pixels.toImage();
     }
     return false;
 }
 // Search for the task by value of the search box
-function searchTasks() {
-    return __awaiter(this, void 0, void 0, function () {
-        var value, tool;
-        return __generator(this, function (_a) {
-            value = _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.searchInput();
-            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.reset.searchBox();
-            // Handle the search in different ways
-            if (value.length == 0) {
-                // Do a manual capture
-                findTask(captureRunescape());
-            }
-            else if (value.startsWith("devTools")) {
-                tool = value;
-                if (value.includes(" "))
-                    tool = value.substring(value.indexOf(" ") + 1);
-                _settings__WEBPACK_IMPORTED_MODULE_0__.executeDevTools(tool);
-            }
-            else {
-                // Search for assignment and add search to history
-                searchHistory.push(value);
-                searchIndex = searchHistory.length;
-                tempSearch = null;
-                search(value);
-            }
-            return [2 /*return*/];
-        });
-    });
+async function searchTasks() {
+    // Get the current search value and then reset it
+    let value = _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.searchInput();
+    _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.reset.searchBox();
+    // Handle the search in different ways
+    if (value.length == 0) {
+        // Do a manual capture
+        findTask(captureRunescape());
+    }
+    else if (value.startsWith("devTools")) {
+        // Deal with the devTools
+        let tool = value;
+        if (value.includes(" "))
+            tool = value.substring(value.indexOf(" ") + 1);
+        _settings__WEBPACK_IMPORTED_MODULE_0__.executeDevTools(tool);
+    }
+    else {
+        // Search for assignment and add search to history
+        searchHistory.push(value);
+        searchIndex = searchHistory.length;
+        tempSearch = null;
+        search(value);
+    }
 }
 // Search for a given assignment and return a list of all possible matches with most probably listed first
-function search(value) {
-    return __awaiter(this, void 0, void 0, function () {
-        var res, probabilities, _i, res_1, a, _a, _b, b, res2, _c, res2_1, a, _d, _e, b, _f, _g, b, task, maxProb, reaper, key, aliasKeys, i, creatureKeys, i;
-        return __generator(this, function (_h) {
-            switch (_h.label) {
-                case 0:
-                    // TODO Add in Reaper Tasks for search
-                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loading();
-                    return [4 /*yield*/, fetch("./data/reapers.json").then(function (r) { return r.json(); })];
-                case 1:
-                    res = _h.sent();
-                    probabilities = new Object();
-                    for (_i = 0, res_1 = res; _i < res_1.length; _i++) { // Search created by authors (overlord1234 & David) and redefined as needed
-                        a = res_1[_i];
-                        probabilities[a["index"]] = new Object();
-                        probabilities[a["index"]].reaper = true;
-                        probabilities[a["index"]].index = Math.round(_extrafuncs__WEBPACK_IMPORTED_MODULE_2__.similarity(a["index"], value) * 10000) / 100;
-                        probabilities[a["index"]].creatures = new Object();
-                        for (_a = 0, _b = a["creatures"]; _a < _b.length; _a++) {
-                            b = _b[_a];
-                            probabilities[a["index"]].creatures[b] = Math.round(_extrafuncs__WEBPACK_IMPORTED_MODULE_2__.similarity(b, value) * 10000) / 175;
-                        }
-                    }
-                    return [4 /*yield*/, fetch("./data/assignments.json").then(function (r) { return r.json(); })];
-                case 2:
-                    res2 = _h.sent();
-                    for (_c = 0, res2_1 = res2; _c < res2_1.length; _c++) { // Search created by authors (overlord1234 & David) and redefined as needed
-                        a = res2_1[_c];
-                        probabilities[a["index"]] = new Object();
-                        probabilities[a["index"]].reaper = false;
-                        probabilities[a["index"]].index = Math.round(_extrafuncs__WEBPACK_IMPORTED_MODULE_2__.similarity(a["index"], value) * 10000) / 125;
-                        probabilities[a["index"]].alias = new Object();
-                        for (_d = 0, _e = a["alias"]; _d < _e.length; _d++) {
-                            b = _e[_d];
-                            probabilities[a["index"]].alias[b] = Math.round(_extrafuncs__WEBPACK_IMPORTED_MODULE_2__.similarity(b, value) * 10000) / 150;
-                        }
-                        probabilities[a["index"]].creatures = new Object();
-                        for (_f = 0, _g = a["creatures"]; _f < _g.length; _f++) {
-                            b = _g[_f];
-                            probabilities[a["index"]].creatures[b] = Math.round(_extrafuncs__WEBPACK_IMPORTED_MODULE_2__.similarity(b, value) * 10000) / 175;
-                        }
-                    }
-                    task = value, maxProb = 0, reaper = false;
-                    for (key in probabilities) {
-                        if (probabilities[key].index > maxProb) {
-                            task = key;
-                            reaper = probabilities[key].reaper;
-                            maxProb = probabilities[key].index;
-                        }
-                        if (probabilities[key].alias) {
-                            aliasKeys = Object.keys(probabilities[key].alias);
-                            for (i = 0; i < aliasKeys.length; i++) {
-                                if (probabilities[key].alias[aliasKeys[i]] > maxProb) {
-                                    task = key;
-                                    reaper = probabilities[key].reaper;
-                                    maxProb = probabilities[key].alias[aliasKeys[i]];
-                                }
-                            }
-                        }
-                        if (probabilities[key].creatures) {
-                            creatureKeys = Object.keys(probabilities[key].creatures);
-                            for (i = 0; i < creatureKeys.length; i++) {
-                                if (probabilities[key].creatures[creatureKeys[i]] > maxProb) {
-                                    task = key;
-                                    reaper = probabilities[key].reaper;
-                                    maxProb = probabilities[key].creatures[creatureKeys[i]];
-                                }
-                            }
-                        }
-                    }
-                    if (reaper)
-                        _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.set.reaper();
-                    else
-                        _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.set.single();
-                    console.log("Search for (Assignment, Alias, or Creature): " + task);
-                    if (!reaper) return [3 /*break*/, 4];
-                    return [4 /*yield*/, _dochandler__WEBPACK_IMPORTED_MODULE_1__.change.reaper(task, 1)];
-                case 3:
-                    _h.sent();
-                    return [3 /*break*/, 6];
-                case 4: return [4 /*yield*/, _dochandler__WEBPACK_IMPORTED_MODULE_1__.change.assignment(0, task, 1)];
-                case 5:
-                    _h.sent();
-                    _h.label = 6;
-                case 6: return [2 /*return*/];
+async function search(value) {
+    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loading();
+    // Add all reapers based on probability
+    let res = await fetch("./data/reapers.json").then(r => r.json());
+    let probabilities = new Object();
+    for (let a of res) { // Search created by authors (overlord1234 & David) and redefined as needed
+        probabilities[a["index"]] = new Object();
+        probabilities[a["index"]].reaper = true;
+        probabilities[a["index"]].index = Math.round(_extrafuncs__WEBPACK_IMPORTED_MODULE_2__.similarity(a["index"], value) * 10000) / 100;
+        probabilities[a["index"]].creatures = new Object();
+        for (let b of a["creatures"])
+            probabilities[a["index"]].creatures[b] = Math.round(_extrafuncs__WEBPACK_IMPORTED_MODULE_2__.similarity(b, value) * 10000) / 175;
+    }
+    // Add all assignments based on probability
+    let res2 = await fetch("./data/assignments.json").then(r => r.json());
+    for (let a of res2) { // Search created by authors (overlord1234 & David) and redefined as needed
+        probabilities[a["index"]] = new Object();
+        probabilities[a["index"]].reaper = false;
+        probabilities[a["index"]].index = Math.round(_extrafuncs__WEBPACK_IMPORTED_MODULE_2__.similarity(a["index"], value) * 10000) / 125;
+        probabilities[a["index"]].alias = new Object();
+        for (let b of a["alias"])
+            probabilities[a["index"]].alias[b] = Math.round(_extrafuncs__WEBPACK_IMPORTED_MODULE_2__.similarity(b, value) * 10000) / 150;
+        probabilities[a["index"]].creatures = new Object();
+        for (let b of a["creatures"])
+            probabilities[a["index"]].creatures[b] = Math.round(_extrafuncs__WEBPACK_IMPORTED_MODULE_2__.similarity(b, value) * 10000) / 175;
+    }
+    // Find highest lickelyhood of the search (overlord1234 & David) and redefined as needed
+    let task = value, maxProb = 0, reaper = false;
+    for (let key in probabilities) {
+        if (probabilities[key].index > maxProb) {
+            task = key;
+            reaper = probabilities[key].reaper;
+            maxProb = probabilities[key].index;
+        }
+        if (probabilities[key].alias) {
+            let aliasKeys = Object.keys(probabilities[key].alias);
+            for (let i = 0; i < aliasKeys.length; i++) {
+                if (probabilities[key].alias[aliasKeys[i]] > maxProb) {
+                    task = key;
+                    reaper = probabilities[key].reaper;
+                    maxProb = probabilities[key].alias[aliasKeys[i]];
+                }
             }
-        });
-    });
+        }
+        if (probabilities[key].creatures) {
+            let creatureKeys = Object.keys(probabilities[key].creatures);
+            for (let i = 0; i < creatureKeys.length; i++) {
+                if (probabilities[key].creatures[creatureKeys[i]] > maxProb) {
+                    task = key;
+                    reaper = probabilities[key].reaper;
+                    maxProb = probabilities[key].creatures[creatureKeys[i]];
+                }
+            }
+        }
+    }
+    if (reaper)
+        _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.set.reaper();
+    else
+        _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.set.single();
+    console.log("Search for (Assignment, Alias, or Creature): " + task);
+    if (reaper)
+        await _dochandler__WEBPACK_IMPORTED_MODULE_1__.change.reaper(task, 1);
+    else
+        await _dochandler__WEBPACK_IMPORTED_MODULE_1__.change.assignment(0, task, 1);
+    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
 }
 
+
+/***/ }),
+
+/***/ "./fonts/aa_10px_mono.fontmeta.json":
+/*!******************************************!*\
+  !*** ./fonts/aa_10px_mono.fontmeta.json ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "aa_10px_mono.fontmeta.json";
 
 /***/ }),
 
@@ -5645,6 +5247,18 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_alt1_base__;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -5659,6 +5273,29 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_alt1_base__;
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
@@ -5692,42 +5329,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_data_assignments__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/data/assignments */ "./modules/data/assignments.ts");
 /* harmony import */ var _modules_data_creatures__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/data/creatures */ "./modules/data/creatures.ts");
 /* harmony import */ var _modules_data_variants__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/data/variants */ "./modules/data/variants.ts");
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 
 
 
@@ -5771,6 +5372,7 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     Settings:
     - Ability to toggle auto find task via dialog
     - Ability to toggle auto find current task via Slayer Count RS3UI
+    - Ability to toggle extra info to make box smaller without scrollbar
     - Ability to toggle all hidden creatures
     -- Ability to toggle sub-classes of hidden creatures like (elite), (dragonkin lab) and such
     - Ability to select default loading
@@ -5785,35 +5387,24 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 */
 // Boolean to determine is captureLoop is already running
-var loopRunning = false;
+let loopRunning = false;
 // Check if we are running in alt1 and if so then tell alt1 about the config
 if (window.alt1)
     alt1.identifyAppUrl("./appconfig.json");
 // The Main Capture Loop of the App
-function captureLoop() {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    // If the captureLoop is already running or if we can't capture the screen then just return else set as running
-                    if (loopRunning || !_modules_slayer__WEBPACK_IMPORTED_MODULE_1__.canCaptureRunescape())
-                        return [2 /*return*/];
-                    loopRunning = true;
-                    // Capture the Runescape screen and see if we can find a task on it
-                    _modules_slayer__WEBPACK_IMPORTED_MODULE_1__.findTask(_modules_slayer__WEBPACK_IMPORTED_MODULE_1__.captureRunescape());
-                    // Wait 0.5 seconds and then set running to false before we allow loop to continue
-                    return [4 /*yield*/, _modules_slayer__WEBPACK_IMPORTED_MODULE_1__.timer(500)];
-                case 1:
-                    // Wait 0.5 seconds and then set running to false before we allow loop to continue
-                    _a.sent();
-                    loopRunning = false;
-                    return [2 /*return*/];
-            }
-        });
-    });
+async function captureLoop() {
+    // If the captureLoop is already running or if we can't capture the screen then just return else set as running
+    if (loopRunning || !_modules_slayer__WEBPACK_IMPORTED_MODULE_1__.canCaptureRunescape())
+        return;
+    loopRunning = true;
+    // Capture the Runescape screen and see if we can find a task on it
+    _modules_slayer__WEBPACK_IMPORTED_MODULE_1__.findTask(_modules_slayer__WEBPACK_IMPORTED_MODULE_1__.captureRunescape());
+    // Wait 0.5 seconds and then set running to false before we allow loop to continue
+    await _modules_slayer__WEBPACK_IMPORTED_MODULE_1__.timer(500);
+    loopRunning = false;
 }
 // Initialize the javascript for the entire app
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", (event) => {
     // Setup the main document and load assignment index
     _modules_dochandler__WEBPACK_IMPORTED_MODULE_2__.main.setup.documentMain();
     // Run the Config Setup Process
