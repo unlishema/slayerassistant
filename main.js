@@ -6278,7 +6278,6 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     Features coming in the near future (Also my current TODO List)
 
     ~ Before Release for Sure ~
-    Update (dev-appconfig.json) in webpack.config.js before every release
     Update the about page. (Done but needs adjustment in next release)
     Update the changelog page. (Will need updated again on next release)
     Update the credits page. (May need more later on)
@@ -6288,7 +6287,7 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     Add settings into the app finally
 
     ~ Near future Release ~
-    Add support for Ushabti
+    Add support for Ushubti
     Adjust the caching of the json database files to make sure they get updated timely (use .htaccess and mode_expires.c)
 
     ~ Settings for the app ~
