@@ -18,20 +18,24 @@ a:hover {color:#a19100;}
 #base {position: relative; width: 100%; height: 310px;}
 
 /* About Info & Settings Menu */
-#infobutton {position: absolute; top: 7px; left: 7px; width: 12px; height: 12px; z-index: 11; background-image:url('../images/ui/infoicon.png'); cursor:pointer;}
+#infobutton {position: absolute; top: 7px; left: 7px; width: 12px; height: 12px; z-index: 11; background:url('../images/ui/infoicon.png') 0px 0px / cover; cursor:pointer;}
 #infobutton:hover {background-position:0px -12px;}
-#menubutton {position: absolute; top: 23px; left: 7px; width: 12px; height: 12px; z-index: 11; background-image:url('../images/ui/settingscog.png'); cursor:pointer;}
+#menubutton {position: absolute; top: 23px; left: 7px; width: 12px; height: 12px; z-index: 11; background:url('../images/ui/settingscog.png') 0px 0px / cover; cursor:pointer;}
 #menubutton:hover {background-position:0px -12px;}
 #donatebutton {position: absolute; top: 39px; left: 7px; width: 12px; height: 12px; z-index: 11; background:url('../images/ui/donate.png') 0px 0px / cover; cursor:pointer;}
 #donatebutton:hover {background-position:0px -12px;}
+#backbutton {position: absolute; top: 41px; left: 23px; width: 12px; height: 12px; z-index: 11; background:url('../images/ui/back.png') 0px 0px / cover; cursor:pointer;}
+#backbutton:hover {background-position:0px -12px;}
+#forwardbutton {position: absolute; top: 41px; left: 37px; width: 12px; height: 12px; z-index: 11; background:url('../images/ui/forward.png') 0px 0px / cover; cursor:pointer;}
+#forwardbutton:hover {background-position:0px -12px;}
 
 /* Search Box & Button */
 #search-info {position: relative; top: 3px; left: 20px; height: 20px; width : calc(68% - 20px); background-color:#2f2f2f; color:#a39e00; cursor:pointer; }
 #search-button {position: absolute; top: 3px; left: 70%; height: 33px; width : calc(30% - 35px);}
 
 /* Loading Spinner */
-.loading {display: flex; justify-content: center; visibility: visible;}
-.loading::after {content: ""; width: 12px; height: 12px; border: 3px dashed rgb(19, 49, 78); border-radius: 100%; transform: rotate(0.125turn); animation: loading 2.5s ease-in-out infinite;}
+.loading {display: flex; justify-content: center; visibility: hidden;}
+.loading::after {content: ""; width: 12px; height: 12px; border: 3px dashed #13314e; border-radius: 100%; transform: rotate(0.125turn); animation: loading 2.5s ease-in-out infinite;}
 .loading-container {position: absolute; top: 15px; right: 13px; height: 20px; width: 20px;}
 @keyframes loading {to{transform: rotate(1.130turn);}}
 
@@ -42,9 +46,19 @@ div.right {position : absolute; left : 50%; width : 48%;}
 div.center {position : absolute; left : 0%; width : 98%; height: 85%;}
 
 /* Type of Assignment */
-div[id^="type"] {position : relative; left : 0%; top : 10px; color: green; font-size: 20px; text-align : center; height : 25px; width : 100%;}
-.right div[id^="type"] {color: red;}
-#type-2 {color: gold;}
+div[id^="type"] {position : relative; left : 0%; top : 10px; color: #008000; font-size: 20px; text-align : center; height : 25px; width : 100%;}
+.right div[id^="type"] {color: #ff0000;}
+#type-2 {color: #ffd700;}
+#type-3 {color: #ff00d4; cursor:pointer; }
+#type-3:hover {color: #6d0077;}
+
+/* Suggested Creatures */
+table#suggestions {position : relative; left : 0%; top : 5px; width: 100%;}
+table#suggestions thead td {color: #ffd700; font-size: 16px; text-align : left; }
+table#suggestions td {color: #39cf96; font-size: 16px; text-align : left; }
+table#suggestions td[id^="suggestion"] {color: #008000; cursor:pointer; }
+table#suggestions td[id^="suggestion"]:hover {color: #00db00;}
+div#footnote-3 {position : relative; left : 0%; top : 2px; color: #ffd700; font-size: 11px; text-align : right; height: 15px; width: 100%;}
 
 /* Slayer Info */
 div[id^="info"] {position : absolute; left : 3px; top : 40px; text-align : left; height : 40px; width : 100%;}
