@@ -626,7 +626,7 @@ var UICounterReader = /** @class */ (function () {
     }
     UICounterReader.prototype.read = function (buffer) {
         return __awaiter(this, void 0, void 0, function () {
-            var _a, _b, width, height, _i, _c, match, countText;
+            var _a, _b, width, height, _i, _c, match;
             return __generator(this, function (_d) {
                 switch (_d.label) {
                     case 0:
@@ -649,46 +649,15 @@ var UICounterReader = /** @class */ (function () {
                         // Reset data for next search
                         this.pos = [];
                         this.data = null;
-                        // Look for OS Collapsed Slayer Counter
-                        if (!this.data && this.pos.length == 0)
-                            this.pos = buffer.findSubimage(imgs.slayer_collapsed_OSL);
-                        if (!this.data && this.pos.length > 0)
-                            this.data = { reaper: false, collapsed: true, OS: true, img: null, count: -1, task: null };
-                        // Look for OS Expanded Slayer Counter
-                        if (!this.data && this.pos.length == 0)
-                            this.pos = buffer.findSubimage(imgs.slayer_expanded_OSL);
-                        if (!this.data && this.pos.length > 0)
-                            this.data = { reaper: false, collapsed: false, OS: true, img: null, count: -1, task: null };
-                        // Look for RS3 Collapsed Slayer Counter
-                        if (!this.data && this.pos.length == 0)
-                            this.pos = buffer.findSubimage(imgs.slayer_collapsed_RS3);
-                        if (!this.data && this.pos.length > 0)
-                            this.data = { reaper: false, collapsed: true, OS: false, img: null, count: -1, task: null };
-                        // Look for RS3 Expanded Slayer Counter
-                        if (!this.data && this.pos.length == 0)
-                            this.pos = buffer.findSubimage(imgs.slayer_expanded_RS3);
-                        if (!this.data && this.pos.length > 0)
-                            this.data = { reaper: false, collapsed: false, OS: false, img: null, count: -1, task: null };
-                        // Look for OS Collapsed Reaper Counter
-                        if (!this.data && this.pos.length == 0)
-                            this.pos = buffer.findSubimage(imgs.reaper_collapsed_OSL);
-                        if (!this.data && this.pos.length > 0)
-                            this.data = { reaper: true, collapsed: true, OS: true, img: null, count: -1, task: null };
-                        // Look for OS Expanded Reaper Counter
-                        if (!this.data && this.pos.length == 0)
-                            this.pos = buffer.findSubimage(imgs.reaper_expanded_OSL);
-                        if (!this.data && this.pos.length > 0)
-                            this.data = { reaper: true, collapsed: false, OS: true, img: null, count: -1, task: null };
-                        // Look for RS3 Collapsed Reaper Counter
-                        if (!this.data && this.pos.length == 0)
-                            this.pos = buffer.findSubimage(imgs.reaper_collapsed_RS3);
-                        if (!this.data && this.pos.length > 0)
-                            this.data = { reaper: true, collapsed: true, OS: false, img: null, count: -1, task: null };
-                        // Look for RS3 Expanded Reaper Counter
-                        if (!this.data && this.pos.length == 0)
-                            this.pos = buffer.findSubimage(imgs.reaper_expanded_RS3);
-                        if (!this.data && this.pos.length > 0)
-                            this.data = { reaper: true, collapsed: false, OS: false, img: null, count: -1, task: null };
+                        // Look for all UI Elements until we find one, then the rest will get skipped
+                        this.findUIElement(buffer, imgs.slayer_collapsed_OSL, { reaper: false, collapsed: true, OS: true });
+                        this.findUIElement(buffer, imgs.slayer_expanded_OSL, { reaper: false, collapsed: false, OS: true });
+                        this.findUIElement(buffer, imgs.slayer_collapsed_RS3, { reaper: false, collapsed: true, OS: false });
+                        this.findUIElement(buffer, imgs.slayer_expanded_RS3, { reaper: false, collapsed: false, OS: false });
+                        this.findUIElement(buffer, imgs.reaper_collapsed_OSL, { reaper: true, collapsed: true, OS: true });
+                        this.findUIElement(buffer, imgs.reaper_expanded_OSL, { reaper: true, collapsed: false, OS: true });
+                        this.findUIElement(buffer, imgs.reaper_collapsed_RS3, { reaper: true, collapsed: true, OS: false });
+                        this.findUIElement(buffer, imgs.reaper_expanded_RS3, { reaper: true, collapsed: false, OS: false });
                         // If we don't find any data or we found too many matches then return
                         if (!this.data && this.pos.length == 0)
                             return [2 /*return*/, null];
@@ -702,8 +671,8 @@ var UICounterReader = /** @class */ (function () {
                                 alt1.overLayRect(alt1__WEBPACK_IMPORTED_MODULE_1__.mixColor(255, 255, 255), match.x, match.y, width, height, 500, 3);
                             // Get the pixel data for the matched area
                             this.data.img = buffer.toData(match.x, match.y, width, height);
-                            countText = alt1_ocr__WEBPACK_IMPORTED_MODULE_2__.findReadLine(this.data.img, this.countFont, this.data.OS ? [[255, 152, 31]] : [[255, 203, 5]], this.data.collapsed ? 10 : 72, 15, 30, 3);
-                            this.data.count = parseInt(countText.text);
+                            // Extract the count and task (if avaliable)
+                            this.data.count = parseInt(alt1_ocr__WEBPACK_IMPORTED_MODULE_2__.findReadLine(this.data.img, this.countFont, this.data.OS ? [[255, 152, 31]] : [[255, 203, 5]], this.data.collapsed ? 10 : 72, 15, 30, 3).text);
                             if (!this.data.collapsed)
                                 this.data.task = alt1_ocr__WEBPACK_IMPORTED_MODULE_2__.findReadLine(this.data.img, this.taskFont, this.data.OS ? [[255, 152, 31]] : [[255, 203, 5]], 9, 28, 156, 3).text;
                         }
@@ -711,6 +680,12 @@ var UICounterReader = /** @class */ (function () {
                 }
             });
         });
+    };
+    UICounterReader.prototype.findUIElement = function (buffer, img, mode) {
+        if (!this.data && this.pos.length == 0)
+            this.pos = buffer.findSubimage(img);
+        if (!this.data && this.pos.length > 0)
+            this.data = { reaper: mode.reaper, collapsed: mode.collapsed, OS: mode.OS, img: null, count: -1, task: null };
     };
     return UICounterReader;
 }());
