@@ -558,10 +558,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   UICounterData: () => (/* binding */ UICounterData),
 /* harmony export */   UICounterReader: () => (/* binding */ UICounterReader)
 /* harmony export */ });
-/* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alt1 */ "../node_modules/alt1/dist/base/index.js");
-/* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(alt1__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var alt1_ocr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! alt1/ocr */ "../node_modules/alt1/dist/ocr/index.js");
-/* harmony import */ var alt1_ocr__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(alt1_ocr__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! alt1 */ "../node_modules/alt1/dist/base/index.js");
+/* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(alt1__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var alt1_ocr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! alt1/ocr */ "../node_modules/alt1/dist/ocr/index.js");
+/* harmony import */ var alt1_ocr__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(alt1_ocr__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _settings__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./settings */ "./modules/settings.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -600,7 +601,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 };
 
 
-var imgs = alt1__WEBPACK_IMPORTED_MODULE_0__.webpackImages({
+
+var imgs = alt1__WEBPACK_IMPORTED_MODULE_1__.webpackImages({
     slayer_expanded_RS3: __webpack_require__(/*! ../images/data/slayer_expanded_RS3.data.png */ "./images/data/slayer_expanded_RS3.data.png"),
     slayer_expanded_OSL: __webpack_require__(/*! ../images/data/slayer_expanded_OSL.data.png */ "./images/data/slayer_expanded_OSL.data.png"),
     reaper_expanded_RS3: __webpack_require__(/*! ../images/data/reaper_expanded_RS3.data.png */ "./images/data/reaper_expanded_RS3.data.png"),
@@ -629,7 +631,7 @@ var UICounterReader = /** @class */ (function () {
                 switch (_d.label) {
                     case 0:
                         if (!buffer)
-                            buffer = alt1__WEBPACK_IMPORTED_MODULE_0__.captureHoldFullRs();
+                            buffer = alt1__WEBPACK_IMPORTED_MODULE_1__.captureHoldFullRs();
                         if (!!this.countFont) return [3 /*break*/, 2];
                         _a = this;
                         return [4 /*yield*/, fetch(__webpack_require__(/*! ../fonts/aa_10px_mono.fontmeta.json */ "./fonts/aa_10px_mono.fontmeta.json")).then(function (r) { return r.json(); })];
@@ -696,18 +698,14 @@ var UICounterReader = /** @class */ (function () {
                         for (_i = 0, _c = this.pos; _i < _c.length; _i++) {
                             match = _c[_i];
                             // Overlay a rectangle around the matched area on screen if we're running in alt1
-                            if (window.alt1 && alt1.permissionOverlay)
-                                alt1.overLayRect(alt1__WEBPACK_IMPORTED_MODULE_0__.mixColor(255, 255, 255), match.x, match.y, width, height, 500, 3);
+                            if (window.alt1 && alt1.permissionOverlay && _settings__WEBPACK_IMPORTED_MODULE_0__.overlayActive)
+                                alt1.overLayRect(alt1__WEBPACK_IMPORTED_MODULE_1__.mixColor(255, 255, 255), match.x, match.y, width, height, 500, 3);
                             // Get the pixel data for the matched area
                             this.data.img = buffer.toData(match.x, match.y, width, height);
-                            countText = alt1_ocr__WEBPACK_IMPORTED_MODULE_1__.findReadLine(this.data.img, this.countFont, this.data.OS ? [[255, 152, 31]] : [[255, 203, 5]], this.data.collapsed ? 10 : 72, 15, 30, 3);
+                            countText = alt1_ocr__WEBPACK_IMPORTED_MODULE_2__.findReadLine(this.data.img, this.countFont, this.data.OS ? [[255, 152, 31]] : [[255, 203, 5]], this.data.collapsed ? 10 : 72, 15, 30, 3);
                             this.data.count = parseInt(countText.text);
-                            console.log("Count Text Extracted: " + countText.text);
-                            console.log("Count Extracted: " + this.data.count);
-                            if (!this.data.collapsed) {
-                                this.data.task = alt1_ocr__WEBPACK_IMPORTED_MODULE_1__.findReadLine(this.data.img, this.taskFont, this.data.OS ? [[255, 152, 31]] : [[255, 203, 5]], 9, 28, 156, 3).text;
-                                console.log("Task Extracted: " + this.data.task);
-                            }
+                            if (!this.data.collapsed)
+                                this.data.task = alt1_ocr__WEBPACK_IMPORTED_MODULE_2__.findReadLine(this.data.img, this.taskFont, this.data.OS ? [[255, 152, 31]] : [[255, 203, 5]], 9, 28, 156, 3).text;
                         }
                         return [2 /*return*/, (!this.pos || this.pos.length == 0) ? null : this.data];
                 }
@@ -1347,7 +1345,7 @@ function reaper(task, count) {
 // Update the entire Assignment data
 function assignment(side, task, count) {
     return __awaiter(this, void 0, void 0, function () {
-        var nameElement, data, _a, i, i, i, i, i, img, masterData, kills, previewMastersHeight, _loop_1, i, variant_1, _i, _b, a, creature_1;
+        var nameElement, slayxp, data, _a, i, i, i, i, i, img, masterData, kills, previewMastersHeight, _loop_1, i, variant_1, _i, _b, a, creature_1;
         return __generator(this, function (_c) {
             switch (_c.label) {
                 case 0:
@@ -1368,7 +1366,10 @@ function assignment(side, task, count) {
                         return [2 /*return*/];
                     if ((task == null && nameElement.innerHTML != "???") || nameElement.innerHTML === task) {
                         console.log("Update task: [" + count + "] " + task + " " + (side == 0 ? "(Default)" : (side == 2 ? "(Reaper)" : "(1 Slayer Token)")));
+                        // Update the kills and exp of the task since it's already loaded
                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("kills-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(count);
+                        slayxp = parseInt(_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("slayer-exp-" + side).innerHTML);
+                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("total-slayer-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas((slayxp * count).toFixed(2));
                         // TODO update the count of the task for tracking
                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loadingStop();
                         return [2 /*return*/];
@@ -2152,6 +2153,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   change: () => (/* binding */ change),
 /* harmony export */   executeDevTools: () => (/* binding */ executeDevTools),
 /* harmony export */   load: () => (/* binding */ load),
+/* harmony export */   overlayActive: () => (/* binding */ overlayActive),
 /* harmony export */   save: () => (/* binding */ save),
 /* harmony export */   search: () => (/* binding */ search),
 /* harmony export */   setup: () => (/* binding */ setup)
@@ -2201,6 +2203,7 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 var dialogReader = new (alt1_dialog__WEBPACK_IMPORTED_MODULE_2___default())();
 var localConfigLoaded = false;
+var overlayActive = false;
 var change;
 (function (change) {
     change.history = [];
@@ -2594,12 +2597,14 @@ function findTask(buffer) {
                     if (!counterData) return [3 /*break*/, 18];
                     // If we can see the Slayer Count UI for RS3, lets let them know we are loading
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loading();
-                    if (!counterData.reaper) return [3 /*break*/, 14];
+                    if (!(counterData.reaper && (_dochandler__WEBPACK_IMPORTED_MODULE_1__.main.reaperLoaded || counterData.task != null))) return [3 /*break*/, 14];
                     return [4 /*yield*/, _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.set.reaper({ name: counterData.task, count: counterData.count })];
                 case 13:
                     _a.sent();
                     return [3 /*break*/, 16];
-                case 14: return [4 /*yield*/, _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.set.single({ name: counterData.task, count: counterData.count })];
+                case 14:
+                    if (!(!counterData.reaper && (_dochandler__WEBPACK_IMPORTED_MODULE_1__.main.singleLoaded || counterData.task != null))) return [3 /*break*/, 16];
+                    return [4 /*yield*/, _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.set.single({ name: counterData.task, count: counterData.count })];
                 case 15:
                     _a.sent();
                     _a.label = 16;

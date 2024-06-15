@@ -27,6 +27,7 @@ Slayer Assistant is a tool designed to assist players of the popular MMORPG Rune
 
 ## Future Updates
 - Add support to keep search and lookup history persistent upon page refreshes and maybe even keep make it a local history for the user.
+- Add support to track kills/hr, xp/hr, and more to come.
 - Add support for Ushabti.
 - Add settings into the app finally and settings to come are as follows.
 
