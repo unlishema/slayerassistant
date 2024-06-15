@@ -6284,6 +6284,7 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
     ~ Coming Next Release ~
     Adjust histories to use sessionStorage
+    Add in a status tracking area to keep track of xp/hr, kills/hr, and more
     Add settings into the app finally
 
     ~ Near future Release ~
