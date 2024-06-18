@@ -309,7 +309,7 @@ var SearchAlgorithm = /** @class */ (function () {
                         this.data = new SearchData();
                         probabilities = new Object();
                         if (!!skipReaper) return [3 /*break*/, 2];
-                        return [4 /*yield*/, fetch("../data/reapers.json").then(function (r) { return r.json(); })];
+                        return [4 /*yield*/, fetch("./data/reapers.json").then(function (r) { return r.json(); })];
                     case 1:
                         res = _h.sent();
                         for (_i = 0, res_1 = res; _i < res_1.length; _i++) { // Search created by authors (overlord1234 & David) and redefined as needed
@@ -324,7 +324,7 @@ var SearchAlgorithm = /** @class */ (function () {
                             }
                         }
                         _h.label = 2;
-                    case 2: return [4 /*yield*/, fetch("../data/assignments.json").then(function (r) { return r.json(); })];
+                    case 2: return [4 /*yield*/, fetch("./data/assignments.json").then(function (r) { return r.json(); })];
                     case 3:
                         res2 = _h.sent();
                         for (_c = 0, res2_1 = res2; _c < res2_1.length; _c++) { // Search created by authors (overlord1234 & David) and redefined as needed
@@ -430,10 +430,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SlayerData: () => (/* binding */ SlayerData),
 /* harmony export */   SlayerDialogReader: () => (/* binding */ SlayerDialogReader)
 /* harmony export */ });
-/* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! alt1 */ "../node_modules/alt1/dist/base/index.js");
-/* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(alt1__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var alt1_dialog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alt1/dialog */ "../node_modules/alt1/dist/dialog/index.js");
-/* harmony import */ var alt1_dialog__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(alt1_dialog__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alt1 */ "../node_modules/alt1/dist/base/index.js");
+/* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(alt1__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var alt1_dialog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! alt1/dialog */ "../node_modules/alt1/dist/dialog/index.js");
+/* harmony import */ var alt1_dialog__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(alt1_dialog__WEBPACK_IMPORTED_MODULE_1__);
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -472,7 +472,6 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 };
 
 
-var dialogReader = new (alt1_dialog__WEBPACK_IMPORTED_MODULE_0___default())();
 var SlayerData = /** @class */ (function () {
     function SlayerData() {
         this.selectYourOwn = false;
@@ -492,12 +491,14 @@ var SlayerDialogReader = /** @class */ (function () {
             var data, box, msg, countText, e, countText, i, a, msg, countText;
             return __generator(this, function (_a) {
                 if (!buffer)
-                    buffer = alt1__WEBPACK_IMPORTED_MODULE_1__.captureHoldFullRs();
+                    buffer = alt1__WEBPACK_IMPORTED_MODULE_0__.captureHoldFullRs();
+                if (!this.dialogReader)
+                    this.dialogReader = new (alt1_dialog__WEBPACK_IMPORTED_MODULE_1___default())();
                 this.data = new SlayerData();
-                data = dialogReader.find(buffer);
+                data = this.dialogReader.find(buffer);
                 if (!data)
                     return [2 /*return*/, null];
-                box = dialogReader.read(buffer);
+                box = this.dialogReader.read(buffer);
                 if (!box)
                     return [2 /*return*/, null];
                 if (box.text && (!box.opts || box.opts.length != 2)) {
@@ -667,7 +668,7 @@ var UICounterReader = /** @class */ (function () {
                         for (_i = 0, _c = this.pos; _i < _c.length; _i++) {
                             match = _c[_i];
                             // Overlay a rectangle around the matched area on screen if we're running in alt1
-                            if (window.alt1 && alt1.permissionOverlay && _settings__WEBPACK_IMPORTED_MODULE_0__.overlayActive)
+                            if (window.alt1 && alt1.permissionOverlay && _settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.overlyaCounter)
                                 alt1.overLayRect(alt1__WEBPACK_IMPORTED_MODULE_1__.mixColor(255, 255, 255), match.x, match.y, width, height, 500, 3);
                             // Get the pixel data for the matched area
                             this.data.img = buffer.toData(match.x, match.y, width, height);
@@ -2125,16 +2126,15 @@ function decodeHtml(html) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   DefaultData: () => (/* binding */ DefaultData),
+/* harmony export */   HiddenData: () => (/* binding */ HiddenData),
+/* harmony export */   SettingsData: () => (/* binding */ SettingsData),
+/* harmony export */   SettingsDataController: () => (/* binding */ SettingsDataController),
 /* harmony export */   change: () => (/* binding */ change),
+/* harmony export */   controller: () => (/* binding */ controller),
 /* harmony export */   executeDevTools: () => (/* binding */ executeDevTools),
-/* harmony export */   load: () => (/* binding */ load),
-/* harmony export */   overlayActive: () => (/* binding */ overlayActive),
-/* harmony export */   save: () => (/* binding */ save),
-/* harmony export */   search: () => (/* binding */ search),
-/* harmony export */   setup: () => (/* binding */ setup)
+/* harmony export */   search: () => (/* binding */ search)
 /* harmony export */ });
-/* harmony import */ var alt1_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! alt1/dialog */ "../node_modules/alt1/dist/dialog/index.js");
-/* harmony import */ var alt1_dialog__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(alt1_dialog__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _dochandler__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dochandler */ "./modules/dochandler.ts");
 /* harmony import */ var _slayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./slayer */ "./modules/slayer.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -2175,10 +2175,142 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 };
 
 
+// All Hidden Data
+var DefaultData = /** @class */ (function () {
+    function DefaultData() {
+    }
+    return DefaultData;
+}());
 
-var dialogReader = new (alt1_dialog__WEBPACK_IMPORTED_MODULE_2___default())();
-var localConfigLoaded = false;
-var overlayActive = false;
+// All Hidden Data
+var HiddenData = /** @class */ (function () {
+    function HiddenData() {
+    }
+    return HiddenData;
+}());
+
+// All settings data
+var SettingsData = /** @class */ (function () {
+    function SettingsData() {
+    }
+    return SettingsData;
+}());
+
+// Controls all the settings data
+var SettingsDataController = /** @class */ (function () {
+    function SettingsDataController() {
+        this.configLoaded = false;
+        this.data = {
+            version: 1,
+            autoCapture: true,
+            autoCaptureCounter: true,
+            limitedUI: false,
+            overlyaCounter: false,
+            style: "default",
+            historyRetentionDuration: 1000 * 60 * 60 * 24,
+            lookupRetentionDuration: 1000 * 60 * 60 * 24,
+            searchAlgorithim: "default",
+            showHidden: {
+                creatures: false,
+                eliteCreatures: false,
+                dragonkinCreatures: false,
+                godWarsCreatures: false,
+                ghorrockCreatures: false,
+                heartGielinorCreatures: false,
+                monsterCreatures: false,
+                newVarrockCreatures: false,
+                shadowReefCreatures: false,
+                strongholdSecurityCreatures: false,
+                summonedCreatures: false,
+                templeTrekkingCreatures: false,
+                unchartedIslesCreatures: false
+            },
+            default: {
+                taskName0: "waterfiends",
+                taskName1: "black demons",
+                taskCount0: 777,
+                taskCount1: 666
+                // TODO Add more default data later on
+            },
+        };
+    }
+    // Load the users settings
+    SettingsDataController.prototype.load = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var res;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (controller.configLoaded)
+                            throw Error("Settings should only be loaded once!");
+                        // Load the versioning system to make sure old settings get updated (Max Version ???.256.256)
+                        if (window.localStorage.getItem('version') != null)
+                            this.data.version = this.decodeVersion(window.localStorage.getItem('version'));
+                        return [4 /*yield*/, fetch("./data/version.json").then(function (r) { return r.json(); })];
+                    case 1:
+                        res = _a.sent();
+                        if (this.data.version < this.decodeVersion(res['version']))
+                            this.data.version = this.decodeVersion(res['version']);
+                        // Add Versioning system to allow compatibility with future updates (Should only ever run once)
+                        if (this.data.version < 3) {
+                            console.log("(Versioning System Missing) Setting up versioning system.");
+                            // Remove the alpha/beta recent task system, we are replacing it with a new defaults loading system
+                            if (window.localStorage.getItem('recent_task_0') != null)
+                                window.localStorage.removeItem('recent_task_0');
+                            if (window.localStorage.getItem('recent_task_count_0') != null)
+                                window.localStorage.removeItem('recent_task_count_0');
+                            if (window.localStorage.getItem('recent_task_1') != null)
+                                window.localStorage.removeItem('recent_task_1');
+                            if (window.localStorage.getItem('recent_task_count_1') != null)
+                                window.localStorage.removeItem('recent_task_count_1');
+                            // Save the new versioning system
+                            controller.save();
+                        }
+                        if (!(this.data.default.taskName0 != null && this.data.default.taskName1 != null)) return [3 /*break*/, 3];
+                        return [4 /*yield*/, _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.double({ name: this.data.default.taskName0, count: this.data.default.taskCount0 }, { name: this.data.default.taskName1, count: this.data.default.taskCount0 })];
+                    case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3:
+                        // Set the config to loaded so we can't load it again
+                        this.configLoaded = true;
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    // Save the users settings
+    SettingsDataController.prototype.save = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                // Save versioning system
+                if (this.data.version > 1)
+                    window.localStorage.setItem('version', this.encodeVersion(this.data.version));
+                // Only update versioning system if we haven't loaded the settings before
+                if (!controller.configLoaded)
+                    return [2 /*return*/];
+                return [2 /*return*/];
+            });
+        });
+    };
+    SettingsDataController.prototype.decodeVersion = function (version) {
+        var versionSplit = version.split("\.");
+        var versionUpper = versionSplit.length > 2 ? parseInt(versionSplit[0]) : 0;
+        var versionLower = parseInt(versionSplit.length > 2 ? versionSplit[1] : versionSplit[0]);
+        var versionPatch = parseInt(versionSplit.length > 2 ? versionSplit[2] : versionSplit[1]);
+        return ((versionUpper * 256 * 256) + (versionLower * 256) + versionPatch);
+    };
+    SettingsDataController.prototype.encodeVersion = function (version) {
+        var versionUpper = version > 256 * 256 ? version / (256 * 256) : 0;
+        var versionLower = version > 256 ? (version - (versionUpper * 256 * 256)) / 256 : 0;
+        var versionPatch = (version - (versionUpper * 256 * 256) - (versionLower * 256));
+        return versionUpper + "." + versionLower + "." + versionPatch;
+    };
+    return SettingsDataController;
+}());
+
+var controller = new SettingsDataController();
+// All functions that deal with lookup history are here
 var change;
 (function (change) {
     change.history = [];
@@ -2191,7 +2323,7 @@ var change;
         change.history.push(history);
         change.index = change.history.length - 1;
         // Save change history
-        save();
+        controller.save();
     }
     change.addHistory = addHistory;
     // Go to previous change history
@@ -2208,6 +2340,8 @@ var change;
             _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.reaper(previousChange.tasks[0], true);
         if (previousChange.type === 'suggestion')
             _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.suggested(true);
+        // Save change history
+        controller.save();
     }
     change.goPreviousHistory = goPreviousHistory;
     // Go to next change history
@@ -2224,9 +2358,12 @@ var change;
             _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.reaper(nextChange.tasks[0], true);
         if (nextChange.type === 'suggestion')
             _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.suggested(true);
+        // Save change history
+        controller.save();
     }
     change.goNextHistory = goNextHistory;
 })(change || (change = {}));
+// All functions that deal with searching are here
 var search;
 (function (search) {
     search.temp = null;
@@ -2242,7 +2379,7 @@ var search;
         search.index = search.history.length;
         search.temp = null;
         // Save search history
-        save();
+        controller.save();
     }
     search.addHistory = addHistory;
     // Get the previous search history
@@ -2250,7 +2387,7 @@ var search;
         // Deal with the temp search value
         tempValue();
         // Save history and then return the correct history
-        save();
+        controller.save();
         if (search.index - 1 < 0)
             return null;
         if (--search.index == search.history.length)
@@ -2263,7 +2400,7 @@ var search;
         // Deal with the temp search value
         tempValue();
         // Save history and then return the correct history
-        save();
+        controller.save();
         if (search.index + 1 > search.history.length + (search.temp == "" ? 0 : 1))
             return null;
         if (++search.index == search.history.length + (search.temp == "" ? 0 : 1))
@@ -2287,57 +2424,6 @@ var search;
         }
     }
 })(search || (search = {}));
-// Run the first setup settings
-function setup() {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    if (localConfigLoaded)
-                        return [2 /*return*/];
-                    // Add Versioning system to allow compatibility with future updates (Should only ever run once)
-                    if (window.localStorage.getItem('version') == null || window.localStorage.getItem('version') == '0.1') {
-                        console.log("(Versioning System Missing) Setting up versioning system.");
-                        // TODO Remove old Config from before versioning system was added
-                        //if (window.localStorage.getItem('recent_task_0') != null) window.localStorage.removeItem('recent_task_0');
-                        //if (window.localStorage.getItem('recent_task_count_0') != null) window.localStorage.removeItem('recent_task_count_0');
-                        //if (window.localStorage.getItem('recent_task_1') != null) window.localStorage.removeItem('recent_task_1');
-                        //if (window.localStorage.getItem('recent_task_count_1') != null) window.localStorage.removeItem('recent_task_count_1');
-                        // Add new Startup config
-                        window.localStorage.setItem('version', '0.1');
-                    }
-                    // Set Default tasks for first ever run (TODO Adjust during versioning update)
-                    if (window.localStorage.getItem('recent_task_0') == null) {
-                        window.localStorage.setItem('recent_task_0', 'waterfiends');
-                        window.localStorage.setItem('recent_task_count_0', '777');
-                        console.log("(Default) task's default info has been saved. This only happens on first ever run!");
-                    }
-                    if (window.localStorage.getItem('recent_task_1') == null) {
-                        window.localStorage.setItem('recent_task_1', 'black demons');
-                        window.localStorage.setItem('recent_task_count_1', '666');
-                        console.log("(Cost 1 Slayer) task's default info has been saved. This only happens on first ever run!");
-                    }
-                    if (!(window.localStorage.getItem('recent_task_0') != null && window.localStorage.getItem('recent_task_1') != null)) return [3 /*break*/, 2];
-                    return [4 /*yield*/, _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.double({ name: window.localStorage.getItem('recent_task_0'), count: parseInt(window.localStorage.getItem('recent_task_count_0')) }, { name: window.localStorage.getItem('recent_task_1'), count: parseInt(window.localStorage.getItem('recent_task_count_1')) })];
-                case 1:
-                    _a.sent();
-                    _a.label = 2;
-                case 2:
-                    // Lets set the local config to loaded so we won't do this again
-                    localConfigLoaded = true;
-                    return [2 /*return*/];
-            }
-        });
-    });
-}
-// Load the users settings
-function load() {
-    // TODO Add load settings
-}
-// Save the users settings
-function save() {
-    // TODO Add save settings
-}
 // ~~~~ DevTools ~~~~
 function executeDevTools(value) {
     return __awaiter(this, void 0, void 0, function () {
@@ -2390,12 +2476,12 @@ function executeDevTools(value) {
                 case 5:
                     if (value === "dialogReader") {
                         console.log("Searching for Dialog...");
-                        pos = dialogReader.find();
+                        pos = _slayer__WEBPACK_IMPORTED_MODULE_1__.slayerReader.dialogReader.find();
                         if (!pos) {
                             console.log(" ~~~ Dev Tools ~ Error: Cannot find the Dialog! ~~~ ");
                             return [2 /*return*/];
                         }
-                        box = dialogReader.read();
+                        box = _slayer__WEBPACK_IMPORTED_MODULE_1__.slayerReader.dialogReader.read();
                         if (!box) {
                             console.log(" ~~~ Dev Tools ~ Error: Cannot read the Dialog! ~~~ ");
                             return [2 /*return*/];
@@ -6283,6 +6369,7 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     Update the credits page. (May need more later on)
 
     ~ Coming Next Release ~
+    FIXME Make it so when you search, it puts the auto counter on a cooldown period
     Adjust histories to use sessionStorage
     Add in a status tracking area to keep track of xp/hr, kills/hr, and more
     Add settings into the app finally
@@ -6348,7 +6435,7 @@ document.addEventListener("DOMContentLoaded", function (event) { return __awaite
                 // Setup the main document and load assignment index
                 _a.sent();
                 // Run the Config Setup Process
-                _modules_settings__WEBPACK_IMPORTED_MODULE_0__.setup();
+                _modules_settings__WEBPACK_IMPORTED_MODULE_0__.controller.load();
                 // Run the first capture loop and then setup the 1.5 sec loop
                 captureLoop();
                 setInterval(function () { captureLoop(); }, 1500);
