@@ -668,8 +668,8 @@ var UICounterReader = /** @class */ (function () {
                         for (_i = 0, _c = this.pos; _i < _c.length; _i++) {
                             match = _c[_i];
                             // Overlay a rectangle around the matched area on screen if we're running in alt1
-                            if (window.alt1 && alt1.permissionOverlay && _settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.overlyaCounter)
-                                alt1.overLayRect(alt1__WEBPACK_IMPORTED_MODULE_1__.mixColor(255, 255, 255), match.x, match.y, width, height, 500, 3);
+                            if (window.alt1 && alt1.permissionOverlay && _settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.ui.counterOverlay)
+                                alt1.overLayRect(alt1__WEBPACK_IMPORTED_MODULE_1__.mixColor(255, 255, 255), match.x, match.y, width, height, _settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.ui.counterOverlayTimer, 3);
                             // Get the pixel data for the matched area
                             this.data.img = buffer.toData(match.x, match.y, width, height);
                             // Extract the count and task (if avaliable)
@@ -1182,13 +1182,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   reaper: () => (/* binding */ reaper),
 /* harmony export */   variant: () => (/* binding */ variant)
 /* harmony export */ });
-/* harmony import */ var _dochandler__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../dochandler */ "./modules/dochandler.ts");
-/* harmony import */ var _extrafuncs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../extrafuncs */ "./modules/extrafuncs.ts");
-/* harmony import */ var _data_masters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../data/masters */ "./modules/data/masters.ts");
-/* harmony import */ var _data_reapers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../data/reapers */ "./modules/data/reapers.ts");
-/* harmony import */ var _data_assignments__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../data/assignments */ "./modules/data/assignments.ts");
-/* harmony import */ var _data_creatures__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../data/creatures */ "./modules/data/creatures.ts");
-/* harmony import */ var _data_variants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../data/variants */ "./modules/data/variants.ts");
+/* harmony import */ var _settings__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../settings */ "./modules/settings.ts");
+/* harmony import */ var _dochandler__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../dochandler */ "./modules/dochandler.ts");
+/* harmony import */ var _extrafuncs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../extrafuncs */ "./modules/extrafuncs.ts");
+/* harmony import */ var _data_masters__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../data/masters */ "./modules/data/masters.ts");
+/* harmony import */ var _data_reapers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../data/reapers */ "./modules/data/reapers.ts");
+/* harmony import */ var _data_assignments__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../data/assignments */ "./modules/data/assignments.ts");
+/* harmony import */ var _data_creatures__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../data/creatures */ "./modules/data/creatures.ts");
+/* harmony import */ var _data_variants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../data/variants */ "./modules/data/variants.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -1232,50 +1233,59 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
+
 // TODO Clean up code and make things a lot better
 // Update the Creature variant Shown
-function variant(side) {
-    return __awaiter(this, void 0, void 0, function () {
+function variant(side_1) {
+    return __awaiter(this, arguments, void 0, function (side, creature, variant) {
         var data, imageElement, imageContainerElement, newSize, weaknessElem, i, susceptibleElem, i, count;
+        if (creature === void 0) { creature = null; }
+        if (variant === void 0) { variant = null; }
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loading();
-                    console.log("Change variant to: " + _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("variants-" + side).value);
-                    return [4 /*yield*/, _data_variants__WEBPACK_IMPORTED_MODULE_6__.get(_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creatures-" + side).value, _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("variants-" + side).value)];
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loading();
+                    if (!creature)
+                        creature = _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("creatures-" + side).value;
+                    if (!variant)
+                        variant = _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("variants-" + side).value;
+                    console.log("Change variant to: " + creature + "#" + variant);
+                    return [4 /*yield*/, _data_variants__WEBPACK_IMPORTED_MODULE_7__.get(creature, variant)];
                 case 1:
                     data = _a.sent();
                     if (data) {
-                        // Set the image of variant but replace the # with url safe Percent-encoding
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("image-container-" + side).innerHTML = data["image"].replace("#", "%23");
-                        imageElement = _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("image-container-" + side).firstElementChild;
-                        imageContainerElement = _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("image-container-" + side);
-                        newSize = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.calculateAspectRatioFit(parseInt(imageElement.getAttribute("width")), parseInt(imageElement.getAttribute("height")), imageContainerElement.offsetWidth, imageContainerElement.offsetHeight);
-                        imageElement.setAttribute("style", "max-width:" + newSize.width + "px; max-height:" + newSize.height + "px;");
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("level-" + side).innerHTML = data["level"];
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("slayer-level-" + side).innerHTML = data["slayer-level"];
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("lifepoints-" + side).innerHTML = data["lifepoints"];
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("defence-" + side).innerHTML = data["defence"];
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("max-melee-" + side).innerHTML = data["max-melee"];
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("max-ranged-" + side).innerHTML = data["max-ranged"];
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("max-magic-" + side).innerHTML = data["max-magic"];
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("max-necromancy-" + side).innerHTML = data["max-necromancy"];
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("max-spec-" + side).innerHTML = data["max-spec"];
-                        weaknessElem = _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("weaknessBox-" + side);
-                        weaknessElem.innerHTML = "<p id=\"weakness-text\">Weakness</p>";
-                        for (i = 0; i < data["weakness"].length; i++)
-                            weaknessElem.innerHTML += data["weakness"][i];
-                        susceptibleElem = _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("susceptibleBox-" + side);
-                        susceptibleElem.innerHTML = "<p id=\"susceptible-text\">Susceptible</p>";
-                        for (i = 0; i < data["susceptible"].length; i++)
-                            susceptibleElem.innerHTML += data["susceptible"][i];
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("combat-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(data["experience"].toFixed(2));
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("lifepoints-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(data["lifepoint-exp"].toFixed(2));
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("slayer-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(data["slayer-exp"].toFixed(2));
-                        count = _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("kills-" + side).innerHTML;
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("total-slayer-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas((data["slayer-exp"] * count).toFixed(2));
+                        if (!_settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.ui.limited) {
+                            // Set the image of variant but replace the # with url safe Percent-encoding
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("image-container-" + side).innerHTML = data["image"].replace("#", "%23");
+                            imageElement = _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("image-container-" + side).firstElementChild;
+                            imageContainerElement = _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("image-container-" + side);
+                            newSize = _extrafuncs__WEBPACK_IMPORTED_MODULE_2__.calculateAspectRatioFit(parseInt(imageElement.getAttribute("width")), parseInt(imageElement.getAttribute("height")), imageContainerElement.offsetWidth, imageContainerElement.offsetHeight);
+                            imageElement.setAttribute("style", "max-width:" + newSize.width + "px; max-height:" + newSize.height + "px;");
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("level-" + side).innerHTML = data["level"];
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("slayer-level-" + side).innerHTML = data["slayer-level"];
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("lifepoints-" + side).innerHTML = data["lifepoints"];
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("defence-" + side).innerHTML = data["defence"];
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("max-melee-" + side).innerHTML = data["max-melee"];
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("max-ranged-" + side).innerHTML = data["max-ranged"];
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("max-magic-" + side).innerHTML = data["max-magic"];
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("max-necromancy-" + side).innerHTML = data["max-necromancy"];
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("max-spec-" + side).innerHTML = data["max-spec"];
+                            weaknessElem = _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("weaknessBox-" + side);
+                            weaknessElem.innerHTML = "<p id=\"weakness-text\">Weakness</p>";
+                            for (i = 0; i < data["weakness"].length; i++)
+                                weaknessElem.innerHTML += data["weakness"][i];
+                            susceptibleElem = _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("susceptibleBox-" + side);
+                            susceptibleElem.innerHTML = "<p id=\"susceptible-text\">Susceptible</p>";
+                            for (i = 0; i < data["susceptible"].length; i++)
+                                susceptibleElem.innerHTML += data["susceptible"][i];
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("combat-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_2__.numberWithCommas(data["experience"].toFixed(2));
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("lifepoints-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_2__.numberWithCommas(data["lifepoint-exp"].toFixed(2));
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("slayer-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_2__.numberWithCommas(data["slayer-exp"].toFixed(2));
+                        }
+                        count = _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("kills-" + side).innerHTML;
+                        _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("total-slayer-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_2__.numberWithCommas((data["slayer-exp"] * count).toFixed(2));
                     }
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loadingStop();
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
                     return [2 /*return*/];
             }
         });
@@ -1283,28 +1293,33 @@ function variant(side) {
 }
 // Update the Creature Shown
 function creature(side_1) {
-    return __awaiter(this, arguments, void 0, function (side, variant) {
+    return __awaiter(this, arguments, void 0, function (side, creature, variant) {
         var data, _i, _a, a;
+        if (creature === void 0) { creature = null; }
         if (variant === void 0) { variant = null; }
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loading();
-                    console.log("Change Creature to: " + _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creatures-" + side).value + (variant ? ("#" + variant) : ''));
-                    return [4 /*yield*/, _data_creatures__WEBPACK_IMPORTED_MODULE_5__.get(_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creatures-" + side).value)];
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loading();
+                    if (!creature)
+                        creature = _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("creatures-" + side).value;
+                    console.log("Change Creature to: " + creature + (variant ? ("#" + variant) : ''));
+                    return [4 /*yield*/, _data_creatures__WEBPACK_IMPORTED_MODULE_6__.get(creature)];
                 case 1:
                     data = _b.sent();
                     if (data) {
-                        if (data["variants"]) {
-                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("variants-" + side).innerHTML = "";
+                        if (data["variants"] && !_settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.ui.limited) {
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("variants-" + side).innerHTML = "";
                             for (_i = 0, _a = data["variants"]; _i < _a.length; _i++) {
                                 a = _a[_i];
-                                _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("variants-" + side).innerHTML += "<option value=\"" + a["name"] + "\"" + ((variant && _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(a["name"]) === _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(variant)) ? " selected" : "") + ">" + a["name"] + "</option>";
+                                _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("variants-" + side).innerHTML += "<option value=\"" + a["name"] + "\"" + ((variant && _extrafuncs__WEBPACK_IMPORTED_MODULE_2__.decodeHtml(a["name"]) === _extrafuncs__WEBPACK_IMPORTED_MODULE_2__.decodeHtml(variant)) ? " selected" : "") + ">" + a["name"] + "</option>";
                             }
+                            if (!variant)
+                                variant = data["variants"][0]["name"];
                         }
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.variant(side);
+                        _dochandler__WEBPACK_IMPORTED_MODULE_1__.change.variant(side, creature, variant);
                     }
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loadingStop();
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
                     return [2 /*return*/];
             }
         });
@@ -1321,128 +1336,135 @@ function reaper(task, count) {
 // Update the entire Assignment data
 function assignment(side, task, count) {
     return __awaiter(this, void 0, void 0, function () {
-        var nameElement, slayxp, data, _a, i, i, i, i, i, img, masterData, kills, previewMastersHeight, _loop_1, i, variant_1, _i, _b, a, creature_1;
+        var nameElement, slayxp, data, _a, i, img, masterData, kills, previewMastersHeight, _loop_1, i, i, i, i, i, _i, _b, a, creature_1, creature_2, variant_1;
         return __generator(this, function (_c) {
             switch (_c.label) {
                 case 0:
                     // Check if we are trying to load a second task when only 1 is displayed
-                    if (side == 1 && !_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.doubleLoaded) {
+                    if (side == 1 && !_dochandler__WEBPACK_IMPORTED_MODULE_1__.main.doubleLoaded) {
                         console.error("Cannot load double slayer task if only 1 is diaplyed!");
                         return [2 /*return*/];
                     }
                     // Check if we are trying to load a reaper task when 2 is displayed
-                    if (side == 2 && !_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.reaperLoaded) {
+                    if (side == 2 && !_dochandler__WEBPACK_IMPORTED_MODULE_1__.main.reaperLoaded) {
                         console.error("Cannot load reaper task if there are 2 is diaplyed!");
                         return [2 /*return*/];
                     }
                     // Show we are loading
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loading();
-                    nameElement = _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("name-" + side);
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loading();
+                    nameElement = _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("name-" + side);
                     if (nameElement === null)
                         return [2 /*return*/];
-                    if ((task == null && nameElement.innerHTML != "???") || nameElement.innerHTML === task) {
+                    if ((task == null && nameElement.innerHTML != "???") || nameElement.innerHTML.toLowerCase() === task.toLowerCase()) {
                         console.log("Update task: [" + count + "] " + task + " " + (side == 0 ? "(Default)" : (side == 2 ? "(Reaper)" : "(1 Slayer Token)")));
                         // Update the kills and exp of the task since it's already loaded
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("kills-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(count);
-                        slayxp = parseInt(_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("slayer-exp-" + side).innerHTML);
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("total-slayer-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas((slayxp * count).toFixed(2));
+                        _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("kills-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_2__.numberWithCommas(count);
+                        slayxp = parseInt(_dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("slayer-exp-" + side).innerHTML);
+                        _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("total-slayer-exp-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_2__.numberWithCommas((slayxp * count).toFixed(2));
                         // TODO update the count of the task for tracking
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loadingStop();
+                        _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
                         return [2 /*return*/];
                     }
                     // Display the task data and log what we loaded
                     console.log("Load task: [" + count + "] " + task + " " + (side == 0 ? "(Default)" : (side == 2 ? "(Reaper)" : "(1 Slayer Token)")));
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("kills-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.numberWithCommas(count);
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("name-" + side).innerHTML = task;
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("kills-" + side).innerHTML = _extrafuncs__WEBPACK_IMPORTED_MODULE_2__.numberWithCommas(count);
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("name-" + side).innerHTML = task;
                     if (!(side == 2)) return [3 /*break*/, 2];
-                    return [4 /*yield*/, _data_reapers__WEBPACK_IMPORTED_MODULE_3__.get(task)];
+                    return [4 /*yield*/, _data_reapers__WEBPACK_IMPORTED_MODULE_4__.get(task)];
                 case 1:
                     _a = _c.sent();
                     return [3 /*break*/, 4];
-                case 2: return [4 /*yield*/, _data_assignments__WEBPACK_IMPORTED_MODULE_4__.get(task)];
+                case 2: return [4 /*yield*/, _data_assignments__WEBPACK_IMPORTED_MODULE_5__.get(task)];
                 case 3:
                     _a = _c.sent();
                     _c.label = 4;
                 case 4:
                     data = _a;
                     if (!data) return [3 /*break*/, 9];
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("name-" + side).innerHTML = data["index"];
-                    if (data["equipment"]) {
-                        for (i = 0; i < 3; i++)
-                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("equipInfo" + (i + 1) + "-" + side).innerHTML = (i == 0 ? "None" : "");
-                        if (data["equipment"].length > 0)
-                            for (i = 0; i < data["equipment"].length; i++)
-                                _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("equipInfo" + (i + 1) + "-" + side).innerHTML = data["equipment"][i] != "" ? data["equipment"][i] : "<span style=\"color: red;\" title=\"There is no information in the database.\">Database Empty</span>";
-                        // Hide & Show the See More Link...
-                        if (data["equipment"].length < 3)
-                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("equipMore-" + side).style.visibility = "hidden";
-                        else
-                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("equipMore-" + side).style.visibility = "visible";
-                    }
-                    else if (!data["equipment"]) {
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("equipMore-" + side).style.visibility = "hidden";
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("equipInfo1-" + side).innerHTML = "<span style=\"color: red;\" title=\"There is no information in the database.\">Database Missing</span>";
-                    }
-                    if (data["locations"]) {
-                        for (i = 0; i < 3; i++)
-                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("locationInfo" + (i + 1) + "-" + side).innerHTML = (i == 0 ? "None" : "");
-                        if (data["locations"].length > 0)
-                            for (i = 0; i < data["locations"].length; i++)
-                                _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("locationInfo" + (i + 1) + "-" + side).innerHTML = data["locations"][i] != "" ? data["locations"][i] : "<span style=\"color: red;\" title=\"There is no information in the database.\">Database Empty</span>";
-                        // Hide & Show the See More Link...
-                        if (data["locations"].length < 3)
-                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("locationMore-" + side).style.visibility = "hidden";
-                        else
-                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("locationMore-" + side).style.visibility = "visible";
-                    }
-                    else if (!data["locations"]) {
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("locationMore-" + side).style.visibility = "hidden";
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("locationInfo1-" + side).innerHTML = "<span style=\"color: red;\" title=\"There is no information in the database.\">Database Missing</span>";
-                    }
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("masters-" + side).innerHTML = "<div class=\"nistext\" id=\"masterTitle\" >Assignment Range</div>";
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("name-" + side).innerHTML = data["index"];
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("name-" + side).title = data["index"];
+                    // Setup the Masters Data
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("masters-" + side).innerHTML = "<div class=\"nistext\" id=\"masterTitle\" >Assignment Range</div>";
                     i = 0;
                     _c.label = 5;
                 case 5:
                     if (!(i < data["masters"].length)) return [3 /*break*/, 8];
                     img = "<img id=\"masterImage" + i + "-" + side + "\" alt=\"" + data["masters"][i] + "\" src=\"./images/masters/" + data["masters"][i] + ".png\" title=\"" + data["masters"][i] + "\"></img>";
-                    return [4 /*yield*/, _data_masters__WEBPACK_IMPORTED_MODULE_2__.get(data["masters"][i])];
+                    return [4 /*yield*/, _data_masters__WEBPACK_IMPORTED_MODULE_3__.get(data["masters"][i])];
                 case 6:
                     masterData = _c.sent();
                     kills = masterData["task-counts"][data["index"]];
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("masters-" + side).innerHTML += "<div class=\"nistext\" id=\"masterInfo" + i + "-" + side + "\">" + img + " Kills: " + kills + "</div>";
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("masters-" + side).innerHTML += "<div class=\"nistext\" id=\"masterInfo" + i + "-" + side + "\">" + img + " Kills: " + kills + "</div>";
                     _c.label = 7;
                 case 7:
                     i++;
                     return [3 /*break*/, 5];
                 case 8:
                     previewMastersHeight = (data["masters"].length * 30 + 30);
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("preview-task-wiki-" + side).setAttribute("style", "height: " + previewMastersHeight + "px;");
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("preview-task-wiki-" + side).setAttribute("style", "height: " + previewMastersHeight + "px;");
                     _loop_1 = function (i) {
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("masterInfo" + i + "-" + side).addEventListener('click', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.wiki.master(side, i); });
+                        _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("masterInfo" + i + "-" + side).addEventListener('click', function () { _dochandler__WEBPACK_IMPORTED_MODULE_1__.open.wiki.master(side, i); });
                     };
                     for (i = 0; i < data["masters"].length; i++) {
                         _loop_1(i);
                     }
-                    if (data["creatures"]) {
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creatures-" + side).innerHTML = "";
-                        variant_1 = null;
-                        for (_i = 0, _b = data["creatures"]; _i < _b.length; _i++) {
-                            a = _b[_i];
-                            if (!_extrafuncs__WEBPACK_IMPORTED_MODULE_1__.listContains(data["hidden-creatures"], a)) {
-                                if (data["default-creature"] && data["default-creature"].includes("#")) {
-                                    creature_1 = data["default-creature"].substring(0, data["default-creature"].indexOf("#"));
-                                    variant_1 = data["default-creature"].substring(data["default-creature"].indexOf("#") + 1);
-                                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creatures-" + side).innerHTML += "<option value=\"" + a + "\"" + (_extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(a) === _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(creature_1) ? " selected" : "") + ">" + a + "</option>";
+                    if (!_settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.ui.limited) {
+                        // Setup the Equipment Data
+                        if (data["equipment"]) {
+                            for (i = 0; i < 3; i++)
+                                _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("equipInfo" + (i + 1) + "-" + side).innerHTML = (i == 0 ? "None" : "");
+                            if (data["equipment"].length > 0)
+                                for (i = 0; i < data["equipment"].length; i++)
+                                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("equipInfo" + (i + 1) + "-" + side).innerHTML = data["equipment"][i] != "" ? data["equipment"][i] : "<span style=\"color: red;\" title=\"There is no information in the database.\">Database Empty</span>";
+                            // Hide & Show the See More Link...
+                            if (data["equipment"].length < 3)
+                                _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("equipMore-" + side).style.visibility = "hidden";
+                            else
+                                _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("equipMore-" + side).style.visibility = "visible";
+                        }
+                        else if (!data["equipment"]) {
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("equipMore-" + side).style.visibility = "hidden";
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("equipInfo1-" + side).innerHTML = "<span style=\"color: red;\" title=\"There is no information in the database.\">Database Missing</span>";
+                        }
+                        // Setup the Locations Data
+                        if (data["locations"]) {
+                            for (i = 0; i < 3; i++)
+                                _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("locationInfo" + (i + 1) + "-" + side).innerHTML = (i == 0 ? "None" : "");
+                            if (data["locations"].length > 0)
+                                for (i = 0; i < data["locations"].length; i++)
+                                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("locationInfo" + (i + 1) + "-" + side).innerHTML = data["locations"][i] != "" ? data["locations"][i] : "<span style=\"color: red;\" title=\"There is no information in the database.\">Database Empty</span>";
+                            // Hide & Show the See More Link...
+                            if (data["locations"].length < 3)
+                                _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("locationMore-" + side).style.visibility = "hidden";
+                            else
+                                _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("locationMore-" + side).style.visibility = "visible";
+                        }
+                        else if (!data["locations"]) {
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("locationMore-" + side).style.visibility = "hidden";
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("locationInfo1-" + side).innerHTML = "<span style=\"color: red;\" title=\"There is no information in the database.\">Database Missing</span>";
+                        }
+                        // Setup the Creatures Data
+                        if (data["creatures"]) {
+                            _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("creatures-" + side).innerHTML = "";
+                            for (_i = 0, _b = data["creatures"]; _i < _b.length; _i++) {
+                                a = _b[_i];
+                                if (!_extrafuncs__WEBPACK_IMPORTED_MODULE_2__.listContains(data["hidden-creatures"], a)) {
+                                    if (data["default-creature"] && data["default-creature"].includes("#")) {
+                                        creature_1 = data["default-creature"].substring(0, data["default-creature"].indexOf("#"));
+                                        _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("creatures-" + side).innerHTML += "<option value=\"" + a + "\"" + (_extrafuncs__WEBPACK_IMPORTED_MODULE_2__.decodeHtml(a) === _extrafuncs__WEBPACK_IMPORTED_MODULE_2__.decodeHtml(creature_1) ? " selected" : "") + ">" + a + "</option>";
+                                    }
+                                    else
+                                        _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.get.elid("creatures-" + side).innerHTML += "<option value=\"" + a + "\"" + (_extrafuncs__WEBPACK_IMPORTED_MODULE_2__.decodeHtml(a) === _extrafuncs__WEBPACK_IMPORTED_MODULE_2__.decodeHtml(data["default-creature"]) ? " selected" : "") + ">" + a + "</option>";
                                 }
-                                else
-                                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creatures-" + side).innerHTML += "<option value=\"" + a + "\"" + (_extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(a) === _extrafuncs__WEBPACK_IMPORTED_MODULE_1__.decodeHtml(data["default-creature"]) ? " selected" : "") + ">" + a + "</option>";
                             }
                         }
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.creature(side, variant_1);
                     }
+                    creature_2 = data["default-creature"].substring(0, data["default-creature"].indexOf("#"));
+                    variant_1 = data["default-creature"].substring(data["default-creature"].indexOf("#") + 1);
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.change.creature(side, creature_2, variant_1);
                     _c.label = 9;
                 case 9:
-                    _dochandler__WEBPACK_IMPORTED_MODULE_0__.animate.loadingStop();
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
                     return [2 /*return*/];
             }
         });
@@ -1651,7 +1673,7 @@ var reset;
     // Reset the search box value to nothing
     function searchBox() {
         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("search-info").value = "";
-        set.searchButtonText("Capture");
+        toggle.searchText();
     }
     reset.searchBox = searchBox;
 })(reset || (reset = {}));
@@ -1824,9 +1846,6 @@ var setup;
                                 case "ArrowDown":
                                     _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.searchInput(_settings__WEBPACK_IMPORTED_MODULE_1__.search.getNextHistory());
                                     break;
-                                case "Enter":
-                                    _slayer__WEBPACK_IMPORTED_MODULE_2__.searchTasks();
-                                    break;
                             }
                         });
                         // Load the list of all assignments into the search feature (aka datalist)
@@ -1841,7 +1860,7 @@ var setup;
     // Setup the base for double assignment
     function doubleAssignment() {
         return __awaiter(this, void 0, void 0, function () {
-            var _a, _loop_1, side;
+            var _a, limited, _loop_1, side;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -1849,28 +1868,36 @@ var setup;
                         return [4 /*yield*/, fetch("./pages/doc/dual.html").then(function (r) { return r.text(); })];
                     case 1:
                         _a.innerHTML = _b.sent();
+                        limited = _settings__WEBPACK_IMPORTED_MODULE_1__.controller.data.ui.limited ? "-limited" : "";
                         _loop_1 = function (side) {
                             var _c;
                             return __generator(this, function (_d) {
                                 switch (_d.label) {
                                     case 0:
                                         _c = document.getElementsByClassName(side == 0 ? "left" : "right")[0];
-                                        return [4 /*yield*/, fetch("./pages/doc/example" + side + ".html").then(function (r) { return r.text(); })];
+                                        return [4 /*yield*/, fetch("./pages/doc/example" + side + (_settings__WEBPACK_IMPORTED_MODULE_1__.controller.data.ui.limited ? "-limited" : "") + ".html").then(function (r) { return r.text(); })];
                                     case 1:
                                         _c.innerHTML = _d.sent();
                                         // Setup the event listeners for everything
                                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("task-wiki-" + side).addEventListener('click', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.wiki.assignment(side); });
                                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("task-wiki-" + side).addEventListener('mouseover', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.assignmentWiki(side); });
                                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("preview-task-wiki-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.assignmentWikiPreview(side); });
-                                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("equipMore-" + side).addEventListener('mouseenter', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.moreEquip(side); });
-                                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("equipHidden-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.moreEquip(side); });
-                                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("locationMore-" + side).addEventListener('mouseenter', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.moreLocations(side); });
-                                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("locationHidden-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.moreLocations(side); });
-                                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creature-wiki-" + side).addEventListener('click', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.wiki.creature(side); });
-                                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creature-wiki-" + side).addEventListener('mouseover', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.creatureWiki(side); });
-                                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("preview-creature-wiki-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.creatureWikiPreview(side); });
-                                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creatures-" + side).addEventListener('change', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.creature(side); });
-                                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("variants-" + side).addEventListener('change', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.variant(side); });
+                                        if (!_settings__WEBPACK_IMPORTED_MODULE_1__.controller.data.ui.limited) {
+                                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("equipMore-" + side).addEventListener('mouseenter', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.moreEquip(side); });
+                                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("equipHidden-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.moreEquip(side); });
+                                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("locationMore-" + side).addEventListener('mouseenter', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.moreLocations(side); });
+                                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("locationHidden-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.moreLocations(side); });
+                                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creature-wiki-" + side).addEventListener('click', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.wiki.creature(side); });
+                                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creature-wiki-" + side).addEventListener('mouseover', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.creatureWiki(side); });
+                                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("preview-creature-wiki-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.creatureWikiPreview(side); });
+                                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creatures-" + side).addEventListener('change', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.creature(side); });
+                                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("variants-" + side).addEventListener('change', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.variant(side); });
+                                        }
+                                        // Adjust if status is visible
+                                        if (_settings__WEBPACK_IMPORTED_MODULE_1__.controller.data.ui.status)
+                                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("status-" + side).style.visibility = "visible";
+                                        else
+                                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("status-" + side).style.visibility = "hidden";
                                         return [2 /*return*/];
                                 }
                             });
@@ -1887,6 +1914,8 @@ var setup;
                         side++;
                         return [3 /*break*/, 2];
                     case 5:
+                        // Adjust the doc for limited and full
+                        adjustForSettings();
                         doubleLoaded = true;
                         return [2 /*return*/];
                 }
@@ -1902,22 +1931,31 @@ var setup;
                 switch (_b.label) {
                     case 0:
                         _a = _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("base");
-                        return [4 /*yield*/, fetch("./pages/doc/example" + side + ".html").then(function (r) { return r.text(); })];
+                        return [4 /*yield*/, fetch("./pages/doc/example" + side + (_settings__WEBPACK_IMPORTED_MODULE_1__.controller.data.ui.limited ? "-limited" : "") + ".html").then(function (r) { return r.text(); })];
                     case 1:
                         _a.innerHTML = _b.sent();
                         // Setup the event listeners for everything
                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("task-wiki-" + side).addEventListener('click', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.wiki.assignment(side); });
                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("task-wiki-" + side).addEventListener('mouseover', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.assignmentWiki(side); });
                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("preview-task-wiki-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.assignmentWikiPreview(side); });
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("equipMore-" + side).addEventListener('mouseenter', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.moreEquip(side); });
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("equipHidden-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.moreEquip(side); });
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("locationMore-" + side).addEventListener('mouseenter', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.moreLocations(side); });
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("locationHidden-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.moreLocations(side); });
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creature-wiki-" + side).addEventListener('click', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.wiki.creature(side); });
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creature-wiki-" + side).addEventListener('mouseover', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.creatureWiki(side); });
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("preview-creature-wiki-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.creatureWikiPreview(side); });
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creatures-" + side).addEventListener('change', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.creature(side); });
-                        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("variants-" + side).addEventListener('change', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.variant(side); });
+                        if (!_settings__WEBPACK_IMPORTED_MODULE_1__.controller.data.ui.limited) {
+                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("equipMore-" + side).addEventListener('mouseenter', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.moreEquip(side); });
+                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("equipHidden-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.moreEquip(side); });
+                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("locationMore-" + side).addEventListener('mouseenter', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.moreLocations(side); });
+                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("locationHidden-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.moreLocations(side); });
+                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creature-wiki-" + side).addEventListener('click', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.wiki.creature(side); });
+                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creature-wiki-" + side).addEventListener('mouseover', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.creatureWiki(side); });
+                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("preview-creature-wiki-" + side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.creatureWikiPreview(side); });
+                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("creatures-" + side).addEventListener('change', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.creature(side); });
+                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("variants-" + side).addEventListener('change', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.change.variant(side); });
+                        }
+                        // Adjust if status is visible
+                        if (_settings__WEBPACK_IMPORTED_MODULE_1__.controller.data.ui.status)
+                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("status-" + side).style.visibility = "visible";
+                        else
+                            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("status-" + side).style.visibility = "hidden";
+                        // Adjust the doc for limited and full
+                        adjustForSettings();
                         if (side == 2)
                             reaperLoaded = true;
                         else
@@ -1954,14 +1992,28 @@ var setup;
         });
     }
     setup.suggested = suggested;
+    // If limited the lets set the size of the base
+    function adjustForSettings() {
+        if (_settings__WEBPACK_IMPORTED_MODULE_1__.controller.data.ui.limited) {
+            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("base").classList.remove("base-full");
+            if (_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("divide"))
+                _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("divide").classList.remove("divide-full");
+            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("copyright").classList.remove("copyright-full");
+        }
+        else {
+            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("base").classList.add("base-full");
+            if (_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("divide"))
+                _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("divide").classList.add("divide-full");
+            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("copyright").classList.add("copyright-full");
+        }
+    }
 })(setup || (setup = {}));
 var toggle;
 (function (toggle) {
     // Toggle if we are capturing screen or searching text
     function searchText() {
-        if (_dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.searchInput() != "")
-            _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.searchButtonText("Search");
-        else
+        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.searchButtonText("Search");
+        if (_slayer__WEBPACK_IMPORTED_MODULE_2__.searchResult)
             _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.searchButtonText("Capture");
     }
     toggle.searchText = searchText;
@@ -2126,10 +2178,12 @@ function decodeHtml(html) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   AutoCaptureData: () => (/* binding */ AutoCaptureData),
 /* harmony export */   DefaultData: () => (/* binding */ DefaultData),
 /* harmony export */   HiddenData: () => (/* binding */ HiddenData),
 /* harmony export */   SettingsData: () => (/* binding */ SettingsData),
 /* harmony export */   SettingsDataController: () => (/* binding */ SettingsDataController),
+/* harmony export */   UIData: () => (/* binding */ UIData),
 /* harmony export */   change: () => (/* binding */ change),
 /* harmony export */   controller: () => (/* binding */ controller),
 /* harmony export */   executeDevTools: () => (/* binding */ executeDevTools),
@@ -2175,6 +2229,20 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 };
 
 
+// Add Auto Capture Data
+var AutoCaptureData = /** @class */ (function () {
+    function AutoCaptureData() {
+    }
+    return AutoCaptureData;
+}());
+
+// All UI Data
+var UIData = /** @class */ (function () {
+    function UIData() {
+    }
+    return UIData;
+}());
+
 // All Hidden Data
 var DefaultData = /** @class */ (function () {
     function DefaultData() {
@@ -2202,14 +2270,25 @@ var SettingsDataController = /** @class */ (function () {
         this.configLoaded = false;
         this.data = {
             version: 1,
-            autoCapture: true,
-            autoCaptureCounter: true,
-            limitedUI: false,
-            overlyaCounter: false,
-            style: "default",
-            historyRetentionDuration: 1000 * 60 * 60 * 24,
-            lookupRetentionDuration: 1000 * 60 * 60 * 24,
             searchAlgorithim: "default",
+            autoCapture: {
+                enabled: true,
+                counterEnabled: true,
+                searchToggle: false,
+                loopTimer: 500,
+                counterTimer: 500,
+                dialogTimer: 5000,
+                searchTimer: 10000,
+            },
+            ui: {
+                style: "default", // Select sytle for the app (Needs finished later on)
+                limited: false,
+                status: false,
+                counterOverlay: false,
+                counterOverlayTimer: 500,
+                historyRetentionCount: 10, // How many search results to keep in history (0 = unlimited)
+                lookupRetentionCount: 0, // How many lookup results to keep in history (0 = unlimited)
+            },
             showHidden: {
                 creatures: false,
                 eliteCreatures: false,
@@ -2252,7 +2331,7 @@ var SettingsDataController = /** @class */ (function () {
                         if (this.data.version < this.decodeVersion(res['version']))
                             this.data.version = this.decodeVersion(res['version']);
                         // Add Versioning system to allow compatibility with future updates (Should only ever run once)
-                        if (this.data.version < 3) {
+                        if (this.data.version < 5) {
                             console.log("(Versioning System Missing) Setting up versioning system.");
                             // Remove the alpha/beta recent task system, we are replacing it with a new defaults loading system
                             if (window.localStorage.getItem('recent_task_0') != null)
@@ -2272,6 +2351,12 @@ var SettingsDataController = /** @class */ (function () {
                         _a.sent();
                         _a.label = 3;
                     case 3:
+                        if (!(this.data.default.taskName0 != null && this.data.default.taskName1 == null)) return [3 /*break*/, 5];
+                        return [4 /*yield*/, _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.single({ name: this.data.default.taskName0, count: this.data.default.taskCount0 })];
+                    case 4:
+                        _a.sent();
+                        _a.label = 5;
+                    case 5:
                         // Set the config to loaded so we can't load it again
                         this.configLoaded = true;
                         return [2 /*return*/];
@@ -2526,7 +2611,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   captureRunescape: () => (/* binding */ captureRunescape),
 /* harmony export */   counterReader: () => (/* binding */ counterReader),
 /* harmony export */   findTask: () => (/* binding */ findTask),
+/* harmony export */   loopRunning: () => (/* binding */ loopRunning),
 /* harmony export */   searchAlgo: () => (/* binding */ searchAlgo),
+/* harmony export */   searchResult: () => (/* binding */ searchResult),
 /* harmony export */   searchTasks: () => (/* binding */ searchTasks),
 /* harmony export */   slayerReader: () => (/* binding */ slayerReader),
 /* harmony export */   timer: () => (/* binding */ timer)
@@ -2585,6 +2672,8 @@ var timer = function (ms) { return new Promise(function (res) { return setTimeou
 var searchAlgo = new _SearchAlgorithm__WEBPACK_IMPORTED_MODULE_2__.SearchAlgorithm();
 var slayerReader = new _SlayerDialogReader__WEBPACK_IMPORTED_MODULE_3__.SlayerDialogReader();
 var counterReader = new _UICounterReader__WEBPACK_IMPORTED_MODULE_4__.UICounterReader();
+var loopRunning = false, searchResult = false;
+;
 // Check to see if we can capture the current screen
 function canCaptureRunescape() {
     return window.alt1 && alt1.rsLinked && alt1.permissionPixel;
@@ -2609,10 +2698,16 @@ function findTask(buffer) {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
+                    // If autoCapture is disabled, loo is already running, or we have a search result then return
+                    if (!_settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.autoCapture.enabled || loopRunning || searchResult)
+                        return [2 /*return*/];
+                    // If there is no image, attempt to capture a new one
                     if (!buffer)
                         buffer = captureRunescape();
                     if (!buffer)
                         return [2 /*return*/];
+                    // Set the loop to running and reset the loading icon
+                    loopRunning = true;
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
                     return [4 /*yield*/, slayerReader.read(buffer)];
                 case 1:
@@ -2625,9 +2720,10 @@ function findTask(buffer) {
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.set.suggested();
                     // End Loading animation, wait 5 secs and then return
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
-                    return [4 /*yield*/, timer(5000)];
+                    return [4 /*yield*/, timer(_settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.autoCapture.dialogTimer)];
                 case 2:
                     _a.sent();
+                    loopRunning = false;
                     return [2 /*return*/];
                 case 3:
                     if (!(slayerData.reaper && !slayerData.ticket)) return [3 /*break*/, 5];
@@ -2648,11 +2744,14 @@ function findTask(buffer) {
                 case 9:
                     // End Loading animation, wait 5 secs and then return
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
-                    return [4 /*yield*/, timer(5000)];
+                    return [4 /*yield*/, timer(_settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.autoCapture.dialogTimer)];
                 case 10:
                     _a.sent();
+                    loopRunning = false;
                     return [2 /*return*/];
-                case 11: return [4 /*yield*/, counterReader.read(buffer)];
+                case 11:
+                    if (!_settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.autoCapture.counterEnabled) return [3 /*break*/, 18];
+                    return [4 /*yield*/, counterReader.read(buffer)];
                 case 12:
                     counterData = _a.sent();
                     if (!counterData) return [3 /*break*/, 18];
@@ -2672,16 +2771,15 @@ function findTask(buffer) {
                 case 16:
                     // End Loading animation, wait 5 secs and then return
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
-                    return [4 /*yield*/, timer(5000)];
+                    return [4 /*yield*/, timer(_settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.autoCapture.counterTimer)];
                 case 17:
                     _a.sent();
+                    loopRunning = false;
                     return [2 /*return*/];
                 case 18:
                     // Finish up by stoping the loading animation and wait 0.5 seconds before we start capturing again
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
-                    return [4 /*yield*/, timer(500)];
-                case 19:
-                    _a.sent();
+                    loopRunning = false;
                     return [2 /*return*/];
             }
         });
@@ -2700,8 +2798,10 @@ function searchTasks(value) {
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.reset.searchBox();
                     _settings__WEBPACK_IMPORTED_MODULE_0__.search.addHistory(value);
                     // Handle the search in different ways
-                    if (value.length == 0) {
+                    if (value.length == 0 && searchResult) {
                         // Do a manual capture
+                        searchResult = false;
+                        _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.toggle.searchText();
                         findTask();
                         return [2 /*return*/];
                     }
@@ -2716,6 +2816,9 @@ function searchTasks(value) {
                         _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.set.suggested();
                         return [2 /*return*/];
                     }
+                    // Setup the loopRunnign, lookup value, and if there is a second assignment then lets add them both
+                    searchResult = true;
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.toggle.searchText();
                     lookup = [value];
                     if (value.includes("|")) {
                         lookup[0] = value.substring(0, value.indexOf("|"));
@@ -2762,8 +2865,16 @@ function searchTasks(value) {
                     _d.sent();
                     _d.label = 10;
                 case 10:
+                    // Stop loading
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loadingStop();
-                    return [2 /*return*/];
+                    if (!!_settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.autoCapture.searchToggle) return [3 /*break*/, 12];
+                    return [4 /*yield*/, timer(_settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.autoCapture.searchTimer)];
+                case 11:
+                    _d.sent();
+                    searchResult = false;
+                    _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.toggle.searchText();
+                    _d.label = 12;
+                case 12: return [2 /*return*/];
             }
         });
     });
@@ -6307,9 +6418,6 @@ var __webpack_exports__ = {};
   !*** ./index.ts ***!
   \******************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   captureLoop: () => (/* binding */ captureLoop)
-/* harmony export */ });
 /* harmony import */ var _modules_settings__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/settings */ "./modules/settings.ts");
 /* harmony import */ var _modules_slayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slayer */ "./modules/slayer.ts");
 /* harmony import */ var _modules_dochandler__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/dochandler */ "./modules/dochandler.ts");
@@ -6396,34 +6504,9 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     - Ability to select the type of search algo for the app (Maybe Later On)
 
 */
-// Boolean to determine is captureLoop is already running
-var loopRunning = false;
 // Check if we are running in alt1 and if so then tell alt1 about the config
 if (window.alt1)
     alt1.identifyAppUrl("./appconfig.json");
-// The Main Capture Loop of the App
-function captureLoop() {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    // If the captureLoop is already running or if we can't capture the screen then just return else set as running
-                    if (loopRunning || !_modules_slayer__WEBPACK_IMPORTED_MODULE_1__.canCaptureRunescape())
-                        return [2 /*return*/];
-                    loopRunning = true;
-                    // Capture the Runescape screen and see if we can find a task on it
-                    _modules_slayer__WEBPACK_IMPORTED_MODULE_1__.findTask(_modules_slayer__WEBPACK_IMPORTED_MODULE_1__.captureRunescape());
-                    // Wait 0.5 seconds and then set running to false before we allow loop to continue
-                    return [4 /*yield*/, _modules_slayer__WEBPACK_IMPORTED_MODULE_1__.timer(500)];
-                case 1:
-                    // Wait 0.5 seconds and then set running to false before we allow loop to continue
-                    _a.sent();
-                    loopRunning = false;
-                    return [2 /*return*/];
-            }
-        });
-    });
-}
 // Initialize the javascript for the entire app
 document.addEventListener("DOMContentLoaded", function (event) { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
@@ -6436,9 +6519,12 @@ document.addEventListener("DOMContentLoaded", function (event) { return __awaite
                 _a.sent();
                 // Run the Config Setup Process
                 _modules_settings__WEBPACK_IMPORTED_MODULE_0__.controller.load();
-                // Run the first capture loop and then setup the 1.5 sec loop
-                captureLoop();
-                setInterval(function () { captureLoop(); }, 1500);
+                // Run the first capture loop and then setup the infinite sec loop
+                return [4 /*yield*/, _modules_slayer__WEBPACK_IMPORTED_MODULE_1__.findTask()];
+            case 2:
+                // Run the first capture loop and then setup the infinite sec loop
+                _a.sent();
+                setInterval(function () { _modules_slayer__WEBPACK_IMPORTED_MODULE_1__.findTask(); }, _modules_settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.autoCapture.loopTimer);
                 return [2 /*return*/];
         }
     });
