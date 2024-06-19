@@ -2013,7 +2013,7 @@ var toggle;
     // Toggle if we are capturing screen or searching text
     function searchText() {
         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.searchButtonText("Search");
-        if (_slayer__WEBPACK_IMPORTED_MODULE_2__.searchResult)
+        if (_slayer__WEBPACK_IMPORTED_MODULE_2__.searchResult || (!_settings__WEBPACK_IMPORTED_MODULE_1__.controller.data.autoCapture.enabled && _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.searchInput() === ""))
             _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.set.searchButtonText("Capture");
     }
     toggle.searchText = searchText;
@@ -2272,7 +2272,7 @@ var SettingsDataController = /** @class */ (function () {
             version: 1,
             searchAlgorithim: "default",
             autoCapture: {
-                enabled: true,
+                enabled: false,
                 counterEnabled: true,
                 searchToggle: false,
                 loopTimer: 500,
