@@ -2272,7 +2272,7 @@ var SettingsDataController = /** @class */ (function () {
             version: 1,
             searchAlgorithim: "default",
             autoCapture: {
-                enabled: false,
+                enabled: true,
                 counterEnabled: true,
                 searchToggle: false,
                 loopTimer: 500,
@@ -2798,7 +2798,7 @@ function searchTasks(value) {
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.reset.searchBox();
                     _settings__WEBPACK_IMPORTED_MODULE_0__.search.addHistory(value);
                     // Handle the search in different ways
-                    if (value.length == 0 && searchResult) {
+                    if (value.length == 0 && (searchResult || !_settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.autoCapture.enabled)) {
                         // Do a manual capture
                         searchResult = false;
                         _dochandler__WEBPACK_IMPORTED_MODULE_1__.main.toggle.searchText();
