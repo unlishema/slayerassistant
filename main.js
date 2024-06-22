@@ -2146,6 +2146,7 @@ function settingsPage() {
         // FIXME Make it so when we unload, we can reload the settings in case user pressed F5
         console.warn("Settings Closed!");
         settingsWindow.window.console.warn("Settings Saved!");
+        return "Settings Closing";
     });
 }
 var wiki;
@@ -6698,7 +6699,7 @@ document.addEventListener("DOMContentLoaded", function (event) { return __awaite
 document.addEventListener("beforeunload", function (event) { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
         _modules_settings__WEBPACK_IMPORTED_MODULE_0__.controller.save();
-        return [2 /*return*/];
+        return [2 /*return*/, "Slayer Assistant Closing"];
     });
 }); });
 
