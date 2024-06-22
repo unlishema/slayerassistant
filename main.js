@@ -2430,13 +2430,8 @@ var SettingsDataController = /** @class */ (function () {
                         // Load the versioning system to make sure old settings get updated (Max Version ???.256.256)
                         if (window.localStorage.getItem('version') != null)
                             this.data.version = this.decodeVersion(window.localStorage.getItem('version'));
-                        return [4 /*yield*/, fetch("./data/version.json").then(function (r) { return r.json(); })];
-                    case 1:
-                        res = _a.sent();
-                        if (this.data.version < this.decodeVersion(res['version']))
-                            this.data.version = this.decodeVersion(res['version']);
                         // Add Versioning system to allow compatibility with future updates (Should only ever run once)
-                        if (this.data.version < 10 && !this.configLoaded) {
+                        if (this.data.version <= 5 && !this.configLoaded) {
                             console.log("(Versioning System Missing) Setting up versioning system.");
                             // Remove the alpha/beta recent task system, we are replacing it with a new defaults loading system
                             if (window.localStorage.getItem('recent_task_0') != null)
@@ -2450,6 +2445,11 @@ var SettingsDataController = /** @class */ (function () {
                             // If this is the first setup since versions system we need to set the defaults with a save
                             this.save();
                         }
+                        return [4 /*yield*/, fetch("./data/version.json").then(function (r) { return r.json(); })];
+                    case 1:
+                        res = _a.sent();
+                        if (this.data.version < this.decodeVersion(res['version']))
+                            this.data.version = this.decodeVersion(res['version']);
                         // TODO Load basic settings here
                         controller.data.autoCapture.enabled = window.localStorage.getItem("auto-capture-enabled") === "true";
                         controller.data.autoCapture.counter = window.localStorage.getItem("auto-capture-counter") === "true";
@@ -6692,6 +6692,13 @@ document.addEventListener("DOMContentLoaded", function (event) { return __awaite
                 setInterval(function () { _modules_slayer__WEBPACK_IMPORTED_MODULE_1__.findTask(); }, _modules_settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.autoCapture.loopTimer);
                 return [2 /*return*/];
         }
+    });
+}); });
+// When we close the app, lets make sure we save the settings
+document.addEventListener("beforeunload", function (event) { return __awaiter(void 0, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        _modules_settings__WEBPACK_IMPORTED_MODULE_0__.controller.save();
+        return [2 /*return*/];
     });
 }); });
 
