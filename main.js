@@ -488,7 +488,7 @@ var SlayerDialogReader = /** @class */ (function () {
     }
     SlayerDialogReader.prototype.read = function (buffer) {
         return __awaiter(this, void 0, void 0, function () {
-            var data, box, msg, countText, e, countText, i, a, msg, countText;
+            var data, box, msg, countText, e, countText, e, i, a, msg, countText;
             return __generator(this, function (_a) {
                 if (!buffer)
                     buffer = alt1__WEBPACK_IMPORTED_MODULE_0__.captureHoldFullRs();
@@ -521,8 +521,14 @@ var SlayerDialogReader = /** @class */ (function () {
                         this.data.task[0] = e.substring((e.includes(",") ? e.indexOf(",") : e.indexOf(" ")) + 1);
                     }
                     // Get single slayer assignment from still hunting dialog
-                    if (msg.toLowerCase().includes("still hunting"))
-                        this.data.task[0] = msg.substring(msg.indexOf("hunting ") + 8, msg.indexOf(";"));
+                    if (msg.toLowerCase().includes("still need to kill")) {
+                        console.log("Found");
+                        e = msg.substring(msg.indexOf("kill ") + 5);
+                        this.data.count[0] = parseInt(e.substring(0, e.indexOf(" ")));
+                        console.log("Found Count: " + this.data.count[0]);
+                        this.data.task[0] = e.substring(e.indexOf(" ") + 1, e.includes(".") ? e.indexOf(".") : e.length - 1);
+                        console.log("Found Task: " + this.data.task[0]);
+                    }
                 }
                 // Look and see if there is a slayer assignment choice on screen via 2 options and title
                 if (box.opts && box.opts.length == 2 && (box.title && box.title.toLowerCase().includes("change your assigned slayer task"))) {
@@ -1947,11 +1953,11 @@ var setup;
                                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elc("task-wiki", side).addEventListener('click', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.wiki.assignment(i); });
                                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elc("task-wiki", side).addEventListener('mouseover', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.assignmentWiki(i); });
                                         if (!!_settings__WEBPACK_IMPORTED_MODULE_1__.controller.data.ui.limited) return [3 /*break*/, 3];
-                                        limitedLoaded = false;
                                         _d = _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elc("extra-info", side);
                                         return [4 /*yield*/, fetch("./pages/doc/example-extra.html").then(function (r) { return r.text(); })];
                                     case 2:
                                         _d.innerHTML = _e.sent();
+                                        limitedLoaded = false;
                                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elc("preview-task-wiki", side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.assignmentWikiPreview(i); });
                                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elc("preview-creature-wiki", side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.creatureWikiPreview(i); });
                                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elc("equipMore", side).addEventListener('mouseenter', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.moreEquip(i); });
@@ -1995,6 +2001,7 @@ var setup;
             return __generator(this, function (_d) {
                 switch (_d.label) {
                     case 0:
+                        limitedLoaded = true;
                         _a = _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elid("base");
                         return [4 /*yield*/, fetch("./pages/doc/single.html").then(function (r) { return r.text(); })];
                     case 1:
@@ -2008,11 +2015,11 @@ var setup;
                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elc("task-wiki", side).addEventListener('click', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.open.wiki.assignment(i); });
                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elc("task-wiki", side).addEventListener('mouseover', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.assignmentWiki(i); });
                         if (!!_settings__WEBPACK_IMPORTED_MODULE_1__.controller.data.ui.limited) return [3 /*break*/, 4];
-                        limitedLoaded = false;
                         _c = _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elc("extra-info", side);
                         return [4 /*yield*/, fetch("./pages/doc/example-extra.html").then(function (r) { return r.text(); })];
                     case 3:
                         _c.innerHTML = _d.sent();
+                        limitedLoaded = false;
                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elc("preview-task-wiki", side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.assignmentWikiPreview(i); });
                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elc("preview-creature-wiki", side).addEventListener('mouseleave', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hide.creatureWikiPreview(i); });
                         _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.get.elc("equipMore", side).addEventListener('mouseenter', function () { _dochandler__WEBPACK_IMPORTED_MODULE_0__.hover.moreEquip(i); });
@@ -2143,6 +2150,7 @@ function settingsPage() {
     settingsWindow.addEventListener('beforeunload', function () {
         // Load the new settings and apply them
         _settings__WEBPACK_IMPORTED_MODULE_1__.controller.load();
+        _dochandler__WEBPACK_IMPORTED_MODULE_0__.main.toggle.searchText();
         // FIXME Make it so when we unload, we can reload the settings in case user pressed F5
         console.warn("Settings Closed!");
         settingsWindow.window.console.warn("Settings Saved!");
@@ -2537,6 +2545,15 @@ var change;
     change.index = 0;
     // Add change history for forward and back buttons
     function addHistory(history) {
+        if (!history || !history.tasks || !change.history[change.index])
+            return;
+        // Check if is previous history and if so abort
+        if ((history.type === "single" || history.type === "reaper") && history.tasks[0].name === change.history[change.index].tasks[0].name)
+            return;
+        if (history.type === "double" && history.tasks[0].name === change.history[change.index].tasks[0].name && history.tasks[1].name === change.history[change.index].tasks[1].name)
+            return;
+        if (history.type === "suggestion" && history.type === change.history[change.index].type)
+            return;
         // Add Change History
         if (change.index + 1 != change.history.length)
             change.history = change.history.slice(0, change.index + 1);
@@ -2876,7 +2893,7 @@ function findTask(buffer) {
                     return [4 /*yield*/, slayerReader.read(buffer)];
                 case 1:
                     slayerData = _a.sent();
-                    if (!slayerData) return [3 /*break*/, 11];
+                    if (!(slayerData && slayerData[0])) return [3 /*break*/, 11];
                     // If we found a slayer dialog then set loading
                     _dochandler__WEBPACK_IMPORTED_MODULE_1__.animate.loading();
                     if (!slayerData.selectYourOwn) return [3 /*break*/, 3];
@@ -6641,10 +6658,9 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     Update the credits page. (May need more later on)
 
     ~ Coming Next Release ~
-    FIXME Make it so when you search, it puts the auto counter on a cooldown period
     Adjust histories to use sessionStorage
-    Add in a status tracking area to keep track of xp/hr, kills/hr, and more
-    Add settings into the app finally
+    Add in a status tracking area to keep track of xp/hr, kills/hr, and more (Needs finished)
+    Add settings into the app finally (Needs rest added)
 
     ~ Near future Release ~
     Add support for Ushubti
@@ -6652,14 +6668,13 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
     ~ Settings for the app ~
     Settings:
-    - Ability to save current window size and reload it (Also auto adjust to limited ui)
-    - Ability to toggle auto find task via dialog
-    - Ability to toggle auto find current task via Slayer Count RS3UI
-    - Ability to toggle extra info to make box smaller without scrollbar
+    - Ability to toggle auto find task via dialog (Done)
+    - Ability to toggle auto find current task via Slayer Count RS3UI (Done)
+    - Ability to toggle extra info to make box smaller without scrollbar (Done)
     - Ability to toggle all hidden creatures
     -- Ability to toggle sub-classes of hidden creatures like (elite), (dragonkin lab) and such
     - Ability to select default loading
-    -- Default Task(s) on open and adjust doc based on it
+    -- Default Task(s) on open and adjust doc based on it (Done)
     -- Load previous task(s) and adjust doc based on it
     - Ability to select defaults for everything (Later On)
     -- Select default creature per task
@@ -6685,10 +6700,6 @@ document.addEventListener("DOMContentLoaded", function (event) { return __awaite
                 // Run the Config Setup Process
                 _modules_settings__WEBPACK_IMPORTED_MODULE_0__.controller.load();
                 // Run the first capture loop and then setup the infinite sec loop
-                return [4 /*yield*/, _modules_slayer__WEBPACK_IMPORTED_MODULE_1__.findTask()];
-            case 2:
-                // Run the first capture loop and then setup the infinite sec loop
-                _a.sent();
                 setInterval(function () { _modules_slayer__WEBPACK_IMPORTED_MODULE_1__.findTask(); }, _modules_settings__WEBPACK_IMPORTED_MODULE_0__.controller.data.autoCapture.loopTimer);
                 return [2 /*return*/];
         }
