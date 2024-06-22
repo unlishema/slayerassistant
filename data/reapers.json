@@ -1,5 +1,6 @@
 [
     {
+        "default-creature": "Araxxi#Default",
         "weakness": [],
         "creatures": ["Araxxi"],
         "hidden-creatures": [],
@@ -10,6 +11,7 @@
         "locations": []
     },
     {
+        "default-creature": "Arch-Glacor#Normal mode",
         "weakness": [],
         "creatures": ["Arch-Glacor"],
         "hidden-creatures": [],
@@ -20,6 +22,7 @@
         "locations": []
     },
     {
+        "default-creature": "Black stone dragon#Default",
         "weakness": [],
         "creatures": ["Black stone dragon"],
         "hidden-creatures": [],
@@ -30,6 +33,7 @@
         "locations": []
     },
     {
+        "default-creature": "Chaos Elemental#P2P",
         "weakness": [],
         "creatures": ["Chaos Elemental"],
         "hidden-creatures": [],
@@ -50,6 +54,7 @@
         "locations": []
     },
     {
+        "default-creature": "Corporeal Beast#Default",
         "weakness": [],
         "creatures": ["Corporeal Beast"],
         "hidden-creatures": [],
@@ -60,6 +65,7 @@
         "locations": []
     },
     {
+        "default-creature": "Croesus#Active",
         "weakness": [],
         "creatures": ["Croesus"],
         "hidden-creatures": [],
@@ -70,11 +76,12 @@
         "locations": []
     },
     {
+        "default-creature": "Dagannoth Rex#Default",
         "weakness": [],
         "creatures": [
-            "Dagannoth Supreme",
+            "Dagannoth Prime",
             "Dagannoth Rex",
-            "Dagannoth Prime"
+            "Dagannoth Supreme"
         ],
         "hidden-creatures": [],
         "index": "Dagannoth Kings",
@@ -84,6 +91,7 @@
         "locations": []
     },
     {
+        "default-creature": "General Graardor#Normal",
         "weakness": [],
         "creatures": ["General Graardor"],
         "hidden-creatures": [],
@@ -94,6 +102,7 @@
         "locations": []
     },
     {
+        "default-creature": "Giant mole#Normal",
         "weakness": [],
         "creatures": ["Giant mole"],
         "hidden-creatures": [],
@@ -104,6 +113,7 @@
         "locations": []
     },
     {
+        "default-creature": "Gregorovic#Normal Mode",
         "weakness": [],
         "creatures": ["Gregorovic"],
         "hidden-creatures": [],
@@ -114,6 +124,7 @@
         "locations": []
     },
     {
+        "default-creature": "Har-Aken#Head",
         "weakness": [],
         "creatures": ["Har-Aken"],
         "hidden-creatures": [],
@@ -124,6 +135,7 @@
         "locations": []
     },
     {
+        "default-creature": "Helwyr#Normal Mode",
         "weakness": [],
         "creatures": ["Helwyr"],
         "hidden-creatures": [],
@@ -134,6 +146,7 @@
         "locations": []
     },
     {
+        "default-creature": "Hermod, the Spirit of War#Normal",
         "weakness": [],
         "creatures": ["Hermod, the Spirit of War"],
         "hidden-creatures": [],
@@ -144,6 +157,7 @@
         "locations": []
     },
     {
+        "default-creature": "K'ril Tsutsaroth#Normal",
         "weakness": [],
         "creatures": ["K'ril Tsutsaroth"],
         "hidden-creatures": [],
@@ -154,6 +168,7 @@
         "locations": []
     },
     {
+        "default-creature": "Kalphite King#Magic",
         "weakness": [],
         "creatures": ["Kalphite King"],
         "hidden-creatures": [],
@@ -164,6 +179,7 @@
         "locations": []
     },
     {
+        "default-creature": "Kalphite Queen#First form",
         "weakness": [],
         "creatures": ["Kalphite Queen"],
         "hidden-creatures": [],
@@ -174,6 +190,7 @@
         "locations": []
     },
     {
+        "default-creature": "Kerapac, the bound#Normal mode",
         "weakness": [],
         "creatures": ["Kerapac, the bound"],
         "hidden-creatures": [],
@@ -184,6 +201,7 @@
         "locations": []
     },
     {
+        "default-creature": "King Black Dragon#Default",
         "weakness": [],
         "creatures": ["King Black Dragon"],
         "hidden-creatures": [],
@@ -194,6 +212,7 @@
         "locations": []
     },
     {
+        "default-creature": "Kree'arra#Normal",
         "weakness": [],
         "creatures": ["Kree'arra"],
         "hidden-creatures": [],
@@ -204,14 +223,15 @@
         "locations": []
     },
     {
+        "default-creature": "Legio Primus#Default",
         "weakness": [],
         "creatures": [
             "Legio Primus",
-            "Legio Secundus",
-            "Legio Tertius",
             "Legio Quartus",
             "Legio Quintus",
-            "Legio Sextus"
+            "Legio Secundus",
+            "Legio Sextus",
+            "Legio Tertius"
         ],
         "hidden-creatures": [],
         "index": "Legiones",
@@ -221,6 +241,7 @@
         "locations": []
     },
     {
+        "default-creature": "Nex#Standard",
         "weakness": [],
         "creatures": ["Nex"],
         "hidden-creatures": [],
@@ -231,6 +252,7 @@
         "locations": []
     },
     {
+        "default-creature": "Nex: Angel of Death#Default",
         "weakness": [],
         "creatures": ["Nex: Angel of Death"],
         "hidden-creatures": [],
@@ -241,6 +263,7 @@
         "locations": []
     },
     {
+        "default-creature": "Queen Black Dragon#Normal",
         "weakness": [],
         "creatures": ["Queen Black Dragon"],
         "hidden-creatures": [],
@@ -251,6 +274,7 @@
         "locations": []
     },
     {
+        "default-creature": "Raksha, the Shadow Colossus#During fight",
         "weakness": [],
         "creatures": ["Raksha, the Shadow Colossus"],
         "hidden-creatures": [],
@@ -261,6 +285,7 @@
         "locations": []
     },
     {
+        "default-creature": "Rasial, the First Necromancer#Normal",
         "weakness": [],
         "creatures": ["Rasial, the First Necromancer"],
         "hidden-creatures": [],
@@ -271,12 +296,13 @@
         "locations": []
     },
     {
+        "default-creature": "Orikalka#Default",
         "weakness": [],
         "creatures": [
             "Orikalka",
-            "Rathis",
+            "Osseous",
             "Pthentraken",
-            "Osseous"
+            "Rathis"
         ],
         "hidden-creatures": [],
         "index": "Rex Matriarchs",
@@ -286,6 +312,7 @@
         "locations": []
     },
     {
+        "default-creature": "Seiryu the Azure Serpent#Normal mode",
         "weakness": [],
         "creatures": ["Seiryu the Azure Serpent"],
         "hidden-creatures": [],
@@ -296,6 +323,7 @@
         "locations": []
     },
     {
+        "default-creature": "Solak#Solak",
         "weakness": [],
         "creatures": ["Solak"],
         "hidden-creatures": [],
@@ -306,6 +334,7 @@
         "locations": []
     },
     {
+        "default-creature": "Telos, the Warden#Standard",
         "weakness": [],
         "creatures": ["Telos, the Warden"],
         "hidden-creatures": [],
@@ -316,6 +345,7 @@
         "locations": []
     },
     {
+        "default-creature": "The Ambassador#Normal mode",
         "weakness": [],
         "creatures": ["The Ambassador"],
         "hidden-creatures": [],
@@ -326,6 +356,7 @@
         "locations": []
     },
     {
+        "default-creature": "Dharok the Wretched#Normal",
         "weakness": [],
         "creatures": [
             "Ahrim the Blighted",
@@ -345,14 +376,15 @@
         "locations": []
     },
     {
+        "default-creature": "Dharok the Wretched#Normal",
         "weakness": [],
         "creatures": [
             "Ahrim the Blighted",
             "Dharok the Wretched",
             "Guthan the Infested",
+            "Karil the Tainted",
             "Torag the Corrupted",
-            "Verac the Defiled",
-            "Karil the Tainted"
+            "Verac the Defiled"
         ],
         "hidden-creatures": [],
         "index": "The Barrows: Rise of the Six",
@@ -362,6 +394,7 @@
         "locations": []
     },
     {
+        "default-creature": "The Magister#Default",
         "weakness": [],
         "creatures": ["The Magister"],
         "hidden-creatures": [],
@@ -372,10 +405,11 @@
         "locations": []
     },
     {
+        "default-creature": "Avaryss, the Unceasing#Normal Mode",
         "weakness": [],
         "creatures": [
-            "Nymora, the Vengeful",
-            "Avaryss, the Unceasing"
+            "Avaryss, the Unceasing",
+            "Nymora, the Vengeful"
         ],
         "hidden-creatures": [],
         "index": "Twin Furies",
@@ -385,6 +419,7 @@
         "locations": []
     },
     {
+        "default-creature": "TzKal-Zuk#Normal Mode",
         "weakness": [],
         "creatures": ["TzKal-Zuk"],
         "hidden-creatures": [],
@@ -395,6 +430,7 @@
         "locations": []
     },
     {
+        "default-creature": "TzTok-Jad#Default",
         "weakness": [],
         "creatures": ["TzTok-Jad"],
         "hidden-creatures": [],
@@ -405,6 +441,7 @@
         "locations": []
     },
     {
+        "default-creature": "Vindicta#Normal mode",
         "weakness": [],
         "creatures": ["Vindicta"],
         "hidden-creatures": [],
@@ -415,6 +452,7 @@
         "locations": []
     },
     {
+        "default-creature": "Vorago#Default",
         "weakness": [],
         "creatures": ["Vorago"],
         "hidden-creatures": [],
@@ -425,6 +463,7 @@
         "locations": []
     },
     {
+        "default-creature": "Zamorak, Lord of Chaos#Normal mode",
         "weakness": [],
         "creatures": ["Zamorak, Lord of Chaos"],
         "hidden-creatures": [],
@@ -435,10 +474,11 @@
         "locations": []
     },
     {
+        "default-creature": "Vorkath#Normal mode",
         "weakness": [],
         "creatures": [
-            "Zemouregal",
-            "Vorkath"
+            "Vorkath",
+            "Zemouregal"
         ],
         "hidden-creatures": [],
         "index": "Zemouregal & Vorkath",

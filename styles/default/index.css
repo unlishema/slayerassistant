@@ -1,180 +1,190 @@
-/* App Controls & Info */
-.nis {background: url("../../images/ui/default/background.png");}
-.nistext {color: #E5E6EB; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
-.nisbutton{height:32px; position:relative; background: url('../../images/ui/default/nisbutton.png') 0px -100%/24px 400% repeat content-box; cursor:pointer; text-align:center; color:#000; font-family:'trajan-pro-3'; text-shadow:1px 1px 2px #ECC622; font-size:18px; margin:5px; padding:0px 12px; line-height:32px; user-select:none; -webkit-user-select:none;}
-.nisbutton::before{width:12px; height:100%; content:""; position:absolute; top:0px; left:0px; background: url('../../images/ui/default/nisbutton.png') 0px 0px / 24px 400%;}
-.nisbutton::after{width:12px; height:100%; content:""; position:absolute; top:0px; right:1px; background: url('../../images/ui/default/nisbutton.png') -12px 0px / 24px 400%;}
-.nisbutton:hover{background-position:0px -300%;}
-.nisbutton:hover::before{background-position:0px -200%;}
-.nisbutton:hover::after{background-position:-12px -200%;}
-.nisbutton:active, .nisbutton.fakeactive{-webkit-filter:brightness(1.2); filter:brightness(1.2);}
+/* Global App settings */
+.nis     {background: url("../../images/ui/default/background.png");}
+.nistext {color: #E5E6EB;}
+a        {color: #ffffff; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-decoration: none; cursor: pointer;}
+a:hover  {color: #a19100; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-decoration: none; cursor: pointer;}
 
-/* Basic Style Data */
-a {color: white;}
-a:hover {color:#a19100;}
-div#base {position: relative; width: 100%; height: 70px;}
-div.base-full {height: 310px;}
+/* Base Sections of App */
+div#menubar        {position: relative; width: 100%; height: 34px;}
+div#base           {position: relative; width: 100%; height: 70px;}
+#copyright         {position: relative; width: 100%; height: 13px; font-family: 'trajan-pro-3'; font-size: 11px; color: #5a6400; text-align: center; }
+div.base-full      {height: 310px;}
+.copyright-limited {top: 0px;}
+.copyright-full    {top: 250px;}
 
-/* About Info & Settings Menu */
-#infobutton {position: absolute; top: 7px; left: 7px; width: 12px; height: 12px; z-index: 11; background: url('../../images/ui/default/infoicon.png') 0px 0px / cover; cursor:pointer;}
-#infobutton:hover {background-position:0px -12px;}
-#menubutton {position: absolute; top: 23px; left: 7px; width: 12px; height: 12px; z-index: 11; background: url('../../images/ui/default/settingscog.png') 0px 0px / cover; cursor:pointer;}
-#menubutton:hover {background-position:0px -12px;}
-#donatebutton {position: absolute; top: 39px; left: 7px; width: 12px; height: 12px; z-index: 11; background: url('../../images/ui/default/donate.png') 0px 0px / cover; cursor:pointer;}
-#donatebutton:hover {background-position:0px -12px;}
-#backbutton {position: absolute; top: 41px; left: 23px; width: 12px; height: 12px; z-index: 11; background: url('../../images/ui/default/back.png') 0px 0px / cover; cursor:pointer;}
-#backbutton:hover {background-position:0px -12px;}
-#forwardbutton {position: absolute; top: 41px; left: 37px; width: 12px; height: 12px; z-index: 11; background: url('../../images/ui/default/forward.png') 0px 0px / cover; cursor:pointer;}
-#forwardbutton:hover {background-position:0px -12px;}
+/* Menu Bar Controls */
+#infobutton          {position: absolute; width: 12px; height: 12px; top: 00px; left: 00px; z-index: 11; cursor:pointer; background: url('../../images/ui/default/infoicon.png') 0px 0px / cover;}
+#menubutton          {position: absolute; width: 12px; height: 12px; top: 16px; left: 00px; z-index: 11; cursor:pointer; background: url('../../images/ui/default/settingscog.png') 0px 0px / cover;}
+#donatebutton        {position: absolute; width: 12px; height: 12px; top: 32px; left: 00px; z-index: 11; cursor:pointer; background: url('../../images/ui/default/donate.png') 0px 0px / cover;}
+#backbutton          {position: absolute; width: 12px; height: 12px; top: 32px; left: 16px; z-index: 11; cursor:pointer; background: url('../../images/ui/default/back.png') 0px 0px / cover;}
+#forwardbutton       {position: absolute; width: 12px; height: 12px; top: 32px; left: 32px; z-index: 11; cursor:pointer; background: url('../../images/ui/default/forward.png') 0px 0px / cover;}
+#infobutton:hover    {background-position: 0px -12px;}
+#menubutton:hover    {background-position: 0px -12px;}
+#donatebutton:hover  {background-position: 0px -12px;}
+#backbutton:hover    {background-position: 0px -12px;}
+#forwardbutton:hover {background-position: 0px -12px;}
 
 /* Search Box & Button */
-#search-info {position: relative; top: 3px; left: 20px; height: 20px; width : calc(68% - 20px); background-color:#2f2f2f; color:#a39e00; cursor:pointer; }
-#search-button {position: absolute; top: 3px; left: 70%; font-size: 18px; text-align: left; height: 33px; width : calc(30% - 35px);}
+#search-info   {position: relative; width: calc(100% - 20px - 100px); height: 20px; top: 3px; left: 18px; color:#a39e00; cursor:pointer; background-color:#2f2f2f;}
+#search-button {position: absolute; width: 66px; height: 33px; top: 0px; right: 0px; color:#370042; font-size: 18px; text-align: left;}
+
+/* Search Button LookNFeel */
+.nisbutton               {position: relative; width: auto; height: 32px; cursor: pointer; text-align: center; color: #000000; font-family: 'trajan-pro-3'; font-size: 18px; text-shadow: 1px 1px 2px #ECC622; margin-left: 5px; padding: 0px 12px; line-height: 32px; user-select: none; -webkit-user-select: none; background: url('../../images/ui/default/nisbutton.png') 0px -100%/24px 400% repeat content-box;}
+.nisbutton::before       {position: absolute; width: 12px; height: 100%; top: 0px; left: 00px; content: ""; background: url('../../images/ui/default/nisbutton.png') 0px 0px / 24px 400%;}
+.nisbutton::after        {position: absolute; width: 12px; height: 100%; top: 0px; right: 1px; content: ""; background: url('../../images/ui/default/nisbutton.png') -12px 0px / 24px 400%;}
+.nisbutton:hover         {background-position: 000px -300%;}
+.nisbutton:hover::before {background-position: 000px -200%;}
+.nisbutton:hover::after  {background-position: -12px -200%;}
+.nisbutton:active        {-webkit-filter: brightness(1.2); filter: brightness(1.2);}
+.nisbutton.fakeactive    {-webkit-filter: brightness(1.2); filter: brightness(1.2);}
 
 /* Loading Spinner */
-.loading {display: flex; justify-content: center; visibility: hidden;}
-.loading::after {content: ""; width: 12px; height: 12px; border: 3px dashed #13314e; border-radius: 100%; transform: rotate(0.125turn); animation: loading 2.5s ease-in-out infinite;}
-.loading-container {position: absolute; top: 15px; right: 13px; height: 20px; width: 20px;}
-@keyframes loading {to{transform: rotate(1.130turn);}}
+.loading-container {position: absolute; width: 20px; height: 20px; top: 8px; right: 8px; cursor:pointer; }
+.loading           {width: 20px; height: 20px; display: flex; justify-content: center; visibility: hidden;}
+.loading::after    {width: 12px; height: 12px; content: ""; border: 3px dashed #13314e; border-radius: 100%; transform: rotate(0.125turn); animation: loading 2.5s ease-in-out infinite;}
+@keyframes loading {to {transform: rotate(1.130turn);}}
 
 /* Division Bar */
-div#divide {position : absolute; left : 49.35%; top : 10px; width : 1px; background-color: white;}
-.divide-limited {height : 60px;}
-.divide-full {height : 310px;}
-div.left {position : absolute; left : 0%; width : 48%;}
-div.right {position : absolute; left : 50%; width : 48%;}
-div.center {position : absolute; left : 0%; width : 98%;}
+div.left        {position: absolute; width: calc(050% - 01px); left: 00%;}
+div.right       {position: absolute; width: calc(050% - 01px); left: 50%;}
+div.single      {position: absolute; width: 100%; left: 00%;}
+div#divide      {position: absolute; width: 2px; left: calc(50% - 2px); background-color: #afad1f;}
+.divide-limited {height: 65px;}
+.divide-full    {height: 310px;}
 
-/* Copyright */
-#copyright {position : absolute; font-size: 10px; color: #5a6400; text-align : center; padding-top: 3px; height : 20px; width : calc(100% - 6px);}
-.copyright-limited {top : 110px;}
-.copyright-full {top : 360px;}
+/* Headers for Sections */
+div#title-1 {position: absolute; height: 13px; left: calc(25%); right: calc(25%); z-index: 10; margin-top: -10px; font-size: 14px; text-align: center; padding: 0px 8px 0px; color: #778899; background: url("../../images/ui/default/background.png");}
+div#title-2 {position: absolute; height: 13px; left: calc(25%); right: calc(25%); z-index: 10; margin-top: -10px; font-size: 14px; text-align: center; padding: 0px 8px 0px; color: #778899; background: url("../../images/ui/default/background.png");}
+div#title-3 {position: absolute; height: 13px; left: calc(25%); right: calc(25%); z-index: 10; margin-top: -10px; font-size: 14px; text-align: center; padding: 0px 8px 0px; color: #778899; background: url("../../images/ui/default/background.png");}
+div#title-4 {position: absolute; height: 11px; left: calc(15%); right: calc(15%); z-index: 22; margin-top: -06px; font-size: 12px; text-align: center; padding: 0px 8px 0px; color: #778899; background: url("../../images/ui/default/background.png");}
+div#title-5 {position: absolute; height: 11px; left: calc(15%); right: calc(15%); z-index: 22; margin-top: -08px; font-size: 12px; text-align: center; padding: 0px 8px 0px; color: #778899; background: url("../../images/ui/default/background.png");}
+div#title-6 {position: absolute; height: 11px; left: calc(15%); right: calc(15%); z-index: 22; margin-top: -08px; font-size: 12px; text-align: center; padding: 0px 8px 0px; color: #778899; background: url("../../images/ui/default/background.png");}
+div#title-7 {position: absolute; height: 13px; left: calc(25%); right: calc(25%); z-index: 10; margin-top: -10px; font-size: 14px; text-align: center; padding: 0px 8px 0px; color: #778899; background: url("../../images/ui/default/background.png");}
 
 /* Type of Assignment */
-div[id^="type"] {position : relative; left : 0%; top : 10px; color: #008000; font-size: 20px; text-align : center; height : 25px; width : 100%;}
-.right div[id^="type"] {color: #ff0000;}
-#type-2 {color: #ffd700;}
-#type-3 {color: #ff00d4; cursor:pointer; }
-#type-3:hover {color: #6d0077;}
+div.type            {position: relative; width: 100%; height: 22px; color: #008000; font-family: 'trajan-pro-3'; font-size: 20px; text-align: center;}
+.right div.type     {color: #ff0000;}
+#type-reaper        {color: #ffd700;}
+#type-suggest       {color: #ff00d4; cursor:pointer;}
+#type-suggest:hover {color: #6d0077;}
 
 /* Suggested Creatures */
-table#suggestions {position : relative; left : 0%; top : 5px; width: 100%;}
-table#suggestions thead td {color: #ffd700; font-size: 16px; text-align : left; }
-table#suggestions td {color: #39cf96; font-size: 16px; text-align : left; }
-table#suggestions td[id^="suggestion"] {color: #008000; cursor:pointer; }
-table#suggestions td[id^="suggestion"]:hover {color: #00db00;}
-div#footnote-3 {position : relative; left : 0%; top : 2px; color: #ffd700; font-size: 11px; text-align : right; height: 15px; width: 100%;}
+span.starnote              {position: relative; display: inline; color: #ffd700; font-size: 11px;}
+div#footnote               {position: relative; width: 100%; height: 015px; left: 0%; top: 0px; color: #ffd700; font-size: 11px; text-align: right;}
+table#suggestions          {position: relative; width: 100%; height: 200px; left: 0%; top: 0px; font-size: 16px; text-align: left;}
+table#suggestions thead td {color: #ffd700; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+table#suggestions td       {color: #39cf96; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+td[id^="suggestion"]       {color: #008000; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; cursor:pointer;}
+td[id^="suggestion"]:hover {color: #00db00;}
 
-/* Slayer Info */
-div[id^="info"] {position : absolute; left : 3px; top : 35px; text-align : left; height : 40px; width : 68%;}
-div.left div[id^="info"] {width : 100%;}
-div.right div[id^="info"] {width : 100%;}
-div[id^="info"]:hover {background-color: #324e6165;}
-div[id^="info"] div[id^="task-wiki"] {position : absolute; left : 0px; top : -4px; cursor:pointer; text-align : left; background: transparent url("../../images/ui/default/wikipedia.png") 0px 0px / cover; height : 24px; width : 24px;}
-div[id^="info"] div[id^="task-wiki"]:hover {background-position:0px -24px;}
-div[id^="info"] div[id^="kills"] {position : absolute; left : 18px; top : 0px; text-align : right; height : 16px; width : 40px;}
-div[id^="info"] div[id^="name"] {position : absolute; left : 62px; top : 0px; text-align : left; height : 16px; width : calc(100% - 65px);}
-div[id^="info"] div#slayer-exp-text {position : absolute; left : 3px; top : 20px; text-align : left; height : 16px; width : 33px;}
-div[id^="info"] div[id^="total-slayer-exp"] {position : absolute; left : 35px; top : 20px; text-align : left; height : 16px; width : calc(100% - 40px);}
-
-/* Status Menu */
-div[id^="status"] {position : absolute; left : 70%; top : 10px; z-index: 10; text-align : left; height : 65px; width : 30%; border: 2px ridge #5a6400;}
-div.left div[id^="status"] {visibility: hidden;}
-div.right div[id^="status"] {visibility: hidden;}
-div[id^="status"] div[id^="timer-text"] {position : absolute; left : 0px; top : 0%; padding-top: 2px; font-size: 16px; margin-top: -2px; height : calc(33% - 6px); width : 100%;}
-div[id^="status"] div[id^="timer-text"]:hover {background-color: #324e6165;}
-div[id^="status"] div[id^="timer-value"] {position : absolute; left : 48px; top : 0px; padding-top: 2px; font-size: 16px; height : 100%; width : calc(100% - 48px);}
-div[id^="status"] div[id^="kills-per-text"] {position : absolute; left : 0px; top : 33%; padding-top: 2px; font-size: 16px; border-color: #a19100; border-top-style: solid; border-width: 1px; margin-top: -2px; height : calc(33% - 6px); width : 100%;}
-div[id^="status"] div[id^="kills-per-text"]:hover {background-color: #324e6165;}
-div[id^="status"] div[id^="kills-per-hour"] {position : absolute; left : 60px; top : 0px; padding-top: 2px; font-size: 16px; height : 100%; width : calc(100% - 60px);}
-div[id^="status"] div[id^="exp-per-text"] {position : absolute; left : 0px; top : 66%; padding-top: 2px; font-size: 16px; border-color: #a19100; border-top-style: solid; border-width: 1px; margin-top: -2px; height : calc(33% - 6px); width : 100%;}
-div[id^="status"] div[id^="exp-per-text"]:hover {background-color: #324e6165;}
-div[id^="status"] div[id^="exp-per-hour"] {position : absolute; left : 50px; top : 0%; padding-top: 2px; font-size: 16px; height : 100%; width : calc(100% - 50px);}
+/* Assignment Info */
+div.info                      {position: relative; width: 068%; height: 40px; left: 3px; top: 0px; margin-top: 5px; text-align: left;}
+div.info div.task-wiki        {position: absolute; width: 24px; height: 24px; left: 0px; top: -4px; cursor:pointer; text-align: left; background: transparent url("../../images/ui/default/wikipedia.png") 0px 0px / cover;}
+div.info div.kills            {position: absolute; width: 40px; height: 16px; left: 18px; top: 0px; text-align: right; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+div.info div#slayer-exp-text  {position: absolute; width: 33px; height: 16px; left: 3px; top: 20px; text-align: left;}
+div.info div.name             {position: absolute; width: calc(100% - 65px); height: 16px; left: 62px; top: 0px; text-align: left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+div.info div.total-slayer-exp {position: absolute; width: calc(100% - 40px); height: 16px; left: 35px; top: 20px; text-align: left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+div.left div.info             {width: 100%;}
+div.right div.info            {width: 100%;}
+div.info:hover                {background-color: #324e6165;}
+div.info div.task-wiki:hover  {background-position:0px -24px;}
 
 /* Preview Task Wiki */
-div[id^="preview-task-wiki"] {visibility: hidden; position : absolute; left : 3px; top : 58px; z-index: 11; border: 2px ridge #a19100; background: url("../../images/ui/default/background.png"); text-align : left; height : 240px; width : calc(100% - 6px);}
-div[id^="preview-task-wiki"] div[id^="masters"] {position : absolute; left : 0px; top : 0px; text-align : left; width : 100%; height: auto;}
-div[id^="preview-task-wiki"] div[id^="masterTitle"] {position : relative; cursor:pointer; border-color: #a19100; border-bottom-style: double; padding-top: 2px; padding-left: 3px; font-size: 18px; height: 27px; width: 100%;}
-div[id^="preview-task-wiki"] div[id^="masterInfo"] {position : relative; cursor:pointer; padding-top: 2px; padding-left: 3px; font-size: 14px; height: 27px; width: 100%;}
-div[id^="preview-task-wiki"] div[id^="masterInfo"]:hover {background-color: #64643065;}
-div[id^="preview-task-wiki"] img[id^="masterImage"] {position : relative; vertical-align: middle; text-align : center; width : 20px; height: 27px;}
+div.preview-task-wiki                                {position: absolute; width: calc(100% - 8px); height: auto; left: 0px; top: 0px; z-index: 11; visibility: hidden; text-align: left; border: 2px ridge #a19100; background: url("../../images/ui/default/background.png");}
+div.preview-task-wiki div.masters                    {position: relative; width: calc(100% - 8px); height: auto; left: 0px; top: 0px; text-align: left;}
+div.preview-task-wiki div.masterTitle                {position: relative; width: 100%; height: 27px; font-size: 18px; margin: 2px 0px 0px 3px; border-bottom: 3px double #a19100;}
+div.preview-task-wiki div[class*="masterInfo"]       {position: relative; width: 100%; height: 27px; cursor:pointer; font-size: 14px; padding: 2px 0px 0px 3px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+div.preview-task-wiki img[id^="masterImage"]         {position: relative; width: 20px; height: 27px; cursor:pointer; vertical-align: middle; text-align: center;}
+div.preview-task-wiki div[class*="masterInfo"]:hover {background-color: #64643065;}
+div.left div.preview-task-wiki                       {left: 0px;}
+div.right div.preview-task-wiki                      {left: 4px;}
+
+/* Status Menu */
+div.status                          {position: absolute; width: 100px; height: 60px; right: 0px; top: 2px; z-index: 10; text-align: left; border: 2px ridge #5a6400;}
+div.status div.kills-per-text       {position: absolute; width: 100%; height: calc(33% - 6px); left: 0px; top: 33%; padding-top: 2px; font-size: 16px; border-top: 1px solid #a19100; margin-top: -2px;}
+div.status div.exp-per-text         {position: absolute; width: 100%; height: calc(33% - 6px); left: 0px; top: 66%; padding-top: 2px; font-size: 16px; border-top: 1px solid #a19100; margin-top: -2px;}
+div.status div.timer-text           {position: absolute; width: 100%; height: calc(33% - 6px); left: 0px; top: 0%; padding-top: 2px; font-size: 16px; margin-top: -2px;}
+div.status div.timer-value          {position: absolute; width: calc(100% - 46px); height: 100%; left: 46px; top: 0px; padding: 2px 2px 0px 0px; font-size: 16px; text-align: right; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+div.status div.kills-per-hour       {position: absolute; width: calc(100% - 60px); height: 100%; left: 60px; top: 0px; padding: 2px 2px 0px 0px; font-size: 16px; text-align: right; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+div.status div.exp-per-hour         {position: absolute; width: calc(100% - 50px); height: 100%; left: 50px; top: 0px; padding: 2px 2px 0px 0px; font-size: 16px; text-align: right; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+div.status div.timer-text:hover     {background-color: #324e6165;}
+div.status div.kills-per-text:hover {background-color: #324e6165;}
+div.status div.exp-per-text:hover   {background-color: #324e6165;}
+div.left div.status                 {visibility: hidden;}
+div.right div.status                {visibility: hidden;}
+
+/* Extra Data (Not shown on limited) */
+div.extra-info {position: relative; width: 100%;}
 
 /* Equpiment */
-img#equip-image {position : absolute; left : 3px; top : 80px; height : 20px; width : 20px;}
-div#title-1 {position : relative; margin-left: auto; margin-right: auto; left: 0px; top: 50px; z-index: 10; font-size: 14px; padding-left: 5px; padding-right: 5px;  color: lightslategrey; background: url("../../images/ui/default/background.png"); text-align : center; height : 13px; width : 40%; }
-div[id^="equipment"] {position : absolute; left : 5px; top : 80px; text-align : left; border-color: #a19100; border-top-style: double; padding-top: 3px; height : 60px; width : calc(100% - 6px);}
-div[id^="equipment"] div[id^="equipInfo"] {position : relative; text-align : left; height : auto; width : 100%;}
-div[id^="equipment"] div[id^="equipInfo"]:hover {background-color: #64643065;}
-div[id^="equipment"] div[id^="equipHidden"] {visibility: hidden; z-index: 11; position : absolute; left : 0px; top : 42px; background: url("../../images/ui/default/background.png"); border-color: lightslategrey; border-left-style: groove; border-right-style: groove; border-bottom-style: groove; margin-left: -3px; height : auto; width : 100%;}
-div[id^="equipment"] div[id^="equipMore"] {position : absolute; left : 0px; top : 42px; cursor:pointer; text-decoration: underline; color: lightslategrey; font-size: 10px; text-align : left; height : 16px; width : 100%;}
-div[id^="equipment"] div[id^="equipMore"]:hover {background-color: #64643065;}
+img#equip-image                             {position: relative; width: 18px; height: 18px;}
+div.equipment                               {position: relative; width: calc(100% - 8px); height: 60px; left: 5px; top: 0px; padding-top: 3px; text-align: left; border-top: 3px double #a19100;}
+div.equipment div[class*="equipInfo"]       {position: relative; width: 100%; height: auto; text-align: left;}
+div.equipment div.equipHidden               {position: absolute; width: 100%; height: auto; left: 0px; top: 42px; z-index: 11; margin-left: -3px; visibility: hidden; border: 3px groove #778899; border-top-style:none; background: url("../../images/ui/default/background.png");}
+div.equipment div.equipMore                 {position: absolute; width: 100%; height: 16px; left: 0px; top: 42px; cursor:pointer; text-decoration: underline; color: #778899; font-size: 10px; text-align: left;}
+div.equipment div[class*="equipInfo"]:hover {background-color: #64643065;}
+div.equipment div.equipMore:hover           {background-color: #64643065;}
 
 /* Locations */
-img#location-image {position : absolute; left : 3px; top : 140px; height : 20px; width : 20px;}
-div#title-2 {position : relative; margin-left: auto; margin-right: auto; left: 0px; top : 100px; z-index: 10; font-size: 14px; padding-left: 5px; padding-right: 5px;  color: lightslategrey; background: url("../../images/ui/default/background.png"); text-align : center; height : 13px; width : 40%; }
-div[id^="locations"] {position : absolute; left : 5px; top : 145px; text-align : left; border-color: #a19100; border-top-style: double; padding-top: 3px; height : 60px; width : calc(100% - 6px);}
-div[id^="locations"] div[id^="locationInfo"] {position : relative; text-align : left; height : auto; width : 100%;}
-div[id^="locations"] div[id^="locationInfo"]:hover {background-color: #64643065;}
-div[id^="locations"] div[id^="locationHidden"] {visibility: hidden; z-index: 11; position : absolute; left : 0px; top : 42px; background: url("../../images/ui/default/background.png"); border-color: lightslategrey; border-left-style: groove; border-right-style: groove; border-bottom-style: groove; margin-left: -3px; height : auto; width : 100%;}
-div[id^="locations"] div[id^="locationMore"] {position : absolute; left : 0px; top : 42px; cursor:pointer; text-decoration: underline; color: lightslategrey; font-size: 10px; text-align : left; height : 16px; width : 100%;}
-div[id^="locations"] div[id^="locationMore"]:hover {background-color: #64643065;}
+img#location-image                             {position: relative; width: 18px; height: 18px;}
+div.locations                                  {position: relative; width: calc(100% - 8px); height: 60px; left: 5px; top: 0px; padding-top: 3px; text-align: left; border-top: 3px double #a19100;}
+div.locations div[class*="locationInfo"]       {position: relative; width: 100%; height: auto; text-align: left;}
+div.locations div.locationHidden               {position: absolute; width: 100%; height: auto; left: 0px; top: 42px; z-index: 11; margin-left: -3px; visibility: hidden; border: 3px groove #778899; border-top-style:none; background: url("../../images/ui/default/background.png");}
+div.locations div.locationMore                 {position: absolute; width: 100%; height: 16px; left: 0px; top: 42px; cursor:pointer; text-decoration: underline; color: #778899; font-size: 10px; text-align: left;}
+div.locations div[class*="locationInfo"]:hover {background-color: #64643065;}
+div.locations div.locationMore:hover           {background-color: #64643065;}
 
 /* Creature Wiki */
-div#title-3 {position : relative; margin-left: auto; margin-right: auto; left: 0px; top : 152px; z-index: 10; font-size: 14px; padding-left: 5px; padding-right: 5px;  color: lightslategrey; background: url("../../images/ui/default/background.png"); text-align : center; height : 13px; width : 40%; }
-div#title-border-3 {position : absolute; left : 3px; top : 210px; border-color: #a19100; border-top-style: double; padding-top: 3px; height : 13px; width : calc(100% - 6px);}
-div[id^="creature-wiki"] {position : absolute; left : -2px; top : 218px; cursor:pointer; text-align : left; background: transparent url("../../images/ui/default/wikipedia.png") 0px 0px / cover; height : 24px; width : 24px;}
-div[id^="creature-wiki"]:hover {background-position:0px -24px;}
-select[id^="creatures"] {position : absolute; left : 24px; top : 220px; cursor:pointer; height : 20px; width : calc(64% - 10px); background-color: #2f2f2f;}
-select[id^="variants"] {position : absolute; left : calc(65% + 16px); top : 220px; cursor:pointer; height : 20px; width : calc(34.5% - 15px); background-color: #2f2f2f;}
+div#creature-container  {position: relative; width: calc(100%  - 08px); height: 32px; left: 03px; top: 0px; padding-top: 3px; border-top: 3px double #a19100;}
+select.creatures        {position: absolute; width: calc(64%   - 10px); height: 20px; left: 24px; top: 9px; cursor:pointer; background-color: #2f2f2f;}
+select.variants         {position: absolute; width: calc(34.5% - 15px); height: 20px; left: calc(65% + 16px); top: 9px; cursor:pointer; background-color: #2f2f2f;}
+div.creature-wiki       {position: absolute; width: 24px; height: 24px; left: -2px; top: 5px; cursor:pointer; text-align: left; background: transparent url("../../images/ui/default/wikipedia.png") 0px 0px / cover;}
+div.creature-wiki:hover {background-position: 0px -24px;}
 
 /* Creature Wiki Preview */
-div[id^="preview-creature-wiki"] {visibility: hidden; position : absolute; left : 0px; top : 35px; z-index: 11; border: 2px ridge #a19100; background: url("../../images/ui/default/background.png"); text-align : left; height : 178px; width : calc(100% - 6px);}
-div[id^="preview-creature-wiki"] div[id^="image-container"] {position : relative; float:left; left: -2px; top: -2px; border-right: 1px ridge #a19100; width: 50%; height: 50%;}
-div[id^="preview-creature-wiki"] img[id^="image"] { background-color: transparent; display: block; margin-left: auto; margin-right: auto;}
-
-div#title-4 {position : absolute; margin-left: auto; margin-right: auto; z-index: 22; left: 50%; top : -2px; font-size: 12px; padding-left: 5px; padding-right: 5px; color: lightslategrey; background: url("../../images/ui/default/background.png"); text-align : center; height : 11px; width : 50%; }
-div[id^="preview-creature-wiki"] div[id^="stats"] {position : absolute; float:right; left: 50%; top: 0px; text-align: center; border-color: #a19100; border-top-style: double; width: 50%; height: calc(50% - 10px);}
-div[id^="preview-creature-wiki"] div[id^="stats"]:hover {background-color: #64643065;}
-
-div#title-5 {position : absolute; margin-left: auto; margin-right: auto; z-index: 22; left: 0px; top : calc(50% - 3px); font-size: 12px; padding-left: 5px; padding-right: 5px; border-color: #a19100; border-top-style: double;  color: lightslategrey; background: url("../../images/ui/default/background.png"); text-align : center; height : 11px; width : 50%; }
-div[id^="preview-creature-wiki"] div[id^="exp"] {position : absolute; left : 0px; top : 50%; font-size: 12px; text-align : center; border-color: #a19100; border-top-style: double; padding-top: -1px; height : 83px; width : 50%;}
-div[id^="preview-creature-wiki"] div[id^="exp"]:hover {background-color: #64643065;}
-
-div#title-6 {position : absolute; margin-left: auto; margin-right: auto; z-index: 22; left: 50%; top : calc(50% - 3px); font-size: 12px; padding-left: 5px; padding-right: 5px; border-color: #a19100; border-top-style: double;  color: lightslategrey; background: url("../../images/ui/default/background.png"); text-align : center; height : 11px; width : 50%; }
-div[id^="preview-creature-wiki"] div[id^="max-hits"] {position : absolute; left : 50%; top : 50%; font-size: 12px; text-align : center; border-color: #a19100; border-top-style: double; padding-top: -1px; height : 83px; width : 50%}
-div[id^="preview-creature-wiki"] div[id^="max-hits"]:hover {background-color: #64643065;}
+div.preview-creature-wiki                           {position: absolute; width: calc(100% - 6px); height: 178px; left: 0px; top: -42px; z-index: 11; visibility: hidden; border: 2px ridge #a19100; background: url("../../images/ui/default/background.png"); text-align: left;}
+div.preview-creature-wiki div.image-container       {position: absolute; width: 50%; height: 50%; left: 0px; top: 0px; border-top: 1px solid #a19100; border-right: 1px ridge #a19100;}
+div.preview-creature-wiki div.stats                 {position: absolute; width: 50%; height: 50%; left: 50%; top: 0px; font-size: 12px; text-align: center; border-top: 1px solid #a19100;}
+div.preview-creature-wiki div.exp                   {position: absolute; width: 50%; height: 50%; left: 0px; top: 50%; font-size: 12px; text-align: center; border-top: 3px double #a19100; border-right: 1px ridge #a19100; padding-top: -1px;}
+div.preview-creature-wiki div.max-hits              {position: absolute; width: 50%; height: 50%; left: 50%; top: 50%; font-size: 12px; text-align: center; border-top: 3px double #a19100; padding-top: -1px;}
+div.preview-creature-wiki img.image                 {display: block; margin-left: auto; margin-right: auto; background-color: transparent;}
+div.preview-creature-wiki div.image-container:hover {background-color: #64643065;}
+div.preview-creature-wiki div.stats:hover           {background-color: #64643065;}
+div.preview-creature-wiki div.exp:hover             {background-color: #64643065;}
+div.preview-creature-wiki div.max-hits:hover        {background-color: #64643065;}
+div.left div.preview-creature-wiki                  {left: -2px;}
+div.right div.preview-creature-wiki                 {left: 3px;}
 
 /* Summary */
-div#title-7 {position : relative; margin-left: auto; margin-right: auto; left: 0px; top : 176px; z-index: 10; font-size: 14px; padding-left: 5px; padding-right: 5px;  color: lightslategrey; background: url("../../images/ui/default/background.png"); text-align : center; height : 13px; width : 40%; }
-div[id^="summary"] {position : absolute; left : 5px; top : 245px; font-size: 12px; text-align : center; border-color: #a19100; border-top-style: double; padding-top: 3px; height : 75px; width : calc(100% - 6px);}
-div[id^="summary"]:hover {background-color: #324e6165;}
+div.summary       {position: relative; width: calc(100% - 8px); height: 75px; left: 5px; top: 0px; padding-top: 3px; font-size: 12px; text-align: center; border-top: 3px double #a19100;}
+div.summary:hover {background-color: #324e6165;}
 
-div[id^="summary"] div[id^="weaknessBox"] {position : absolute; left : 50%; top : 5px; font-size: 12px; text-align : center; height : 35px; width : 48%;}
-div[id^="summary"] div[id^="weaknessBox"] p#weakness-text {margin: 0px; padding: 0px;}
-div[id^="summary"] div[id^="weaknessBox"] img {position : relative; height : 18px; width : 18px; padding-right: 3px; padding-left: 3px;}
+div.summary div.weaknessBox     {position: absolute; width: 048%; height: 35px; left: 50%; top: 5px; font-size: 12px; text-align: center;}
+div.summary div.weaknessBox img {position: relative; width: 18px; height: 18px; padding: 0px 3px 0px 3px;}
+div.summary div.weaknessBox p#weakness-text {margin: 0px; padding: 0px;}
 
-div[id^="summary"] div[id^="susceptibleBox"] {position : absolute; left : 50%; top : 40px; font-size: 12px; text-align : center; height : 35px; width : 48%;}
-div[id^="summary"] div[id^="susceptibleBox"] p#susceptible-text {margin: 0px; padding: 0px;}
-div[id^="summary"] div[id^="susceptibleBox"] img {position : relative; height : 18px; width : 18px; padding-right: 3px; padding-left: 3px;}
+div.summary div.susceptibleBox     {position: absolute; width: 048%; height: 35px; left: 50%; top: 40px; font-size: 12px; text-align: center;}
+div.summary div.susceptibleBox img {position: relative; width: 18px; height: 18px; padding: 0px 3px 0px 3px;}
+div.summary div.susceptibleBox p#susceptible-text {margin: 0px; padding: 0px;}
 
 /* Third Sections */
-img.first-third-image {position : absolute; left : 5px; top : 10px; height : 15px; width : 15px;}
-img.second-third-image {position : absolute; left : 5px; top : 28px; height : 15px; width : 15px;}
-img.third-third-image {position : absolute; left : 5px; top : 43px; height : 15px; width : 15px;}
+img.first-third-image  {position: absolute; width: 15px; height: 15px; left: 5px; top: 10px;}
+img.second-third-image {position: absolute; width: 15px; height: 15px; left: 5px; top: 28px;}
+img.third-third-image  {position: absolute; width: 15px; height: 15px; left: 5px; top: 43px;}
 
-.first-third {position : absolute; left : 25px; top : 10px; font-size: 10px; text-align : left; height : 12px; width : 50%;}
-.second-third {position : absolute; left : 25px; top : 28px; font-size: 10px; text-align : left; height : 12px; width : 50%;}
-.third-third {position : absolute; left : 25px; top : 46px; font-size: 10px; text-align : left; height : 12px; width : 50%;}
+.first-third  {position: absolute; width: 50%; height: 12px; left: 25px; top: 10px; font-size: 10px; text-align: left;}
+.second-third {position: absolute; width: 50%; height: 12px; left: 25px; top: 28px; font-size: 10px; text-align: left;}
+.third-third  {position: absolute; width: 50%; height: 12px; left: 25px; top: 46px; font-size: 10px; text-align: left;}
 
 /* Quarter Sections */
-img.first-quarter-image {position : absolute; left : 5px; top : 8px; height : 15px; width : 15px;}
-img.second-quarter-image {position : absolute; left : 5px; top : 23px; height : 15px; width : 15px;}
-img.third-quarter-image {position : absolute; left : 5px; top : 38px; height : 15px; width : 15px;}
-img.forth-quarter-image {position : absolute; left : 5px; top : 53px; height : 15px; width : 15px;}
-img.fifth-quarter-image {position : absolute; left : 5px; top : 68px; height : 15px; width : 15px;}
+img.first-quarter-image  {position: absolute; width: 15px; height: 15px; left: 5px; top: 8px;}
+img.second-quarter-image {position: absolute; width: 15px; height: 15px; left: 5px; top: 23px;}
+img.third-quarter-image  {position: absolute; width: 15px; height: 15px; left: 5px; top: 38px;}
+img.forth-quarter-image  {position: absolute; width: 15px; height: 15px; left: 5px; top: 53px;}
+img.fifth-quarter-image  {position: absolute; width: 15px; height: 15px; left: 5px; top: 68px;}
 
-.first-quarter {position : absolute; left : 25px; top : 10px; font-size: 10px; text-align : left; height : 12px; width : 50%;}
-.second-quarter {position : absolute; left : 25px; top : 26px; font-size: 10px; text-align : left; height : 12px; width : 50%;}
-.third-quarter {position : absolute; left : 25px; top : 40px; font-size: 10px; text-align : left; height : 12px; width : 50%;}
-.forth-quarter {position : absolute;left : 25px; top : 55px; font-size: 10px; text-align : left; height : 12px; width : 50%;}
-.fifth-quarter {position : absolute;left : 25px; top : 70px; font-size: 10px; text-align : left; height : 12px; width : 50%;}
+.first-quarter  {position: absolute; width: 50%; height: 12px; left: 25px; top: 10px; font-size: 10px; text-align: left;}
+.second-quarter {position: absolute; width: 50%; height: 12px; left: 25px; top: 26px; font-size: 10px; text-align: left;}
+.third-quarter  {position: absolute; width: 50%; height: 12px; left: 25px; top: 40px; font-size: 10px; text-align: left;}
+.forth-quarter  {position: absolute; width: 50%; height: 12px; left: 25px; top: 55px; font-size: 10px; text-align: left;}
+.fifth-quarter  {position: absolute; width: 50%; height: 12px; left: 25px; top: 70px; font-size: 10px; text-align: left;}

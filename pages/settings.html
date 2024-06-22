@@ -9,9 +9,65 @@
 <body class="nis">
 
     <h2 class="nistext">Settings</h2>
-    <p class="nistext">Coming soon.</p>
+    <p class="nistext" id="test">More Coming soon... This is only the basic settings for now</p>
 
-    <div id="copyright" class="center">Copyright &copy;2021 Unlishema Dragonsworn</div>
+    <label class="nistext">Auto Capture Settings</label><br>
+    <input type="checkbox" id="auto-capture-enabled">
+    <label class="nistext" for="auto-capture-enabled"> Enabled?</label><br>
+    <input type="checkbox" id="auto-capture-counter">
+    <label class="nistext" for="auto-capture-counter"> Counter UI?</label><br>
+    <input type="checkbox" id="auto-capture-search">
+    <label class="nistext" for="auto-capture-search"> Search Toggle?</label><br>
+    <br>
+    <label class="nistext">UI Settings</label><br>
+    <input type="checkbox" id="ui-limited">
+    <label class="nistext" for="ui-limited"> Limited?</label><br>
+    <input type="checkbox" id="ui-status">
+    <label class="nistext" for="ui-status"> Status?</label><br>
+    <input type="checkbox" id="ui-overlay">
+    <label class="nistext" for="ui-overlay"> Overlay?</label><br>
+
+    <div class="nisbutton" id="changelog-button" onclick="closeSettings();">Close Settings</div>
+    <div id="copyright">Copyright &copy;2021 Unlishema Dragonsworn</div>
+
+    <script type="text/javascript">
+        function closeSettings() {
+            window.close();
+        }
+
+        // On Load lets load in the settings from the local storage
+        document.addEventListener("DOMContentLoaded", async (event) => {
+            // FIXME Finished setting up settings
+
+            if (localStorage.getItem("auto-capture-enabled")) document.getElementById("auto-capture-enabled").checked = localStorage.getItem("auto-capture-enabled") === "true";
+            if (localStorage.getItem("auto-capture-counter")) document.getElementById("auto-capture-counter").checked = localStorage.getItem("auto-capture-counter") === "true";
+            if (localStorage.getItem("auto-capture-search")) document.getElementById("auto-capture-search").checked = localStorage.getItem("auto-capture-search") === "true";
+
+            if (localStorage.getItem("ui-limited")) document.getElementById("ui-limited").checked = localStorage.getItem("ui-limited") === "true";
+            if (localStorage.getItem("ui-status")) document.getElementById("ui-status").checked = localStorage.getItem("ui-status") === "true";
+            if (localStorage.getItem("ui-overlay")) document.getElementById("ui-overlay").checked = localStorage.getItem("ui-overlay") === "true";
+        });
+
+        // On change lets update the locally stored settings
+        document.getElementById("auto-capture-enabled").addEventListener("input", function () {
+            localStorage.setItem("auto-capture-enabled", document.getElementById("auto-capture-enabled").checked);
+        });
+        document.getElementById("auto-capture-counter").addEventListener("input", function () {
+            localStorage.setItem("auto-capture-counter", document.getElementById("auto-capture-counter").checked);
+        });
+        document.getElementById("auto-capture-search").addEventListener("input", function () {
+            localStorage.setItem("auto-capture-search", document.getElementById("auto-capture-search").checked);
+        });
+        document.getElementById("ui-limited").addEventListener("input", function () {
+            localStorage.setItem("ui-limited", document.getElementById("ui-limited").checked);
+        });
+        document.getElementById("ui-status").addEventListener("input", function () {
+            localStorage.setItem("ui-status", document.getElementById("ui-status").checked);
+        });
+        document.getElementById("ui-overlay").addEventListener("input", function () {
+            localStorage.setItem("ui-overlay", document.getElementById("ui-overlay").checked);
+        });
+    </script>
 </body>
 
 </html>
