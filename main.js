@@ -520,15 +520,15 @@ var SlayerDialogReader = /** @class */ (function () {
                         this.data.count[0] = parseInt(countText);
                         this.data.task[0] = e.substring((e.includes(",") ? e.indexOf(",") : e.indexOf(" ")) + 1);
                     }
-                    // Get single slayer assignment from still hunting dialog
+                    // Get single slayer assignment from still need to kill dialog
                     if (msg.toLowerCase().includes("still need to kill")) {
-                        console.log("Found");
                         e = msg.substring(msg.indexOf("kill ") + 5);
                         this.data.count[0] = parseInt(e.substring(0, e.indexOf(" ")));
-                        console.log("Found Count: " + this.data.count[0]);
                         this.data.task[0] = e.substring(e.indexOf(" ") + 1, e.includes(".") ? e.indexOf(".") : e.length - 1);
-                        console.log("Found Task: " + this.data.task[0]);
                     }
+                    // Get single slayer assignment from still hunting dialog
+                    if (msg.toLowerCase().includes("still hunting"))
+                        this.data.task[0] = msg.substring(msg.indexOf("hunting ") + 8, msg.indexOf(";"));
                 }
                 // Look and see if there is a slayer assignment choice on screen via 2 options and title
                 if (box.opts && box.opts.length == 2 && (box.title && box.title.toLowerCase().includes("change your assigned slayer task"))) {
