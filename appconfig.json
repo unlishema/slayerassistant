@@ -1,9 +1,9 @@
 {
 	"appName": "Slayer Assistant",
 	"description": "Slayer Assistant is your go-to tool for efficient Slayer tasks in RuneScape. Designed for the Alt1 Toolkit, it provides instant access to task information, helping you make informed decisions quickly. Whether you're a new player or an experienced Slayer, this app streamlines the task selection process, making your gameplay smoother and more enjoyable.",
-	"appUrl": "https://unlishema.github.io/slayerassistant/",
-	"configUrl": "https://unlishema.github.io/slayerassistant/appconfig.json",
-	"iconUrl": "https://unlishema.github.io/slayerassistant/images/icon.png",
+	"appUrl": "https://slayer.unlishema.org/",
+	"configUrl": "https://slayer.unlishema.org/appconfig.json",
+	"iconUrl": "https://slayer.unlishema.org/images/icon.png",
 	"defaultWidth": 360,
 	"defaultHeight": 395,
 	"minWidth": 360,
